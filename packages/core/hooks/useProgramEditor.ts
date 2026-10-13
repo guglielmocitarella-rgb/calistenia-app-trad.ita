@@ -12,7 +12,7 @@ import { useState, useCallback, useRef } from 'react'
 import { useQueryClient } from '@tanstack/react-query'
 import { pb, isPocketBaseAvailable } from '../lib/pocketbase'
 import { qk } from '../lib/query-keys'
-import { contentLanguage } from '../lib/content-language'
+import { contentLanguage, contentT } from '../lib/content-language'
 import { getLanguagePolicy, getPlatform } from '../platform'
 import { CANONICAL_ANALYTICS_EVENTS, trackCanonicalEvent } from '../lib/analytics'
 import { PHASES as FALLBACK_PHASES, WEEK_DAYS as FALLBACK_WEEK_DAYS, WORKOUTS } from '../data/workouts'
@@ -349,7 +349,7 @@ const DEFAULT_PHASE_DEFS: { nameKey: string; weeks: string; color: string; bgCol
  */
 export function defaultPhases(locale = contentLanguage()): EditorPhase[] {
   return DEFAULT_PHASE_DEFS.map(p => ({
-    name: i18n.getFixedT(locale)(p.nameKey),
+    name: contentT(locale)(p.nameKey),
     weeks: p.weeks,
     color: p.color,
     bgColor: p.bgColor,
@@ -402,8 +402,8 @@ export type DefaultDay = Omit<EditorDay, 'exercises'>
 export function dayDefaults(locale = contentLanguage()): DefaultDay[] {
   return DAY_DEFAULTS.map(d => ({
     dayId: d.dayId,
-    dayName: i18n.getFixedT(locale)(d.nameKey),
-    focus: i18n.getFixedT(locale)(d.focusKey),
+    dayName: contentT(locale)(d.nameKey),
+    focus: contentT(locale)(d.focusKey),
     type: d.type,
     color: d.color,
   }))
@@ -924,7 +924,7 @@ export function useProgramEditor() {
       // porque este hook lo comparte web con móvil y antes decía «Fase N» en
       // español pasara lo que pasara.
       const newPhase: EditorPhase = {
-        name: i18n.getFixedT(getLanguagePolicy() ? editorLocale.current : i18n.language)('programEditor.phaseNumbered', { n: s.phases.length + 1 }),
+        name: contentT(getLanguagePolicy() ? editorLocale.current : i18n.language)('programEditor.phaseNumbered', { n: s.phases.length + 1 }),
         weeks: '', color, bgColor,
       }
       const newPhases = [...s.phases, newPhase]

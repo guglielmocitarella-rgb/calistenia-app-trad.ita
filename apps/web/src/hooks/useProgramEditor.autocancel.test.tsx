@@ -35,6 +35,8 @@ vi.mock('@calistenia/core/lib/pocketbase', () => ({
 // lanza — lo que taparía el fallo real con una excepción distinta.
 const reportError = vi.fn()
 vi.mock('@calistenia/core/platform', () => ({
+  // Web no instala la política de idiomas exclusiva de Android.
+  getLanguagePolicy: () => undefined,
   // #636 §5: `saveProgram` emite `program_editor_saved` desde core, así que el
   // facade de analytics tiene que existir o el guardado revienta en el test.
   getPlatform: () => ({ reportError, analytics: { track: vi.fn(), identify: vi.fn(), clear: vi.fn() } }),
