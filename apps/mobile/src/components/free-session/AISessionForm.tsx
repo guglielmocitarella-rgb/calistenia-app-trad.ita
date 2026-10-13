@@ -1,3 +1,4 @@
+import { useTrainingLabels } from '@/lib/use-training-labels'
 /** Formulario de configuración para el coach IA. Prellenado desde el perfil del
  *  usuario + nutrition_goals (igual que la web `SessionForm.tsx`). */
 import { useState, useEffect } from 'react'
@@ -46,6 +47,8 @@ const LEVELS = [
   { id: 'avanzado', label: 'Avanzado' },
 ]
 
+const GOAL_KEYS: Record<Goal, string> = {"fuerza": "Strength", "resistencia": "Endurance", "movilidad": "Mobility", "yoga": "Yoga", "circuito": "Circuit", "mixto": "Mixed"}
+
 const TIMES = [15, 20, 30, 45, 60]
 
 export interface UserContext {
@@ -74,6 +77,7 @@ function FieldLabel({ children }: { children: string }) {
 }
 
 export function AISessionForm({ onSubmit, isLoading }: Props) {
+  const { label } = useTrainingLabels()
   const user = useAuthUser()
 
   const [age, setAge] = useState('')
@@ -148,12 +152,12 @@ export function AISessionForm({ onSubmit, isLoading }: Props) {
     >
       {/* Datos físicos */}
       <View>
-        <FieldLabel>Datos físicos</FieldLabel>
+        <FieldLabel>{label('Datos físicos')}</FieldLabel>
         <View className="flex-row flex-wrap gap-2">
           <Input
             value={age}
             onChangeText={setAge}
-            placeholder="Edad"
+            placeholder={label('Edad', 'onboarding.age')}
             placeholderTextColor={COLORS.placeholder}
             keyboardType="number-pad"
             className="h-11 flex-1 rounded-xl"
@@ -161,7 +165,7 @@ export function AISessionForm({ onSubmit, isLoading }: Props) {
           <Input
             value={weight}
             onChangeText={setWeight}
-            placeholder="Peso (kg)"
+            placeholder={label('Peso (kg)', 'onboarding.weight')}
             placeholderTextColor={COLORS.placeholder}
             keyboardType="number-pad"
             className="h-11 flex-1 rounded-xl"
@@ -169,61 +173,61 @@ export function AISessionForm({ onSubmit, isLoading }: Props) {
           <Input
             value={height}
             onChangeText={setHeight}
-            placeholder="Altura (cm)"
+            placeholder={label('Altura (cm)', 'onboarding.height')}
             placeholderTextColor={COLORS.placeholder}
             keyboardType="number-pad"
             className="h-11 flex-1 rounded-xl"
           />
         </View>
         <View className="mt-2 flex-row gap-2">
-          <Chip label="Masculino" active={sex === 'male'} onPress={() => setSex(sex === 'male' ? '' : 'male')} className="flex-1 items-center" />
-          <Chip label="Femenino" active={sex === 'female'} onPress={() => setSex(sex === 'female' ? '' : 'female')} className="flex-1 items-center" />
+          <Chip label={label('Masculino', 'onboarding.male')} active={sex === 'male'} onPress={() => setSex(sex === 'male' ? '' : 'male')} className="flex-1 items-center" />
+          <Chip label={label('Femenino', 'onboarding.female')} active={sex === 'female'} onPress={() => setSex(sex === 'female' ? '' : 'female')} className="flex-1 items-center" />
         </View>
       </View>
 
       {/* Nivel */}
       <View>
-        <FieldLabel>Nivel</FieldLabel>
+        <FieldLabel>{label('Nivel', 'onboarding.level')}</FieldLabel>
         <View className="flex-row gap-1.5">
           {LEVELS.map((l) => (
-            <Chip key={l.id} label={l.label} active={level === l.id} onPress={() => setLevel(l.id)} className="flex-1 items-center" />
+            <Chip key={l.id} label={label(l.label, `difficulty.${l.id === 'principiante' ? 'beginner' : l.id === 'intermedio' ? 'intermediate' : 'advanced'}`)} active={level === l.id} onPress={() => setLevel(l.id)} className="flex-1 items-center" />
           ))}
         </View>
       </View>
 
       {/* Objetivo */}
       <View>
-        <FieldLabel>Objetivo</FieldLabel>
+        <FieldLabel>{label('Objetivo', 'programEditor.goalLabel')}</FieldLabel>
         <View className="flex-row flex-wrap gap-1.5">
           {GOALS.map((g) => (
-            <Chip key={g.id} label={g.label} active={goal === g.id} onPress={() => setGoal(g.id)} />
+            <Chip key={g.id} label={label(g.label, `freeSession.goal${GOAL_KEYS[g.id]}`)} active={goal === g.id} onPress={() => setGoal(g.id)} />
           ))}
         </View>
       </View>
 
       {/* Equipamiento */}
       <View>
-        <FieldLabel>Equipamiento</FieldLabel>
+        <FieldLabel>{label('Equipamiento', 'programEditor.equipmentLabel')}</FieldLabel>
         <View className="flex-row flex-wrap gap-1.5">
           {EQUIPMENT_OPTIONS.map((eq) => (
-            <Chip key={eq.id} label={eq.label} active={equipment.includes(eq.id)} onPress={() => toggleEquipment(eq.id)} />
+            <Chip key={eq.id} label={label(eq.label, `equipment.${eq.id}`)} active={equipment.includes(eq.id)} onPress={() => toggleEquipment(eq.id)} />
           ))}
         </View>
       </View>
 
       {/* Ubicación */}
       <View>
-        <FieldLabel>Ubicación</FieldLabel>
+        <FieldLabel>{label('Ubicación')}</FieldLabel>
         <View className="flex-row gap-1.5">
           {LOCATIONS.map((loc) => (
-            <Chip key={loc.id} label={loc.label} active={location === loc.id} onPress={() => setLocation(loc.id)} className="flex-1 items-center" />
+            <Chip key={loc.id} label={label(loc.label, loc.id === 'casa' ? 'freeSession.locationHome' : loc.id === 'parque' ? 'freeSession.locationPark' : 'freeSession.locationGym')} active={location === loc.id} onPress={() => setLocation(loc.id)} className="flex-1 items-center" />
           ))}
         </View>
       </View>
 
       {/* Tiempo */}
       <View>
-        <FieldLabel>Tiempo disponible</FieldLabel>
+        <FieldLabel>{label('Tiempo disponible')}</FieldLabel>
         <View className="flex-row gap-1.5">
           {TIMES.map((t) => (
             <Chip key={t} label={`${t} min`} active={availableTime === t} onPress={() => setAvailableTime(t)} className="flex-1 items-center" />
@@ -234,7 +238,7 @@ export function AISessionForm({ onSubmit, isLoading }: Props) {
       {/* CTA */}
       <Button onPress={handleSubmit} disabled={isLoading} className="mt-1 w-full">
         <Text className="font-bebas text-lg tracking-wide">
-          {isLoading ? 'Generando…' : 'Generar sesión'}
+          {label(isLoading ? 'Generando…' : 'Generar sesión')}
         </Text>
       </Button>
     </ScrollView>

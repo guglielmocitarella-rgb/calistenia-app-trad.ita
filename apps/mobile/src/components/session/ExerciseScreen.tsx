@@ -1,3 +1,4 @@
+import { useTrainingLabels } from '@/lib/use-training-labels'
 import { memo, useState } from 'react'
 import { View, ScrollView, Pressable, Linking } from 'react-native'
 import { useTranslation } from 'react-i18next'
@@ -25,6 +26,7 @@ interface ExerciseScreenProps {
 
 const ExerciseScreen = memo(function ExerciseScreen({ step, onLogged, logs = [] }: ExerciseScreenProps) {
   const { t } = useTranslation()
+  const { repsLabel, label } = useTrainingLabels()
   const [editOpen, setEditOpen] = useState(false)
   const [customReps, setCustomReps] = useState('')
   const [customNote, setCustomNote] = useState('')
@@ -91,7 +93,7 @@ const ExerciseScreen = memo(function ExerciseScreen({ step, onLogged, logs = [] 
       <View className="mb-2">
         <Text className="font-bebas text-[40px] leading-none tracking-[2px] text-foreground">{exercise.name}</Text>
         <View className="mt-2 flex-row flex-wrap items-center gap-x-3 gap-y-1">
-          <Text className="font-mono text-[13px] tracking-wide text-lime">{exercise.reps}</Text>
+          <Text className="font-mono text-[13px] tracking-wide text-lime">{repsLabel(exercise.reps)}</Text>
           <Text className="font-mono text-[11px] text-muted-foreground">· {t('common.rest')} {exercise.rest}s</Text>
           <Text className="font-mono text-[10px] tracking-wide text-muted-foreground">{exercise.muscles}</Text>
         </View>
@@ -283,7 +285,7 @@ const ExerciseScreen = memo(function ExerciseScreen({ step, onLogged, logs = [] 
               <Input
                 value={customReps}
                 onChangeText={setCustomReps}
-                placeholder={`Reps (${exercise.reps})`}
+                placeholder={label(`Reps (${exercise.reps})`, 'exercise.repsPlaceholder', { reps: repsLabel(exercise.reps) })}
                 className="h-10 flex-1 text-xs"
                 maxLength={20}
               />

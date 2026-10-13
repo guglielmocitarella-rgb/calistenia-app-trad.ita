@@ -1,3 +1,4 @@
+import { trainingSuggestionMessage } from '@/lib/training-ui-labels'
 /** Coach IA de sesión libre. La lógica de chat vive en `useFreeSessionChat`;
  *  este componente solo renderiza usando los primitivos ai-elements. */
 import {
@@ -29,7 +30,7 @@ import {
 import { useFreeSessionChat } from '@/lib/use-free-session-chat'
 import { useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ActivityIndicator, View } from 'react-native'
+import { ActivityIndicator, View, Platform } from 'react-native'
 import { Search } from 'lucide-react-native'
 import { AISessionForm } from './AISessionForm'
 import { AISessionPreview } from './AISessionPreview'
@@ -89,7 +90,7 @@ function StreamingLoader({ messages }: { messages: FreeSessionUIMessage[] }) {
 // ── Main ─────────────────────────────────────────────────────────────────────
 
 export function AISessionTab() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [input, setInput] = useState('')
 
   const {
@@ -204,7 +205,7 @@ export function AISessionTab() {
         {!isStreaming && (
           <Suggestions contentClassName="px-0">
             {SUGGESTION_KEYS.map((key) => (
-              <Suggestion key={key} suggestion={t(key)} onPress={send} />
+              <Suggestion key={key} suggestion={t(key)} onPress={() => send(trainingSuggestionMessage(key, i18n.language, Platform.OS, i18n))} />
             ))}
           </Suggestions>
         )}

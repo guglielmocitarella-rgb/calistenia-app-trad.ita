@@ -1,3 +1,4 @@
+import { useTrainingLabels } from '@/lib/use-training-labels'
 import { useEffect, useState } from 'react'
 import { View, ScrollView, Pressable, Linking } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
@@ -21,6 +22,7 @@ import { CANONICAL_ANALYTICS_EVENTS, trackCanonicalEvent } from '@calistenia/cor
 
 export default function ExerciseDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>()
+  const { categoryLabel, repsLabel } = useTrainingLabels()
   const { t, i18n } = useTranslation()
   const router = useRouter()
   const locale = i18n.language
@@ -137,14 +139,14 @@ export default function ExerciseDetailScreen() {
                 <Text className="font-mono text-[11px] tracking-wide text-muted-foreground">{localize(ex.muscles, locale)}</Text>
 
                 <View className="flex-row flex-wrap gap-2">
-                  <Chip label={ex.category.replace(/_/g, ' ')} />
+                  <Chip label={categoryLabel(ex.category)} />
                   {ex.difficulty && <Chip label={t(`difficulty.${ex.difficulty}`)} />}
                   {ex.isTimer && ex.timerSeconds ? <Chip label={`${ex.timerSeconds}s`} /> : null}
                 </View>
 
                 <View className="flex-row gap-4 rounded-lg bg-muted/40 px-4 py-3">
                   <Stat label={t('common.sets')} value={String(ex.sets)} />
-                  <Stat label={t('common.reps')} value={ex.reps} />
+                  <Stat label={t('common.reps')} value={repsLabel(ex.reps)} />
                   <Stat label={t('common.rest')} value={`${ex.rest}s`} />
                 </View>
               </CardContent>

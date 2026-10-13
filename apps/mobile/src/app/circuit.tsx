@@ -1,3 +1,4 @@
+import { useTrainingLabels } from '@/lib/use-training-labels'
 /**
  * Runner de circuito a pantalla completa — port nativo del CircuitView web
  * (apps/web/src/components/circuit/CircuitView.tsx). Ruta apilada de Expo Router.
@@ -71,6 +72,7 @@ const ElapsedClock = memo(function ElapsedClock({
 
 export default function CircuitScreen() {
   const { t, i18n } = useTranslation()
+  const { repsLabel } = useTrainingLabels()
   const l = useLocalize()
   const router = useRouter()
   useKeepAwake()
@@ -359,7 +361,7 @@ export default function CircuitScreen() {
                 {l(currentExercise.name)}
               </Text>
               {currentExercise.reps && (
-                <Text className="mt-1 font-mono text-lg text-lime">{localizeReps(currentExercise.reps, i18n.language)}</Text>
+                <Text className="mt-1 font-mono text-lg text-lime">{repsLabel(currentExercise.reps, localizeReps(currentExercise.reps, i18n.language))}</Text>
               )}
             </View>
 

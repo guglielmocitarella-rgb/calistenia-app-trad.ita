@@ -1,3 +1,4 @@
+import { useTrainingLabels } from '@/lib/use-training-labels'
 import { contentLanguage } from '@calistenia/core/lib/content-language'
 import { catalogToEditorExercise } from '@/lib/editor-exercise'
 /**
@@ -37,6 +38,7 @@ interface ExercisePickerSheetProps {
 }
 
 export function ExercisePickerSheet({ visible, onClose, onAdd, contentLocale }: ExercisePickerSheetProps) {
+  const { categoryLabel, repsLabel } = useTrainingLabels()
   const { t } = useTranslation()
   const l = useLocalize()
   const { exercises: catalog } = useCatalogExerciseList()
@@ -83,7 +85,7 @@ export function ExercisePickerSheet({ visible, onClose, onAdd, contentLocale }: 
             {l(ex.name)}
           </Text>
           <Text className="mt-0.5 font-mono text-[10px] uppercase tracking-wide text-muted-foreground" numberOfLines={1}>
-            {String(ex.sets)}×{ex.reps} · {l(ex.muscles)}
+            {String(ex.sets)}×{repsLabel(ex.reps)} · {l(ex.muscles)}
           </Text>
         </View>
         <View
@@ -96,7 +98,7 @@ export function ExercisePickerSheet({ visible, onClose, onAdd, contentLocale }: 
         </View>
       </Pressable>
     )
-  }, [addedIds, handleAdd, l])
+  }, [addedIds, handleAdd, l, repsLabel])
 
   return (
     <Modal visible={visible} animationType="slide" onRequestClose={handleClose} statusBarTranslucent>
@@ -154,7 +156,7 @@ export function ExercisePickerSheet({ visible, onClose, onAdd, contentLocale }: 
                   )}
                 >
                   <Text className={cn('font-mono text-[10px] uppercase tracking-wide', active ? 'text-lime' : 'text-muted-foreground')}>
-                    {cat === 'all' ? t('exerciseLibrary.allMuscles') : cat.replace(/_/g, ' ')}
+                    {cat === 'all' ? t('exerciseLibrary.allMuscles') : categoryLabel(cat)}
                   </Text>
                 </Pressable>
               )

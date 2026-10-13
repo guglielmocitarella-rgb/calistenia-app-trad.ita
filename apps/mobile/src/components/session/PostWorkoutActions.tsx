@@ -1,3 +1,4 @@
+import { useTrainingLabels } from '@/lib/use-training-labels'
 // Panel de acciones post-entreno (#347). Paridad con
 // apps/web/src/components/PostWorkoutActions.tsx: vive dentro de la pantalla de
 // celebración, debajo del resultado, y concentra el bucle de crecimiento —
@@ -58,6 +59,7 @@ export function PostWorkoutActions({
   onNavigateAway,
 }: PostWorkoutActionsProps) {
   const { t } = useTranslation()
+  const { label } = useTrainingLabels()
   const reduced = useReducedMotion()
   // Solo para esta finalización: no se persiste.
   const [dismissed, setDismissed] = useState(false)
@@ -213,7 +215,7 @@ export function PostWorkoutActions({
                 >
                   <Share2 size={16} color={LIME_FG} />
                   <Text className="font-bebas text-xl tracking-[2px] text-lime-foreground">
-                    {sharing ? 'GENERANDO…' : t('postWorkout.share')}
+                    {sharing ? label('GENERANDO…') : t('postWorkout.share')}
                   </Text>
                 </Button>
               )

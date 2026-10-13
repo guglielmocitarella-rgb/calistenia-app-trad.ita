@@ -9,7 +9,8 @@ import { contentLanguage } from '@calistenia/core/lib/content-language'
  * la analítica (#854) delante.
  */
 import { useCallback, useState } from 'react'
-import { View } from 'react-native'
+import { View, Platform } from 'react-native'
+import { trainingRepsLabel } from '@/lib/training-ui-labels'
 import { useRouter, useFocusEffect } from 'expo-router'
 import { useTranslation } from 'react-i18next'
 
@@ -73,7 +74,7 @@ function exerciseRows(exercises: readonly Exercise[], lang: string): TodayRow[] 
   return exercises.slice(0, MAX_ROWS).map((ex, i) => ({
     key: `${ex.id}_${i}`,
     name: ex.name,
-    detail: `${ex.sets} × ${localizeReps(ex.reps, lang)}`,
+    detail: `${ex.sets} × ${trainingRepsLabel(ex.reps, localizeReps(ex.reps, lang), lang, Platform.OS)}`,
   }))
 }
 
@@ -161,7 +162,7 @@ function TrainingToday({ view, day, chosen, deload, actions, onChangeDay, onBack
     rows = (circuit?.exercises ?? []).slice(0, MAX_ROWS).map((ex, i) => ({
       key: `${ex.exerciseId}_${i}`,
       name: l(ex.name),
-      detail: ex.reps ? localizeReps(ex.reps, i18n.language) : undefined,
+      detail: ex.reps ? trainingRepsLabel(ex.reps, localizeReps(ex.reps, i18n.language), i18n.language, Platform.OS) : undefined,
     }))
     primary = t('home.action.startCircuit')
   } else {

@@ -1,3 +1,4 @@
+import { useTrainingLabels } from '@/lib/use-training-labels'
 /**
  * Descanso de la sesión de fuerza.
  *
@@ -48,6 +49,7 @@ export function RestScreen({
   onAdjust,
 }: RestScreenProps) {
   const { t } = useTranslation()
+  const { repsLabel } = useTrainingLabels()
   const initialSeconds = savedRest || defaultSeconds
 
   // La sesión es dueña de su ventana de descanso; `useCountdown` solo la lee.
@@ -166,7 +168,7 @@ export function RestScreen({
               {nextStep.exercise.name}
             </Text>
             <Text className="font-mono text-xs text-lime">
-              {nextStep.exercise.reps}
+              {repsLabel(nextStep.exercise.reps)}
               <Text className="font-mono text-[11px] text-muted-foreground">
                 {'  '}· {t('session.set')} {nextStep.setNumber}/{nextStep.totalSets}
               </Text>

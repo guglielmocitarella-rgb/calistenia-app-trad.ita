@@ -1,3 +1,4 @@
+import { useTrainingLabels } from '@/lib/use-training-labels'
 import { memo, useCallback, useEffect, useRef, useState } from 'react'
 import { View, FlatList, Pressable, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
@@ -21,6 +22,7 @@ import { CANONICAL_ANALYTICS_EVENTS, trackCanonicalEvent } from '@calistenia/cor
 const DIFFICULTIES: DifficultyLevel[] = ['beginner', 'intermediate', 'advanced']
 
 export default function LibraryScreen() {
+  const { categoryLabel } = useTrainingLabels()
   const { t, i18n } = useTranslation()
   const router = useRouter()
   const locale = i18n.language
@@ -108,7 +110,7 @@ export default function LibraryScreen() {
               )}
             >
               <Text className={cn('font-mono text-[10px] uppercase tracking-wide', category === cat ? 'text-lime' : 'text-muted-foreground')}>
-                {cat === 'todos' ? t('common.filter') : cat.replace(/_/g, ' ')}
+                {cat === 'todos' ? t('common.filter') : categoryLabel(cat)}
               </Text>
             </Pressable>
           ))}
@@ -214,6 +216,7 @@ export default function LibraryScreen() {
 }
 
 const ExerciseRow = memo(function ExerciseRow({ ex, locale, onPress }: { ex: CatalogExercise; locale: string; onPress: (id: string) => void }) {
+  const { categoryLabel, label } = useTrainingLabels()
   const handlePress = useCallback(() => onPress(ex.id), [onPress, ex.id])
   return (
     <Pressable
@@ -224,8 +227,8 @@ const ExerciseRow = memo(function ExerciseRow({ ex, locale, onPress }: { ex: Cat
         <Text className="font-sans-medium text-foreground" numberOfLines={1}>{localize(ex.name, locale)}</Text>
         <Text className="text-xs text-muted-foreground" numberOfLines={1}>{localize(ex.muscles, locale)}</Text>
         <View className="mt-1 flex-row items-center gap-2">
-          <Text className="font-mono text-[9px] uppercase tracking-wide text-muted-foreground/70">{ex.category.replace(/_/g, ' ')}</Text>
-          {ex.difficulty && <Text className="font-mono text-[9px] capitalize text-muted-foreground/70">· {ex.difficulty}</Text>}
+          <Text className="font-mono text-[9px] uppercase tracking-wide text-muted-foreground/70">{categoryLabel(ex.category)}</Text>
+          {ex.difficulty && <Text className="font-mono text-[9px] capitalize text-muted-foreground/70">· {label(ex.difficulty, `difficulty.${ex.difficulty}`)}</Text>}
         </View>
       </View>
       <ChevronRight size={16} color="hsl(0 0% 55%)" />

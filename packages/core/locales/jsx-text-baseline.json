@@ -3,16 +3,11 @@
     "apps/web/src/pages/LegalPage.tsx": "Política de privacidad y términos. Es texto legal publicado y aceptado en español; traducirlo cambia lo que el usuario acepta, así que no pasa por i18n mientras la app solo tenga versión legal en español."
   },
   "pending": {
-    "apps/mobile/src/app/cardio/[id].tsx": 2,
     "apps/mobile/src/app/friends.tsx": 6,
     "apps/mobile/src/app/health.tsx": 12,
     "apps/mobile/src/app/u/[id].tsx": 8,
-    "apps/mobile/src/components/free-session/AISessionForm.tsx": 4,
-    "apps/mobile/src/components/free-session/AISessionPreview.tsx": 5,
-    "apps/mobile/src/components/free-session/WarmupCooldownPrompt.tsx": 4,
     "apps/mobile/src/components/nutrition/meal-logger-views.tsx": 1,
     "apps/mobile/src/components/nutrition/NutritionGoalSetup.tsx": 1,
-    "apps/mobile/src/components/session/SessionDetailBody.tsx": 1,
     "apps/mobile/src/components/share/NutritionShareButton.tsx": 2,
     "apps/mobile/src/components/share/NutritionShareCard.tsx": 7,
     "apps/mobile/src/components/share/PRCelebration.tsx": 2,

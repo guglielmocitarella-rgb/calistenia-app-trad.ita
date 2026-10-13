@@ -1,3 +1,4 @@
+import { useTrainingLabels } from '@/lib/use-training-labels'
 import { contentLanguage } from '@calistenia/core/lib/content-language'
 /** Tarjeta de la sesión generada por la IA: resuelve los IDs contra el catálogo,
  *  agrupa por fase (warmup → main → cooldown), permite reordenar/quitar/agregar
@@ -38,6 +39,7 @@ interface Props {
 
 export function AISessionPreview({ exercises, onRemove, onReorder, onAdd }: Props) {
   const { t } = useTranslation()
+  const { label, repsLabel } = useTrainingLabels()
   const locale = contentLanguage()
   const startFreeSession = useStartFreeSession()
   const [starting, setStarting] = useState(false)
@@ -67,12 +69,12 @@ export function AISessionPreview({ exercises, onRemove, onReorder, onAdd }: Prop
     <View className="overflow-hidden rounded-xl border border-lime/20 bg-card">
       {/* Header */}
       <View className="flex-row items-center justify-between border-b border-border bg-lime/5 px-4 py-2.5">
-        <Text className="font-mono text-[10px] uppercase tracking-[2px] text-lime">Tu sesión</Text>
+        <Text className="font-mono text-[10px] uppercase tracking-[2px] text-lime">{label('Tu sesión', 'freeSession.yourSession')}</Text>
         <Text className="font-mono text-[10px] text-muted-foreground">
-          {resolved.length} ejercicios
+          {label(`${resolved.length} ejercicios`, 'freeSession.exerciseCount', { count: resolved.length })}
           {resolved.length < exercises.length && (
             <Text className="font-mono text-[10px] text-amber-400">
-              {`  (${exercises.length - resolved.length} no encontrados)`}
+              {`  ${label(`(${exercises.length - resolved.length} no encontrados)`, 'freeSession.aiNotFoundCount', { count: exercises.length - resolved.length })}`}
             </Text>
           )}
         </Text>
@@ -97,7 +99,7 @@ export function AISessionPreview({ exercises, onRemove, onReorder, onAdd }: Prop
                     PHASE_COLOR[phase],
                   )}
                 >
-                  {PHASE_LABEL[phase]}
+                  {label(PHASE_LABEL[phase], `warmupCooldown.sections.${phase}`)}
                 </Text>
               )}
               <View
@@ -120,7 +122,7 @@ export function AISessionPreview({ exercises, onRemove, onReorder, onAdd }: Prop
                       </Text>
                     )}
                     <Text className="font-mono text-[10px] text-muted-foreground">
-                      {ai.sets}×{ai.reps} · {ai.rest}s
+                      {ai.sets}×{repsLabel(ai.reps)} · {ai.rest}s
                     </Text>
                   </View>
                 </View>
@@ -147,7 +149,7 @@ export function AISessionPreview({ exercises, onRemove, onReorder, onAdd }: Prop
             className="flex-row items-center justify-center gap-1.5 py-1 active:opacity-70"
           >
             <Plus size={14} color={COLORS.mutedIcon} />
-            <Text className="font-mono text-[11px] text-muted-foreground">Agregar ejercicio</Text>
+            <Text className="font-mono text-[11px] text-muted-foreground">{label('Agregar ejercicio', 'exercisePicker.addExercise')}</Text>
           </Pressable>
         ) : (
           <View className="gap-2">
@@ -155,7 +157,7 @@ export function AISessionPreview({ exercises, onRemove, onReorder, onAdd }: Prop
               <Input
                 value={query}
                 onChangeText={setQuery}
-                placeholder="Buscar ejercicio…"
+                placeholder={label('Buscar ejercicio…', 'freeSession.searchExercisePlaceholder')}
                 placeholderTextColor={COLORS.placeholder}
                 autoFocus
                 autoCorrect={false}
@@ -216,7 +218,7 @@ export function AISessionPreview({ exercises, onRemove, onReorder, onAdd }: Prop
       {resolved.length > 0 && (
         <View className="border-t border-border p-3">
           <Button onPress={handleStart} disabled={starting} className="w-full">
-            <Text className="font-bebas text-lg tracking-wide">Empezar sesión</Text>
+            <Text className="font-bebas text-lg tracking-wide">{label('Empezar sesión', 'freeSession.startSession')}</Text>
           </Button>
         </View>
       )}

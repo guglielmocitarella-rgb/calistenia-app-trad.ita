@@ -1,4 +1,5 @@
 name: Android TEST APK (standalone, no publication)
+# Rebuild the standalone test APK for phase 4B using the existing push trigger.
 
 on:
   workflow_dispatch:
