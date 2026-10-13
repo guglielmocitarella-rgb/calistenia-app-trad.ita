@@ -1,0 +1,1495 @@
+{
+  "note": "Lexical review index, not proof of data flow; includes local rendering, query keys and persistence. See report for verified contracts.",
+  "sites": [
+    {
+      "file": "apps/mobile/src/app/(tabs)/progress.tsx",
+      "line": 138,
+      "text": "const monthName = new Date().toLocaleDateString(i18n.language, { month: 'long' })"
+    },
+    {
+      "file": "apps/mobile/src/app/_layout.tsx",
+      "line": 258,
+      "text": "// la app (#804). Después de initI18n: necesita `i18n.language`."
+    },
+    {
+      "file": "apps/mobile/src/app/battle-create.tsx",
+      "line": 140,
+      "text": "const lang = i18n.language"
+    },
+    {
+      "file": "apps/mobile/src/app/battle-create.tsx",
+      "line": 230,
+      "text": "toSend = { ...config, exercise_names: battleExerciseNamesFrom(nameSources, lang, index) }"
+    },
+    {
+      "file": "apps/mobile/src/app/calendar.tsx",
+      "line": 127,
+      "text": "? ((cs.circuit_name as Record<string, string>)[i18n.language] || (cs.circuit_name as Record<string, string>).en || (cs.circuit_name as Record<string, string>).es || '')"
+    },
+    {
+      "file": "apps/mobile/src/app/calendar.tsx",
+      "line": 288,
+      "text": "{new Date(selectedDate + 'T12:00:00').toLocaleDateString(i18n.language, { weekday: 'long', day: 'numeric', month: 'long' })}"
+    },
+    {
+      "file": "apps/mobile/src/app/circuit.tsx",
+      "line": 362,
+      "text": "<Text className=\"mt-1 font-mono text-lg text-lime\">{localizeReps(currentExercise.reps, i18n.language)}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/app/exercise/[id].tsx",
+      "line": 26,
+      "text": "const locale = i18n.language"
+    },
+    {
+      "file": "apps/mobile/src/app/exercise/[id].tsx",
+      "line": 45,
+      "text": "|| `https://www.youtube.com/results?search_query=${encodeURIComponent(ex.youtube_query || localize(ex.name, locale))}`"
+    },
+    {
+      "file": "apps/mobile/src/app/exercise/[id].tsx",
+      "line": 57,
+      "text": "const description = ex ? localize(ex.description as TranslatableField, locale) : ''"
+    },
+    {
+      "file": "apps/mobile/src/app/exercise/[id].tsx",
+      "line": 81,
+      "text": "{ex ? localize(ex.name, locale) : ''}"
+    },
+    {
+      "file": "apps/mobile/src/app/exercise/[id].tsx",
+      "line": 92,
+      "text": "onPress={() => setViewer({ uri: media.sequence!, label: localize(ex.name, locale) })}"
+    },
+    {
+      "file": "apps/mobile/src/app/exercise/[id].tsx",
+      "line": 94,
+      "text": "accessibilityLabel={localize(ex.name, locale)}"
+    },
+    {
+      "file": "apps/mobile/src/app/exercise/[id].tsx",
+      "line": 136,
+      "text": "<Text className=\"font-bebas text-3xl leading-none text-foreground\">{localize(ex.name, locale)}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/app/exercise/[id].tsx",
+      "line": 137,
+      "text": "<Text className=\"font-mono text-[11px] tracking-wide text-muted-foreground\">{localize(ex.muscles, locale)}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/app/exercise/[id].tsx",
+      "line": 162,
+      "text": "{localize(ex.note, locale) ? ("
+    },
+    {
+      "file": "apps/mobile/src/app/exercise/[id].tsx",
+      "line": 166,
+      "text": "<Text className=\"font-sans-italic text-sm leading-5 text-muted-foreground\">{localize(ex.note, locale)}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/app/exercise/[id].tsx",
+      "line": 204,
+      "text": "{localize(v.name as TranslatableField, locale)}"
+    },
+    {
+      "file": "apps/mobile/src/app/exercise/[id].tsx",
+      "line": 236,
+      "text": "{localize(v.name as TranslatableField, locale)}"
+    },
+    {
+      "file": "apps/mobile/src/app/exercise/[id].tsx",
+      "line": 243,
+      "text": "{localize(v.muscles as TranslatableField, locale)}"
+    },
+    {
+      "file": "apps/mobile/src/app/free-session.tsx",
+      "line": 40,
+      "text": "const locale = i18n.language || 'es'"
+    },
+    {
+      "file": "apps/mobile/src/app/free-session.tsx",
+      "line": 68,
+      "text": "locale,"
+    },
+    {
+      "file": "apps/mobile/src/app/free-session.tsx",
+      "line": 227,
+      "text": "locale,"
+    },
+    {
+      "file": "apps/mobile/src/app/free-session.tsx",
+      "line": 232,
+      "text": "locale: string"
+    },
+    {
+      "file": "apps/mobile/src/app/free-session.tsx",
+      "line": 291,
+      "text": "locale,"
+    },
+    {
+      "file": "apps/mobile/src/app/free-session.tsx",
+      "line": 306,
+      "text": "locale: string"
+    },
+    {
+      "file": "apps/mobile/src/app/free-session.tsx",
+      "line": 338,
+      "text": "[locale, selectedIds, selectedPositions, onToggle],"
+    },
+    {
+      "file": "apps/mobile/src/app/free-session.tsx",
+      "line": 430,
+      "text": "locale,"
+    },
+    {
+      "file": "apps/mobile/src/app/free-session.tsx",
+      "line": 437,
+      "text": "locale: string"
+    },
+    {
+      "file": "apps/mobile/src/app/free-session.tsx",
+      "line": 457,
+      "text": "[count, locale, onMoveUp, onMoveDown, onRemove],"
+    },
+    {
+      "file": "apps/mobile/src/app/free-session.tsx",
+      "line": 492,
+      "text": "locale,"
+    },
+    {
+      "file": "apps/mobile/src/app/free-session.tsx",
+      "line": 498,
+      "text": "locale: string"
+    },
+    {
+      "file": "apps/mobile/src/app/free-session.tsx",
+      "line": 514,
+      "text": "{localize(ex.name, locale)}"
+    },
+    {
+      "file": "apps/mobile/src/app/free-session.tsx",
+      "line": 517,
+      "text": "{localize(ex.muscles, locale)}"
+    },
+    {
+      "file": "apps/mobile/src/app/free-session.tsx",
+      "line": 538,
+      "text": "locale,"
+    },
+    {
+      "file": "apps/mobile/src/app/free-session.tsx",
+      "line": 546,
+      "text": "locale: string"
+    },
+    {
+      "file": "apps/mobile/src/app/free-session.tsx",
+      "line": 561,
+      "text": "{localize(ex.name, locale)}"
+    },
+    {
+      "file": "apps/mobile/src/app/free-session.tsx",
+      "line": 564,
+      "text": "{localize(ex.muscles, locale)}"
+    },
+    {
+      "file": "apps/mobile/src/app/library.tsx",
+      "line": 26,
+      "text": "const locale = i18n.language"
+    },
+    {
+      "file": "apps/mobile/src/app/library.tsx",
+      "line": 37,
+      "text": "// a `localize()` dos veces por entrada. El hook compartido precalcula el texto"
+    },
+    {
+      "file": "apps/mobile/src/app/library.tsx",
+      "line": 41,
+      "text": "locale,"
+    },
+    {
+      "file": "apps/mobile/src/app/library.tsx",
+      "line": 83,
+      "text": "[locale, openExercise],"
+    },
+    {
+      "file": "apps/mobile/src/app/library.tsx",
+      "line": 216,
+      "text": "const ExerciseRow = memo(function ExerciseRow({ ex, locale, onPress }: { ex: CatalogExercise; locale: string; onPress: (id: string) => void }) {"
+    },
+    {
+      "file": "apps/mobile/src/app/library.tsx",
+      "line": 224,
+      "text": "<Text className=\"font-sans-medium text-foreground\" numberOfLines={1}>{localize(ex.name, locale)}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/app/library.tsx",
+      "line": 225,
+      "text": "<Text className=\"text-xs text-muted-foreground\" numberOfLines={1}>{localize(ex.muscles, locale)}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/app/profile.tsx",
+      "line": 204,
+      "text": "const currentLang = i18n.language.startsWith('en') ? 'en' : 'es'"
+    },
+    {
+      "file": "apps/mobile/src/app/program-day.tsx",
+      "line": 29,
+      "text": "const locale = i18n.language"
+    },
+    {
+      "file": "apps/mobile/src/app/s/[id].tsx",
+      "line": 47,
+      "text": "function formatSessionDate(dateStr: string, locale: string): string {"
+    },
+    {
+      "file": "apps/mobile/src/app/s/[id].tsx",
+      "line": 50,
+      "text": "return d.toLocaleDateString(locale, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })"
+    },
+    {
+      "file": "apps/mobile/src/app/s/[id].tsx",
+      "line": 66,
+      "text": "const locale = i18n.language"
+    },
+    {
+      "file": "apps/mobile/src/app/session-detail.tsx",
+      "line": 33,
+      "text": "function formatSessionDate(dateStr: string, locale: string): string {"
+    },
+    {
+      "file": "apps/mobile/src/app/session-detail.tsx",
+      "line": 36,
+      "text": "return d.toLocaleDateString(locale, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })"
+    },
+    {
+      "file": "apps/mobile/src/app/session-detail.tsx",
+      "line": 55,
+      "text": "const locale = i18n.language"
+    },
+    {
+      "file": "apps/mobile/src/app/session-detail.tsx",
+      "line": 125,
+      "text": "name: localize(ex.name, locale),"
+    },
+    {
+      "file": "apps/mobile/src/app/session-detail.tsx",
+      "line": 138,
+      "text": "exerciseName: localize(ex.name, locale),"
+    },
+    {
+      "file": "apps/mobile/src/components/DiscoverSheet.tsx",
+      "line": 232,
+      "text": "{pickLang(f.title, i18n.language)}"
+    },
+    {
+      "file": "apps/mobile/src/components/DiscoverSheet.tsx",
+      "line": 235,
+      "text": "{pickLang(f.body, i18n.language)}"
+    },
+    {
+      "file": "apps/mobile/src/components/WhatsNewModal.tsx",
+      "line": 138,
+      "text": "lang={i18n.language}"
+    },
+    {
+      "file": "apps/mobile/src/components/WhatsNewModal.tsx",
+      "line": 167,
+      "text": "lang={i18n.language}"
+    },
+    {
+      "file": "apps/mobile/src/components/WhatsNewModal.tsx",
+      "line": 181,
+      "text": "lang,"
+    },
+    {
+      "file": "apps/mobile/src/components/WhatsNewModal.tsx",
+      "line": 190,
+      "text": "lang: string"
+    },
+    {
+      "file": "apps/mobile/src/components/WhatsNewModal.tsx",
+      "line": 450,
+      "text": "function formatDate(iso: string, lang: string): string {"
+    },
+    {
+      "file": "apps/mobile/src/components/WhatsNewModal.tsx",
+      "line": 452,
+      "text": "return new Date(iso + 'T00:00:00').toLocaleDateString(lang.startsWith('en') ? 'en' : 'es', {"
+    },
+    {
+      "file": "apps/mobile/src/components/battle/BattleLive.tsx",
+      "line": 135,
+      "text": "const exerciseName = battleExerciseLabel(config, exercise.exercise_id, i18n.language)"
+    },
+    {
+      "file": "apps/mobile/src/components/battle/BattleLobby.tsx",
+      "line": 33,
+      "text": "const circuitTitle = battleTitle(battle.config, i18n.language) || t('battle.title')"
+    },
+    {
+      "file": "apps/mobile/src/components/battle/BattleLobby.tsx",
+      "line": 120,
+      "text": "{battleExerciseLabel(battle.config, exercise.exercise_id, i18n.language)}"
+    },
+    {
+      "file": "apps/mobile/src/components/battle/BattleResults.tsx",
+      "line": 78,
+      "text": "const circuitName = battleTitle(snapshot?.battle.config, i18n.language) || t('battle.title')"
+    },
+    {
+      "file": "apps/mobile/src/components/battle/BattleStandingsList.tsx",
+      "line": 46,
+      "text": "language: string,"
+    },
+    {
+      "file": "apps/mobile/src/components/battle/BattleStandingsList.tsx",
+      "line": 170,
+      "text": "activity: activityLine(entry, config, now, i18n.language, t),"
+    },
+    {
+      "file": "apps/mobile/src/components/battle/BattleStandingsList.tsx",
+      "line": 172,
+      "text": "[standings, config, now, i18n.language, t],"
+    },
+    {
+      "file": "apps/mobile/src/components/cardio/CardioSessionRow.tsx",
+      "line": 65,
+      "text": "{date.toLocaleDateString(i18n.language, { weekday: 'short', day: 'numeric', month: 'short' })}"
+    },
+    {
+      "file": "apps/mobile/src/components/cardio/CardioSessionRow.tsx",
+      "line": 67,
+      "text": "{date.toLocaleTimeString(i18n.language, { hour: '2-digit', minute: '2-digit' })}"
+    },
+    {
+      "file": "apps/mobile/src/components/cardio/CardioStats.tsx",
+      "line": 68,
+      "text": "{lastSession ? <LastSessionCard session={lastSession} locale={i18n.language} t={t} /> : null}"
+    },
+    {
+      "file": "apps/mobile/src/components/cardio/CardioStats.tsx",
+      "line": 176,
+      "text": "locale,"
+    },
+    {
+      "file": "apps/mobile/src/components/cardio/CardioStats.tsx",
+      "line": 180,
+      "text": "locale: string"
+    },
+    {
+      "file": "apps/mobile/src/components/cardio/CardioStats.tsx",
+      "line": 185,
+      "text": "const dateLabel = new Date(session.started_at).toLocaleDateString(locale, { day: 'numeric', month: 'short' })"
+    },
+    {
+      "file": "apps/mobile/src/components/circuit/CircuitBuilder.tsx",
+      "line": 217,
+      "text": "const locale = i18n.language"
+    },
+    {
+      "file": "apps/mobile/src/components/circuit/CircuitBuilder.tsx",
+      "line": 234,
+      "text": "locale,"
+    },
+    {
+      "file": "apps/mobile/src/components/free-session/AISessionPreview.tsx",
+      "line": 40,
+      "text": "const locale = i18n.language || 'es'"
+    },
+    {
+      "file": "apps/mobile/src/components/free-session/AISessionPreview.tsx",
+      "line": 55,
+      "text": "const searchResults = useExerciseSearch({ query, locale, excludeIds, minLength: 2, limit: 6 })"
+    },
+    {
+      "file": "apps/mobile/src/components/free-session/AISessionPreview.tsx",
+      "line": 84,
+      "text": "const name = cat ? localize(cat.name, locale) : ai.id"
+    },
+    {
+      "file": "apps/mobile/src/components/free-session/AISessionPreview.tsx",
+      "line": 85,
+      "text": "const muscles = cat ? localize(cat.muscles, locale) : ''"
+    },
+    {
+      "file": "apps/mobile/src/components/free-session/AISessionPreview.tsx",
+      "line": 199,
+      "text": "{localize(ex.name, locale)}"
+    },
+    {
+      "file": "apps/mobile/src/components/free-session/AISessionPreview.tsx",
+      "line": 202,
+      "text": "{localize(ex.muscles, locale)}"
+    },
+    {
+      "file": "apps/mobile/src/components/home/HomeHeader.tsx",
+      "line": 28,
+      "text": "const date = new Date().toLocaleDateString(i18n.language, { weekday: 'long', day: 'numeric', month: 'short', timeZone: getTimezone() })"
+    },
+    {
+      "file": "apps/mobile/src/components/home/TodayBlock.tsx",
+      "line": 71,
+      "text": "function exerciseRows(exercises: readonly Exercise[], lang: string): TodayRow[] {"
+    },
+    {
+      "file": "apps/mobile/src/components/home/TodayBlock.tsx",
+      "line": 163,
+      "text": "detail: ex.reps ? localizeReps(ex.reps, i18n.language) : undefined,"
+    },
+    {
+      "file": "apps/mobile/src/components/home/TodayBlock.tsx",
+      "line": 173,
+      "text": "rows = exerciseRows(exercises, i18n.language)"
+    },
+    {
+      "file": "apps/mobile/src/components/home/TodayBlock.tsx",
+      "line": 286,
+      "text": "const workout = buildFirstWorkout(level, i18n.language)"
+    },
+    {
+      "file": "apps/mobile/src/components/home/TodayBlock.tsx",
+      "line": 298,
+      "text": "<TodayRows rows={exerciseRows(workout.exercises, i18n.language)} />"
+    },
+    {
+      "file": "apps/mobile/src/components/home/WeekRow.tsx",
+      "line": 32,
+      "text": "function Cell({ cell, lang }: { cell: WeekCell; lang: string }) {"
+    },
+    {
+      "file": "apps/mobile/src/components/home/WeekRow.tsx",
+      "line": 36,
+      "text": "const letter = new Date(`${cell.day}T12:00:00`).toLocaleDateString(lang, { weekday: 'narrow' }).toUpperCase()"
+    },
+    {
+      "file": "apps/mobile/src/components/home/WeekRow.tsx",
+      "line": 80,
+      "text": "function MissedDaysNote({ week, lang }: { week: WeekSummary; lang: string }) {"
+    },
+    {
+      "file": "apps/mobile/src/components/home/WeekRow.tsx",
+      "line": 84,
+      "text": "const day = new Date(`${note.latest.day}T12:00:00`).toLocaleDateString(lang, { weekday: 'long' })"
+    },
+    {
+      "file": "apps/mobile/src/components/home/WeekRow.tsx",
+      "line": 139,
+      "text": "{week.cells.map(cell => <Cell key={cell.day} cell={cell} lang={i18n.language} />)}"
+    },
+    {
+      "file": "apps/mobile/src/components/home/WeekRow.tsx",
+      "line": 142,
+      "text": "{!firstWeek && <MissedDaysNote week={week} lang={i18n.language} />}"
+    },
+    {
+      "file": "apps/mobile/src/components/nutrition/FastingPanel.tsx",
+      "line": 28,
+      "text": "function dateLabel(iso: string, language: string) {"
+    },
+    {
+      "file": "apps/mobile/src/components/nutrition/FastingPanel.tsx",
+      "line": 29,
+      "text": "return new Date(iso).toLocaleString(language, { timeZone: getTimezone(), month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' })"
+    },
+    {
+      "file": "apps/mobile/src/components/nutrition/FastingPanel.tsx",
+      "line": 209,
+      "text": "<Text className=\"text-xs text-muted-foreground\">{t('fasting.startedAt')}: {dateLabel(active.startedAt, i18n.language)}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/components/nutrition/FastingPanel.tsx",
+      "line": 210,
+      "text": "<Text className=\"text-xs text-muted-foreground\">{t('fasting.targetAt')}: {dateLabel(progress.targetAt, i18n.language)}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/components/nutrition/FastingPanel.tsx",
+      "line": 241,
+      "text": "<View className=\"gap-1\"><Text className=\"text-xs text-muted-foreground\">{t('fasting.weekHours', { hours: summary.weekHours.toLocaleString(i18n.language, { maximumFractionDigits: 1 }) })}</Text><Text className=\"text-xs text-muted-foreground\">{t('fasting.monthHours', { hours: summary.monthHours.toLocaleString(i18n.language, { maximumFractionDigits: 1 }) })}</Text></View>"
+    },
+    {
+      "file": "apps/mobile/src/components/nutrition/FastingPanel.tsx",
+      "line": 253,
+      "text": "<Text className=\"text-xs text-muted-foreground\">{t('fasting.startedAt')}: {dateLabel(session.startedAt, i18n.language)}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/components/nutrition/FastingPanel.tsx",
+      "line": 254,
+      "text": "<Text className=\"text-xs text-muted-foreground\">{t('fasting.endedAt')}: {dateLabel(session.endedAt!, i18n.language)}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/components/nutrition/PantryPlanSection.tsx",
+      "line": 31,
+      "text": "function formatDayLabel(dateStr: string, lang: string): string {"
+    },
+    {
+      "file": "apps/mobile/src/components/nutrition/PantryPlanSection.tsx",
+      "line": 33,
+      "text": "return new Date(`${dateStr}T12:00:00`).toLocaleDateString(lang === 'en' ? 'en-US' : 'es-ES', {"
+    },
+    {
+      "file": "apps/mobile/src/components/nutrition/PantryPlanSection.tsx",
+      "line": 126,
+      "text": "date: formatDayLabel(dayPlan.target_date ?? isoDate(target === 'tomorrow' ? 1 : 0), i18n.language),"
+    },
+    {
+      "file": "apps/mobile/src/components/onboarding/OnboardingFlow.tsx",
+      "line": 73,
+      "text": "const currentLang = i18n.language.startsWith('en') ? 'en' : 'es'"
+    },
+    {
+      "file": "apps/mobile/src/components/onboarding/StepPersonalizing.tsx",
+      "line": 59,
+      "text": "const lang = i18n.language.startsWith('en') ? 'en' : 'es'"
+    },
+    {
+      "file": "apps/mobile/src/components/onboarding/StepPersonalizing.tsx",
+      "line": 66,
+      "text": "const m = months[lang] ?? months['en']!"
+    },
+    {
+      "file": "apps/mobile/src/components/onboarding/StepPersonalizing.tsx",
+      "line": 69,
+      "text": "}, [currentWeightKg, goalWeightKg, pace, i18n.language])"
+    },
+    {
+      "file": "apps/mobile/src/components/session/SessionDetailBody.tsx",
+      "line": 34,
+      "text": "locale: string"
+    },
+    {
+      "file": "apps/mobile/src/components/session/SessionDetailBody.tsx",
+      "line": 49,
+      "text": "locale,"
+    },
+    {
+      "file": "apps/mobile/src/components/session/SessionDetailBody.tsx",
+      "line": 203,
+      "text": "locale,"
+    },
+    {
+      "file": "apps/mobile/src/components/session/SessionDetailBody.tsx",
+      "line": 209,
+      "text": "locale: string"
+    },
+    {
+      "file": "apps/mobile/src/components/session/SessionDetailBody.tsx",
+      "line": 226,
+      "text": "{localize(exercise.name, locale)}"
+    },
+    {
+      "file": "apps/mobile/src/components/session/SessionDetailBody.tsx",
+      "line": 237,
+      "text": "{localize(exercise.muscles, locale)}"
+    },
+    {
+      "file": "apps/mobile/src/components/share/StreakShareCard.tsx",
+      "line": 43,
+      "text": "function formatDate(dateStr: string | undefined, lang: string): string {"
+    },
+    {
+      "file": "apps/mobile/src/components/share/StreakShareCard.tsx",
+      "line": 47,
+      "text": "return d.toLocaleDateString(lang, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })"
+    },
+    {
+      "file": "apps/mobile/src/components/share/StreakShareCard.tsx",
+      "line": 86,
+      "text": "{formatDate(date, i18n.language)}"
+    },
+    {
+      "file": "apps/mobile/src/contexts/WorkoutContext.tsx",
+      "line": 178,
+      "text": "lang: i18n.language,"
+    },
+    {
+      "file": "apps/mobile/src/contexts/WorkoutContext.tsx",
+      "line": 194,
+      "text": "}, [programsReady, activeProgram, settings, programProgress.currentPhase, weekDays, progress, weeklyStreak.current, i18n.language]) // eslint-disable-line react-hooks/exhaustive-deps"
+    },
+    {
+      "file": "apps/mobile/src/lib/ai-exercise-to-exercise.ts",
+      "line": 32,
+      "text": "export function aiExerciseToExercise(ai: AIExercise, locale: string): Exercise | null {"
+    },
+    {
+      "file": "apps/mobile/src/lib/cardio-widget-snapshot.ts",
+      "line": 15,
+      "text": "lang: 'es' | 'en'"
+    },
+    {
+      "file": "apps/mobile/src/lib/catalog-to-exercise.ts",
+      "line": 5,
+      "text": "export function catalogToExercise(c: CatalogExercise, locale: string): Exercise {"
+    },
+    {
+      "file": "apps/mobile/src/lib/catalog-to-exercise.ts",
+      "line": 8,
+      "text": "name: localize(c.name, locale),"
+    },
+    {
+      "file": "apps/mobile/src/lib/catalog-to-exercise.ts",
+      "line": 12,
+      "text": "muscles: localize(c.muscles, locale),"
+    },
+    {
+      "file": "apps/mobile/src/lib/catalog-to-exercise.ts",
+      "line": 13,
+      "text": "note: localize(c.note, locale),"
+    },
+    {
+      "file": "apps/mobile/src/lib/nutrition-widget-snapshot.ts",
+      "line": 26,
+      "text": "lang: 'es' | 'en'"
+    },
+    {
+      "file": "apps/mobile/src/lib/share.ts",
+      "line": 16,
+      "text": "return localizedWebUrl(`/u/${userId}`, i18n.language)"
+    },
+    {
+      "file": "apps/mobile/src/lib/share.ts",
+      "line": 20,
+      "text": "return localizedWebUrl(`/session/${date}/${workoutKey}`, i18n.language)"
+    },
+    {
+      "file": "apps/mobile/src/lib/share.ts",
+      "line": 24,
+      "text": "return localizedWebUrl(`/race/${id}`, i18n.language)"
+    },
+    {
+      "file": "apps/mobile/src/lib/share.ts",
+      "line": 28,
+      "text": "return localizedWebUrl(`/invite/${code}`, i18n.language)"
+    },
+    {
+      "file": "apps/mobile/src/lib/share.ts",
+      "line": 33,
+      "text": "return localizedWebUrl(`/cardio/session/${id}`, i18n.language)"
+    },
+    {
+      "file": "apps/mobile/src/lib/share.ts",
+      "line": 49,
+      "text": "return sharedProgramUrl(programId, i18n.language)"
+    },
+    {
+      "file": "apps/mobile/src/lib/share.ts",
+      "line": 252,
+      "text": "return { message, url: localizedWebUrl('/', i18n.language) }"
+    },
+    {
+      "file": "apps/mobile/src/lib/share.ts",
+      "line": 271,
+      "text": "const url = sessionId ? cardioUrl(sessionId) : localizedWebUrl('/', i18n.language)"
+    },
+    {
+      "file": "apps/mobile/src/lib/share.ts",
+      "line": 344,
+      "text": "const url = referralCode ? inviteUrl(referralCode) : localizedWebUrl('/', i18n.language)"
+    },
+    {
+      "file": "apps/mobile/src/lib/share.ts",
+      "line": 362,
+      "text": "return localizedWebUrl(`/nutrition?date=${date}`, i18n.language)"
+    },
+    {
+      "file": "apps/mobile/src/lib/start-first-workout.ts",
+      "line": 27,
+      "text": "const workout = buildFirstWorkout(lv, i18n.language)"
+    },
+    {
+      "file": "apps/mobile/src/lib/start-first-workout.ts",
+      "line": 33,
+      "text": "[router, startSession, i18n.language],"
+    },
+    {
+      "file": "apps/mobile/src/lib/sync-cardio-widget.ts",
+      "line": 60,
+      "text": "lang: i18n.language?.startsWith('en') ? 'en' : 'es',"
+    },
+    {
+      "file": "apps/mobile/src/lib/sync-nutrition-widget.ts",
+      "line": 54,
+      "text": "lang: i18n.language?.startsWith('en') ? 'en' : 'es',"
+    },
+    {
+      "file": "apps/mobile/src/lib/sync-widget-snapshot.ts",
+      "line": 10,
+      "text": "lang: string"
+    },
+    {
+      "file": "apps/mobile/src/lib/sync-widget-snapshot.ts",
+      "line": 38,
+      "text": "lang: args.lang.startsWith('en') ? 'en' : 'es',"
+    },
+    {
+      "file": "apps/mobile/src/lib/use-exercise-search.ts",
+      "line": 8,
+      "text": "* a `localize()` en cada una, y el de la pestaña lo hacía **en cada tecla**, sin"
+    },
+    {
+      "file": "apps/mobile/src/lib/use-exercise-search.ts",
+      "line": 9,
+      "text": "* debounce: dos `localize()` × 1.578 entradas por pulsación."
+    },
+    {
+      "file": "apps/mobile/src/lib/use-exercise-search.ts",
+      "line": 28,
+      "text": "locale: string"
+    },
+    {
+      "file": "apps/mobile/src/lib/use-exercise-search.ts",
+      "line": 62,
+      "text": "function searchableCatalog(locale: string): SearchableEntry[] {"
+    },
+    {
+      "file": "apps/mobile/src/lib/use-exercise-search.ts",
+      "line": 66,
+      "text": "const name = localize(ex.name, locale)"
+    },
+    {
+      "file": "apps/mobile/src/lib/use-exercise-search.ts",
+      "line": 67,
+      "text": "const note = localize(ex.note, locale)"
+    },
+    {
+      "file": "apps/mobile/src/lib/use-exercise-search.ts",
+      "line": 71,
+      "text": "muscles: localize(ex.muscles, locale).toLowerCase(),"
+    },
+    {
+      "file": "apps/mobile/src/lib/use-exercise-search.ts",
+      "line": 75,
+      "text": "_byLocale.set(locale, built)"
+    },
+    {
+      "file": "apps/mobile/src/lib/use-exercise-search.ts",
+      "line": 92,
+      "text": "locale,"
+    },
+    {
+      "file": "apps/mobile/src/lib/use-exercise-search.ts",
+      "line": 134,
+      "text": "locale,"
+    },
+    {
+      "file": "apps/mobile/src/lib/widget-snapshot.ts",
+      "line": 37,
+      "text": "lang: 'es' | 'en'"
+    },
+    {
+      "file": "apps/mobile/src/lib/widget-snapshot.ts",
+      "line": 45,
+      "text": "lang: 'es' | 'en'"
+    },
+    {
+      "file": "apps/mobile/src/lib/widget-snapshot.ts",
+      "line": 92,
+      "text": "lang: args.lang,"
+    },
+    {
+      "file": "apps/mobile/src/widgets/CardioWidget.tsx",
+      "line": 38,
+      "text": "const tr = STRINGS[snapshot?.lang ?? 'es']"
+    },
+    {
+      "file": "apps/mobile/src/widgets/MealStreakWidget.tsx",
+      "line": 31,
+      "text": "const tr = STRINGS[snapshot?.lang ?? 'es']"
+    },
+    {
+      "file": "apps/mobile/src/widgets/NextSessionWidget.tsx",
+      "line": 31,
+      "text": "const tr = STRINGS[snapshot?.lang ?? 'es']"
+    },
+    {
+      "file": "apps/mobile/src/widgets/NutritionRingWidget.tsx",
+      "line": 35,
+      "text": "const lang = snapshot?.lang ?? 'es'"
+    },
+    {
+      "file": "apps/mobile/src/widgets/NutritionWidget.tsx",
+      "line": 99,
+      "text": "const lang = snapshot?.lang ?? 'es'"
+    },
+    {
+      "file": "apps/mobile/src/widgets/StreakWidget.tsx",
+      "line": 26,
+      "text": "const tr = STRINGS[snapshot?.lang ?? 'es']"
+    },
+    {
+      "file": "apps/mobile/src/widgets/TodayWidget.tsx",
+      "line": 20,
+      "text": "const tr = STRINGS[snapshot?.lang ?? 'es']"
+    },
+    {
+      "file": "apps/mobile/src/widgets/TodayWidget.tsx",
+      "line": 31,
+      "text": "const tr = STRINGS[snapshot?.lang ?? 'es']"
+    },
+    {
+      "file": "apps/mobile/src/widgets/WaterWidget.tsx",
+      "line": 48,
+      "text": "const tr = STRINGS[snapshot?.lang ?? 'es']"
+    },
+    {
+      "file": "packages/core/lib/i18n-db.ts",
+      "line": 15,
+      "text": "* Fallback chain: current locale → 'es' → first available → empty string."
+    },
+    {
+      "file": "packages/core/lib/i18n-db.ts",
+      "line": 17,
+      "text": "export function localize("
+    },
+    {
+      "file": "packages/core/lib/i18n-db.ts",
+      "line": 19,
+      "text": "locale: string,"
+    },
+    {
+      "file": "packages/core/lib/i18n-db.ts",
+      "line": 23,
+      "text": "return field[locale] ?? field['es'] ?? Object.values(field)[0] ?? ''"
+    },
+    {
+      "file": "packages/core/lib/i18n-db.ts",
+      "line": 30,
+      "text": "export function toTranslatable(value: string, locale: string): Record<string, string> {"
+    },
+    {
+      "file": "packages/core/lib/i18n-db.ts",
+      "line": 42,
+      "text": "* `json`, así que `localize()` tampoco lo recuperaba después. Aquí cada locale"
+    },
+    {
+      "file": "packages/core/lib/i18n-db.ts",
+      "line": 50,
+      "text": "locale: string,"
+    },
+    {
+      "file": "packages/core/lib/i18n-db.ts",
+      "line": 55,
+      "text": "if (entries.length === 0) return toTranslatable(suffixed(localize(field, locale), locale), locale)"
+    },
+    {
+      "file": "packages/core/lib/query-keys.ts",
+      "line": 278,
+      "text": "wgerSearch: (term: string, language: string) =>"
+    },
+    {
+      "file": "packages/core/lib/dateUtils.ts",
+      "line": 26,
+      "text": "dayjs.locale(i18n.language)"
+    },
+    {
+      "file": "packages/core/lib/i18n-safe.ts",
+      "line": 35,
+      "text": "/** Idioma activo con respaldo, para `localize()` y formateadores de Intl. */"
+    },
+    {
+      "file": "packages/core/lib/i18n-safe.ts",
+      "line": 38,
+      "text": "return i18n.language || 'es'"
+    },
+    {
+      "file": "packages/core/lib/i18n-safe.ts",
+      "line": 49,
+      "text": "* i18next se limita a propagar lo detectado a `i18n.language`, y de ahí acaba"
+    },
+    {
+      "file": "packages/core/hooks/useCardioStats.ts",
+      "line": 129,
+      "text": "// `safeLocale` y no `i18n.language` a secas: el detector del navegador puede"
+    },
+    {
+      "file": "packages/core/hooks/useCardioStats.ts",
+      "line": 243,
+      "text": "weekLabel: wStartDay.startOf('day').toDate().toLocaleDateString(locale, { month: 'short', day: 'numeric', timeZone: 'UTC' }),"
+    },
+    {
+      "file": "packages/core/lib/battle.ts",
+      "line": 172,
+      "text": "for (const lang of ['es', 'en'] as const) {"
+    },
+    {
+      "file": "packages/core/lib/language-sync.ts",
+      "line": 82,
+      "text": "if (user?.id) void syncUserLanguage(user.id, user.language, i18n.language)"
+    },
+    {
+      "file": "packages/core/hooks/useLocalize.ts",
+      "line": 15,
+      "text": "const locale = i18n.language"
+    },
+    {
+      "file": "packages/core/hooks/useLocalize.ts",
+      "line": 18,
+      "text": "(field: TranslatableField | undefined | null) => localize(field, locale),"
+    },
+    {
+      "file": "packages/core/data/battle-presets.ts",
+      "line": 193,
+      "text": "const langOf = (language: string): 'es' | 'en' => (language.startsWith('en') ? 'en' : 'es')"
+    },
+    {
+      "file": "packages/core/data/battle-presets.ts",
+      "line": 214,
+      "text": "language: string,"
+    },
+    {
+      "file": "packages/core/data/battle-presets.ts",
+      "line": 220,
+      "text": "const other = lang === 'es' ? 'en' : 'es'"
+    },
+    {
+      "file": "packages/core/data/battle-presets.ts",
+      "line": 232,
+      "text": "language: string,"
+    },
+    {
+      "file": "packages/core/lib/battle-exercise-names.ts",
+      "line": 24,
+      "text": "const es = cap(localize(entry.name, 'es'))"
+    },
+    {
+      "file": "packages/core/lib/battle-exercise-names.ts",
+      "line": 25,
+      "text": "const en = cap(localize(entry.name, 'en'))"
+    },
+    {
+      "file": "packages/core/lib/battle-exercise-names.ts",
+      "line": 37,
+      "text": "language: string,"
+    },
+    {
+      "file": "packages/core/lib/battle-exercise-names.ts",
+      "line": 40,
+      "text": "const lang: 'es' | 'en' = language.startsWith('en') ? 'en' : 'es'"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 57,
+      "text": "* Campos de las colecciones del programa que se guardan como `{ locale: texto }`."
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 221,
+      "text": "* `programs.instructions`, que es un `json` `{ locale: texto }` como"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1128,
+      "text": "const locale = i18n.language"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1132,
+      "text": "name: localize(p.name, locale),"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1154,
+      "text": "days[key].dayName = localize(dc.day_name, locale) || days[key].dayName"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1155,
+      "text": "days[key].focus = localize(dc.day_focus, locale) || days[key].focus"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1190,
+      "text": "days[key].dayName = localize(r.day_name, locale)"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1191,
+      "text": "days[key].focus = localize(r.day_focus, locale)"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1205,
+      "text": "muscles: localize(r.muscles, locale),"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1206,
+      "text": "note: localize(r.note, locale),"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1227,
+      "text": "name: localize(program.name, locale),"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1228,
+      "text": "description: localize(program.description, locale) || '',"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1252,
+      "text": "instructions: localize(program.instructions, locale) || '',"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1290,
+      "text": "const locale = i18n.language"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1294,
+      "text": "name: toTranslatable(state.info.name, locale),"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1295,
+      "text": "description: toTranslatable(state.info.description, locale),"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1302,
+      "text": "// «Cómo seguir este programa» (#618). Viaja como `{ locale: texto }`"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1303,
+      "text": "// igual que `name` y `description`; leerlo sin `localize()` imprimiría"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1305,
+      "text": "instructions: toTranslatable(state.info.instructions, locale),"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1362,
+      "text": "name: toTranslatable(phase.name, locale),"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1396,
+      "text": "day_name: toTranslatable(day.dayName, locale),"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1398,
+      "text": "day_focus: toTranslatable(day.focus, locale),"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1448,
+      "text": "day_name: toTranslatable(day.dayName, locale),"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1449,
+      "text": "day_focus: toTranslatable(day.focus, locale),"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1453,
+      "text": "exercise_name: toTranslatable(ex.name, locale),"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1457,
+      "text": "muscles: toTranslatable(ex.muscles, locale),"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1458,
+      "text": "note: toTranslatable(ex.note, locale),"
+    },
+    {
+      "file": "packages/core/hooks/useProgramEditor.ts",
+      "line": 1503,
+      "text": "const diffOpts = { locale, translatableFields: PROGRAM_TRANSLATABLE_FIELDS }"
+    },
+    {
+      "file": "packages/core/lib/exercise-resolver.ts",
+      "line": 43,
+      "text": "locale: string"
+    },
+    {
+      "file": "packages/core/lib/exercise-resolver.ts",
+      "line": 50,
+      "text": "function fromEntry(entry: CatalogIndexEntry, locale: string): ResolvedExercise {"
+    },
+    {
+      "file": "packages/core/lib/exercise-resolver.ts",
+      "line": 53,
+      "text": "name: localize(entry.name, locale) || entry.id,"
+    },
+    {
+      "file": "packages/core/lib/exercise-resolver.ts",
+      "line": 84,
+      "text": "const probe = localize(rawName, 'es').trim()"
+    },
+    {
+      "file": "packages/core/lib/exercise-resolver.ts",
+      "line": 100,
+      "text": "locale: string,"
+    },
+    {
+      "file": "packages/core/lib/exercise-resolver.ts",
+      "line": 103,
+      "text": "return localize(resolveExerciseNameField(rawName, exerciseId, index), locale) || exerciseId"
+    },
+    {
+      "file": "packages/core/lib/programEditorDiff.ts",
+      "line": 61,
+      "text": "function translatableEquals(existing: unknown, desired: unknown, locale: string): boolean {"
+    },
+    {
+      "file": "packages/core/lib/programEditorDiff.ts",
+      "line": 67,
+      "text": "function readLocale(field: unknown, locale: string): string {"
+    },
+    {
+      "file": "packages/core/lib/programEditorDiff.ts",
+      "line": 121,
+      "text": "locale: string"
+    },
+    {
+      "file": "packages/core/lib/programEditorDiff.ts",
+      "line": 122,
+      "text": "/** Campos que guardan `{ locale: texto }` en vez de un escalar. */"
+    },
+    {
+      "file": "packages/core/lib/challenges.ts",
+      "line": 71,
+      "text": "if (entry) return localize(entry.name, i18n.language)"
+    },
+    {
+      "file": "packages/core/lib/challenges.ts",
+      "line": 75,
+      "text": "if (entry) return i18n.t('challenge.metricTotalOf', { name: localize(entry.name, i18n.language) })"
+    },
+    {
+      "file": "packages/core/lib/localize-reps.ts",
+      "line": 31,
+      "text": "export function localizeReps(reps: string | null | undefined, locale: string | null | undefined): string {"
+    },
+    {
+      "file": "packages/core/lib/localize-reps.ts",
+      "line": 33,
+      "text": "if (!text || !locale || locale.toLowerCase().startsWith('es')) return text"
+    },
+    {
+      "file": "packages/core/lib/app-urls.ts",
+      "line": 49,
+      "text": "const locale = language?.toLowerCase().startsWith('en') ? 'en' : 'es'"
+    },
+    {
+      "file": "packages/core/hooks/useProgramDetail.ts",
+      "line": 66,
+      "text": "const locale = i18n.language"
+    },
+    {
+      "file": "packages/core/hooks/useProgramDetail.ts",
+      "line": 100,
+      "text": "instructions: localize((rec as unknown as ProgramRow).instructions, locale),"
+    },
+    {
+      "file": "packages/core/hooks/useProgramDetail.ts",
+      "line": 151,
+      "text": "async function loadWeekDays(filter: string, locale: string): Promise<ProgramDayRow[]> {"
+    },
+    {
+      "file": "packages/core/lib/program-detail.ts",
+      "line": 76,
+      "text": "export function toProgramMeta(row: ProgramRow, locale: string): ProgramMeta {"
+    },
+    {
+      "file": "packages/core/lib/program-detail.ts",
+      "line": 79,
+      "text": "name: localize(row.name, locale),"
+    },
+    {
+      "file": "packages/core/lib/program-detail.ts",
+      "line": 80,
+      "text": "description: localize(row.description, locale),"
+    },
+    {
+      "file": "packages/core/lib/program-detail.ts",
+      "line": 92,
+      "text": "instructions: localize(row.instructions, locale),"
+    },
+    {
+      "file": "packages/core/lib/program-detail.ts",
+      "line": 98,
+      "text": "? localize(row.expand.forked_from.name, locale) || undefined"
+    },
+    {
+      "file": "packages/core/lib/program-detail.ts",
+      "line": 113,
+      "text": "locale: string,"
+    },
+    {
+      "file": "packages/core/lib/program-detail.ts",
+      "line": 120,
+      "text": "name: localize(r.day_name, locale),"
+    },
+    {
+      "file": "packages/core/lib/program-detail.ts",
+      "line": 121,
+      "text": "focus: localize(r.day_focus, locale),"
+    },
+    {
+      "file": "packages/core/hooks/usePrograms.ts",
+      "line": 46,
+      "text": "const locale = i18n.language"
+    },
+    {
+      "file": "packages/core/hooks/usePrograms.ts",
+      "line": 51,
+      "text": "name:  localize(p.name, locale),"
+    },
+    {
+      "file": "packages/core/hooks/usePrograms.ts",
+      "line": 116,
+      "text": "const locale = i18n.language"
+    },
+    {
+      "file": "packages/core/hooks/usePrograms.ts",
+      "line": 123,
+      "text": "name:  localize(dc.day_name, locale),"
+    },
+    {
+      "file": "packages/core/hooks/usePrograms.ts",
+      "line": 124,
+      "text": "focus: localize(dc.day_focus, locale),"
+    },
+    {
+      "file": "packages/core/hooks/usePrograms.ts",
+      "line": 150,
+      "text": "name:  localize(r.day_name, locale),"
+    },
+    {
+      "file": "packages/core/hooks/usePrograms.ts",
+      "line": 151,
+      "text": "focus: localize(r.day_focus, locale),"
+    },
+    {
+      "file": "packages/core/hooks/usePrograms.ts",
+      "line": 216,
+      "text": "const locale = i18n.language"
+    },
+    {
+      "file": "packages/core/hooks/usePrograms.ts",
+      "line": 224,
+      "text": "title: localize(r.workout_title, locale),"
+    },
+    {
+      "file": "packages/core/hooks/usePrograms.ts",
+      "line": 243,
+      "text": "muscles:      localize(r.muscles, locale),"
+    },
+    {
+      "file": "packages/core/hooks/usePrograms.ts",
+      "line": 244,
+      "text": "note:         localize(r.note, locale),"
+    },
+    {
+      "file": "packages/core/hooks/usePrograms.ts",
+      "line": 354,
+      "text": "locale: string,"
+    },
+    {
+      "file": "packages/core/hooks/usePrograms.ts",
+      "line": 364,
+      "text": "name:           localize(p.name, locale),"
+    },
+    {
+      "file": "packages/core/hooks/usePrograms.ts",
+      "line": 365,
+      "text": "description:    localize(p.description, locale),"
+    },
+    {
+      "file": "packages/core/hooks/usePrograms.ts",
+      "line": 375,
+      "text": "forked_from_name: forkedFrom ? localize(forkedFrom.name, locale) || undefined : undefined,"
+    },
+    {
+      "file": "packages/core/hooks/usePrograms.ts",
+      "line": 440,
+      "text": "const locale = i18n.language"
+    },
+    {
+      "file": "packages/core/hooks/usePrograms.ts",
+      "line": 466,
+      "text": "return catalogItems.map(p => toProgramMeta(p, locale, disciplineByProgram.get(p.id) || 'calistenia'))"
+    },
+    {
+      "file": "packages/core/hooks/usePrograms.ts",
+      "line": 542,
+      "text": "programMeta: expanded ? toProgramMeta(expanded, i18n.language, 'calistenia') : undefined,"
+    },
+    {
+      "file": "packages/core/hooks/usePrograms.ts",
+      "line": 826,
+      "text": "name: duplicatedName(original.name, i18n.language), description: original.description,"
+    },
+    {
+      "file": "packages/core/hooks/useAutoProgression.ts",
+      "line": 49,
+      "text": "function toOverride(rec: OverrideRecord, locale: string): ProgramOverride {"
+    },
+    {
+      "file": "packages/core/hooks/useAutoProgression.ts",
+      "line": 68,
+      "text": "function variantName(exerciseId: string, locale: string): string | undefined {"
+    },
+    {
+      "file": "packages/core/hooks/useAutoProgression.ts",
+      "line": 71,
+      "text": "return localize(entry.name, locale) || undefined"
+    },
+    {
+      "file": "packages/core/hooks/useAutoProgression.ts",
+      "line": 85,
+      "text": "const locale = i18n.language"
+    },
+    {
+      "file": "packages/core/hooks/useAutoProgression.ts",
+      "line": 157,
+      "text": "export function harderVariantOf(exerciseId: string, locale: string): VariantRef | null {"
+    },
+    {
+      "file": "packages/core/hooks/useAutoProgression.ts",
+      "line": 160,
+      "text": "return { id: next.id, name: localize(next.name, locale) || next.id }"
+    },
+    {
+      "file": "packages/core/hooks/useAutoProgression.ts",
+      "line": 176,
+      "text": "const locale = i18n.language"
+    },
+    {
+      "file": "packages/core/hooks/useAutoProgression.ts",
+      "line": 198,
+      "text": "}, [enabled, exercise, logs, locale, options.sessionsAtTarget, options.repsCap, options.secondsCap])"
+    },
+    {
+      "file": "packages/core/lib/program-day-breakdown.ts",
+      "line": 59,
+      "text": "export function circuitToSessionExercises(circuit: CircuitDefinition, locale: string): SessionExercise[] {"
+    },
+    {
+      "file": "packages/core/lib/program-day-breakdown.ts",
+      "line": 65,
+      "text": "name: localize(ce.name, locale),"
+    },
+    {
+      "file": "packages/core/lib/exerciseCatalog.ts",
+      "line": 106,
+      "text": "* criterios —dos buscaban palabras inglesas tras `localize(field, 'en')`, la del"
+    },
+    {
+      "file": "packages/core/lib/exerciseCatalog.ts",
+      "line": 108,
+      "text": "* funcionaba porque `localize()` devuelve tal cual los strings planos de"
+    },
+    {
+      "file": "packages/core/lib/exerciseCatalog.ts",
+      "line": 281,
+      "text": "* Sus campos son strings planos, no `{es,en}`: `localize()` los devuelve tal"
+    },
+    {
+      "file": "packages/core/hooks/useTrainingStats.ts",
+      "line": 33,
+      "text": "const locale = i18n.language"
+    },
+    {
+      "file": "packages/core/lib/whats-new.ts",
+      "line": 103,
+      "text": "export function pickLang(text: LocalizedText | undefined, lang: string): string {"
+    },
+    {
+      "file": "packages/core/lib/whats-new.ts",
+      "line": 105,
+      "text": "const key = lang.startsWith('en') ? 'en' : 'es'"
+    },
+    {
+      "file": "packages/core/lib/first-workout.ts",
+      "line": 223,
+      "text": "export function firstWorkoutTitle(locale: string): string {"
+    },
+    {
+      "file": "packages/core/lib/first-workout.ts",
+      "line": 224,
+      "text": "return localize({ es: 'Tu primer entreno', en: 'Your first workout' }, locale)"
+    },
+    {
+      "file": "packages/core/lib/first-workout.ts",
+      "line": 259,
+      "text": "function regressionPhrase(entry: FirstWorkoutEntry, locale: string): string {"
+    },
+    {
+      "file": "packages/core/lib/first-workout.ts",
+      "line": 260,
+      "text": "return localize(entry.regression, locale)"
+    },
+    {
+      "file": "packages/core/lib/first-workout.ts",
+      "line": 270,
+      "text": "function withRegression(technique: string, regression: string, locale: string): string {"
+    },
+    {
+      "file": "packages/core/lib/first-workout.ts",
+      "line": 271,
+      "text": "const suffix = locale === 'en'"
+    },
+    {
+      "file": "packages/core/lib/first-workout.ts",
+      "line": 292,
+      "text": "export function buildFirstWorkout(level: string | null | undefined, locale: string): Workout {"
+    },
+    {
+      "file": "packages/core/lib/first-workout.ts",
+      "line": 297,
+      "text": "const technique = localize(entry.note, locale)"
+    },
+    {
+      "file": "packages/core/lib/first-workout.ts",
+      "line": 301,
+      "text": "name: localize(cat?.name ?? entry.name, locale),"
+    },
+    {
+      "file": "packages/core/lib/first-workout.ts",
+      "line": 305,
+      "text": "muscles: localize(cat?.muscles ?? entry.muscles, locale),"
+    },
+    {
+      "file": "packages/core/lib/feed-item.ts",
+      "line": 168,
+      "text": "title: localize(c?.name, currentLanguage()) || tr('feed.circuitGeneric', 'Circuito'),"
+    },
+    {
+      "file": "packages/core/lib/feed-item.ts",
+      "line": 228,
+      "text": "title: b?.title || (preset ? localize(preset.name, currentLanguage()) : tr('feed.battleGeneric', 'Batalla')),"
+    },
+    {
+      "file": "packages/core/lib/feed-item.ts",
+      "line": 229,
+      "text": "detail: preset ? localize(preset.description, currentLanguage()) : null,"
+    },
+    {
+      "file": "packages/core/hooks/session-contexts/normalizeRestoredWorkout.ts",
+      "line": 44,
+      "text": "function normalizeExercise(ex: Exercise, locale: string): Exercise {"
+    },
+    {
+      "file": "packages/core/hooks/session-contexts/normalizeRestoredWorkout.ts",
+      "line": 61,
+      "text": "export function normalizeRestoredWorkout(workout: Workout, locale: string = i18n.language): Workout {"
+    },
+    {
+      "file": "packages/core/hooks/session-contexts/normalizeRestoredWorkout.ts",
+      "line": 76,
+      "text": "locale: string = i18n.language,"
+    }
+  ]
+}
