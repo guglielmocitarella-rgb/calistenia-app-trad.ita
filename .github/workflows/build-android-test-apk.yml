@@ -149,3 +149,4 @@ jobs:
           path: test-smoke/
           if-no-files-found: warn
           retention-days: 3
+          # Rebuild standalone APK for phase 4A verification.
