@@ -120,9 +120,9 @@ function PanelLink({ label, hint, onPress }: { label: string; hint?: string; onP
 /** Cifra grande + etiqueta mono: las tres del carné. */
 function StatTile({ label, value, lime }: { label: string; value: string; lime?: boolean }) {
   return (
-    <View className="flex-1 rounded-lg border border-border p-3">
-      <Text className={cn('font-bebas text-[32px] leading-none', lime ? 'text-lime' : 'text-foreground')}>{value}</Text>
-      <Kicker size="xs" className="mt-1" numberOfLines={1}>{label}</Kicker>
+    <View className="min-w-0 flex-1 rounded-lg border border-border p-3">
+      <Text className={cn('font-bebas text-[32px] leading-none', lime ? 'text-lime' : 'text-foreground')} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.7}>{value}</Text>
+      <Kicker size="xs" className="mt-1 tracking-[0.5px]" numberOfLines={2}>{label}</Kicker>
     </View>
   )
 }

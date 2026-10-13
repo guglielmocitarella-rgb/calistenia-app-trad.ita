@@ -911,6 +911,7 @@
     "nav.sectionMore",
     "nav.signOut",
     "nav.sleep",
+    "nav.workout",
     "notifSettings.challenges",
     "notifSettings.comments",
     "notifSettings.follows",
@@ -3147,8 +3148,8 @@
     {
       "key": "nav.workout",
       "english": "Workout",
-      "italian": "Allenamento",
-      "changedFromBaseline": false
+      "italian": "Allenati",
+      "changedFromBaseline": true
     },
     {
       "key": "notifSettings.challenges",
@@ -4551,13 +4552,13 @@
     {
       "key": "progressTab.weeksShort_one",
       "english": "{{count}} wk",
-      "italian": "{{count}} settimana",
+      "italian": "{{count}} sett.",
       "changedFromBaseline": true
     },
     {
       "key": "progressTab.weeksShort_other",
       "english": "{{count}} wks",
-      "italian": "{{count}} settimane",
+      "italian": "{{count}} sett.",
       "changedFromBaseline": true
     },
     {
