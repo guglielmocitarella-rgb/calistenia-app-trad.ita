@@ -10,7 +10,7 @@ import { contentLanguage } from '@calistenia/core/lib/content-language'
  */
 import { useCallback, useState } from 'react'
 import { View, Platform } from 'react-native'
-import { trainingRepsLabel } from '@/lib/training-ui-labels'
+import { trainingRepsLabel, trainingUiLabel } from '@/lib/training-ui-labels'
 import { useRouter, useFocusEffect } from 'expo-router'
 import { useTranslation } from 'react-i18next'
 
@@ -74,7 +74,7 @@ function exerciseRows(exercises: readonly Exercise[], lang: string): TodayRow[] 
   return exercises.slice(0, MAX_ROWS).map((ex, i) => ({
     key: `${ex.id}_${i}`,
     name: ex.name,
-    detail: `${ex.sets} × ${trainingRepsLabel(ex.reps, localizeReps(ex.reps, lang), lang, Platform.OS)}`,
+    detail: `${trainingUiLabel(String(ex.sets), undefined, lang, Platform.OS)} × ${trainingRepsLabel(ex.reps, localizeReps(ex.reps, lang), lang, Platform.OS)}`,
   }))
 }
 

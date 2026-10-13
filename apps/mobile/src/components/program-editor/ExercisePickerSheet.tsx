@@ -38,7 +38,7 @@ interface ExercisePickerSheetProps {
 }
 
 export function ExercisePickerSheet({ visible, onClose, onAdd, contentLocale }: ExercisePickerSheetProps) {
-  const { categoryLabel, repsLabel } = useTrainingLabels()
+  const { categoryLabel, repsLabel, label } = useTrainingLabels()
   const { t } = useTranslation()
   const l = useLocalize()
   const { exercises: catalog } = useCatalogExerciseList()
@@ -85,7 +85,7 @@ export function ExercisePickerSheet({ visible, onClose, onAdd, contentLocale }: 
             {l(ex.name)}
           </Text>
           <Text className="mt-0.5 font-mono text-[10px] uppercase tracking-wide text-muted-foreground" numberOfLines={1}>
-            {String(ex.sets)}×{repsLabel(ex.reps)} · {l(ex.muscles)}
+            {label(String(ex.sets))}×{repsLabel(ex.reps)} · {l(ex.muscles)}
           </Text>
         </View>
         <View
@@ -98,7 +98,7 @@ export function ExercisePickerSheet({ visible, onClose, onAdd, contentLocale }: 
         </View>
       </Pressable>
     )
-  }, [addedIds, handleAdd, l, repsLabel])
+  }, [addedIds, handleAdd, l, repsLabel, label])
 
   return (
     <Modal visible={visible} animationType="slide" onRequestClose={handleClose} statusBarTranslucent>

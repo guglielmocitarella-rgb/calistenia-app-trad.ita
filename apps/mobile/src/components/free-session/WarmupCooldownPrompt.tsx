@@ -51,7 +51,7 @@ function SectionToggle({ checked, onToggle, label, count, color }: {
 }
 
 function ExercisePreviewRow({ exercise, color }: { exercise: Exercise; color: 'amber' | 'sky' }) {
-  const { repsLabel } = useTrainingLabels()
+  const { repsLabel, label } = useTrainingLabels()
   return (
     <View className="flex-row items-center gap-2 px-2 py-1">
       <View className={cn(
@@ -60,7 +60,7 @@ function ExercisePreviewRow({ exercise, color }: { exercise: Exercise; color: 'a
       )} />
       <Text className="flex-1 text-[12px] text-muted-foreground" numberOfLines={1}>{exercise.name}</Text>
       <Text className="font-mono text-[10px] text-muted-foreground/60 shrink-0">
-        {exercise.sets}×{repsLabel(exercise.reps)}
+        {label(String(exercise.sets))}×{repsLabel(exercise.reps)}
       </Text>
     </View>
   )

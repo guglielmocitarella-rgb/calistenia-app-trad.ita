@@ -2965,7 +2965,7 @@
   "communityProgram.leave": "Abbandona",
   "communityProgram.joined": "Iscritto",
   "communityProgram.joinError": "Non è andata a buon fine. Riprova.",
-  "communityProgram.notJoined": "Iscriviti per iniziare oggi la tua prima settimana.",
+  "communityProgram.notJoined": "Iscriviti per iniziare oggi la settimana 1.",
   "communityProgram.leftNotice": "Hai abbandonato il programma. Riprendendolo, continuerai da dove ti sei fermato.",
   "communityProgram.durationDays": "{{count}} giorni",
   "communityProgram.milestoneCount": "{{count}} traguardi",

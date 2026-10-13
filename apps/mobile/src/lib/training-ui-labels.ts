@@ -1,5 +1,6 @@
 import type { i18n, TFunction, TOptions } from 'i18next'
 import literals from './training-ui.it.json'
+import repetitionLabels from './training-reps.it.json'
 import { localizeReps } from '@calistenia/core/lib/localize-reps'
 
 function isAndroidItalian(language: string, os: string): boolean {
@@ -7,9 +8,9 @@ function isAndroidItalian(language: string, os: string): boolean {
 }
 
 // Rendering only. Never use these values in editor state, sessions or API messages.
-export function trainingUiLabel(source: string, key: string | undefined, language: string, os: string, t: TFunction, options?: TOptions): string {
+export function trainingUiLabel(source: string, key: string | undefined, language: string, os: string, t?: TFunction, options?: TOptions): string {
   if (!isAndroidItalian(language, os)) return source
-  if (key) return t(key, options ?? {})
+  if (key && t) return t(key, options ?? {})
   return Object.hasOwn(literals, source) ? literals[source as keyof typeof literals] : source
 }
 
@@ -45,6 +46,7 @@ const REPS_RULES: [RegExp, string][] = [
 
 export function trainingRepsLabel(source: string, fallback: string, language: string, os: string): string {
   if (!isAndroidItalian(language, os)) return fallback
+  if (Object.hasOwn(repetitionLabels, source)) return repetitionLabels[source as keyof typeof repetitionLabels]
   let text = localizeReps(source, 'en')
   for (const [pattern, replacement] of REPS_RULES) text = text.replace(pattern, replacement)
   return text
