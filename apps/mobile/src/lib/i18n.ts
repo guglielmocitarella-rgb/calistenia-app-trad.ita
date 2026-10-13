@@ -13,6 +13,7 @@ import { resolveInitialLanguage } from './language-resolver'
 
 import es from '@calistenia/core/locales/es/translation.json'
 import en from '@calistenia/core/locales/en/translation.json'
+import it from '@calistenia/core/locales/it/translation.json'
 
 const LANG_KEY = 'i18nextLng'
 
@@ -31,6 +32,7 @@ export function initI18n(): void {
     resources: {
       es: { translation: es },
       en: { translation: en },
+      it: { translation: it },
     },
     lng,
     fallbackLng: 'en',
