@@ -1,3 +1,4 @@
+import { resolveInitialLanguage } from '@/lib/language-resolver'
 /**
  * OnboardingFlow — mobile port of the web onboarding flow.
  *
@@ -70,7 +71,10 @@ const EMPTY_TRAINING: TrainingValues = {
 export function OnboardingFlow() {
   const router = useRouter()
   const { t, i18n } = useTranslation()
-  const currentLang = i18n.language.startsWith('en') ? 'en' : 'es'
+  const currentLang = Platform.OS === 'android' ? resolveInitialLanguage(i18n.language) : (i18n.language.startsWith('en') ? 'en' : 'es')
+  const languageOptions = Platform.OS === 'android'
+    ? [['es', 'Español'], ['en', 'English'], ['it', 'Italiano']] as const
+    : [['es', 'ES'], ['en', 'EN']] as const
   const user = useAuthUser()
   const userId = user?.id
   const displayName: string =
@@ -359,7 +363,7 @@ export function OnboardingFlow() {
       >
         {/* Selector de idioma: visible durante todo el onboarding */}
         <View className="mb-3 flex-row justify-end gap-2">
-          {([['es', 'ES'], ['en', 'EN']] as const).map(([code, label]) => (
+          {languageOptions.map(([code, label]) => (
             <Pressable
               key={code}
               onPress={() => {

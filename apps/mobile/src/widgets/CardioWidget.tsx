@@ -1,6 +1,7 @@
 'use no memo'
 // React Compiler inyecta useMemoCache y rompe el renderer headless de react-native-android-widget
 import React from 'react'
+import { widgetStrings } from '../lib/widget-language'
 import { FlexWidget, TextWidget } from 'react-native-android-widget'
 import type { CardioWidgetSnapshot } from '../lib/cardio-widget-snapshot'
 
@@ -35,7 +36,7 @@ function fmtPace(minPerKm: number): string {
 }
 
 export function CardioWidget({ snapshot }: { snapshot: CardioWidgetSnapshot | null }) {
-  const tr = STRINGS[snapshot?.lang ?? 'es']
+  const tr = widgetStrings(STRINGS, snapshot?.lang)
   const last = snapshot?.lastSession ?? null
 
   return (

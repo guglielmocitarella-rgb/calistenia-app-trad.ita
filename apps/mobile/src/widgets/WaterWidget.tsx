@@ -1,6 +1,7 @@
 'use no memo'
 // React Compiler inyecta useMemoCache y rompe el renderer headless de react-native-android-widget
 import React from 'react'
+import { widgetStrings } from '../lib/widget-language'
 import { FlexWidget, TextWidget } from 'react-native-android-widget'
 import type { ColorProp } from 'react-native-android-widget'
 import type { NutritionWidgetSnapshot } from '../lib/nutrition-widget-snapshot'
@@ -45,7 +46,7 @@ const SHELL = {
  * lectura + deep-link; la acción rápida queda para una iteración con QA real.
  */
 export function WaterWidget({ snapshot, today }: { snapshot: NutritionWidgetSnapshot | null; today: string }) {
-  const tr = STRINGS[snapshot?.lang ?? 'es']
+  const tr = widgetStrings(STRINGS, snapshot?.lang)
 
   if (!snapshot || snapshot.date !== today) {
     return (

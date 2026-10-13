@@ -1,9 +1,10 @@
+import { resolveInitialLanguage } from '@/lib/language-resolver'
 // Perfil y ajustes (#859): pantalla de pila que se abre desde el avatar de
 // cada pestaña. Arriba quién eres (nivel, cifras); debajo los ajustes en tres
 // grupos —Entrenamiento, Cuerpo y App—, una fila por tema. Lo que se edita se
 // despliega aquí mismo, lo que es otra pantalla navega.
 import { useEffect, useState } from 'react'
-import { View, ScrollView, Linking, Switch, Alert, Pressable } from 'react-native'
+import { Platform, View, ScrollView, Linking, Switch, Alert, Pressable } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useLocalSearchParams, useRouter } from 'expo-router'
 import { useTranslation } from 'react-i18next'
@@ -201,7 +202,7 @@ export default function ProfileScreen() {
   const toggleSection = (id: SettingsSection) =>
     setOpenSection(prev => (prev === id ? null : id))
 
-  const currentLang = i18n.language.startsWith('en') ? 'en' : 'es'
+  const currentLang = Platform.OS === 'android' ? resolveInitialLanguage(i18n.language) : (i18n.language.startsWith('en') ? 'en' : 'es')
   const initial = (name || (user?.email as string) || '?').trim().charAt(0).toUpperCase()
 
   // Carné: las mismas cifras que el dashboard y las mismas cinco skills que el
@@ -650,6 +651,7 @@ export default function ProfileScreen() {
                   options={[
                     { value: 'es', label: 'Español' },
                     { value: 'en', label: 'English' },
+                    ...(Platform.OS === 'android' ? [{ value: 'it', label: 'Italiano' }] : []),
                   ]}
                   value={currentLang}
                   onChange={(next) => { if (next) i18n.changeLanguage(next) }}

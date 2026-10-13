@@ -1,6 +1,7 @@
 'use no memo'
 // React Compiler inyecta useMemoCache y rompe el renderer headless de react-native-android-widget
 import React from 'react'
+import { widgetStrings } from '../lib/widget-language'
 import { FlexWidget, TextWidget } from 'react-native-android-widget'
 import type { WidgetSnapshot } from '../lib/widget-snapshot'
 
@@ -17,7 +18,7 @@ const STRINGS = {
 }
 
 function label(snapshot: WidgetSnapshot | null, today: string) {
-  const tr = STRINGS[snapshot?.lang ?? 'es']
+  const tr = widgetStrings(STRINGS, snapshot?.lang)
   if (!snapshot || snapshot.date !== today) return { top: '', title: tr.stale, color: MUTED }
   const w = snapshot.workoutToday
   if (!w) return { top: '', title: tr.none, color: MUTED }
@@ -28,7 +29,7 @@ function label(snapshot: WidgetSnapshot | null, today: string) {
 
 export function TodayWidget({ snapshot, today }: { snapshot: WidgetSnapshot | null; today: string }) {
   const { top, title, color } = label(snapshot, today)
-  const tr = STRINGS[snapshot?.lang ?? 'es']
+  const tr = widgetStrings(STRINGS, snapshot?.lang)
   const fresh = snapshot && snapshot.date === today
 
   return (

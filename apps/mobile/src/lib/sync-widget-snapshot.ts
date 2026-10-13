@@ -1,3 +1,5 @@
+import { Platform } from 'react-native'
+import { widgetLanguage } from './widget-language'
 import { localDay, todayStr, getTimezone } from '@calistenia/core/lib/dateUtils'
 import { getEffectiveWeeklyGoal } from '@calistenia/core/lib/weeklyGoal'
 import { buildWidgetSnapshot } from './widget-snapshot'
@@ -35,7 +37,7 @@ export function syncWidgetSnapshot(args: {
   void writeWidgetSnapshot(buildWidgetSnapshot({
     today: todayStr(),
     tz: getTimezone(),
-    lang: args.lang.startsWith('en') ? 'en' : 'es',
+    lang: widgetLanguage(args.lang, Platform.OS),
     programName: args.programName,
     programPhase: phase,
     todayId,

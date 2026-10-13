@@ -1,3 +1,5 @@
+import type { WidgetLanguage } from './widget-language'
+
 /** Contrato del snapshot del widget de nutrición. Puro: testeable sin react-native. */
 export interface NutritionWidgetSnapshot {
   /** YYYY-MM-DD local de la última escritura — el widget marca stale si es viejo. */
@@ -23,7 +25,7 @@ export interface NutritionWidgetSnapshot {
   waterMl: number
   /** Meta diaria de agua en ml (`settings.water_goal`, default 2500). */
   waterGoalMl: number
-  lang: 'es' | 'en'
+  lang: WidgetLanguage
   /** IANA tz usada por el escritor para calcular `date`. El widget recalcula
    *  "hoy" en esta misma tz para evitar mismatch entre proceso app y headless. */
   tz: string

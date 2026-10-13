@@ -1,3 +1,4 @@
+import { widgetLanguage } from './widget-language'
 /**
  * Sincroniza el widget de cardio: consulta las sesiones de la semana en PB,
  * escribe el snapshot en AsyncStorage y fuerza el refresh del widget.
@@ -57,7 +58,7 @@ export async function syncCardioWidget(userId: string | null): Promise<void> {
             date: utcToLocalDateStr(String(last.started_at)) || String(last.started_at).slice(0, 10),
           }
         : null,
-      lang: i18n.language?.startsWith('en') ? 'en' : 'es',
+      lang: widgetLanguage(i18n.language),
     }
 
     const json = JSON.stringify(snapshot)
