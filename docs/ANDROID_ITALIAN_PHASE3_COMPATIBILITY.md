@@ -1,5 +1,7 @@
 # Android italiano — compatibilità, fase 3
 
+> **Rettifica della verifica (13 ottobre 2026):** la valutazione locale seguente non includeva la CI web. La PR ha fallito con 24 test web; sono state individuate regressioni nel percorso core senza adattatore Android e nei mock web. Avanzamento sospeso. Questa fase non è completata. Vedere [diagnosi, correzioni e registro CI](ANDROID_ITALIAN_CI_VERIFICATION.md) e la [PR #1](https://github.com/guglielmocitarella-rgb/calistenia-app-trad.ita/pull/1) per gli esiti dei nuovi run sul commit corretto.
+
 Data: 13 ottobre 2026. Base audit: `6a0961da7cb2564417ee1d2dd186d810eb13bbda`.
 Ramo: `feature/italian-localization`. PR #1: mantenere in bozza.
 
