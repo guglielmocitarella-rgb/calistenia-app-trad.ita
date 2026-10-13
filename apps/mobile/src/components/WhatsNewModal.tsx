@@ -15,7 +15,7 @@
  * aparecer solo cuando el usuario llega al inicio y nunca durante una sesión.
  */
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { Modal, Pressable, ScrollView, StyleSheet, View, useWindowDimensions } from 'react-native'
+import { Modal, Platform, Pressable, ScrollView, StyleSheet, View, useWindowDimensions } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { Gesture, GestureDetector, GestureHandlerRootView } from 'react-native-gesture-handler'
 import Animated, {
@@ -449,7 +449,8 @@ function WhatsNewSheet({
 
 function formatDate(iso: string, lang: string): string {
   try {
-    return new Date(iso + 'T00:00:00').toLocaleDateString(lang.startsWith('en') ? 'en' : 'es', {
+    const locale = Platform.OS === 'android' && lang.startsWith('it') ? 'it' : lang.startsWith('en') ? 'en' : 'es'
+    return new Date(iso + 'T00:00:00').toLocaleDateString(locale, {
       day: 'numeric',
       month: 'short',
     })

@@ -1,0 +1,4714 @@
+{
+  "baseline": "f531b3b822ca5f88c19f2b85df6cf42426e352ea",
+  "keys": [
+    "account.dangerZone",
+    "account.deleteBullet1",
+    "account.deleteBullet2",
+    "account.deleteBullet3",
+    "account.deleteConfirmCta",
+    "account.deleteConfirmLabel",
+    "account.deleteCta",
+    "account.deleteDesc",
+    "account.deleteError",
+    "account.deleteIntro",
+    "account.deleteTitle",
+    "account.privacyEntry",
+    "achievements.profileHint",
+    "achievements.profileRow",
+    "auth.connecting",
+    "auth.continueWithGoogle",
+    "auth.createAccount",
+    "auth.email",
+    "auth.googleError",
+    "auth.hasAccount",
+    "auth.login",
+    "auth.loginError",
+    "auth.loginLink",
+    "auth.loginSubtitle",
+    "auth.name",
+    "auth.noAccount",
+    "auth.password",
+    "auth.privacy",
+    "auth.register",
+    "auth.signupError",
+    "auth.signupSubtitle",
+    "auth.tagline",
+    "auth.terms",
+    "battle.barLive",
+    "battle.challengeFriend",
+    "battle.kicker",
+    "blocks.manageEntry",
+    "cardio.activeSession",
+    "cardio.cycling",
+    "cardio.running",
+    "cardio.title",
+    "cardio.walking",
+    "challenges.participants_one",
+    "challenges.participants_other",
+    "circuit.modes.circuit",
+    "circuit.summary",
+    "common.and",
+    "common.back",
+    "common.backHome",
+    "common.cameraPermissionMessage",
+    "common.cancel",
+    "common.close",
+    "common.confirm",
+    "common.continue",
+    "common.copied",
+    "common.create",
+    "common.daysAgo",
+    "common.delete",
+    "common.deleteManyTitle",
+    "common.deleteOneTitle",
+    "common.duplicate",
+    "common.edit",
+    "common.error",
+    "common.exercises",
+    "common.filter",
+    "common.finish",
+    "common.galleryPermissionMessage",
+    "common.kg",
+    "common.loading",
+    "common.minutes",
+    "common.mode",
+    "common.month",
+    "common.new",
+    "common.next",
+    "common.no",
+    "common.noResults",
+    "common.of",
+    "common.or",
+    "common.permissionRequired",
+    "common.processing",
+    "common.reps",
+    "common.rest",
+    "common.save",
+    "common.search",
+    "common.searching",
+    "common.searchingShort",
+    "common.seconds",
+    "common.selectedMany",
+    "common.selectedOne",
+    "common.sets",
+    "common.settings",
+    "common.share",
+    "common.start",
+    "common.today",
+    "common.unknownUser",
+    "common.viewFullscreen",
+    "common.week",
+    "common.yes",
+    "common.yesterday",
+    "dashboard.completed",
+    "dashboard.findFriends",
+    "dashboard.goal.lsit",
+    "dashboard.goal.pistol",
+    "dashboard.seeAll",
+    "dashboard.train",
+    "day.activeWalk",
+    "day.dom",
+    "day.inSentence.dom",
+    "day.inSentence.jue",
+    "day.inSentence.lun",
+    "day.inSentence.mar",
+    "day.inSentence.mie",
+    "day.inSentence.sab",
+    "day.inSentence.vie",
+    "day.jue",
+    "day.lun",
+    "day.mar",
+    "day.mie",
+    "day.sab",
+    "day.saturday",
+    "day.shortFri",
+    "day.shortMon",
+    "day.shortSat",
+    "day.shortSun",
+    "day.shortThu",
+    "day.shortTue",
+    "day.shortWed",
+    "day.sunday",
+    "day.totalRest",
+    "day.vie",
+    "dayShort.0",
+    "dayShort.1",
+    "dayShort.2",
+    "dayShort.3",
+    "dayShort.4",
+    "dayShort.5",
+    "dayShort.6",
+    "difficulty.advanced",
+    "difficulty.beginner",
+    "difficulty.intermediate",
+    "discover.category.community",
+    "discover.category.extras",
+    "discover.category.nutrition",
+    "discover.category.progress",
+    "discover.category.training",
+    "discover.kicker",
+    "discover.title",
+    "featuredChallenge.continue",
+    "featuredChallenge.daysLeft",
+    "featuredChallenge.ended",
+    "featuredChallenge.join",
+    "featuredChallenge.kicker",
+    "featuredChallenge.lastDay",
+    "featuredChallenge.participating",
+    "featuredChallenge.results",
+    "home.a11y.notifications",
+    "home.a11y.notificationsUnread_one",
+    "home.a11y.notificationsUnread_other",
+    "home.a11y.profile",
+    "home.action.backToToday",
+    "home.action.changeDay",
+    "home.action.chooseOtherDay",
+    "home.action.choosePrograms",
+    "home.action.continue",
+    "home.action.discard",
+    "home.action.discardConfirm",
+    "home.action.repeat",
+    "home.action.start",
+    "home.action.startCardio",
+    "home.action.startCircuit",
+    "home.action.startMinutes",
+    "home.action.startYoga",
+    "home.action.viewSummary",
+    "home.cardio.distance",
+    "home.cardio.duration",
+    "home.cardio.gpsHint",
+    "home.cardio.minutes",
+    "home.cardio.pace",
+    "home.cardio.target",
+    "home.changeDay.title",
+    "home.comeback.body_one",
+    "home.comeback.body_other",
+    "home.comeback.title",
+    "home.deload.banner",
+    "home.done.minutes",
+    "home.done.sets",
+    "home.firstWeek.hintStart",
+    "home.firstWeek.hint_one",
+    "home.firstWeek.hint_other",
+    "home.firstWeek.progress",
+    "home.firstWeek.reached",
+    "home.firstWeek.title",
+    "home.firstWorkout.body",
+    "home.firstWorkout.preferProgram",
+    "home.firstWorkout.programDay",
+    "home.firstWorkout.title",
+    "home.greeting.afternoon",
+    "home.greeting.evening",
+    "home.greeting.morning",
+    "home.inProgress.continueBattle",
+    "home.inProgress.continueCardio",
+    "home.inProgress.continueCircuit",
+    "home.inProgress.continueFree",
+    "home.inProgress.sets",
+    "home.inactive_one",
+    "home.inactive_other",
+    "home.kicker.chosenDay",
+    "home.kicker.comeback",
+    "home.kicker.comebackNewWeek",
+    "home.kicker.doneToday",
+    "home.kicker.firstWorkout",
+    "home.kicker.inProgress",
+    "home.kicker.inProgressNow",
+    "home.kicker.inProgressOtherDay",
+    "home.kicker.noProgram",
+    "home.kicker.programComplete",
+    "home.kicker.rest",
+    "home.kicker.today",
+    "home.kicker.todayCardio",
+    "home.kicker.todayCircuit",
+    "home.kicker.todayYoga",
+    "home.kicker.weekCompleteNoNumber",
+    "home.next.label",
+    "home.next.tomorrow",
+    "home.next.tomorrowShort",
+    "home.noProgram.freeBody",
+    "home.noProgram.freeTitle",
+    "home.noProgram.title",
+    "home.paraTi.battleYourTurn",
+    "home.paraTi.challenge",
+    "home.paraTi.challengeDaysLeft_one",
+    "home.paraTi.challengeDaysLeft_other",
+    "home.paraTi.communityProgram",
+    "home.paraTi.communityProgramHint",
+    "home.paraTi.featuredChallenge",
+    "home.paraTi.featuredChallengeHint",
+    "home.paraTi.friendToday",
+    "home.paraTi.friendsToday_one",
+    "home.paraTi.friendsToday_other",
+    "home.paraTi.nutritionHint",
+    "home.paraTi.phasePhotos",
+    "home.paraTi.phasePhotosHint",
+    "home.paraTi.title",
+    "home.paraTi.viewActivity",
+    "home.programComplete.title",
+    "home.programComplete.weeks",
+    "home.programComplete.workouts",
+    "home.rest.body",
+    "home.rest.bodyNext",
+    "home.rest.comingSoon",
+    "home.rest.easyCardio",
+    "home.rest.easyCardioHint",
+    "home.rest.moveOptional",
+    "home.rest.title",
+    "home.streak.deloadCounts",
+    "home.streak.meetingGoal",
+    "home.streak.milestone_one",
+    "home.streak.milestone_other",
+    "home.streak.remaining_one",
+    "home.streak.remaining_other",
+    "home.streak.share.badge",
+    "home.streak.share.label",
+    "home.streak.share.tagline",
+    "home.streak.share.tagline12",
+    "home.streak.share.tagline26",
+    "home.streak.share.tagline52",
+    "home.streak.shareText_one",
+    "home.streak.shareText_other",
+    "home.streak.shareTitle",
+    "home.streak.weeks_one",
+    "home.streak.weeks_other",
+    "home.training.meta",
+    "home.training.programPhase",
+    "home.training.programWeek",
+    "home.week.cell.beforeStart",
+    "home.week.cell.done",
+    "home.week.cell.inProgress",
+    "home.week.cell.missed",
+    "home.week.cell.planned",
+    "home.week.cell.rest",
+    "home.week.cell.today",
+    "home.week.cell.todayRest",
+    "home.week.countNoPlan_one",
+    "home.week.countNoPlan_other",
+    "home.week.count_one",
+    "home.week.count_other",
+    "home.week.missed_one",
+    "home.week.missed_other",
+    "home.week.title",
+    "home.week.todayShort",
+    "home.weekComplete.body_one",
+    "home.weekComplete.body_other",
+    "home.weekComplete.title",
+    "leaderboard.prPushups",
+    "month.0",
+    "month.1",
+    "month.10",
+    "month.11",
+    "month.2",
+    "month.3",
+    "month.4",
+    "month.5",
+    "month.6",
+    "month.7",
+    "month.8",
+    "month.9",
+    "nav.activity",
+    "nav.admin",
+    "nav.battles",
+    "nav.calendar",
+    "nav.cardio",
+    "nav.challenges",
+    "nav.circuit",
+    "nav.community",
+    "nav.communityPrograms",
+    "nav.dashboard",
+    "nav.editor",
+    "nav.exercises",
+    "nav.leaderboard",
+    "nav.notificationSettings",
+    "nav.notifications",
+    "nav.nutrition",
+    "nav.profile",
+    "nav.programs",
+    "nav.progress",
+    "nav.races",
+    "nav.reminders",
+    "nav.sectionMore",
+    "nav.signOut",
+    "nav.sleep",
+    "nav.today",
+    "nav.workout",
+    "notifSettings.challenges",
+    "notifSettings.comments",
+    "notifSettings.follows",
+    "notifSettings.friend_achievements",
+    "notifSettings.friend_streaks",
+    "notifSettings.friend_workouts",
+    "notifSettings.own_milestones",
+    "notifSettings.pushMaster",
+    "notifSettings.pushMasterDesc",
+    "notifSettings.reactions",
+    "notifSettings.referrals",
+    "notifSettings.sectionFriends",
+    "notifSettings.sectionSocial",
+    "notifSettings.sectionYou",
+    "notifSettings.subtitle",
+    "notifSettings.title",
+    "onboarding.aboutYou",
+    "onboarding.aboutYouDesc",
+    "onboarding.activityActive",
+    "onboarding.activityLevel",
+    "onboarding.activityLight",
+    "onboarding.activitySedentary",
+    "onboarding.activityVeryActive",
+    "onboarding.advanced",
+    "onboarding.advancedDesc",
+    "onboarding.age",
+    "onboarding.alsoForYou",
+    "onboarding.back",
+    "onboarding.beginner",
+    "onboarding.beginnerDesc",
+    "onboarding.by",
+    "onboarding.chooseProgramBtn",
+    "onboarding.chooseProgramDesc",
+    "onboarding.chooseProgramTitle",
+    "onboarding.conditions.asthma",
+    "onboarding.conditions.back",
+    "onboarding.conditions.diabetes",
+    "onboarding.conditions.heart",
+    "onboarding.conditions.hypertension",
+    "onboarding.conditions.joint",
+    "onboarding.conditions.other",
+    "onboarding.continueBtn",
+    "onboarding.createOwn",
+    "onboarding.dayLabel",
+    "onboarding.days.fri",
+    "onboarding.days.mon",
+    "onboarding.days.sat",
+    "onboarding.days.sun",
+    "onboarding.days.thu",
+    "onboarding.days.tue",
+    "onboarding.days.wed",
+    "onboarding.discoveryAiChat",
+    "onboarding.discoveryAppStore",
+    "onboarding.discoveryFriend",
+    "onboarding.discoveryGithub",
+    "onboarding.discoveryOptional",
+    "onboarding.discoveryOther",
+    "onboarding.discoverySearch",
+    "onboarding.discoverySocial",
+    "onboarding.discoveryTitle",
+    "onboarding.enduranceNotice",
+    "onboarding.essentialsDesc",
+    "onboarding.essentialsTitle",
+    "onboarding.exercises",
+    "onboarding.female",
+    "onboarding.firstMeasurementCta",
+    "onboarding.firstWorkoutCta",
+    "onboarding.firstWorkoutHint",
+    "onboarding.focus.core",
+    "onboarding.focus.full_body",
+    "onboarding.focus.handstand",
+    "onboarding.focus.legs",
+    "onboarding.focus.muscle_up",
+    "onboarding.focus.planche",
+    "onboarding.focus.pull_up",
+    "onboarding.focus.upper_body",
+    "onboarding.focusAreas",
+    "onboarding.forYou",
+    "onboarding.goHomeInstead",
+    "onboarding.healthDesc",
+    "onboarding.healthDisclaimer",
+    "onboarding.healthTitle",
+    "onboarding.height",
+    "onboarding.howItWorks",
+    "onboarding.howItWorksDetail",
+    "onboarding.injuries.ankle",
+    "onboarding.injuries.elbow",
+    "onboarding.injuries.knee",
+    "onboarding.injuries.lower_back",
+    "onboarding.injuries.other",
+    "onboarding.injuries.shoulder",
+    "onboarding.injuries.wrist",
+    "onboarding.injuriesLabel",
+    "onboarding.intensity",
+    "onboarding.intensityIntense",
+    "onboarding.intensityLight",
+    "onboarding.intensityModerate",
+    "onboarding.intermediate",
+    "onboarding.intermediateDesc",
+    "onboarding.invitedProgram",
+    "onboarding.justChooseProgram",
+    "onboarding.level",
+    "onboarding.male",
+    "onboarding.medicalConditions",
+    "onboarding.needsProfileHint",
+    "onboarding.noIssuesLabel",
+    "onboarding.official",
+    "onboarding.pace",
+    "onboarding.paceAggressive",
+    "onboarding.paceAggressiveDesc",
+    "onboarding.paceBalanced",
+    "onboarding.paceBalancedDesc",
+    "onboarding.paceGradual",
+    "onboarding.paceGradualDesc",
+    "onboarding.pickForMe",
+    "onboarding.primaryGoal",
+    "onboarding.primaryGoalEndurance",
+    "onboarding.primaryGoalFatLoss",
+    "onboarding.primaryGoalHealth",
+    "onboarding.primaryGoalMuscle",
+    "onboarding.primaryGoalRecomp",
+    "onboarding.primaryGoalSkills",
+    "onboarding.programLabel",
+    "onboarding.progress",
+    "onboarding.recommended",
+    "onboarding.recommendedHint",
+    "onboarding.reminderAfternoon",
+    "onboarding.reminderContinue",
+    "onboarding.reminderEvening",
+    "onboarding.reminderMidday",
+    "onboarding.reminderMorning",
+    "onboarding.reminderPermissionDenied",
+    "onboarding.reminderSkip",
+    "onboarding.reminderSubtitle",
+    "onboarding.reminderTitle",
+    "onboarding.saveError",
+    "onboarding.saving",
+    "onboarding.sex",
+    "onboarding.skipAll",
+    "onboarding.skipForNow",
+    "onboarding.startBtn",
+    "onboarding.startTraining",
+    "onboarding.timelineGoal",
+    "onboarding.timelineProgram",
+    "onboarding.timelineProjection",
+    "onboarding.timelineProjectionNote",
+    "onboarding.timelineWeeks",
+    "onboarding.timelineWeight",
+    "onboarding.trainingDays",
+    "onboarding.weeks",
+    "onboarding.weight",
+    "onboarding.welcomeDefault",
+    "onboarding.welcomeMsg",
+    "onboarding.yourPlanDesc",
+    "onboarding.yourPlanTitle",
+    "onboarding.yours",
+    "privacy.privateAccount",
+    "privacy.privateAccountDesc",
+    "privacy.privateNote",
+    "privacy.publicAccountDesc",
+    "privacy.saveError",
+    "profile.age",
+    "profile.agePlaceholder",
+    "profile.alertsHint",
+    "profile.avatarChange",
+    "profile.avatarChooseGallery",
+    "profile.avatarError",
+    "profile.avatarRemove",
+    "profile.avatarRemoveConfirm",
+    "profile.avatarTakePhoto",
+    "profile.avatarTooLarge",
+    "profile.avatarUnsupported",
+    "profile.currency",
+    "profile.currencyDesc",
+    "profile.discover",
+    "profile.email",
+    "profile.female",
+    "profile.goal",
+    "profile.goalPlaceholder",
+    "profile.goalWeightPlaceholder",
+    "profile.goalWeightShort",
+    "profile.groupApp",
+    "profile.groupTraining",
+    "profile.health",
+    "profile.heightPlaceholder",
+    "profile.heightShort",
+    "profile.language",
+    "profile.level",
+    "profile.male",
+    "profile.memberSince",
+    "profile.name",
+    "profile.namePlaceholder",
+    "profile.phase",
+    "profile.programAndPhase",
+    "profile.remindersHint",
+    "profile.rowAccountPrivacy",
+    "profile.rowBodyGoals",
+    "profile.rowPreferences",
+    "profile.saved",
+    "profile.saving",
+    "profile.screenKicker",
+    "profile.sectionBody",
+    "profile.sectionTraining",
+    "profile.seeRecords",
+    "profile.sessions",
+    "profile.sex",
+    "profile.skillAchieved",
+    "profile.skillLocked",
+    "profile.skillsAndRecords",
+    "profile.skillsEmpty",
+    "profile.staffPanel",
+    "profile.streak",
+    "profile.theme",
+    "profile.themeDark",
+    "profile.themeLight",
+    "profile.themeSystem",
+    "profile.title",
+    "profile.weekOfTotal",
+    "profile.weeklyGoal",
+    "profile.weeklyGoalField",
+    "profile.weeklyGoalHintCustom",
+    "profile.weeklyGoalHintProgram_one",
+    "profile.weeklyGoalHintProgram_other",
+    "profile.weeklyGoalReset_one",
+    "profile.weeklyGoalReset_other",
+    "profile.weeklyGoalValue_one",
+    "profile.weeklyGoalValue_other",
+    "profile.weightPlaceholder",
+    "profile.weightShort",
+    "profile.whatsNew",
+    "programs.penalty.equipmentMissing",
+    "programs.penalty.healthFlag",
+    "programs.penalty.highFrequency",
+    "progressTab.weeksShort_one",
+    "progressTab.weeksShort_other",
+    "quickGuide.communityBody",
+    "quickGuide.communityTitle",
+    "quickGuide.kicker",
+    "quickGuide.nutritionBody",
+    "quickGuide.nutritionTitle",
+    "quickGuide.profileBody",
+    "quickGuide.profileTitle",
+    "quickGuide.progressBody",
+    "quickGuide.progressTitle",
+    "quickGuide.title",
+    "quickGuide.todayBody",
+    "quickGuide.todayTitle",
+    "quickGuide.trainBody",
+    "quickGuide.trainTitle",
+    "race.athlete",
+    "session.session",
+    "whatsNew.continue",
+    "whatsNew.details",
+    "whatsNew.gotIt",
+    "whatsNew.historyKicker",
+    "whatsNew.kicker",
+    "whatsNew.seeOlder",
+    "whatsNew.title",
+    "workout.exerciseCount_one",
+    "workout.exerciseCount_other"
+  ],
+  "identicalToEnglish": {
+    "auth.password": "Termine condiviso di uso corrente in italiano.",
+    "auth.privacy": "Termine condiviso di uso corrente in italiano.",
+    "cardio.title": "Termine condiviso di uso corrente in italiano.",
+    "common.kg": "Unità o abbreviazione invariata.",
+    "common.minutes": "Unità o abbreviazione invariata.",
+    "common.no": "Termine condiviso di uso corrente in italiano.",
+    "common.seconds": "Unità o abbreviazione invariata.",
+    "dashboard.goal.lsit": "Nome tecnico calistenico consolidato.",
+    "discover.category.community": "Termine condiviso di uso corrente in italiano.",
+    "home.training.meta": "Formato di placeholder e unità; il testo interpolato è localizzato dove applicabile.",
+    "nav.cardio": "Termine condiviso di uso corrente in italiano.",
+    "nav.community": "Termine condiviso di uso corrente in italiano.",
+    "nav.dashboard": "Termine condiviso di uso corrente in italiano.",
+    "nav.editor": "Termine condiviso di uso corrente in italiano.",
+    "notifSettings.sectionSocial": "Termine condiviso di uso corrente in italiano.",
+    "onboarding.discoveryAppStore": "Nome proprio o marchio.",
+    "onboarding.discoveryGithub": "Nome proprio o marchio.",
+    "onboarding.focus.core": "Termine condiviso di uso corrente in italiano.",
+    "onboarding.focus.muscle_up": "Nome tecnico calistenico consolidato.",
+    "onboarding.focus.planche": "Nome tecnico calistenico consolidato.",
+    "profile.groupApp": "Termine condiviso di uso corrente in italiano.",
+    "profile.skillAchieved": "Formato di placeholder e unità; il testo interpolato è localizzato dove applicabile.",
+    "profile.skillLocked": "Formato di placeholder e unità; il testo interpolato è localizzato dove applicabile.",
+    "quickGuide.communityTitle": "Termine condiviso di uso corrente in italiano."
+  },
+  "changedFromBaseline": [
+    "account.dangerZone",
+    "account.deleteBullet1",
+    "account.deleteBullet2",
+    "account.deleteBullet3",
+    "account.deleteConfirmCta",
+    "account.deleteConfirmLabel",
+    "account.deleteCta",
+    "account.deleteDesc",
+    "account.deleteError",
+    "account.deleteIntro",
+    "account.deleteTitle",
+    "account.privacyEntry",
+    "achievements.profileHint",
+    "achievements.profileRow",
+    "auth.connecting",
+    "auth.continueWithGoogle",
+    "auth.createAccount",
+    "auth.email",
+    "auth.googleError",
+    "auth.hasAccount",
+    "auth.login",
+    "auth.loginError",
+    "auth.loginLink",
+    "auth.loginSubtitle",
+    "auth.name",
+    "auth.noAccount",
+    "auth.register",
+    "auth.signupError",
+    "auth.signupSubtitle",
+    "auth.tagline",
+    "auth.terms",
+    "battle.barLive",
+    "battle.challengeFriend",
+    "battle.kicker",
+    "blocks.manageEntry",
+    "cardio.activeSession",
+    "cardio.cycling",
+    "cardio.running",
+    "cardio.walking",
+    "challenges.participants_one",
+    "challenges.participants_other",
+    "circuit.modes.circuit",
+    "circuit.summary",
+    "common.and",
+    "common.backHome",
+    "common.cameraPermissionMessage",
+    "common.confirm",
+    "common.copied",
+    "common.create",
+    "common.daysAgo",
+    "common.deleteManyTitle",
+    "common.deleteOneTitle",
+    "common.duplicate",
+    "common.exercises",
+    "common.filter",
+    "common.galleryPermissionMessage",
+    "common.loading",
+    "common.month",
+    "common.new",
+    "common.noResults",
+    "common.of",
+    "common.or",
+    "common.permissionRequired",
+    "common.processing",
+    "common.reps",
+    "common.rest",
+    "common.searching",
+    "common.searchingShort",
+    "common.sets",
+    "common.share",
+    "common.unknownUser",
+    "common.week",
+    "dashboard.completed",
+    "dashboard.findFriends",
+    "dashboard.goal.pistol",
+    "dashboard.seeAll",
+    "dashboard.train",
+    "day.activeWalk",
+    "day.dom",
+    "day.inSentence.dom",
+    "day.inSentence.jue",
+    "day.inSentence.lun",
+    "day.inSentence.mar",
+    "day.inSentence.mie",
+    "day.inSentence.sab",
+    "day.inSentence.vie",
+    "day.jue",
+    "day.lun",
+    "day.mar",
+    "day.mie",
+    "day.sab",
+    "day.saturday",
+    "day.shortFri",
+    "day.shortMon",
+    "day.shortSat",
+    "day.shortSun",
+    "day.shortThu",
+    "day.shortTue",
+    "day.shortWed",
+    "day.sunday",
+    "day.totalRest",
+    "day.vie",
+    "dayShort.0",
+    "dayShort.1",
+    "dayShort.2",
+    "dayShort.3",
+    "dayShort.4",
+    "dayShort.5",
+    "dayShort.6",
+    "difficulty.advanced",
+    "difficulty.beginner",
+    "difficulty.intermediate",
+    "discover.category.extras",
+    "discover.category.nutrition",
+    "discover.category.progress",
+    "discover.category.training",
+    "discover.kicker",
+    "discover.title",
+    "featuredChallenge.daysLeft",
+    "featuredChallenge.ended",
+    "featuredChallenge.join",
+    "featuredChallenge.kicker",
+    "featuredChallenge.lastDay",
+    "featuredChallenge.participating",
+    "featuredChallenge.results",
+    "home.a11y.notifications",
+    "home.a11y.notificationsUnread_one",
+    "home.a11y.notificationsUnread_other",
+    "home.a11y.profile",
+    "home.action.backToToday",
+    "home.action.changeDay",
+    "home.action.chooseOtherDay",
+    "home.action.choosePrograms",
+    "home.action.continue",
+    "home.action.discard",
+    "home.action.discardConfirm",
+    "home.action.repeat",
+    "home.action.start",
+    "home.action.startCardio",
+    "home.action.startCircuit",
+    "home.action.startMinutes",
+    "home.action.startYoga",
+    "home.action.viewSummary",
+    "home.cardio.distance",
+    "home.cardio.duration",
+    "home.cardio.gpsHint",
+    "home.cardio.minutes",
+    "home.cardio.pace",
+    "home.cardio.target",
+    "home.changeDay.title",
+    "home.comeback.body_one",
+    "home.comeback.body_other",
+    "home.comeback.title",
+    "home.deload.banner",
+    "home.done.minutes",
+    "home.done.sets",
+    "home.firstWeek.hintStart",
+    "home.firstWeek.hint_one",
+    "home.firstWeek.hint_other",
+    "home.firstWeek.progress",
+    "home.firstWeek.reached",
+    "home.firstWeek.title",
+    "home.firstWorkout.body",
+    "home.firstWorkout.preferProgram",
+    "home.firstWorkout.programDay",
+    "home.firstWorkout.title",
+    "home.greeting.afternoon",
+    "home.greeting.evening",
+    "home.greeting.morning",
+    "home.inProgress.continueBattle",
+    "home.inProgress.continueCardio",
+    "home.inProgress.continueCircuit",
+    "home.inProgress.continueFree",
+    "home.inProgress.sets",
+    "home.inactive_one",
+    "home.inactive_other",
+    "home.kicker.chosenDay",
+    "home.kicker.comeback",
+    "home.kicker.comebackNewWeek",
+    "home.kicker.doneToday",
+    "home.kicker.firstWorkout",
+    "home.kicker.inProgress",
+    "home.kicker.inProgressNow",
+    "home.kicker.inProgressOtherDay",
+    "home.kicker.noProgram",
+    "home.kicker.programComplete",
+    "home.kicker.rest",
+    "home.kicker.today",
+    "home.kicker.todayCardio",
+    "home.kicker.todayCircuit",
+    "home.kicker.todayYoga",
+    "home.kicker.weekCompleteNoNumber",
+    "home.next.label",
+    "home.next.tomorrow",
+    "home.noProgram.freeBody",
+    "home.noProgram.freeTitle",
+    "home.noProgram.title",
+    "home.paraTi.battleYourTurn",
+    "home.paraTi.challenge",
+    "home.paraTi.challengeDaysLeft_one",
+    "home.paraTi.challengeDaysLeft_other",
+    "home.paraTi.communityProgram",
+    "home.paraTi.communityProgramHint",
+    "home.paraTi.featuredChallenge",
+    "home.paraTi.featuredChallengeHint",
+    "home.paraTi.friendToday",
+    "home.paraTi.friendsToday_one",
+    "home.paraTi.friendsToday_other",
+    "home.paraTi.nutritionHint",
+    "home.paraTi.phasePhotos",
+    "home.paraTi.phasePhotosHint",
+    "home.paraTi.title",
+    "home.paraTi.viewActivity",
+    "home.programComplete.title",
+    "home.programComplete.weeks",
+    "home.rest.body",
+    "home.rest.bodyNext",
+    "home.rest.comingSoon",
+    "home.rest.easyCardio",
+    "home.rest.easyCardioHint",
+    "home.rest.moveOptional",
+    "home.rest.title",
+    "home.streak.deloadCounts",
+    "home.streak.meetingGoal",
+    "home.streak.milestone_one",
+    "home.streak.milestone_other",
+    "home.streak.remaining_one",
+    "home.streak.remaining_other",
+    "home.streak.share.badge",
+    "home.streak.share.label",
+    "home.streak.share.tagline",
+    "home.streak.share.tagline12",
+    "home.streak.share.tagline26",
+    "home.streak.share.tagline52",
+    "home.streak.shareText_one",
+    "home.streak.shareText_other",
+    "home.streak.shareTitle",
+    "home.streak.weeks_one",
+    "home.streak.weeks_other",
+    "home.training.programPhase",
+    "home.training.programWeek",
+    "home.week.cell.beforeStart",
+    "home.week.cell.done",
+    "home.week.cell.inProgress",
+    "home.week.cell.missed",
+    "home.week.cell.planned",
+    "home.week.cell.rest",
+    "home.week.cell.today",
+    "home.week.cell.todayRest",
+    "home.week.countNoPlan_one",
+    "home.week.countNoPlan_other",
+    "home.week.count_one",
+    "home.week.count_other",
+    "home.week.missed_one",
+    "home.week.missed_other",
+    "home.week.title",
+    "home.weekComplete.body_one",
+    "home.weekComplete.body_other",
+    "home.weekComplete.title",
+    "leaderboard.prPushups",
+    "month.0",
+    "month.1",
+    "month.10",
+    "month.11",
+    "month.2",
+    "month.3",
+    "month.4",
+    "month.5",
+    "month.6",
+    "month.7",
+    "month.8",
+    "month.9",
+    "nav.activity",
+    "nav.admin",
+    "nav.battles",
+    "nav.calendar",
+    "nav.challenges",
+    "nav.circuit",
+    "nav.communityPrograms",
+    "nav.leaderboard",
+    "nav.notificationSettings",
+    "nav.notifications",
+    "nav.nutrition",
+    "nav.programs",
+    "nav.progress",
+    "nav.races",
+    "nav.reminders",
+    "nav.sectionMore",
+    "nav.signOut",
+    "nav.sleep",
+    "notifSettings.challenges",
+    "notifSettings.comments",
+    "notifSettings.follows",
+    "notifSettings.friend_achievements",
+    "notifSettings.friend_streaks",
+    "notifSettings.friend_workouts",
+    "notifSettings.own_milestones",
+    "notifSettings.pushMaster",
+    "notifSettings.pushMasterDesc",
+    "notifSettings.reactions",
+    "notifSettings.referrals",
+    "notifSettings.sectionFriends",
+    "notifSettings.sectionYou",
+    "notifSettings.subtitle",
+    "notifSettings.title",
+    "onboarding.aboutYou",
+    "onboarding.aboutYouDesc",
+    "onboarding.activityActive",
+    "onboarding.activityLevel",
+    "onboarding.activityLight",
+    "onboarding.activitySedentary",
+    "onboarding.activityVeryActive",
+    "onboarding.advanced",
+    "onboarding.advancedDesc",
+    "onboarding.age",
+    "onboarding.alsoForYou",
+    "onboarding.back",
+    "onboarding.beginner",
+    "onboarding.beginnerDesc",
+    "onboarding.by",
+    "onboarding.chooseProgramBtn",
+    "onboarding.chooseProgramDesc",
+    "onboarding.chooseProgramTitle",
+    "onboarding.conditions.asthma",
+    "onboarding.conditions.back",
+    "onboarding.conditions.diabetes",
+    "onboarding.conditions.heart",
+    "onboarding.conditions.hypertension",
+    "onboarding.conditions.joint",
+    "onboarding.conditions.other",
+    "onboarding.continueBtn",
+    "onboarding.createOwn",
+    "onboarding.dayLabel",
+    "onboarding.days.fri",
+    "onboarding.days.mon",
+    "onboarding.days.sat",
+    "onboarding.days.sun",
+    "onboarding.days.thu",
+    "onboarding.days.tue",
+    "onboarding.days.wed",
+    "onboarding.discoveryAiChat",
+    "onboarding.discoveryFriend",
+    "onboarding.discoveryOptional",
+    "onboarding.discoveryOther",
+    "onboarding.discoverySearch",
+    "onboarding.discoverySocial",
+    "onboarding.discoveryTitle",
+    "onboarding.enduranceNotice",
+    "onboarding.essentialsDesc",
+    "onboarding.essentialsTitle",
+    "onboarding.female",
+    "onboarding.firstMeasurementCta",
+    "onboarding.firstWorkoutCta",
+    "onboarding.firstWorkoutHint",
+    "onboarding.focus.full_body",
+    "onboarding.focus.handstand",
+    "onboarding.focus.legs",
+    "onboarding.focus.pull_up",
+    "onboarding.focus.upper_body",
+    "onboarding.focusAreas",
+    "onboarding.forYou",
+    "onboarding.goHomeInstead",
+    "onboarding.healthDesc",
+    "onboarding.healthDisclaimer",
+    "onboarding.healthTitle",
+    "onboarding.height",
+    "onboarding.howItWorks",
+    "onboarding.howItWorksDetail",
+    "onboarding.injuries.ankle",
+    "onboarding.injuries.elbow",
+    "onboarding.injuries.knee",
+    "onboarding.injuries.lower_back",
+    "onboarding.injuries.other",
+    "onboarding.injuries.shoulder",
+    "onboarding.injuries.wrist",
+    "onboarding.injuriesLabel",
+    "onboarding.intensity",
+    "onboarding.intensityIntense",
+    "onboarding.intensityLight",
+    "onboarding.intensityModerate",
+    "onboarding.intermediate",
+    "onboarding.intermediateDesc",
+    "onboarding.invitedProgram",
+    "onboarding.justChooseProgram",
+    "onboarding.level",
+    "onboarding.male",
+    "onboarding.medicalConditions",
+    "onboarding.needsProfileHint",
+    "onboarding.noIssuesLabel",
+    "onboarding.official",
+    "onboarding.pace",
+    "onboarding.paceAggressive",
+    "onboarding.paceAggressiveDesc",
+    "onboarding.paceBalanced",
+    "onboarding.paceBalancedDesc",
+    "onboarding.paceGradual",
+    "onboarding.paceGradualDesc",
+    "onboarding.pickForMe",
+    "onboarding.primaryGoal",
+    "onboarding.primaryGoalEndurance",
+    "onboarding.primaryGoalFatLoss",
+    "onboarding.primaryGoalHealth",
+    "onboarding.primaryGoalMuscle",
+    "onboarding.primaryGoalRecomp",
+    "onboarding.primaryGoalSkills",
+    "onboarding.programLabel",
+    "onboarding.progress",
+    "onboarding.recommended",
+    "onboarding.recommendedHint",
+    "onboarding.reminderAfternoon",
+    "onboarding.reminderContinue",
+    "onboarding.reminderEvening",
+    "onboarding.reminderMidday",
+    "onboarding.reminderMorning",
+    "onboarding.reminderPermissionDenied",
+    "onboarding.reminderSkip",
+    "onboarding.reminderSubtitle",
+    "onboarding.reminderTitle",
+    "onboarding.saveError",
+    "onboarding.saving",
+    "onboarding.sex",
+    "onboarding.skipAll",
+    "onboarding.skipForNow",
+    "onboarding.startBtn",
+    "onboarding.startTraining",
+    "onboarding.timelineGoal",
+    "onboarding.timelineProgram",
+    "onboarding.timelineProjection",
+    "onboarding.timelineProjectionNote",
+    "onboarding.timelineWeeks",
+    "onboarding.timelineWeight",
+    "onboarding.trainingDays",
+    "onboarding.weeks",
+    "onboarding.weight",
+    "onboarding.welcomeDefault",
+    "onboarding.welcomeMsg",
+    "onboarding.yourPlanDesc",
+    "onboarding.yourPlanTitle",
+    "onboarding.yours",
+    "privacy.privateAccount",
+    "privacy.privateAccountDesc",
+    "privacy.privateNote",
+    "privacy.publicAccountDesc",
+    "privacy.saveError",
+    "profile.age",
+    "profile.agePlaceholder",
+    "profile.alertsHint",
+    "profile.avatarChange",
+    "profile.avatarChooseGallery",
+    "profile.avatarError",
+    "profile.avatarRemove",
+    "profile.avatarRemoveConfirm",
+    "profile.avatarTakePhoto",
+    "profile.avatarTooLarge",
+    "profile.avatarUnsupported",
+    "profile.currency",
+    "profile.currencyDesc",
+    "profile.discover",
+    "profile.email",
+    "profile.female",
+    "profile.goal",
+    "profile.goalPlaceholder",
+    "profile.goalWeightPlaceholder",
+    "profile.goalWeightShort",
+    "profile.groupTraining",
+    "profile.health",
+    "profile.heightPlaceholder",
+    "profile.heightShort",
+    "profile.level",
+    "profile.male",
+    "profile.memberSince",
+    "profile.name",
+    "profile.namePlaceholder",
+    "profile.phase",
+    "profile.programAndPhase",
+    "profile.remindersHint",
+    "profile.rowAccountPrivacy",
+    "profile.rowBodyGoals",
+    "profile.rowPreferences",
+    "profile.saved",
+    "profile.saving",
+    "profile.screenKicker",
+    "profile.sectionBody",
+    "profile.sectionTraining",
+    "profile.seeRecords",
+    "profile.sessions",
+    "profile.sex",
+    "profile.skillsAndRecords",
+    "profile.skillsEmpty",
+    "profile.staffPanel",
+    "profile.streak",
+    "profile.theme",
+    "profile.themeDark",
+    "profile.themeLight",
+    "profile.themeSystem",
+    "profile.title",
+    "profile.weekOfTotal",
+    "profile.weeklyGoal",
+    "profile.weeklyGoalField",
+    "profile.weeklyGoalHintCustom",
+    "profile.weeklyGoalHintProgram_one",
+    "profile.weeklyGoalHintProgram_other",
+    "profile.weeklyGoalReset_one",
+    "profile.weeklyGoalReset_other",
+    "profile.weeklyGoalValue_one",
+    "profile.weeklyGoalValue_other",
+    "profile.weightPlaceholder",
+    "profile.weightShort",
+    "profile.whatsNew",
+    "programs.penalty.equipmentMissing",
+    "programs.penalty.healthFlag",
+    "programs.penalty.highFrequency",
+    "progressTab.weeksShort_one",
+    "progressTab.weeksShort_other",
+    "quickGuide.communityBody",
+    "quickGuide.kicker",
+    "quickGuide.nutritionBody",
+    "quickGuide.nutritionTitle",
+    "quickGuide.profileBody",
+    "quickGuide.progressBody",
+    "quickGuide.progressTitle",
+    "quickGuide.title",
+    "quickGuide.todayBody",
+    "quickGuide.trainBody",
+    "quickGuide.trainTitle",
+    "race.athlete",
+    "session.session",
+    "whatsNew.details",
+    "whatsNew.gotIt",
+    "whatsNew.historyKicker",
+    "whatsNew.kicker",
+    "whatsNew.seeOlder",
+    "whatsNew.title",
+    "workout.exerciseCount_one",
+    "workout.exerciseCount_other"
+  ],
+  "entries": [
+    {
+      "key": "account.dangerZone",
+      "english": "Danger zone",
+      "italian": "Zona di pericolo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "account.deleteBullet1",
+      "english": "Workouts, sets, cardio with its routes, circuits, personal records and stats.",
+      "italian": "Allenamenti, serie, cardio con i relativi percorsi, circuiti, record personali e statistiche.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "account.deleteBullet2",
+      "english": "Weight, measurements, progress photos, sleep, meals with their photos, medical conditions and injuries.",
+      "italian": "Peso, misure, foto dei progressi, sonno, pasti con relative foto, condizioni di salute e infortuni.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "account.deleteBullet3",
+      "english": "Your comments, reactions, challenges, any races you created and who you follow.",
+      "italian": "I tuoi commenti, le tue reazioni, le tue sfide, le gare che hai creato e le persone che segui.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "account.deleteConfirmCta",
+      "english": "Delete forever",
+      "italian": "Elimina definitivamente",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "account.deleteConfirmLabel",
+      "english": "Type {{email}} to confirm",
+      "italian": "Digita {{email}} per confermare",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "account.deleteCta",
+      "english": "Delete my account",
+      "italian": "Elimina il mio account",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "account.deleteDesc",
+      "english": "Deletes your account and all your data. It happens immediately and cannot be undone.",
+      "italian": "Elimina il tuo account e tutti i tuoi dati. L'operazione ha effetto immediato e non può essere annullata.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "account.deleteError",
+      "english": "We could not delete your account. Try again or write to contacto@calisteniaapp.com.",
+      "italian": "Non siamo riusciti a cancellare il tuo account. Prova di nuovo oppure scrivi a contacto@calisteniaapp.com.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "account.deleteIntro",
+      "english": "This deletes your account and everything you have logged. There is no backup and no way to get it back.",
+      "italian": "Questa operazione cancellerà il tuo account e tutti i dati che hai registrato. Non esiste alcun backup né alcun modo per recuperarli.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "account.deleteTitle",
+      "english": "Delete your account",
+      "italian": "Elimina il tuo account",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "account.privacyEntry",
+      "english": "Privacy and terms",
+      "italian": "Informativa sulla privacy e condizioni d'uso",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "achievements.profileHint",
+      "english": "Your first milestones and streaks",
+      "italian": "I tuoi primi traguardi e le tue prime serie consecutive",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "achievements.profileRow",
+      "english": "Achievements",
+      "italian": "Risultati raggiunti",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "auth.connecting",
+      "english": "Connecting...",
+      "italian": "Connessione in corso...",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "auth.continueWithGoogle",
+      "english": "Continue with Google",
+      "italian": "Continua con Google",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "auth.createAccount",
+      "english": "Create account",
+      "italian": "Crea un account",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "auth.email",
+      "english": "Email",
+      "italian": "E-mail",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "auth.googleError",
+      "english": "Error signing in with Google",
+      "italian": "Errore durante l'accesso con Google",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "auth.hasAccount",
+      "english": "Already have an account?",
+      "italian": "Hai già un account?",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "auth.login",
+      "english": "Sign in",
+      "italian": "Accedi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "auth.loginError",
+      "english": "Error signing in",
+      "italian": "Errore durante l'accesso",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "auth.loginLink",
+      "english": "Sign in",
+      "italian": "Accedi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "auth.loginSubtitle",
+      "english": "Sign in to continue",
+      "italian": "Accedi per continuare",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "auth.name",
+      "english": "Name",
+      "italian": "Nome",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "auth.noAccount",
+      "english": "Don't have an account?",
+      "italian": "Non hai un account?",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "auth.password",
+      "english": "Password",
+      "italian": "Password",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "auth.privacy",
+      "english": "Privacy",
+      "italian": "Privacy",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "auth.register",
+      "english": "Sign up",
+      "italian": "Iscriviti",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "auth.signupError",
+      "english": "Error creating account",
+      "italian": "Errore durante la creazione dell'account",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "auth.signupSubtitle",
+      "english": "Create your account",
+      "italian": "Crea il tuo account",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "auth.tagline",
+      "english": "Train with purpose",
+      "italian": "Allenati con uno scopo preciso",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "auth.terms",
+      "english": "Terms",
+      "italian": "Condizioni",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "battle.barLive",
+      "english": "Battle in progress · tap to return",
+      "italian": "Battaglia in corso · tocca per tornare indietro",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "battle.challengeFriend",
+      "english": "Challenge a friend",
+      "italian": "Sfida un amico",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "battle.kicker",
+      "english": "CIRCUIT BATTLE",
+      "italian": "BATTAGLIA TRA CIRCUITI",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "blocks.manageEntry",
+      "english": "Blocked users",
+      "italian": "Utenti bloccati",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "cardio.activeSession",
+      "english": "Active cardio session — tap to return",
+      "italian": "Sessione di cardio attiva — tocca per tornare indietro",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "cardio.cycling",
+      "english": "Cycling",
+      "italian": "Ciclismo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "cardio.running",
+      "english": "Running",
+      "italian": "Corsa",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "cardio.title",
+      "english": "CARDIO",
+      "italian": "CARDIO",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "cardio.walking",
+      "english": "Walking",
+      "italian": "Camminare",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "challenges.participants_one",
+      "english": "{{count}} participant",
+      "italian": "{{count}} partecipante",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "challenges.participants_other",
+      "english": "{{count}} participants",
+      "italian": "{{count}} partecipanti",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "circuit.modes.circuit",
+      "english": "Circuit",
+      "italian": "Circuito",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "circuit.summary",
+      "english": "{{rounds}} rounds × {{exercises}} exercises",
+      "italian": "{{rounds}} giri × {{exercises}} esercizi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.and",
+      "english": "and",
+      "italian": "e",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.back",
+      "english": "Back",
+      "italian": "Indietro",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.backHome",
+      "english": "Back to home",
+      "italian": "Torna alla home page",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.cameraPermissionMessage",
+      "english": "Camera access is needed to take photos.",
+      "italian": "Per scattare foto è necessario l'accesso alla fotocamera.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.cancel",
+      "english": "Cancel",
+      "italian": "Annulla",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.close",
+      "english": "Close",
+      "italian": "Chiudi",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.confirm",
+      "english": "Confirm",
+      "italian": "Conferma",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.continue",
+      "english": "Continue",
+      "italian": "Continua",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.copied",
+      "english": "Copied",
+      "italian": "Copiato",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.create",
+      "english": "Create",
+      "italian": "Crea",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.daysAgo",
+      "english": "{{count}} days ago",
+      "italian": "{{count}} giorni fa",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.delete",
+      "english": "Delete",
+      "italian": "Elimina",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.deleteManyTitle",
+      "english": "Delete {{n}} items?",
+      "italian": "Elimina {{n}} elementi?",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.deleteOneTitle",
+      "english": "Delete 1 item?",
+      "italian": "Elimina 1 elemento?",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.duplicate",
+      "english": "Duplicate",
+      "italian": "Duplica",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.edit",
+      "english": "Edit",
+      "italian": "Modifica",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.error",
+      "english": "Error",
+      "italian": "Errore",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.exercises",
+      "english": "exercises",
+      "italian": "esercizi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.filter",
+      "english": "Filter",
+      "italian": "Filtro",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.finish",
+      "english": "Finish",
+      "italian": "Termina",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.galleryPermissionMessage",
+      "english": "Gallery access is needed.",
+      "italian": "È necessario l'accesso alla galleria.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.kg",
+      "english": "kg",
+      "italian": "kg",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.loading",
+      "english": "Loading...",
+      "italian": "Caricamento in corso...",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.minutes",
+      "english": "min",
+      "italian": "min",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.mode",
+      "english": "Mode",
+      "italian": "Modalità",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.month",
+      "english": "Month",
+      "italian": "Mese",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.new",
+      "english": "New",
+      "italian": "Nuovo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.next",
+      "english": "Next",
+      "italian": "Avanti",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.no",
+      "english": "No",
+      "italian": "No",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.noResults",
+      "english": "No results",
+      "italian": "Nessun risultato",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.of",
+      "english": "of",
+      "italian": "di",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.or",
+      "english": "or",
+      "italian": "oppure",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.permissionRequired",
+      "english": "Permission required",
+      "italian": "È richiesta l'autorizzazione",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.processing",
+      "english": "Processing...",
+      "italian": "Elaborazione in corso...",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.reps",
+      "english": "reps",
+      "italian": "ripetizioni",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.rest",
+      "english": "rest",
+      "italian": "riposo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.save",
+      "english": "Save",
+      "italian": "Salva",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.search",
+      "english": "Search",
+      "italian": "Cerca",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.searching",
+      "english": "Searching...",
+      "italian": "Ricerca in corso...",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.searchingShort",
+      "english": "Searching",
+      "italian": "Ricerca",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.seconds",
+      "english": "s",
+      "italian": "s",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.selectedMany",
+      "english": "{{n}} selected",
+      "italian": "{{n}} selezionati",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.selectedOne",
+      "english": "1 selected",
+      "italian": "1 selezionato",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.sets",
+      "english": "sets",
+      "italian": "serie",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.settings",
+      "english": "Settings",
+      "italian": "Impostazioni",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.share",
+      "english": "Share",
+      "italian": "Condividi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.start",
+      "english": "Start",
+      "italian": "Inizia",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.today",
+      "english": "Today",
+      "italian": "Oggi",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.unknownUser",
+      "english": "User",
+      "italian": "Utente",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.viewFullscreen",
+      "english": "View full screen",
+      "italian": "Visualizza a schermo intero",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.week",
+      "english": "Week",
+      "italian": "Settimana",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "common.yes",
+      "english": "Yes",
+      "italian": "Sì",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "common.yesterday",
+      "english": "Yesterday",
+      "italian": "Ieri",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "dashboard.completed",
+      "english": "COMPLETED",
+      "italian": "COMPLETATO",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "dashboard.findFriends",
+      "english": "Find friends",
+      "italian": "Trova amici",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "dashboard.goal.lsit",
+      "english": "L-sit",
+      "italian": "L-sit",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "dashboard.goal.pistol",
+      "english": "Pistol Squat",
+      "italian": "Pistol squat",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "dashboard.seeAll",
+      "english": "See all",
+      "italian": "Vedi tutto",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "dashboard.train",
+      "english": "TRAIN",
+      "italian": "ALLENATI",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.activeWalk",
+      "english": "Active walk",
+      "italian": "Passeggiata attiva",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.dom",
+      "english": "Sunday",
+      "italian": "Domenica",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.inSentence.dom",
+      "english": "Sunday",
+      "italian": "domenica",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.inSentence.jue",
+      "english": "Thursday",
+      "italian": "giovedì",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.inSentence.lun",
+      "english": "Monday",
+      "italian": "lunedì",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.inSentence.mar",
+      "english": "Tuesday",
+      "italian": "martedì",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.inSentence.mie",
+      "english": "Wednesday",
+      "italian": "mercoledì",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.inSentence.sab",
+      "english": "Saturday",
+      "italian": "sabato",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.inSentence.vie",
+      "english": "Friday",
+      "italian": "venerdì",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.jue",
+      "english": "Thursday",
+      "italian": "Giovedì",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.lun",
+      "english": "Monday",
+      "italian": "Lunedì",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.mar",
+      "english": "Tuesday",
+      "italian": "martedì",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.mie",
+      "english": "Wednesday",
+      "italian": "Mercoledì",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.sab",
+      "english": "Saturday",
+      "italian": "Sabato",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.saturday",
+      "english": "Saturday",
+      "italian": "Sabato",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.shortFri",
+      "english": "Fri",
+      "italian": "Ven",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.shortMon",
+      "english": "Mon",
+      "italian": "Lun",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.shortSat",
+      "english": "Sat",
+      "italian": "Sab",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.shortSun",
+      "english": "Sun",
+      "italian": "Dom",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.shortThu",
+      "english": "Thu",
+      "italian": "Gio",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.shortTue",
+      "english": "Tue",
+      "italian": "Mar",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.shortWed",
+      "english": "Wed",
+      "italian": "Mer",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.sunday",
+      "english": "Sunday",
+      "italian": "Domenica",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.totalRest",
+      "english": "Full rest",
+      "italian": "Riposo completo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "day.vie",
+      "english": "Friday",
+      "italian": "Venerdì",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "dayShort.0",
+      "english": "Mon",
+      "italian": "Lun",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "dayShort.1",
+      "english": "Tue",
+      "italian": "Mar",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "dayShort.2",
+      "english": "Wed",
+      "italian": "Mer",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "dayShort.3",
+      "english": "Thu",
+      "italian": "Gio",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "dayShort.4",
+      "english": "Fri",
+      "italian": "Ven",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "dayShort.5",
+      "english": "Sat",
+      "italian": "Sab",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "dayShort.6",
+      "english": "Sun",
+      "italian": "Dom",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "difficulty.advanced",
+      "english": "Advanced",
+      "italian": "Avanzato",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "difficulty.beginner",
+      "english": "Beginner",
+      "italian": "Principiante",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "difficulty.intermediate",
+      "english": "Intermediate",
+      "italian": "Livello intermedio",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "discover.category.community",
+      "english": "Community",
+      "italian": "Community",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "discover.category.extras",
+      "english": "Extras",
+      "italian": "Extra",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "discover.category.nutrition",
+      "english": "Nutrition",
+      "italian": "Nutrizione",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "discover.category.progress",
+      "english": "Progress",
+      "italian": "Progressi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "discover.category.training",
+      "english": "Training",
+      "italian": "Allenamento",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "discover.kicker",
+      "english": "Directory",
+      "italian": "Elenco",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "discover.title",
+      "english": "Discover",
+      "italian": "Scopri",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "featuredChallenge.continue",
+      "english": "Continue",
+      "italian": "Continua",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "featuredChallenge.daysLeft",
+      "english": "{{count}} days left",
+      "italian": "Mancano {{count}} giorni",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "featuredChallenge.ended",
+      "english": "Challenge ended",
+      "italian": "La sfida è terminata",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "featuredChallenge.join",
+      "english": "Join",
+      "italian": "Iscriviti",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "featuredChallenge.kicker",
+      "english": "Featured challenge",
+      "italian": "Sfida in primo piano",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "featuredChallenge.lastDay",
+      "english": "Ends today",
+      "italian": "Scade oggi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "featuredChallenge.participating",
+      "english": "Participating",
+      "italian": "Partecipanti",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "featuredChallenge.results",
+      "english": "View results",
+      "italian": "Visualizza i risultati",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.a11y.notifications",
+      "english": "Notifications",
+      "italian": "Notifiche",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.a11y.notificationsUnread_one",
+      "english": "Notifications, {{count}} unread",
+      "italian": "Notifiche, {{count}} non letta",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.a11y.notificationsUnread_other",
+      "english": "Notifications, {{count}} unread",
+      "italian": "Notifiche, {{count}} non lette",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.a11y.profile",
+      "english": "Profile and settings",
+      "italian": "Profilo e impostazioni",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.action.backToToday",
+      "english": "Back to today",
+      "italian": "Torna a oggi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.action.changeDay",
+      "english": "Change day",
+      "italian": "Cambia giorno",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.action.chooseOtherDay",
+      "english": "Choose another day",
+      "italian": "Scegli un altro giorno",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.action.choosePrograms",
+      "english": "Choose a program",
+      "italian": "Scegli un programma",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.action.continue",
+      "english": "Continue workout",
+      "italian": "Continua l'allenamento",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.action.discard",
+      "english": "Discard session",
+      "italian": "Scarta sessione",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.action.discardConfirm",
+      "english": "You'll lose what you've done in this session.",
+      "italian": "Perderai tutti i progressi di questa sessione.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.action.repeat",
+      "english": "Repeat this workout",
+      "italian": "Ripeti questo allenamento",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.action.start",
+      "english": "Start workout",
+      "italian": "Inizia l'allenamento",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.action.startCardio",
+      "english": "Start GPS cardio",
+      "italian": "Avvia allenamento cardio con GPS",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.action.startCircuit",
+      "english": "Start circuit",
+      "italian": "Inizia il circuito",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.action.startMinutes",
+      "english": "Start · {{minutes}} min",
+      "italian": "Inizia · {{minutes}} min",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.action.startYoga",
+      "english": "Start yoga",
+      "italian": "Inizia a praticare yoga",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.action.viewSummary",
+      "english": "View summary",
+      "italian": "Visualizza il riepilogo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.cardio.distance",
+      "english": "Distance",
+      "italian": "Distanza",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.cardio.duration",
+      "english": "Duration",
+      "italian": "Durata",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.cardio.gpsHint",
+      "english": "GPS records your route with the screen off. If you don't reach {{km}} km, it still counts.",
+      "italian": "Il GPS registra il percorso anche con lo schermo spento. Se non raggiungi i {{km}} km, il percorso viene comunque conteggiato.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.cardio.minutes",
+      "english": "Minutes",
+      "italian": "Minuti",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.cardio.pace",
+      "english": "Pace",
+      "italian": "Ritmo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.cardio.target",
+      "english": "Target",
+      "italian": "Obiettivo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.changeDay.title",
+      "english": "Which day do you want to train?",
+      "italian": "In quale giorno vuoi allenarti?",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.comeback.body_one",
+      "english": "Your last workout was {{count}} day ago. No guilt: the week starts today.",
+      "italian": "Il tuo ultimo allenamento risale a {{count}} giorno fa. Niente sensi di colpa: la settimana inizia oggi.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.comeback.body_other",
+      "english": "Your last workout was {{count}} days ago. No guilt: the week starts today.",
+      "italian": "Il tuo ultimo allenamento risale a {{count}} giorni fa. Niente sensi di colpa: la settimana inizia oggi.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.comeback.title",
+      "english": "Pick your program back up",
+      "italian": "Riprendi il tuo programma",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.deload.banner",
+      "english": "Deload week · half the sets",
+      "italian": "Settimana di scarico · metà delle serie",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.done.minutes",
+      "english": "Minutes",
+      "italian": "Minuti",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.done.sets",
+      "english": "Sets",
+      "italian": "Serie",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.firstWeek.hintStart",
+      "english": "{{target}} workouts in 7 days. Today's counts as the first.",
+      "italian": "{{target}} allenamenti in 7 giorni. Quello di oggi conta come il primo.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.firstWeek.hint_one",
+      "english": "{{target}} workouts on different days · {{count}} day left",
+      "italian": "{{target}} allenamenti in giorni diversi · {{count}} giorno rimanente",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.firstWeek.hint_other",
+      "english": "{{target}} workouts on different days · {{count}} days left",
+      "italian": "{{target}} allenamenti in giorni diversi · {{count}} giorni rimanenti",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.firstWeek.progress",
+      "english": "{{done}} of {{target}}",
+      "italian": "{{done}} di {{target}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.firstWeek.reached",
+      "english": "Goal reached! {{target}} workouts in your first week",
+      "italian": "Obiettivo raggiunto! {{target}} allenamenti nella tua prima settimana",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.firstWeek.title",
+      "english": "Your first-week goal",
+      "italian": "Il tuo obiettivo per la prima settimana",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.firstWorkout.body",
+      "english": "We guide you set by set, with rests timed for you. Just tap.",
+      "italian": "Ti guidiamo serie per serie, con pause cronometrate. Ti basta un tocco.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.firstWorkout.preferProgram",
+      "english": "Rather go straight to your program?",
+      "italian": "Preferisci andare direttamente al tuo programma?",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.firstWorkout.programDay",
+      "english": "{{program}} — day {{day}}",
+      "italian": "{{program}} — giorno {{day}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.firstWorkout.title",
+      "english": "Your first workout",
+      "italian": "Il tuo primo allenamento",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.greeting.afternoon",
+      "english": "Good afternoon",
+      "italian": "Buon pomeriggio",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.greeting.evening",
+      "english": "Good evening",
+      "italian": "Buonasera",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.greeting.morning",
+      "english": "Good morning",
+      "italian": "Buongiorno",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.inProgress.continueBattle",
+      "english": "Continue battle",
+      "italian": "Continua la battaglia",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.inProgress.continueCardio",
+      "english": "Continue cardio",
+      "italian": "Continua l'allenamento cardio",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.inProgress.continueCircuit",
+      "english": "Continue circuit",
+      "italian": "Continua il circuito",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.inProgress.continueFree",
+      "english": "Continue free session",
+      "italian": "Continua la sessione libera",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.inProgress.sets",
+      "english": "{{done}} of {{total}} sets",
+      "italian": "{{done}} di {{total}} serie",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.inactive_one",
+      "english": "You haven't trained in {{count}} day",
+      "italian": "Non ti alleni da {{count}} giorno",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.inactive_other",
+      "english": "You haven't trained in {{count}} days",
+      "italian": "Non ti alleni da {{count}} giorni",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.kicker.chosenDay",
+      "english": "Chosen · {{day}}",
+      "italian": "Scelto · {{day}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.kicker.comeback",
+      "english": "Fresh start",
+      "italian": "Un nuovo inizio",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.kicker.comebackNewWeek",
+      "english": "Fresh start · new week",
+      "italian": "Un nuovo inizio · una nuova settimana",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.kicker.doneToday",
+      "english": "Done today",
+      "italian": "Fatto oggi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.kicker.firstWorkout",
+      "english": "Start here",
+      "italian": "Inizia da qui",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.kicker.inProgress",
+      "english": "In progress · started {{minutes}} min ago",
+      "italian": "In corso · iniziato {{minutes}} minuti fa",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.kicker.inProgressNow",
+      "english": "In progress",
+      "italian": "In corso",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.kicker.inProgressOtherDay",
+      "english": "In progress · started {{day}}",
+      "italian": "In corso · iniziato il {{day}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.kicker.noProgram",
+      "english": "No active program",
+      "italian": "Nessun programma attivo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.kicker.programComplete",
+      "english": "Program complete",
+      "italian": "Programma completato",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.kicker.rest",
+      "english": "Today · rest",
+      "italian": "Oggi · riposo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.kicker.today",
+      "english": "Today · day {{index}} of {{total}}",
+      "italian": "Oggi · giorno {{index}} di {{total}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.kicker.todayCardio",
+      "english": "Today · cardio · day {{index}} of {{total}}",
+      "italian": "Oggi · cardio · giorno {{index}} di {{total}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.kicker.todayCircuit",
+      "english": "Today · circuit · day {{index}} of {{total}}",
+      "italian": "Oggi · circuito · giorno {{index}} di {{total}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.kicker.todayYoga",
+      "english": "Today · yoga · day {{index}} of {{total}}",
+      "italian": "Oggi · yoga · giorno {{index}} di {{total}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.kicker.weekCompleteNoNumber",
+      "english": "Week complete · {{done}} of {{goal}}",
+      "italian": "Settimana completata · {{done}} su {{goal}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.next.label",
+      "english": "Next · {{day}}",
+      "italian": "Avanti · {{day}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.next.tomorrow",
+      "english": "Tomorrow · {{day}}",
+      "italian": "Domani · {{day}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.next.tomorrowShort",
+      "english": "Tomorrow",
+      "italian": "Domani",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "home.noProgram.freeBody",
+      "english": "Free session: pick exercises or ask the AI for one",
+      "italian": "Sessione libera: scegli gli esercizi o chiedi un allenamento all’IA",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.noProgram.freeTitle",
+      "english": "Don't want to decide today?",
+      "italian": "Non vuoi decidere oggi?",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.noProgram.title",
+      "english": "Choose your next program",
+      "italian": "Scegli il tuo prossimo programma",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.paraTi.battleYourTurn",
+      "english": "Battle: it's your turn",
+      "italian": "Battaglia: tocca a te",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.paraTi.challenge",
+      "english": "Challenge: {{name}}",
+      "italian": "Sfida: {{name}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.paraTi.challengeDaysLeft_one",
+      "english": "{{count}} day left",
+      "italian": "Manca {{count}} giorno",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.paraTi.challengeDaysLeft_other",
+      "english": "{{count}} days left",
+      "italian": "Mancano {{count}} giorni",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.paraTi.communityProgram",
+      "english": "Community program: {{name}}",
+      "italian": "Programma della community: {{name}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.paraTi.communityProgramHint",
+      "english": "See what others are training",
+      "italian": "Scopri come si allenano gli altri",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.paraTi.featuredChallenge",
+      "english": "Featured challenge: {{name}}",
+      "italian": "Sfida in primo piano: {{name}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.paraTi.featuredChallengeHint",
+      "english": "Join and compete with the community",
+      "italian": "Unisciti alla community e mettiti alla prova con gli altri membri",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.paraTi.friendToday",
+      "english": "{{name}} trained today",
+      "italian": "{{name}} si è allenato oggi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.paraTi.friendsToday_one",
+      "english": "{{name}} and {{count}} more friend trained today",
+      "italian": "{{name}} e {{count}} altro amico si sono allenati oggi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.paraTi.friendsToday_other",
+      "english": "{{name}} and {{count}} friends trained today",
+      "italian": "{{name}} e {{count}} altri amici si sono allenati oggi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.paraTi.nutritionHint",
+      "english": "Log your next meal",
+      "italian": "Registra il tuo prossimo pasto",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.paraTi.phasePhotos",
+      "english": "Phase {{phase}} photos",
+      "italian": "Foto della fase {{phase}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.paraTi.phasePhotosHint",
+      "english": "Take your start-of-phase photos to see the change",
+      "italian": "Scatta delle foto all'inizio della fase per vedere i cambiamenti",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.paraTi.title",
+      "english": "For you",
+      "italian": "Per te",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.paraTi.viewActivity",
+      "english": "View activity",
+      "italian": "Visualizza attività",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.programComplete.title",
+      "english": "{{name}} complete",
+      "italian": "{{name}} completato",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.programComplete.weeks",
+      "english": "Weeks",
+      "italian": "Settimane",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.programComplete.workouts",
+      "english": "Workouts",
+      "italian": "Allenamenti",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "home.rest.body",
+      "english": "Muscle is built while you rest.",
+      "italian": "I muscoli si sviluppano mentre si riposa.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.rest.bodyNext",
+      "english": "Muscle is built while you rest. {{focus}} is up {{day}}.",
+      "italian": "I muscoli crescono mentre riposi. {{day}} ti aspetta {{focus}}.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.rest.comingSoon",
+      "english": "Today's workout isn't ready yet. Take it as a rest day.",
+      "italian": "L'allenamento di oggi non è ancora pronto. Consideralo un giorno di riposo.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.rest.easyCardio",
+      "english": "Walk or easy run",
+      "italian": "Camminata o corsa leggera",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.rest.easyCardioHint",
+      "english": "GPS cardio",
+      "italian": "Cardio GPS",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.rest.moveOptional",
+      "english": "If you feel like moving",
+      "italian": "Se hai voglia di cambiare aria",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.rest.title",
+      "english": "Recovery is training too",
+      "italian": "Anche il recupero fa parte dell'allenamento",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.streak.deloadCounts",
+      "english": "deload counts too",
+      "italian": "anche lo scarico conta",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.streak.meetingGoal",
+      "english": "meeting your goal",
+      "italian": "obiettivo raggiunto",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.streak.milestone_one",
+      "english": "{{count}} week in a row meeting your goal!",
+      "italian": "Hai raggiunto il tuo obiettivo per {{count}} settimana consecutiva!",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.streak.milestone_other",
+      "english": "{{count}} weeks in a row meeting your goal!",
+      "italian": "Hai raggiunto il tuo obiettivo per {{count}} settimane consecutive!",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.streak.remaining_one",
+      "english": "{{count}} to go",
+      "italian": "Manca {{count}} allenamento",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.streak.remaining_other",
+      "english": "{{count}} to go",
+      "italian": "Mancano {{count}} allenamenti",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.streak.share.badge",
+      "english": "Streak on fire",
+      "italian": "Settimane consecutive da record",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.streak.share.label",
+      "english": "Week streak",
+      "italian": "Serie di settimane consecutive",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.streak.share.tagline",
+      "english": "Consistency is your superpower.",
+      "italian": "La costanza è il tuo superpotere.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.streak.share.tagline12",
+      "english": "Three months on target. This is who you are now.",
+      "italian": "Tre mesi in linea con gli obiettivi. Ecco chi sei adesso.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.streak.share.tagline26",
+      "english": "Half a year without missing. Elite.",
+      "italian": "Sei mesi senza saltare una settimana. Livello élite.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.streak.share.tagline52",
+      "english": "A whole year. Unstoppable. 🐐",
+      "italian": "Un anno intero. Inarrestabile. 🐐",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.streak.shareText_one",
+      "english": "{{count}} week hitting my goal on Calistenia App! 🔥",
+      "italian": "Da {{count}} settimana raggiungo il mio obiettivo su Calistenia! 🔥",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.streak.shareText_other",
+      "english": "{{count}} weeks in a row hitting my goal on Calistenia App! 🔥",
+      "italian": "Da {{count}} settimane consecutive raggiungo il mio obiettivo su Calistenia! 🔥",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.streak.shareTitle",
+      "english": "Share streak",
+      "italian": "Condividi la serie di settimane",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.streak.weeks_one",
+      "english": "{{count}}-week streak",
+      "italian": "{{count}} settimana consecutiva",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.streak.weeks_other",
+      "english": "{{count}}-week streak",
+      "italian": "{{count}} settimane consecutive",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.training.meta",
+      "english": "{{minutes}} min · {{exercises}}",
+      "italian": "{{minutes}} min · {{exercises}}",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "home.training.programPhase",
+      "english": "{{program}} · phase {{phase}} of {{phases}}",
+      "italian": "{{program}} · fase {{phase}} di {{phases}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.training.programWeek",
+      "english": "Week {{week}} of {{weeks}}",
+      "italian": "Settimana {{week}} di {{weeks}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.week.cell.beforeStart",
+      "english": "{{day}}: before you joined",
+      "italian": "{{day}}: prima che ti unissi a noi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.week.cell.done",
+      "english": "{{day}}: done",
+      "italian": "{{day}}: fatto",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.week.cell.inProgress",
+      "english": "{{day}}: in progress",
+      "italian": "{{day}}: in corso",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.week.cell.missed",
+      "english": "{{day}}: not trained",
+      "italian": "{{day}}: allenamento saltato",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.week.cell.planned",
+      "english": "{{day}}: workout",
+      "italian": "{{day}}: allenamento",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.week.cell.rest",
+      "english": "{{day}}: rest",
+      "italian": "{{day}}: riposo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.week.cell.today",
+      "english": "{{day}}: today, to do",
+      "italian": "{{day}}: oggi, da fare",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.week.cell.todayRest",
+      "english": "{{day}}: today, rest",
+      "italian": "{{day}}: oggi, riposo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.week.countNoPlan_one",
+      "english": "{{count}} workout",
+      "italian": "{{count}} allenamento",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.week.countNoPlan_other",
+      "english": "{{count}} workouts",
+      "italian": "{{count}} allenamenti",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.week.count_one",
+      "english": "{{done}} of {{count}} workout",
+      "italian": "{{done}} di {{count}} allenamento",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.week.count_other",
+      "english": "{{done}} of {{count}} workouts",
+      "italian": "{{done}} su {{count}} allenamenti",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.week.missed_one",
+      "english": "You skipped {{day}}. That's okay: one missed day doesn't break the habit. Pick it back up today.",
+      "italian": "Hai saltato {{day}}. Non preoccuparti: un giorno saltato non basta a interrompere l'abitudine. Ricomincia oggi stesso.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.week.missed_other",
+      "english": "You skipped {{count}} days this week. That's okay: what counts is coming back. Pick it back up today.",
+      "italian": "Questa settimana hai saltato {{count}} giorni. Non preoccuparti: l’importante è ricominciare. Ricomincia oggi stesso.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.week.title",
+      "english": "This week",
+      "italian": "Questa settimana",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.week.todayShort",
+      "english": "Today",
+      "italian": "Oggi",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "home.weekComplete.body_one",
+      "english": "First week meeting your goal.",
+      "italian": "Prima settimana in cui raggiungi il tuo obiettivo.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.weekComplete.body_other",
+      "english": "That's {{count}} weeks in a row meeting your goal.",
+      "italian": "Sono già {{count}} settimane di fila che raggiungi il tuo obiettivo.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "home.weekComplete.title",
+      "english": "Week done. Today, rest",
+      "italian": "Settimana conclusa. Oggi, riposo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "leaderboard.prPushups",
+      "english": "Push-ups",
+      "italian": "Piegamenti",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "month.0",
+      "english": "January",
+      "italian": "gennaio",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "month.1",
+      "english": "February",
+      "italian": "febbraio",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "month.10",
+      "english": "November",
+      "italian": "novembre",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "month.11",
+      "english": "December",
+      "italian": "dicembre",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "month.2",
+      "english": "March",
+      "italian": "marzo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "month.3",
+      "english": "April",
+      "italian": "aprile",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "month.4",
+      "english": "May",
+      "italian": "maggio",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "month.5",
+      "english": "June",
+      "italian": "giugno",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "month.6",
+      "english": "July",
+      "italian": "luglio",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "month.7",
+      "english": "August",
+      "italian": "agosto",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "month.8",
+      "english": "September",
+      "italian": "settembre",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "month.9",
+      "english": "October",
+      "italian": "ottobre",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "nav.activity",
+      "english": "Activity",
+      "italian": "Attività",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "nav.admin",
+      "english": "Admin",
+      "italian": "Amministratore",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "nav.battles",
+      "english": "Battles",
+      "italian": "Battaglie",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "nav.calendar",
+      "english": "Calendar",
+      "italian": "Calendario",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "nav.cardio",
+      "english": "Cardio",
+      "italian": "Cardio",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "nav.challenges",
+      "english": "Challenges",
+      "italian": "Sfide",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "nav.circuit",
+      "english": "Circuits",
+      "italian": "Circuiti",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "nav.community",
+      "english": "Community",
+      "italian": "Community",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "nav.communityPrograms",
+      "english": "Community Programs",
+      "italian": "Programmi della community",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "nav.dashboard",
+      "english": "Dashboard",
+      "italian": "Dashboard",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "nav.editor",
+      "english": "Editor",
+      "italian": "Editor",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "nav.exercises",
+      "english": "Exercises",
+      "italian": "Esercizi",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "nav.leaderboard",
+      "english": "Leaderboard",
+      "italian": "Classifica",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "nav.notificationSettings",
+      "english": "Notification settings",
+      "italian": "Impostazioni delle notifiche",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "nav.notifications",
+      "english": "Notifications",
+      "italian": "Notifiche",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "nav.nutrition",
+      "english": "Nutrition",
+      "italian": "Nutrizione",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "nav.profile",
+      "english": "Profile",
+      "italian": "Profilo",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "nav.programs",
+      "english": "Programs",
+      "italian": "Programmi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "nav.progress",
+      "english": "Progress",
+      "italian": "Progressi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "nav.races",
+      "english": "Races",
+      "italian": "Gare",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "nav.reminders",
+      "english": "Reminders",
+      "italian": "Promemoria",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "nav.sectionMore",
+      "english": "More",
+      "italian": "Altro",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "nav.signOut",
+      "english": "Sign out",
+      "italian": "Esci",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "nav.sleep",
+      "english": "Sleep",
+      "italian": "Sonno",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "nav.today",
+      "english": "Today",
+      "italian": "Oggi",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "nav.workout",
+      "english": "Workout",
+      "italian": "Allenamento",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "notifSettings.challenges",
+      "english": "Challenges",
+      "italian": "Sfide",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "notifSettings.comments",
+      "english": "Comments and replies",
+      "italian": "Commenti e risposte",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "notifSettings.follows",
+      "english": "New followers",
+      "italian": "Nuovi follower",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "notifSettings.friend_achievements",
+      "english": "Your friends' achievements",
+      "italian": "I risultati dei tuoi amici",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "notifSettings.friend_streaks",
+      "english": "Your friends' streaks",
+      "italian": "Le serie consecutive dei tuoi amici",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "notifSettings.friend_workouts",
+      "english": "When a friend works out",
+      "italian": "Quando un amico si allena",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "notifSettings.own_milestones",
+      "english": "Your achievements and streaks",
+      "italian": "I tuoi risultati e le tue serie consecutive",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "notifSettings.pushMaster",
+      "english": "Push notifications",
+      "italian": "Notifiche push",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "notifSettings.pushMasterDesc",
+      "english": "Get alerts on your phone",
+      "italian": "Ricevi le notifiche sul tuo telefono",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "notifSettings.reactions",
+      "english": "Reactions to your sessions",
+      "italian": "Reazioni alle tue sessioni",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "notifSettings.referrals",
+      "english": "Referrals",
+      "italian": "Inviti",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "notifSettings.sectionFriends",
+      "english": "Friends",
+      "italian": "Amici",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "notifSettings.sectionSocial",
+      "english": "Social",
+      "italian": "Social",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "notifSettings.sectionYou",
+      "english": "You",
+      "italian": "Tu",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "notifSettings.subtitle",
+      "english": "Choose what you want to receive",
+      "italian": "Scegli cosa vuoi ricevere",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "notifSettings.title",
+      "english": "Notifications",
+      "italian": "Notifiche",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.aboutYou",
+      "english": "TELL US ABOUT YOU",
+      "italian": "RACCONTACI DI TE",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.aboutYouDesc",
+      "english": "This helps us personalize your experience. Everything is optional.",
+      "italian": "Questo ci aiuta a personalizzare la tua esperienza. Tutto è facoltativo.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.activityActive",
+      "english": "Active",
+      "italian": "Attivo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.activityLevel",
+      "english": "Daily activity level",
+      "italian": "Livello di attività quotidiana",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.activityLight",
+      "english": "Light",
+      "italian": "Leggermente attivo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.activitySedentary",
+      "english": "Sedentary",
+      "italian": "Sedentario",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.activityVeryActive",
+      "english": "Very active",
+      "italian": "Molto attivo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.advanced",
+      "english": "Advanced",
+      "italian": "Avanzato",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.advancedDesc",
+      "english": "Muscle-ups, planche...",
+      "italian": "Muscle-up, planche...",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.age",
+      "english": "Age",
+      "italian": "Età",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.alsoForYou",
+      "english": "ALSO FOR YOU",
+      "italian": "ANCHE PER TE",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.back",
+      "english": "BACK",
+      "italian": "INDIETRO",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.beginner",
+      "english": "Beginner",
+      "italian": "Principiante",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.beginnerDesc",
+      "english": "New to calisthenics",
+      "italian": "Alle prime armi con la calistenia",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.by",
+      "english": "by {{name}}",
+      "italian": "di {{name}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.chooseProgramBtn",
+      "english": "CHOOSE PROGRAM",
+      "italian": "SCEGLI IL PROGRAMMA",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.chooseProgramDesc",
+      "english": "A program is your weekly plan: it has exercises for each day and phases that increase in difficulty.",
+      "italian": "Un programma è il tuo piano settimanale: prevede esercizi per ogni giorno e fasi di difficoltà crescente.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.chooseProgramTitle",
+      "english": "CHOOSE YOUR PROGRAM",
+      "italian": "SCEGLI IL TUO PROGRAMMA",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.conditions.asthma",
+      "english": "Asthma",
+      "italian": "Asma",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.conditions.back",
+      "english": "Back",
+      "italian": "Schiena",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.conditions.diabetes",
+      "english": "Diabetes",
+      "italian": "Diabete",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.conditions.heart",
+      "english": "Heart",
+      "italian": "Problemi cardiaci",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.conditions.hypertension",
+      "english": "Hypertension",
+      "italian": "Ipertensione",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.conditions.joint",
+      "english": "Joints",
+      "italian": "Articolazioni",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.conditions.other",
+      "english": "Other",
+      "italian": "Altro",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.continueBtn",
+      "english": "CONTINUE",
+      "italian": "CONTINUA",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.createOwn",
+      "english": "+ Create my own program",
+      "italian": "+ Crea un programma personalizzato",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.dayLabel",
+      "english": "Day",
+      "italian": "Giorno",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.days.fri",
+      "english": "Fri",
+      "italian": "Ven",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.days.mon",
+      "english": "Mon",
+      "italian": "Lun",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.days.sat",
+      "english": "Sat",
+      "italian": "Sab",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.days.sun",
+      "english": "Sun",
+      "italian": "Dom",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.days.thu",
+      "english": "Thu",
+      "italian": "Gio",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.days.tue",
+      "english": "Tue",
+      "italian": "Mar",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.days.wed",
+      "english": "Wed",
+      "italian": "Mer",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.discoveryAiChat",
+      "english": "ChatGPT or another AI",
+      "italian": "ChatGPT o un'altra IA",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.discoveryAppStore",
+      "english": "Google Play / App Store",
+      "italian": "Google Play / App Store",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "onboarding.discoveryFriend",
+      "english": "Someone recommended it",
+      "italian": "Me l'ha consigliato qualcuno",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.discoveryGithub",
+      "english": "GitHub",
+      "italian": "GitHub",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "onboarding.discoveryOptional",
+      "english": "Optional",
+      "italian": "Facoltativo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.discoveryOther",
+      "english": "Somewhere else",
+      "italian": "Da qualche altra parte",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.discoverySearch",
+      "english": "Searching on Google",
+      "italian": "Ricerca su Google",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.discoverySocial",
+      "english": "Instagram, TikTok or YouTube",
+      "italian": "Instagram, TikTok o YouTube",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.discoveryTitle",
+      "english": "How did you find the app?",
+      "italian": "Come hai scoperto l’app?",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.enduranceNotice",
+      "english": "We don't have dedicated endurance programs yet. We recommend a general base program — you can add GPS cardio sessions from the app.",
+      "italian": "Non disponiamo ancora di programmi specifici per la resistenza. Ti consigliamo un programma di base generico: puoi aggiungere sessioni di cardio con GPS dall'app.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.essentialsDesc",
+      "english": "Just enough to build your plan. Fine-tune the rest anytime from your profile.",
+      "italian": "Quanto basta per definire il tuo piano. Puoi perfezionare il resto in qualsiasi momento dal tuo profilo.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.essentialsTitle",
+      "english": "YOUR GOAL",
+      "italian": "IL TUO OBIETTIVO",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.exercises",
+      "english": "Exercises",
+      "italian": "Esercizi",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "onboarding.female",
+      "english": "Female",
+      "italian": "Donna",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.firstMeasurementCta",
+      "english": "Log your first body measurement",
+      "italian": "Registra la tua prima misurazione corporea",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.firstWorkoutCta",
+      "english": "START MY FIRST WORKOUT · {{minutes}} MIN",
+      "italian": "INIZIA IL MIO PRIMO ALLENAMENTO · {{minutes}} MIN",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.firstWorkoutHint",
+      "english": "3 bodyweight exercises. Done today.",
+      "italian": "3 esercizi a corpo libero. Da fare oggi.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.focus.core",
+      "english": "Core",
+      "italian": "Core",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "onboarding.focus.full_body",
+      "english": "Full body",
+      "italian": "Corpo intero",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.focus.handstand",
+      "english": "Handstand",
+      "italian": "Verticale",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.focus.legs",
+      "english": "Legs",
+      "italian": "Gambe",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.focus.muscle_up",
+      "english": "Muscle-up",
+      "italian": "Muscle-up",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "onboarding.focus.planche",
+      "english": "Planche",
+      "italian": "Planche",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "onboarding.focus.pull_up",
+      "english": "Pull-ups",
+      "italian": "Trazioni",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.focus.upper_body",
+      "english": "Upper body",
+      "italian": "Parte superiore del corpo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.focusAreas",
+      "english": "What you want to focus on",
+      "italian": "Su cosa vuoi concentrarti",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.forYou",
+      "english": "FOR YOU",
+      "italian": "PER TE",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.goHomeInstead",
+      "english": "Not now, go to home",
+      "italian": "Non ora, vai alla home",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.healthDesc",
+      "english": "Helps us filter exercises that might hurt you.",
+      "italian": "Ci aiuta a escludere gli esercizi che potrebbero causarti dolore.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.healthDisclaimer",
+      "english": "Consult a healthcare professional before starting any exercise program. This app does not replace medical advice.",
+      "italian": "Prima di iniziare qualsiasi programma di esercizi fisici, consultare un medico. Questa app non sostituisce il parere medico.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.healthTitle",
+      "english": "HEALTH",
+      "italian": "SALUTE",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.height",
+      "english": "Height (cm)",
+      "italian": "Altezza (cm)",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.howItWorks",
+      "english": "How it works:",
+      "italian": "Come funziona:",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.howItWorksDetail",
+      "english": "you choose a training program and each day has assigned exercises. You enter, follow the guided session and everything is logged.",
+      "italian": "Si sceglie un programma di allenamento e a ogni giorno sono assegnati degli esercizi. Si accede, si segue la sessione guidata e tutto viene registrato.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.injuries.ankle",
+      "english": "Ankle",
+      "italian": "Caviglia",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.injuries.elbow",
+      "english": "Elbow",
+      "italian": "Gomito",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.injuries.knee",
+      "english": "Knee",
+      "italian": "Ginocchio",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.injuries.lower_back",
+      "english": "Lower back",
+      "italian": "Parte bassa della schiena",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.injuries.other",
+      "english": "Other",
+      "italian": "Altro",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.injuries.shoulder",
+      "english": "Shoulder",
+      "italian": "Spalla",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.injuries.wrist",
+      "english": "Wrist",
+      "italian": "Polso",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.injuriesLabel",
+      "english": "Injuries or limitations",
+      "italian": "Lesioni o limitazioni",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.intensity",
+      "english": "Preferred intensity",
+      "italian": "Intensità preferita",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.intensityIntense",
+      "english": "Intense",
+      "italian": "Intensa",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.intensityLight",
+      "english": "Light",
+      "italian": "Leggera",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.intensityModerate",
+      "english": "Moderate",
+      "italian": "Moderata",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.intermediate",
+      "english": "Intermediate",
+      "italian": "Livello intermedio",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.intermediateDesc",
+      "english": "6+ months training",
+      "italian": "6 o più mesi di allenamento",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.invitedProgram",
+      "english": "LIKE YOUR FRIEND",
+      "italian": "COME IL TUO AMICO",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.justChooseProgram",
+      "english": "You just need to choose a program to start.",
+      "italian": "Devi solo scegliere un programma da cui iniziare.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.level",
+      "english": "Level",
+      "italian": "Livello",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.male",
+      "english": "Male",
+      "italian": "Maschio",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.medicalConditions",
+      "english": "Medical conditions",
+      "italian": "Condizioni mediche",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.needsProfileHint",
+      "english": "First we ask for some basic data, then you choose your program.",
+      "italian": "Per prima cosa ti chiediamo alcune informazioni di base, poi scegli il programma che preferisci.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.noIssuesLabel",
+      "english": "No conditions or injuries",
+      "italian": "Nessuna condizione particolare né infortuni",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.official",
+      "english": "OFFICIAL",
+      "italian": "UFFICIALE",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.pace",
+      "english": "Desired pace",
+      "italian": "Ritmo desiderato",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.paceAggressive",
+      "english": "Aggressive",
+      "italian": "Aggressivo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.paceAggressiveDesc",
+      "english": "~1 kg/week",
+      "italian": "circa 1 kg a settimana",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.paceBalanced",
+      "english": "Balanced",
+      "italian": "Equilibrato",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.paceBalancedDesc",
+      "english": "~0.5 kg/week",
+      "italian": "~0.5 kg/settimana",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.paceGradual",
+      "english": "Gradual",
+      "italian": "Graduale",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.paceGradualDesc",
+      "english": "~0.25 kg/week",
+      "italian": "~0.25 kg/settimana",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.pickForMe",
+      "english": "Choose for me",
+      "italian": "Scegli tu per me",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.primaryGoal",
+      "english": "What's your main goal?",
+      "italian": "Qual è il tuo obiettivo principale?",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.primaryGoalEndurance",
+      "english": "Endurance",
+      "italian": "Resistenza",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.primaryGoalFatLoss",
+      "english": "Lose fat",
+      "italian": "Perdere grasso",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.primaryGoalHealth",
+      "english": "General health",
+      "italian": "Stato di salute generale",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.primaryGoalMuscle",
+      "english": "Build muscle",
+      "italian": "Aumentare la massa muscolare",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.primaryGoalRecomp",
+      "english": "Recomposition",
+      "italian": "Ricomposizione",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.primaryGoalSkills",
+      "english": "Skills",
+      "italian": "Abilità calisteniche",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.programLabel",
+      "english": "Program",
+      "italian": "Programma",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.progress",
+      "english": "Progress",
+      "italian": "Progressi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.recommended",
+      "english": "RECOMMENDED",
+      "italian": "CONSIGLIATO",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.recommendedHint",
+      "english": "<strong>RECOMMENDED</strong> programs are the best to start with.",
+      "italian": "<strong>I programmi CONSIGLIATI</strong> sono i migliori per iniziare.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.reminderAfternoon",
+      "english": "Afternoon",
+      "italian": "Pomeriggio",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.reminderContinue",
+      "english": "Turn on reminder",
+      "italian": "Attiva promemoria",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.reminderEvening",
+      "english": "Evening",
+      "italian": "Sera",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.reminderMidday",
+      "english": "Midday",
+      "italian": "Mezzogiorno",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.reminderMorning",
+      "english": "Morning",
+      "italian": "Mattina",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.reminderPermissionDenied",
+      "english": "Without notification permission we can't remind you. The reminder is saved in case you enable it later.",
+      "italian": "Senza l'autorizzazione alle notifiche non possiamo inviarti promemoria. Il promemoria viene salvato nel caso in cui tu decida di attivarlo in un secondo momento.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.reminderSkip",
+      "english": "Not now",
+      "italian": "Non adesso",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.reminderSubtitle",
+      "english": "We'll remind you at that time on your training days. Change it any time from Reminders.",
+      "italian": "Ti ricorderemo l'appuntamento nei giorni in cui ti alleni. Puoi modificarlo in qualsiasi momento dalla sezione \"Promemoria\".",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.reminderTitle",
+      "english": "When do you usually train?",
+      "italian": "Quando ti alleni di solito?",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.saveError",
+      "english": "Couldn't save. Check your connection and try again.",
+      "italian": "Impossibile salvare. Verifica la connessione e riprova.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.saving",
+      "english": "SAVING...",
+      "italian": "SALVATAGGIO IN CORSO...",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.sex",
+      "english": "Sex",
+      "italian": "Sesso",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.skipAll",
+      "english": "I already know the app, skip",
+      "italian": "Conosco già l'app, salta",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.skipForNow",
+      "english": "Skip for now",
+      "italian": "Per ora salta questo passaggio",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.startBtn",
+      "english": "START",
+      "italian": "INIZIA",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.startTraining",
+      "english": "START TRAINING",
+      "italian": "INIZIA L'ALLENAMENTO",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.timelineGoal",
+      "english": "Goal",
+      "italian": "Obiettivo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.timelineProgram",
+      "english": "Selected program",
+      "italian": "Programma selezionato",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.timelineProjection",
+      "english": "Projection: {{date}}",
+      "italian": "Proiezione: {{date}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.timelineProjectionNote",
+      "english": "{{pace}} pace · ~{{weeks}} weeks",
+      "italian": "Ritmo {{pace}} · ~{{weeks}} settimane",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.timelineWeeks",
+      "english": "{{weeks}} weeks",
+      "italian": "{{weeks}} settimane",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.timelineWeight",
+      "english": "Weight",
+      "italian": "Peso",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.trainingDays",
+      "english": "Days you'll train",
+      "italian": "Giorni in cui ti allenerai",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.weeks",
+      "english": "weeks",
+      "italian": "settimane",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.weight",
+      "english": "Weight (kg)",
+      "italian": "Peso (kg)",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.welcomeDefault",
+      "english": "Welcome to your training",
+      "italian": "Benvenuto nel tuo allenamento",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.welcomeMsg",
+      "english": "{{name}}, welcome to your training",
+      "italian": "{{name}}, benvenuto nel tuo allenamento",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.yourPlanDesc",
+      "english": "Ready to start.",
+      "italian": "Tutto pronto per iniziare.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.yourPlanTitle",
+      "english": "YOUR PLAN",
+      "italian": "IL TUO PIANO",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "onboarding.yours",
+      "english": "YOURS",
+      "italian": "TUO",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "privacy.privateAccount",
+      "english": "Private account",
+      "italian": "Account privato",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "privacy.privateAccountDesc",
+      "english": "Only approved followers can see your activity. Following you requires your approval.",
+      "italian": "Solo i follower approvati possono vedere la tua attività. Per seguirti è necessaria la tua approvazione.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "privacy.privateNote",
+      "english": "People who already followed you keep access. With a private account you are hidden from challenge leaderboards for others.",
+      "italian": "Le persone che ti seguivano già continueranno ad avere accesso al tuo profilo. Con un account privato, non comparirai nelle classifiche delle sfide degli altri utenti.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "privacy.publicAccountDesc",
+      "english": "Any registered account can see your workouts, records and rankings.",
+      "italian": "Qualsiasi account registrato può visualizzare i tuoi allenamenti, i tuoi record e le tue classifiche.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "privacy.saveError",
+      "english": "Could not change privacy. Please try again.",
+      "italian": "Impossibile modificare le impostazioni sulla privacy. Riprova.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.age",
+      "english": "Age",
+      "italian": "Età",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.agePlaceholder",
+      "english": "E.g.: 28",
+      "italian": "Es.: 28",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.alertsHint",
+      "english": "Which notifications you get",
+      "italian": "Quali notifiche ricevi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.avatarChange",
+      "english": "Change photo",
+      "italian": "Cambia foto",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.avatarChooseGallery",
+      "english": "Choose from gallery",
+      "italian": "Scegli dalla galleria",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.avatarError",
+      "english": "Couldn't update the photo",
+      "italian": "Impossibile aggiornare la foto",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.avatarRemove",
+      "english": "Remove photo",
+      "italian": "Rimuovi foto",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.avatarRemoveConfirm",
+      "english": "Remove your profile photo?",
+      "italian": "Vuoi rimuovere la tua foto del profilo?",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.avatarTakePhoto",
+      "english": "Take a photo",
+      "italian": "Scatta una foto",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.avatarTooLarge",
+      "english": "That photo is too large (max. 5 MB)",
+      "italian": "Quella foto è troppo grande (max. 5 MB)",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.avatarUnsupported",
+      "english": "Unsupported format. Use JPG, PNG or WEBP.",
+      "italian": "Formato non supportato. Utilizza JPG, PNG o WEBP.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.currency",
+      "english": "Currency",
+      "italian": "Valuta",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.currencyDesc",
+      "english": "Spending is always shown in $ (USD as reference).",
+      "italian": "Gli importi sono sempre indicati in $ (USD come valuta di riferimento).",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.discover",
+      "english": "Discover",
+      "italian": "Scopri",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.email",
+      "english": "Email",
+      "italian": "E-mail",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.female",
+      "english": "Female",
+      "italian": "Donna",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.goal",
+      "english": "Goal",
+      "italian": "Obiettivo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.goalPlaceholder",
+      "english": "E.g.: Achieve 10 consecutive muscle-ups, lose body fat...",
+      "italian": "Ad esempio: eseguire 10 muscle-up consecutivi, perdere grasso corporeo...",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.goalWeightPlaceholder",
+      "english": "E.g.: 72",
+      "italian": "Es.: 72",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.goalWeightShort",
+      "english": "Target weight",
+      "italian": "Peso obiettivo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.groupApp",
+      "english": "App",
+      "italian": "App",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "profile.groupTraining",
+      "english": "Training",
+      "italian": "Allenamento",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.health",
+      "english": "Watch & health",
+      "italian": "Orologi e salute",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.heightPlaceholder",
+      "english": "E.g.: 175",
+      "italian": "Es.: 175",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.heightShort",
+      "english": "Height",
+      "italian": "Altezza",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.language",
+      "english": "Language",
+      "italian": "Lingua",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "profile.level",
+      "english": "Level",
+      "italian": "Livello",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.male",
+      "english": "Male",
+      "italian": "Maschio",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.memberSince",
+      "english": "Member since",
+      "italian": "Iscritto dal",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.name",
+      "english": "Name",
+      "italian": "Nome",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.namePlaceholder",
+      "english": "Your name",
+      "italian": "Il tuo nome",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.phase",
+      "english": "Phase {{phase}}",
+      "italian": "Fase {{phase}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.programAndPhase",
+      "english": "Program and phase",
+      "italian": "Programma e fase",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.remindersHint",
+      "english": "Workouts, meals and active breaks",
+      "italian": "Allenamenti, pasti e pause attive",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.rowAccountPrivacy",
+      "english": "Account & privacy",
+      "italian": "Account e privacy",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.rowBodyGoals",
+      "english": "Body & goals",
+      "italian": "Corpo e obiettivi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.rowPreferences",
+      "english": "Preferences",
+      "italian": "Preferenze",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.saved",
+      "english": "SAVED!",
+      "italian": "SALVATO!",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.saving",
+      "english": "SAVING...",
+      "italian": "SALVATAGGIO IN CORSO...",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.screenKicker",
+      "english": "Profile and settings",
+      "italian": "Profilo e impostazioni",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.sectionBody",
+      "english": "Body",
+      "italian": "Corpo",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.sectionTraining",
+      "english": "Training",
+      "italian": "Allenamento",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.seeRecords",
+      "english": "See stats and records",
+      "italian": "Visualizza statistiche e record",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.sessions",
+      "english": "Sessions",
+      "italian": "Sessioni",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.sex",
+      "english": "Sex",
+      "italian": "Sesso",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.skillAchieved",
+      "english": "{{label}} ×{{value}}",
+      "italian": "{{label}} ×{{value}}",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "profile.skillLocked",
+      "english": "{{label}} · {{pct}}%",
+      "italian": "{{label}} · {{pct}}%",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "profile.skillsAndRecords",
+      "english": "Skills and records",
+      "italian": "Abilità e record",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.skillsEmpty",
+      "english": "No records yet. Log a workout and they will show up here.",
+      "italian": "Non ci sono ancora dati. Registra un allenamento e appariranno qui.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.staffPanel",
+      "english": "Admin and editor panel",
+      "italian": "Pannello di amministrazione e di modifica",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.streak",
+      "english": "Streak",
+      "italian": "Settimane consecutive",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.theme",
+      "english": "Theme",
+      "italian": "Tema",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.themeDark",
+      "english": "Dark",
+      "italian": "Scuro",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.themeLight",
+      "english": "Light",
+      "italian": "Chiaro",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.themeSystem",
+      "english": "System",
+      "italian": "Sistema",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.title",
+      "english": "PROFILE",
+      "italian": "PROFILO",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.weekOfTotal",
+      "english": "Week {{current}} of {{total}}",
+      "italian": "Settimana {{current}} di {{total}}",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.weeklyGoal",
+      "english": "Weekly goal",
+      "italian": "Obiettivo settimanale",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.weeklyGoalField",
+      "english": "Workouts per week",
+      "italian": "Allenamenti a settimana",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.weeklyGoalHintCustom",
+      "english": "You picked it. Your streak counts the weeks you meet it.",
+      "italian": "L’hai scelto tu. La serie conta le settimane consecutive in cui raggiungi questo obiettivo.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.weeklyGoalHintProgram_one",
+      "english": "Right now it's your program's: {{count}} day a week. Your streak counts the weeks you meet it.",
+      "italian": "Il tuo programma attuale: {{count}} giorno a settimana. La serie conta le settimane in cui raggiungi questo obiettivo.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.weeklyGoalHintProgram_other",
+      "english": "Right now it's your program's: {{count}} days a week. Your streak counts the weeks you meet it.",
+      "italian": "Il tuo programma attuale: {{count}} giorni a settimana. La serie conta le settimane in cui raggiungi questo obiettivo.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.weeklyGoalReset_one",
+      "english": "Use my program's ({{count}})",
+      "italian": "Usa il mio programma ({{count}})",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.weeklyGoalReset_other",
+      "english": "Use my program's ({{count}})",
+      "italian": "Usa il mio programma ({{count}})",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.weeklyGoalValue_one",
+      "english": "{{count}} workout",
+      "italian": "{{count}} allenamento",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.weeklyGoalValue_other",
+      "english": "{{count}} workouts",
+      "italian": "{{count}} allenamenti",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.weightPlaceholder",
+      "english": "E.g.: 75",
+      "italian": "Ad esempio: 75",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.weightShort",
+      "english": "Weight",
+      "italian": "Peso",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "profile.whatsNew",
+      "english": "What's New",
+      "italian": "Novità",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "programs.penalty.equipmentMissing",
+      "english": "Equipment required",
+      "italian": "Attrezzatura necessaria",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "programs.penalty.healthFlag",
+      "english": "Check with your doctor",
+      "italian": "Consulta il tuo medico",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "programs.penalty.highFrequency",
+      "english": "High frequency",
+      "italian": "Alta frequenza",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "progressTab.weeksShort_one",
+      "english": "{{count}} wk",
+      "italian": "{{count}} settimana",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "progressTab.weeksShort_other",
+      "english": "{{count}} wks",
+      "italian": "{{count}} settimane",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "quickGuide.communityBody",
+      "english": "Friends' activity, challenges, battles, leaderboard and races.",
+      "italian": "Attività degli amici, sfide, battaglie, classifica e gare.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "quickGuide.communityTitle",
+      "english": "Community",
+      "italian": "Community",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "quickGuide.kicker",
+      "english": "Getting around",
+      "italian": "Come spostarsi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "quickGuide.nutritionBody",
+      "english": "Meals, macros, water, pantry and recipes.",
+      "italian": "Pasti, macronutrienti, acqua, dispensa e ricette.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "quickGuide.nutritionTitle",
+      "english": "Nutrition",
+      "italian": "Nutrizione",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "quickGuide.profileBody",
+      "english": "Tap your photo at the top right: weekly goal, reminders, body, language and account.",
+      "italian": "Tocca la tua foto in alto a destra: obiettivo settimanale, promemoria, corpo, lingua e account.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "quickGuide.profileTitle",
+      "english": "Profile",
+      "italian": "Profilo",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "quickGuide.progressBody",
+      "english": "Your weekly streak, the month, calendar, sleep, photos, weight and session history.",
+      "italian": "La tua serie di settimane consecutive, il mese, il calendario, il sonno, le foto, il peso e la cronologia delle sessioni.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "quickGuide.progressTitle",
+      "english": "Progress",
+      "italian": "Progressi",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "quickGuide.title",
+      "english": "Quick app guide",
+      "italian": "Guida rapida all'app",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "quickGuide.todayBody",
+      "english": "What's on today and the button to start. If something is in progress, continue it here.",
+      "italian": "Il programma di oggi e il pulsante per iniziare. Se c'è qualcosa in corso, proseguilo qui.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "quickGuide.todayTitle",
+      "english": "Today",
+      "italian": "Oggi",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "quickGuide.trainBody",
+      "english": "Your program and its week, free sessions, GPS cardio, circuits, and the program and exercise lists.",
+      "italian": "Il tuo programma e la settimana, sessioni libere, cardio con GPS, circuiti e cataloghi di programmi ed esercizi.",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "quickGuide.trainTitle",
+      "english": "Train",
+      "italian": "Allenamento",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "race.athlete",
+      "english": "Athlete",
+      "italian": "Atleta",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "session.session",
+      "english": "Session",
+      "italian": "Sessione",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "whatsNew.continue",
+      "english": "Continue",
+      "italian": "Continua",
+      "changedFromBaseline": false
+    },
+    {
+      "key": "whatsNew.details",
+      "english": "Technical details",
+      "italian": "Dettagli tecnici",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "whatsNew.gotIt",
+      "english": "Got it",
+      "italian": "Capito",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "whatsNew.historyKicker",
+      "english": "History",
+      "italian": "Cronologia",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "whatsNew.kicker",
+      "english": "What's New",
+      "italian": "Novità",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "whatsNew.seeOlder",
+      "english": "See previous versions",
+      "italian": "Vedi le versioni precedenti",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "whatsNew.title",
+      "english": "What's New",
+      "italian": "Novità",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "workout.exerciseCount_one",
+      "english": "{{count}} exercise",
+      "italian": "{{count}} esercizio",
+      "changedFromBaseline": true
+    },
+    {
+      "key": "workout.exerciseCount_other",
+      "english": "{{count}} exercises",
+      "italian": "{{count}} esercizi",
+      "changedFromBaseline": true
+    }
+  ]
+}

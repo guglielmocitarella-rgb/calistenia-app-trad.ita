@@ -50,6 +50,7 @@ import {
 import { Chip } from '@/components/ui/chip'
 import { Textarea } from '@/components/ui/textarea'
 import { Sentry } from '@/lib/instrument'
+import { profileSkillLabel } from '@/lib/italian-ui-labels'
 
 type SaveState = 'idle' | 'saving' | 'saved'
 /** Temas de ajuste que se despliegan en la lista del final. */
@@ -444,8 +445,8 @@ export default function ProfileScreen() {
                         s.achieved ? 'text-lime' : 'text-muted-foreground',
                       )}>
                         {s.achieved
-                          ? t('profile.skillAchieved', { label: s.label, value: `${s.value}${s.unit === 's' ? 's' : ''}` })
-                          : t('profile.skillLocked', { label: s.label, pct: s.pct })}
+                          ? t('profile.skillAchieved', { label: profileSkillLabel(s.key, s.label, i18n.language, Platform.OS, t), value: `${s.value}${s.unit === 's' ? 's' : ''}` })
+                          : t('profile.skillLocked', { label: profileSkillLabel(s.key, s.label, i18n.language, Platform.OS, t), pct: s.pct })}
                       </Text>
                     </View>
                   ))}
