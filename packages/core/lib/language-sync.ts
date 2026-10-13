@@ -8,13 +8,12 @@
  * no sabía en qué idioma usa cada uno la app. `mcp-server/src/api/push-sender.ts`
  * lee este campo para elegir la variante de cada push.
  *
- * A diferencia de `timezone-sync.ts`, aquí SÍ se sobrescribe lo guardado: el
- * idioma de la app es la única fuente de verdad y el usuario lo cambia a mano
- * desde la propia app. Lo que se guarda es lo que la app enseña de verdad
- * (#821: español solo si el idioma es español, inglés para todo lo demás), no
- * el idioma crudo del dispositivo.
+ * Sin política de plataforma conserva el comportamiento histórico de web.
+ * Android separa UI y preferencia server: IT conserva ES/EN existente; los
+ * cambios explícitos a ES/EN siguen sincronizándose como antes.
  */
 import i18n from 'i18next'
+import { getLanguagePolicy } from '../platform'
 import { pb } from './pocketbase'
 
 /** Idiomas que la app sabe enseñar (y, por tanto, que el servidor sabe mandar). */
@@ -42,7 +41,7 @@ export async function syncUserLanguage(
 ): Promise<UserLanguage | null> {
   try {
     if (!userId || !currentLanguage) return null
-    const language = toUserLanguage(currentLanguage)
+    const language = getLanguagePolicy()?.server(currentLanguage, storedLanguage) ?? toUserLanguage(currentLanguage)
     if (storedLanguage === language) return language
     // Actualizar el registro autenticado refresca también `pb.authStore`, así
     // que el `onChange` que dispara ve ya el idioma nuevo y no vuelve a escribir.

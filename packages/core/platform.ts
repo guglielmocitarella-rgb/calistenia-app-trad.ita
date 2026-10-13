@@ -87,6 +87,12 @@ export interface CoreErrorContext {
 }
 
 export interface CorePlatform {
+  /** Solo Android: separa UI de contenido y preferencia de servicios originales. */
+  languages?: {
+    content(ui: string): string
+    server(ui: string, stored?: string | null): 'es' | 'en'
+  }
+
   storage: CoreStorage
   /**
    * OPCIONAL: almacenamiento que NO sobrevive a cerrar la pestaña (web:
@@ -165,3 +171,6 @@ export const lifecycle: CoreLifecycle = {
   onForeground: (handler) => getPlatform().lifecycle?.onForeground(handler) ?? noopUnsubscribe,
   onBackground: (handler) => getPlatform().lifecycle?.onBackground(handler) ?? noopUnsubscribe,
 }
+
+/** La política es opcional también en módulos puros y tests sin initCore. */
+export const getLanguagePolicy = () => platform?.languages

@@ -1,3 +1,5 @@
+import { getLanguagePolicy } from '../platform'
+import { resolveAndroidWgerLanguage } from './android-language'
 /**
  * Mappings from wger exercise data → app exercise catalog format.
  */
@@ -99,6 +101,7 @@ export function mapWgerToExerciseCatalog(
   info: WgerExerciseInfo,
   language = 'es'
 ): MappedExercise {
+  if (getLanguagePolicy()) language = resolveAndroidWgerLanguage(language)
   // Find translated name/description
   const langId = WGER_LANGUAGE_IDS[language] ?? WGER_LANGUAGE_IDS.es
   const enLangId = WGER_LANGUAGE_IDS.en

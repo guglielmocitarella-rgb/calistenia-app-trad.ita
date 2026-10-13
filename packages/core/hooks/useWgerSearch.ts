@@ -1,3 +1,5 @@
+import { getLanguagePolicy } from '../platform'
+import { resolveAndroidWgerLanguage } from '../lib/android-language'
 import { useState, useCallback } from 'react'
 import i18n from 'i18next'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
@@ -40,6 +42,7 @@ export function useWgerSearch() {
   // doSearch actualiza el término que dispara la query reactiva.
   // El debounce queda en manos del llamador si hace falta (la API de wger lo tolera).
   const doSearch = useCallback(async (term: string, language = 'es') => {
+    if (getLanguagePolicy()) language = resolveAndroidWgerLanguage(language)
     if (term.length < 2) return
     setWgerError(null)
     setSearchLanguage(language)
@@ -49,6 +52,7 @@ export function useWgerSearch() {
   // importExercise escribe en PocketBase; permanece como función async directa
   // para mantener la firma pública original (devuelve Promise<string>).
   const importExercise = useCallback(async (wgerId: number, language = 'es'): Promise<string> => {
+    if (getLanguagePolicy()) language = resolveAndroidWgerLanguage(language)
     // Deduplicación: si ya existe en catálogo local, devolver su id
     try {
       const existing = await pb.collection('exercises_catalog').getFirstListItem(pb.filter('wger_id = {:wgerId}', { wgerId }), { requestKey: null })

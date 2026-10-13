@@ -5,6 +5,7 @@
  * (pocketbase.ts, ai-api.ts) leen el platform adapter al evaluarse.
  */
 import { Platform } from 'react-native'
+import { createLanguageContext } from './language-context'
 import { AsyncAuthStore } from 'pocketbase'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import NetInfo from '@react-native-community/netinfo'
@@ -185,7 +186,13 @@ export function trackScreen(route: string, properties?: Record<string, unknown>)
   op.screenView(pathWithAttribution(route, currentInstallAttribution()), properties)
 }
 
+const languages = createLanguageContext(syncStorage, () => {
+  const user = pbAuthStore.isValid ? pbAuthStore.record : null
+  return user?.id ? { id: user.id, language: user.language } : null
+})
+
 initCore({
+  ...(Platform.OS === 'android' ? { languages } : {}),
   storage: syncStorage,
   env: {
     pbUrl,

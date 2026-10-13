@@ -8,7 +8,7 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import { getLocales } from 'expo-localization'
-import { storage } from '@calistenia/core/platform'
+import { getPlatform, storage } from '@calistenia/core/platform'
 import { resolveInitialLanguage } from './language-resolver'
 
 import es from '@calistenia/core/locales/es/translation.json'
@@ -27,6 +27,7 @@ export function initI18n(): void {
   // español sin hablarlo). El guardado sigue ganando siempre — ver
   // `resolveInitialLanguage`.
   const lng = resolveInitialLanguage(deviceLang, saved)
+  getPlatform().languages?.content(saved === 'es' || saved === 'en' ? saved : lng)
 
   i18n.use(initReactI18next).init({
     resources: {
@@ -41,7 +42,10 @@ export function initI18n(): void {
     },
   })
 
-  i18n.on('languageChanged', (next) => storage.setItem(LANG_KEY, next))
+  i18n.on('languageChanged', (next) => {
+    getPlatform().languages?.content(next)
+    storage.setItem(LANG_KEY, next)
+  })
 }
 
 export default i18n
