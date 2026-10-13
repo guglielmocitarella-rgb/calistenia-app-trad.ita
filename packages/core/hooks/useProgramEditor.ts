@@ -8,11 +8,12 @@
  *   4. Exercises per day
  */
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useRef } from 'react'
 import { useQueryClient } from '@tanstack/react-query'
 import { pb, isPocketBaseAvailable } from '../lib/pocketbase'
 import { qk } from '../lib/query-keys'
-import { getPlatform } from '../platform'
+import { contentLanguage } from '../lib/content-language'
+import { getLanguagePolicy, getPlatform } from '../platform'
 import { CANONICAL_ANALYTICS_EVENTS, trackCanonicalEvent } from '../lib/analytics'
 import { PHASES as FALLBACK_PHASES, WEEK_DAYS as FALLBACK_WEEK_DAYS, WORKOUTS } from '../data/workouts'
 import i18n from 'i18next'
@@ -346,9 +347,9 @@ const DEFAULT_PHASE_DEFS: { nameKey: string; weeks: string; color: string; bgCol
  * Se llama en runtime —dentro de un callback o de `createInitialState()`—, que
  * es cuando i18next ya está vivo. Nunca en el top-level del módulo.
  */
-export function defaultPhases(): EditorPhase[] {
+export function defaultPhases(locale = contentLanguage()): EditorPhase[] {
   return DEFAULT_PHASE_DEFS.map(p => ({
-    name: i18n.t(p.nameKey),
+    name: i18n.getFixedT(locale)(p.nameKey),
     weeks: p.weeks,
     color: p.color,
     bgColor: p.bgColor,
@@ -398,11 +399,11 @@ export type DefaultDay = Omit<EditorDay, 'exercises'>
  *
  * Igual que `defaultPhases()`: se llama en runtime, nunca en el top-level.
  */
-export function dayDefaults(): DefaultDay[] {
+export function dayDefaults(locale = contentLanguage()): DefaultDay[] {
   return DAY_DEFAULTS.map(d => ({
     dayId: d.dayId,
-    dayName: i18n.t(d.nameKey),
-    focus: i18n.t(d.focusKey),
+    dayName: i18n.getFixedT(locale)(d.nameKey),
+    focus: i18n.getFixedT(locale)(d.focusKey),
     type: d.type,
     color: d.color,
   }))
@@ -884,6 +885,7 @@ export function moveExerciseWithin(
 
 export function useProgramEditor() {
   const qc = useQueryClient()
+  const editorLocale = useRef(contentLanguage())
   // El estado del editor es estado de FORMULARIO local (no caché de servidor):
   // permanece en useState. TanStack Query solo se usa para cachear la lectura
   // one-shot de loadProgram y para invalidar el catálogo al guardar.
@@ -922,7 +924,7 @@ export function useProgramEditor() {
       // porque este hook lo comparte web con móvil y antes decía «Fase N» en
       // español pasara lo que pasara.
       const newPhase: EditorPhase = {
-        name: i18n.t('programEditor.phaseNumbered', { n: s.phases.length + 1 }),
+        name: i18n.getFixedT(getLanguagePolicy() ? editorLocale.current : i18n.language)('programEditor.phaseNumbered', { n: s.phases.length + 1 }),
         weeks: '', color, bgColor,
       }
       const newPhases = [...s.phases, newPhase]
@@ -930,7 +932,7 @@ export function useProgramEditor() {
       const redistributed = newPhases.map((p, i) => ({ ...p, weeks: ranges[i] }))
       const newDays = { ...s.days }
       const pi = newPhases.length - 1
-      for (const d of dayDefaults()) {
+      for (const d of dayDefaults(getLanguagePolicy() ? editorLocale.current : i18n.language)) {
         newDays[`${pi}_${d.dayId}`] = { ...d, exercises: [] }
       }
       return { ...s, phases: redistributed, days: newDays, isDirty: true }
@@ -946,7 +948,7 @@ export function useProgramEditor() {
       // Rebuild days: remove old phase's days and re-index
       const newDays: Record<string, EditorDay> = {}
       let newIdx = 0
-      const defaults = dayDefaults()
+      const defaults = dayDefaults(getLanguagePolicy() ? editorLocale.current : i18n.language)
       for (let i = 0; i < s.phases.length; i++) {
         if (i === index) continue
         for (const d of defaults) {
@@ -1093,6 +1095,7 @@ export function useProgramEditor() {
 
   // ── Load program from PB ───────────────────────────────────────────────────
   const loadProgram = useCallback(async (programId: string) => {
+    editorLocale.current = contentLanguage()
     const available = await isPocketBaseAvailable()
     if (!available) return
 
@@ -1125,7 +1128,7 @@ export function useProgramEditor() {
       // pasar los slugs crudos («sphinx_pushup»). Si falla, se pinta tal cual.
       await loadCatalogIndex().catch(() => null)
 
-      const locale = i18n.language
+      const locale = getLanguagePolicy() ? editorLocale.current : i18n.language
       const loadedPhases: EditorPhase[] = phasesRes.items
         .sort((a, b) => a.sort_order - b.sort_order)
         .map(p => ({
@@ -1137,7 +1140,7 @@ export function useProgramEditor() {
 
       const days: Record<string, EditorDay> = {}
       // Pre-fill all days
-      const dayFallbacks = dayDefaults()
+      const dayFallbacks = dayDefaults(getLanguagePolicy() ? editorLocale.current : i18n.language)
       for (let pi = 0; pi < loadedPhases.length; pi++) {
         for (const d of dayFallbacks) {
           days[`${pi}_${d.dayId}`] = { ...d, exercises: [] }
@@ -1151,8 +1154,8 @@ export function useProgramEditor() {
         const key = `${phaseIndex}_${dc.day_id}`
         dayConfigKeys.add(key)
         if (days[key]) {
-          days[key].dayName = localize(dc.day_name, locale) || days[key].dayName
-          days[key].focus = localize(dc.day_focus, locale) || days[key].focus
+          days[key].dayName = getLanguagePolicy() ? localize(dc.day_name, locale) : (localize(dc.day_name, locale) || days[key].dayName)
+          days[key].focus = getLanguagePolicy() ? localize(dc.day_focus, locale) : (localize(dc.day_focus, locale) || days[key].focus)
           days[key].type = dc.day_type || days[key].type
           days[key].color = dc.day_color || days[key].color
           if (dc.day_type === 'cardio') {
@@ -1195,10 +1198,9 @@ export function useProgramEditor() {
 
         days[key].exercises.push({
           exerciseId: r.exercise_id,
-          // Cambia un slug de catálogo en `exercise_name` por el nombre
-          // localizado. Bonus: al guardar, el editor reescribe `exercise_name`
-          // con este valor, así que editar un programa viejo sana el dato.
-          name: resolveExerciseDisplayName(r.exercise_name, r.exercise_id, locale),
+          // Android edita el texto original, sin copiar un nombre visual del
+          // catálogo al registro. Otros consumidores conservan su normalización.
+          name: getLanguagePolicy() ? localize(r.exercise_name, locale) : resolveExerciseDisplayName(r.exercise_name, r.exercise_id, locale),
           sets: r.sets,
           reps: r.reps,
           rest: r.rest_seconds,
@@ -1261,7 +1263,7 @@ export function useProgramEditor() {
           coverRemoved: false,
           coverFocus: program.cover_focus || '',
         },
-        phases: loadedPhases.length > 0 ? loadedPhases : defaultPhases(),
+        phases: loadedPhases.length > 0 ? loadedPhases : defaultPhases(getLanguagePolicy() ? editorLocale.current : i18n.language),
         days,
         isDirty: false,
         isSaving: false,
@@ -1276,6 +1278,7 @@ export function useProgramEditor() {
 
   // ── Save program to PB ─────────────────────────────────────────────────────
   const saveProgram = useCallback(async (userId: string): Promise<string | null> => {
+    if (getLanguagePolicy() && state.programId && !state.isDirty) return state.programId
     const available = await isPocketBaseAvailable()
     if (!available) {
       setState(s => ({ ...s, error: 'PocketBase no disponible' }))
@@ -1287,7 +1290,7 @@ export function useProgramEditor() {
     try {
       let programId = state.programId
 
-      const locale = i18n.language
+      const locale = getLanguagePolicy() ? editorLocale.current : i18n.language
 
       // Create or update the program record
       const programData: Record<string, unknown> = {
@@ -1321,7 +1324,13 @@ export function useProgramEditor() {
       Object.assign(programData, buildProgramCatalogFields(state.info, state.days))
 
       if (programId) {
-        await pb.collection('programs').update(programId, programData)
+        if (getLanguagePolicy()) {
+          const original = await pb.collection('programs').getOne(programId, { requestKey: null })
+          const plan = diffCollection([original as ExistingRecord], [{ key: programId, data: programData }], r => r.id, { locale, translatableFields: ['name', 'description', 'instructions'], localizedReadFallback: true })
+          if (plan.toUpdate[0]) await pb.collection('programs').update(programId, plan.toUpdate[0].data)
+        } else {
+          await pb.collection('programs').update(programId, programData)
+        }
       } else {
         const created = await pb.collection('programs').create(programData)
         programId = created.id
@@ -1500,7 +1509,7 @@ export function useProgramEditor() {
         }
       }
 
-      const diffOpts = { locale, translatableFields: PROGRAM_TRANSLATABLE_FIELDS }
+      const diffOpts = { locale, translatableFields: PROGRAM_TRANSLATABLE_FIELDS, localizedReadFallback: !!getLanguagePolicy() }
       const collections: PlannedCollection[] = [
         {
           writer: collectionWriter('program_phases'),
@@ -1640,10 +1649,12 @@ export function useProgramEditor() {
 
   // ── Reset ──────────────────────────────────────────────────────────────────
   const resetEditor = useCallback(() => {
+    editorLocale.current = contentLanguage()
     setState(createInitialState())
   }, [])
 
   return {
+    contentLocale: getLanguagePolicy() ? editorLocale.current : i18n.language,
     state,
     setStep,
     updateInfo,

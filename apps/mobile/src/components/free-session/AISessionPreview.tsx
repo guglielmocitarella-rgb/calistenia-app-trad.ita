@@ -1,3 +1,4 @@
+import { contentLanguage } from '@calistenia/core/lib/content-language'
 /** Tarjeta de la sesión generada por la IA: resuelve los IDs contra el catálogo,
  *  agrupa por fase (warmup → main → cooldown), permite reordenar/quitar/agregar
  *  y arranca la sesión vía el engine (`startSession(..., 'free')`). */
@@ -36,8 +37,8 @@ interface Props {
 }
 
 export function AISessionPreview({ exercises, onRemove, onReorder, onAdd }: Props) {
-  const { t, i18n } = useTranslation()
-  const locale = i18n.language || 'es'
+  const { t } = useTranslation()
+  const locale = contentLanguage()
   const startFreeSession = useStartFreeSession()
   const [starting, setStarting] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)

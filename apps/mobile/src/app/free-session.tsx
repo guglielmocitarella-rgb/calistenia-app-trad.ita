@@ -1,3 +1,4 @@
+import { contentLanguage } from '@calistenia/core/lib/content-language'
 /** Sesión libre — picker de ejercicios del catálogo + warmup/cooldown prompt. */
 import { memo, useCallback, useState, useMemo } from 'react'
 import {
@@ -36,8 +37,8 @@ import type { CircuitDefinition, Exercise, FreeSessionTemplate } from '@calisten
 
 export default function FreeSessionScreen() {
   const router = useRouter()
-  const { t, i18n } = useTranslation()
-  const locale = i18n.language || 'es'
+  const { t } = useTranslation()
+  const locale = contentLanguage()
   const startFreeSession = useStartFreeSession()
   const { startCircuit } = useCircuitSession()
   const authUser = useAuthUser()

@@ -1,3 +1,4 @@
+import { contentLanguage } from '@calistenia/core/lib/content-language'
 /**
  * Constructor de circuitos — port nativo de apps/web/src/components/circuit/CircuitBuilder.tsx.
  * Misma lógica de estado/handleStart/summary; APIs web cambiadas por nativas
@@ -212,9 +213,9 @@ function ExerciseCard({
 // ── CircuitBuilder ─────────────────────────────────────────────────────────────
 
 export default function CircuitBuilder({ initialPreset, onStart }: CircuitBuilderProps) {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const l = useLocalize()
-  const locale = i18n.language
+  const locale = contentLanguage()
 
   // Estado desde el preset inicial
   const [mode, setMode] = useState<'circuit' | 'timed'>(initialPreset?.mode ?? 'circuit')

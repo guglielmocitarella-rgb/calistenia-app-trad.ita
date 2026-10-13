@@ -13,7 +13,7 @@
  * decisión sin servidor.
  */
 
-import type { TranslatableField } from './i18n-db'
+import { localize, type TranslatableField } from './i18n-db'
 
 /** Fila tal y como se manda a PocketBase. */
 export type Row = Record<string, unknown>
@@ -58,9 +58,11 @@ export function planWriteCount(plan: DiffPlan): number {
  * produce `{ [locale]: valor }`, así que un programa guardado en `es` y
  * reabierto en `en` parecería «cambiado» en todas sus filas.
  */
-function translatableEquals(existing: unknown, desired: unknown, locale: string): boolean {
+function translatableEquals(existing: unknown, desired: unknown, locale: string, localizedReadFallback = false): boolean {
   const desiredText = readLocale(desired, locale)
-  const existingText = readLocale(existing, locale)
+  const existingText = localizedReadFallback
+    ? localize(existing as TranslatableField, locale)
+    : readLocale(existing, locale)
   return desiredText === existingText
 }
 
@@ -117,6 +119,9 @@ function scalarEquals(existing: unknown, desired: unknown): boolean {
 }
 
 export interface DiffOptions {
+  /** Solo Android: comparar con el mismo fallback usado al cargar. */
+  localizedReadFallback?: boolean
+
   /** Locale activo, para comparar y fusionar campos traducibles. */
   locale: string
   /** Campos que guardan `{ locale: texto }` en vez de un escalar. */
@@ -139,7 +144,7 @@ function buildUpdate(
   for (const [field, desiredValue] of Object.entries(desired)) {
     const existingValue = existing[field]
     if (translatable.has(field)) {
-      if (!translatableEquals(existingValue, desiredValue, opts.locale)) {
+      if (!translatableEquals(existingValue, desiredValue, opts.locale, opts.localizedReadFallback)) {
         patch[field] = mergeTranslatable(existingValue, desiredValue)
         changed = true
       }

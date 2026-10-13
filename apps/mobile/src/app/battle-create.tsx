@@ -1,3 +1,4 @@
+import { contentLanguage } from '@calistenia/core/lib/content-language'
 /**
  * Crear una batalla: elegir origen (día de programa, propia o formato rápido) → crear el
  * borrador → abrir la sala. Las tres vías acaban en la misma `BattleConfiguration` (#882).
@@ -97,7 +98,7 @@ const noteParams = (note: BattleDayNote): Record<string, unknown> => {
 }
 
 export default function BattleCreateScreen() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const l = useLocalize()
   const router = useRouter()
   const user = useAuthUser()
@@ -137,7 +138,7 @@ export default function BattleCreateScreen() {
     [battleDay, dayId, phase, dayRounds],
   )
   const autoTitle = (dayId ? battleDay.dayTitle(dayId, phase) : '').slice(0, BATTLE_LIMITS.maxTitleLength)
-  const lang = i18n.language
+  const lang = contentLanguage()
 
   // Los nombres que se congelan en `exercise_names` (#882). Se resuelven al CREAR, con el
   // catálogo ya cargado: calcularlos aquí con el índice síncrono los dejaba solo en el

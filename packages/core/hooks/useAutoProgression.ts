@@ -21,7 +21,7 @@
  */
 import { useCallback, useMemo } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
-import i18n from 'i18next'
+import { contentLanguage } from '../lib/content-language'
 import { pb } from '../lib/pocketbase'
 import { qk } from '../lib/query-keys'
 import { localize } from '../lib/i18n-db'
@@ -82,7 +82,7 @@ export function useProgramOverrides(
   userId: string | null,
   programId: string | null,
 ): { overrides: ProgramOverride[]; loading: boolean } {
-  const locale = i18n.language
+  const locale = contentLanguage()
 
   const query = useQuery({
     queryKey: qk.programs.overrides(userId, programId),
@@ -173,7 +173,7 @@ export function useProgressionSuggestion(
   logs: ExerciseLog[],
   { enabled, ...options }: { enabled: boolean } & SuggestProgressionOptions,
 ): ProgressionSuggestion | null {
-  const locale = i18n.language
+  const locale = contentLanguage()
 
   return useMemo(() => {
     if (!enabled || !exercise) return null

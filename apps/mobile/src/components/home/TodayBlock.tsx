@@ -1,3 +1,4 @@
+import { contentLanguage } from '@calistenia/core/lib/content-language'
 /**
  * Bloque «Hoy» del inicio (#858): una variante por `kind` de `getHomeState`
  * (#853). Cada una es un tablero del lienzo de #852 (Main, Cardio, Descarga,
@@ -283,7 +284,7 @@ function FirstWorkoutToday({ onPrimary, onSecondary }: TodayBlockProps) {
   const startFirstWorkout = useStartFirstWorkout()
   const level = normalizeFirstWorkoutLevel(user?.level as string | undefined)
   const minutes = estimateFirstWorkoutMinutes(level)
-  const workout = buildFirstWorkout(level, i18n.language)
+  const workout = buildFirstWorkout(level, contentLanguage())
 
   return (
     <View className="gap-5">
