@@ -1,11 +1,12 @@
-name: Android TEST debug APK (no release)
+name: Android TEST APK (standalone, no publication)
 
 on:
   workflow_dispatch:
-  # Allows a first run before this workflow exists on the default branch.
   push:
     branches: [feature/italian-localization]
-    paths: ['.github/workflows/build-android-test-apk.yml']
+    paths:
+      - '.github/workflows/build-android-test-apk.yml'
+      - 'scripts/smoke-android-test-apk.sh'
 
 permissions:
   contents: read
@@ -22,25 +23,39 @@ jobs:
     env:
       CI: '1'
       EXPO_NO_TELEMETRY: '1'
-      # Public endpoints already declared by apps/mobile/eas.json.
       EXPO_PUBLIC_PB_URL: https://gym.guille.tech
       EXPO_PUBLIC_AI_API_URL: https://gym-server.guille.tech
-      # No Sentry credentials or source-map upload for a debug build.
       SENTRY_DISABLE_AUTO_UPLOAD: 'true'
-      ORG_GRADLE_PROJECT_reactNativeArchitectures: arm64-v8a,armeabi-v7a
+      # Phone + emulator. No application/native feature is removed.
+      ORG_GRADLE_PROJECT_reactNativeArchitectures: arm64-v8a,x86_64
     steps:
-      - name: Require private artifact access
-        env:
-          REPOSITORY_PRIVATE: ${{ github.event.repository.private }}
-        run: |
-          if [ "$REPOSITORY_PRIVATE" != 'true' ]; then
-            echo '::error::Private test artifact required. Public-repository Actions artifacts are not owner-private. Use an authorized private repository containing this branch.'
-            exit 1
-          fi
-
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - name: Validate tracked public Firebase client configuration
+        working-directory: apps/mobile
+        run: |
+          node - <<'NODE'
+          const fs = require('node:fs');
+          const config = JSON.parse(fs.readFileSync('google-services.json', 'utf8'));
+          const pkg = JSON.parse(fs.readFileSync('app.json', 'utf8')).expo.android.package;
+          function validate(value) {
+            if (!value || typeof value !== 'object') return;
+            for (const [key, child] of Object.entries(value)) {
+              if (/^(private_key|private_key_id|client_secret|access_token|refresh_token)$/.test(key) ||
+                  (key === 'type' && child === 'service_account')) {
+                throw new Error('Privileged credentials are not allowed in test configuration');
+              }
+              validate(child);
+            }
+          }
+          validate(config);
+          if (!config.project_info?.project_id || !config.project_info?.project_number ||
+              !config.client?.some(client => client.client_info?.android_client_info?.package_name === pkg)) {
+            throw new Error('Missing Firebase client identifiers or package mismatch');
+          }
+          console.log('Public client configuration validated; no values printed or admin credentials used.');
+          NODE
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
@@ -53,35 +68,14 @@ jobs:
       - uses: android-actions/setup-android@v3
         with:
           packages: platform-tools
-
-      - name: Require authorized Firebase client configuration
-        working-directory: apps/mobile
-        env:
-          TEST_GOOGLE_SERVICES_JSON: ${{ secrets.ANDROID_TEST_GOOGLE_SERVICES_JSON }}
-        run: |
-          # Do not use the original configuration tracked in the source tree.
-          rm -f google-services.json
-          if [ -z "$TEST_GOOGLE_SERVICES_JSON" ]; then
-            echo '::error::Missing ANDROID_TEST_GOOGLE_SERVICES_JSON. Supply only a legitimately authorized Firebase Android client configuration; no placeholders or copied original credentials.'
-            exit 1
-          fi
-          umask 077
-          printf '%s' "$TEST_GOOGLE_SERVICES_JSON" > google-services.json
-          node - <<'NODE'
-          const fs = require('node:fs');
-          try {
-            const c = JSON.parse(fs.readFileSync('google-services.json', 'utf8'));
-            const pkg = JSON.parse(fs.readFileSync('app.json', 'utf8')).expo.android.package;
-            if (!c.project_info?.project_id || !c.project_info?.project_number ||
-                !c.client?.some(x => x.client_info?.android_client_info?.package_name === pkg)) {
-              throw new Error('invalid');
-            }
-          } catch {
-            console.error('::error::Invalid Firebase Android client configuration or package mismatch (values withheld).');
-            process.exit(1);
-          }
-          NODE
-
+      - name: Cache Gradle dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: android-test-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml', 'apps/mobile/app.json', 'apps/mobile/package.json') }}
+          restore-keys: android-test-${{ runner.os }}-
       - name: Install locked dependencies
         run: pnpm install --frozen-lockfile
       - name: Verify core and mobile
@@ -91,25 +85,67 @@ jobs:
           pnpm --filter @calistenia/core test
           pnpm --filter @calistenia/mobile test
           pnpm --filter @calistenia/mobile lint
-      - name: Generate Android project without changing app configuration
+      - name: Generate unchanged Android project
         working-directory: apps/mobile
         run: pnpm exec expo prebuild --platform android --clean --no-install
-      - name: Assemble debug (Metro required at runtime)
+      - name: Assemble standalone TEST APK with existing debug-signing fallback
         working-directory: apps/mobile/android
-        run: ./gradlew :app:assembleDebug --no-daemon --parallel -Dorg.gradle.jvmargs=-Xmx4g -Dorg.gradle.workers.max=4
-      - name: Package TEST APK and checksum only
+        run: ./gradlew :app:assembleRelease --no-daemon --parallel -Dorg.gradle.jvmargs=-Xmx4g -Dorg.gradle.workers.max=4
+      - name: Verify bundle and debug signature; package APK and checksum
         run: |
           mkdir -p test-apk
-          cp apps/mobile/android/app/build/outputs/apk/debug/app-debug.apk test-apk/Calistenia-TEST-debug.apk
-          cd test-apk
-          sha256sum Calistenia-TEST-debug.apk > SHA256SUMS.txt
-      - name: Upload temporary private run artifact
+          APK=apps/mobile/android/app/build/outputs/apk/release/app-release.apk
+          unzip -Z1 "$APK" | awk '$0 == "assets/index.android.bundle" { found=1 } END { exit !found }'
+          SIGNER=$(find "$ANDROID_HOME/build-tools" -name apksigner | sort -V | tail -1)
+          "$SIGNER" verify --print-certs "$APK" > test-apk/signature.txt
+          grep -i 'CN=Android Debug' test-apk/signature.txt
+          cp "$APK" test-apk/Calistenia-TEST-standalone.apk
+          (cd test-apk && sha256sum Calistenia-TEST-standalone.apk > SHA256SUMS.txt)
+          printf 'Commit: %s\nVariant: release\nSigning: Android Debug\nABIs: arm64-v8a,x86_64\nMetro required: no\nRemote services tested: no\n' "$GITHUB_SHA" > test-apk/BUILD-INFO.txt
+          cat test-apk/SHA256SUMS.txt
+      - name: Upload TEST artifact only (not a GitHub Release)
         uses: actions/upload-artifact@v4
         with:
-          name: Calistenia-TEST-debug-${{ github.run_id }}
+          name: Calistenia-TEST-standalone-${{ github.run_id }}
           path: test-apk/
           if-no-files-found: error
           retention-days: 3
-      - name: Remove supplied configuration
+
+  smoke:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: Calistenia-TEST-standalone-${{ github.run_id }}
+          path: test-apk
+      - name: Verify downloaded APK checksum
+        working-directory: test-apk
+        run: sha256sum -c SHA256SUMS.txt
+      - name: Enable KVM for the disposable emulator
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Install and launch without Metro or remote-service access
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          arch: x86_64
+          target: google_apis
+          profile: pixel_7
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: bash scripts/smoke-android-test-apk.sh
+      - name: Upload anonymous startup evidence
         if: always()
-        run: rm -f apps/mobile/google-services.json apps/mobile/android/app/google-services.json
+        uses: actions/upload-artifact@v4
+        with:
+          name: Calistenia-TEST-startup-${{ github.run_id }}
+          path: test-smoke/
+          if-no-files-found: warn
+          retention-days: 3
