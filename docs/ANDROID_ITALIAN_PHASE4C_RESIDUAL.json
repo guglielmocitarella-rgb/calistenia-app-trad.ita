@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "baseline": "21f3bc9eafd8e4dd0b3928baa382562c6d239fb2",
+  "technicalUnchanged": [
+    {
+      "key": "fasting.datePlaceholder",
+      "text": "YYYY-MM-DD"
+    },
+    {
+      "key": "fasting.goalHours",
+      "text": "{{hours}} h"
+    },
+    {
+      "key": "nutrition.logger.durationUnit",
+      "text": "min"
+    },
+    {
+      "key": "pantryPlan.prepMinutes",
+      "text": "{{min}} min"
+    }
+  ],
+  "remoteContentUntranslated": [
+    "food/product names, brands, barcode/OFF results",
+    "AI meal labels, recipes, ingredients, cooking steps and notes",
+    "AI score breakdown, advice and coach messages",
+    "user-entered notes, food names and saved templates",
+    "receipt raw lines and provider errors not represented by known UI keys"
+  ],
+  "preservedFallbacks": [
+    "ES/EN/iOS original hardcoded text remains in conditional fallbacks",
+    "Native share card COMIDA/COMIDAS retained only outside Android Italian"
+  ],
+  "manualStatus": "Phone visual and functional tests not executed; checklist accompanies report.",
+  "outOfScope": [
+    "exercise catalogue, social, progress and body-photo interfaces",
+    "non-nutrition widgets and phase4D",
+    "deep program editor and workout-save testing remaining from phase4B"
+  ]
+}

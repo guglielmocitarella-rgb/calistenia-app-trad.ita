@@ -48,3 +48,23 @@ Le decisioni e i valori approvati della 4A sono conservati. Nel blocco allenamen
 | maximum in every benchmark | max in tutti i test | «máx en todo»: prove di forza, non numero di serie |
 
 Nei badge e nei contatori stretti: «Sett.», «Miei», «Cambia», «Serie», «Info». Core, calisthenics, muscle-up, planche, L-sit, pistol squat, Tabata, EMOM, TRX, BOSU, fitball e kettlebell mantengono la terminologia consolidata. Nessun glossario remoto DeepL creato o modificato.
+
+## Estensione fase 4C — nutrizione
+
+| Origine | Italiano UI | Contesto |
+| --- | --- | --- |
+| meal / log meal | pasto / registra pasto | Log è un comando, non accesso |
+| food log | diario alimentare | |
+| daily / weekly meal plan | piano giornaliero / piano settimanale | Piano alimentare per meal plan |
+| fasting / finish fast | digiuno / termina digiuno | Fast non significa veloce |
+| custom hours | durata personalizzata (ore) | Durata, non orari del giorno |
+| pantry / shopping list | dispensa / lista della spesa | |
+| fat / lose fat | grassi / riduci il grasso corporeo | Macronutriente distinto da obiettivo |
+| protein / carbs | proteine / carboidrati | PROT / CARB nei riepiloghi stretti |
+| unit | pz | Solo etichetta di unidad/ud/unidades; valore contrattuale invariato |
+| logged / regenerate | registrato / rigenera | |
+| quality / score | qualità / punteggio | Lettere A–E invariate |
+| calorie surplus | surplus calorico | |
+| receipt | scontrino | |
+
+Date e decimali italiani soltanto nel rendering. Gli input e i parser numerici conservano il comportamento esistente; non cambiano quantità, unità, timestamp o strutture salvate. Nomi, ricette, ingredienti e messaggi IA remoti rimangono originali. Gli esempi dispensa mostrano italiano ma inviano esattamente la stringa originaria della baseline (EN per UI IT, ES/EN per le rispettive UI). Traduzione iniziale tramite DeepL e revisione contestuale locale; glossari remoti non disponibili sul piano Free e non modificati.
