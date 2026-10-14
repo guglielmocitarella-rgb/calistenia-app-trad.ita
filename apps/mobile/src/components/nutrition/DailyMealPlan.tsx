@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 /**
  * AI-generated daily meal plan suggestions — port of web DailyMealPlan.
  * Presentacional (#470): el job + polling viven en core `useDailyMealPlan`.
@@ -35,6 +36,7 @@ const MEAL_ICONS: Record<string, string> = {
 
 export default function DailyMealPlan({ remaining, loggedMealTypes, onSaveMeal }: DailyMealPlanProps) {
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
   const messages = useMemo(
     () => ({ timeout: t('nutrition.dailyPlan.timeout'), failed: t('nutrition.dailyPlan.error') }),
     [t],
@@ -107,7 +109,7 @@ export default function DailyMealPlan({ remaining, loggedMealTypes, onSaveMeal }
             {t('nutrition.dailyPlan.remaining', 'Quedan')}{' '}
             <Text className="text-lime-400">{Math.round(remaining.calories)} kcal</Text>
             {'\n'}
-            {Math.round(remaining.protein)}g prot · {Math.round(remaining.carbs)}g carbs · {Math.round(remaining.fat)}g grasa
+            {Math.round(remaining.protein)}{display.text('g prot')} · {Math.round(remaining.carbs)}{display.text('g carbs')} · {Math.round(remaining.fat)}{display.text('g grasa')}
           </Text>
         </View>
       )}
@@ -151,7 +153,7 @@ export default function DailyMealPlan({ remaining, loggedMealTypes, onSaveMeal }
                   <View className={cn('flex-row items-center gap-1.5 rounded border px-2 py-0.5', colors.bg)}>
                     <Text className="text-[11px]">{icon}</Text>
                     <Text className={cn('font-mono text-[9px] uppercase tracking-widest', colors.text)}>
-                      {meal.label || meal.meal_type}
+                      {meal.label || display.meal(meal.meal_type)}
                     </Text>
                   </View>
                   <Text className="font-bebas text-lg leading-none text-foreground">

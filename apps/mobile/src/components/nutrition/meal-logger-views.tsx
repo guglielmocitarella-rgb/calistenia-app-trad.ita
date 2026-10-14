@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 /**
  * Presentational sub-components for the MealLogger. Pure: they take data + callbacks
  * (and `t`) as props and render — no state machine knowledge.
@@ -180,6 +181,7 @@ export function RepeatMealView({
   onBack,
   t,
 }: RepeatMealViewProps) {
+  const display = useNutritionDisplay()
   return (
     <View className="gap-3">
       {/* Header */}
@@ -235,7 +237,7 @@ export function RepeatMealView({
                     typeFilter === type ? 'text-lime-400' : 'text-muted-foreground',
                   )}
                 >
-                  {type ? t(MEAL_OPTIONS.find((m) => m.id === type)!.labelKey) : 'Todo'}
+                  {type ? t(MEAL_OPTIONS.find((m) => m.id === type)!.labelKey) : display.text('Todo')}
                 </Text>
               </Pressable>
             ))}
@@ -262,11 +264,11 @@ export function RepeatMealView({
               <View className="flex-row items-center justify-between">
                 <View className="px-2 py-0.5 rounded-full bg-muted">
                   <Text className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                    {entry.mealType}
+                    {display.meal(entry.mealType)}
                   </Text>
                 </View>
                 <Text className="font-mono text-[10px] text-muted-foreground tabular-nums">
-                  {new Date(entry.loggedAt).toLocaleDateString('es', { day: '2-digit', month: 'short' })}
+                  {new Date(entry.loggedAt).toLocaleDateString(display.locale('es'), { day: '2-digit', month: 'short' })}
                 </Text>
               </View>
               <Text className="font-sans text-sm text-foreground" numberOfLines={1}>
@@ -334,6 +336,7 @@ function PortionEditor({
   onPortionChange: (index: number, amount: number, unit: PortionUnit, unitWeight: number) => void
   t: Translate
 }) {
+  const display = useNutritionDisplay()
   const [showUnits, setShowUnits] = useState(false)
   // Texto local de los inputs: deja teclear "2," o borrar sin que el valor
   // controlado pelee; se propaga el número parseado en cada cambio.
@@ -391,7 +394,7 @@ function PortionEditor({
           )}
         >
           <Text className={cn('font-mono text-xs tracking-wide', showUnits ? 'text-lime-400' : 'text-muted-foreground')}>
-            {unitLabel}
+            {display.unit(unitLabel)}
           </Text>
         </Pressable>
         {food.portionUnit === 'unidad' && (
@@ -408,11 +411,11 @@ function PortionEditor({
               onBlur={() => setWeightText(fmtAmount(food.unitWeightInGrams))}
               keyboardType="decimal-pad"
               selectTextOnFocus
-              accessibilityLabel="g/ud"
+              accessibilityLabel={display.text('g/ud')}
               className="w-14 h-10 text-center rounded-lg bg-background border border-border text-foreground font-sans text-sm tabular-nums"
               style={{ fontSize: 13 }}
             />
-            <Text className="font-mono text-[10px] text-muted-foreground">g/ud</Text>
+            <Text className="font-mono text-[10px] text-muted-foreground">{display.text('g/ud')}</Text>
           </View>
         )}
         {food.portionUnit === 'unidad' && totalGrams > 0 ? (
@@ -444,7 +447,7 @@ function PortionEditor({
                   food.portionUnit === u.value ? 'text-lime-400' : 'text-muted-foreground',
                 )}
               >
-                {u.label}
+                {display.unit(u.label)}
               </Text>
             </Pressable>
           ))}
@@ -469,8 +472,8 @@ function PortionEditor({
                 amount === preset ? 'text-lime-400' : 'text-muted-foreground',
               )}
             >
-              {preset}
-              {unitLabel}
+              {display.number(String(preset))}
+              {display.unit(unitLabel)}
             </Text>
           </Pressable>
         ))}
@@ -522,6 +525,7 @@ export function FoodItemCard({
   onRemove,
   t,
 }: FoodItemCardProps) {
+  const display = useNutritionDisplay()
   return (
     <View className="rounded-xl border border-border bg-muted/20 overflow-hidden">
       {/* Food name + remove */}
@@ -529,7 +533,7 @@ export function FoodItemCard({
         <TextInput
           value={food.name}
           onChangeText={(v) => onUpdateFood(index, 'name', v)}
-          placeholder="Nombre del alimento"
+          placeholder={display.text('Nombre del alimento')}
           placeholderTextColor="#52525b"
           className="flex-1 font-sans text-base text-foreground"
           style={{ fontSize: 15 }}
@@ -580,7 +584,7 @@ export function FoodItemCard({
               className={cn('px-2 py-1.5 rounded-lg active:bg-muted/60', 'min-h-[36px] items-center justify-center')}
             >
               <Text className={cn('font-sans text-xs tabular-nums', macro.color)}>
-                {displayVal}{macro.field === 'fat' ? `g ${t('nutrition.fatShort')}` : macro.suffix}
+                {display.number(String(displayVal))}{macro.field === 'fat' ? `g ${t('nutrition.fatShort')}` : macro.suffix}
               </Text>
             </Pressable>
           )

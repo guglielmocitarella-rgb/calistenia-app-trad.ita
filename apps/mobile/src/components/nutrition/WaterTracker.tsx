@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 /** Water intake tracker widget — port of web WaterTracker. */
 import { View, Pressable, ActivityIndicator } from 'react-native'
 import { useTranslation } from 'react-i18next'
@@ -22,6 +23,7 @@ export default function WaterTracker({
   adding = false,
 }: WaterTrackerProps) {
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
   const pct = goal > 0 ? Math.min(todayTotal / goal, 1) : 0
   const reached = todayTotal >= goal
   const liters = (todayTotal / 1000).toFixed(1)
@@ -46,11 +48,11 @@ export default function WaterTracker({
             </View>
           )}
           <Text className="font-bebas text-xl leading-none text-sky-400">
-            {liters}
+            {display.number(liters)}
             <Text className="font-mono text-[10px] text-muted-foreground"> L</Text>
           </Text>
           <Text className="font-mono text-[9px] text-muted-foreground">
-            / {(goal / 1000).toFixed(1)} L
+            / {display.number((goal / 1000).toFixed(1))} L
           </Text>
         </View>
       </View>

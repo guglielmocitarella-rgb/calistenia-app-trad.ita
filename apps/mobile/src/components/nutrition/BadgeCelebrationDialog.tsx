@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 /**
  * BadgeCelebrationDialog — celebración de badges de nutrición (#231).
  * Sustituye el Alert.alert nativo: dialog centrado estilo spec-sheet con
@@ -26,6 +27,7 @@ interface BadgeCelebrationDialogProps {
 
 export function BadgeCelebrationDialog({ badges, onDone }: BadgeCelebrationDialogProps) {
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
   const reduceMotion = useReducedMotion()
   const [idx, setIdx] = useState(0)
   const scale = useRef(new Animated.Value(0.92)).current
@@ -91,10 +93,10 @@ export function BadgeCelebrationDialog({ badges, onDone }: BadgeCelebrationDialo
             </Kicker>
             <Text className="mt-5 text-6xl leading-none">{def.icon}</Text>
             <Text className="mt-4 font-bebas text-4xl leading-none text-foreground">
-              {def.label}
+              {display.badge(current!, 'label', def.label)}
             </Text>
             <Text className="mt-2 text-center font-sans text-sm text-muted-foreground">
-              {def.description}
+              {display.badge(current!, 'description', def.description)}
             </Text>
             {badges.length > 1 && (
               <Text className="mt-3 font-mono text-[10px] tracking-[2px] text-muted-foreground/60">

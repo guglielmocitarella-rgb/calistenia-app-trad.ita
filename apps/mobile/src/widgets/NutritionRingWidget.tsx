@@ -13,6 +13,7 @@ const MUTED: ColorProp = '#8a8782'
 const FG: ColorProp = '#fafaf9'
 
 const STRINGS = {
+  it: { kcalGoal: '/ OBIETTIVO KCAL', consumed: 'CONSUMATE', stale: 'APRI L’APP' },
   es: {
     kcalGoal: '/ OBJ KCAL',
     consumed: 'CONSUMIDAS',

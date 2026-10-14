@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 import { useEffect, useState } from 'react'
 import { Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native'
 import { KeyboardAvoidingView, KeyboardProvider } from 'react-native-keyboard-controller'
@@ -16,6 +17,7 @@ export function PantryDepleteSheet({ rows, onConfirm, onDismiss }: {
   onDismiss: () => void
 }) {
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
   const insets = useSafeAreaInsets()
   const [state, setState] = useState<RowState[]>([])
   const [invalid, setInvalid] = useState<Set<number>>(new Set())
@@ -95,7 +97,7 @@ export function PantryDepleteSheet({ rows, onConfirm, onDismiss }: {
                       placeholderTextColor="hsl(0 0% 45%)"
                       className={`h-10 w-20 rounded-md border bg-background px-2 text-right font-mono text-sm text-foreground ${invalid.has(i) ? 'border-destructive' : 'border-input'}`}
                     />
-                    <Text className="w-12 font-mono text-[10px] text-muted-foreground">{r.item.unit ?? ''}</Text>
+                    <Text className="w-12 font-mono text-[10px] text-muted-foreground">{display.unit(r.item.unit ?? '')}</Text>
                   </View>
                 ))}
               </ScrollView>

@@ -12,6 +12,7 @@ const LIME: ColorProp = '#a3e635'
 const MUTED: ColorProp = '#8a8782'
 
 const STRINGS = {
+  it: { streak: 'CONTINUITÀ ALIMENTARE', day: 'GIORNO', days: 'GIORNI', stale: 'APRI L’APP', none: 'NESSUNA SERIE' },
   es: { streak: 'RACHA COMIDAS', day: 'DÍA', days: 'DÍAS', stale: 'ABRE LA APP', none: 'SIN RACHA' },
   en: { streak: 'MEAL STREAK', day: 'DAY', days: 'DAYS', stale: 'OPEN THE APP', none: 'NO STREAK' },
 }

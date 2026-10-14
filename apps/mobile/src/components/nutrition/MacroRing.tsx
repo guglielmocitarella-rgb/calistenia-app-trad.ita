@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 /** SVG calorie ring gauge — port of web CalorieGauge. */
 import { useEffect, useRef } from 'react'
 import { Animated, Easing, View, Pressable } from 'react-native'
@@ -37,6 +38,7 @@ interface MacroRingProps {
 const AnimatedCircle = Animated.createAnimatedComponent(Circle as any)
 
 export default function MacroRing({ consumed, target, dailyScore, onScorePress }: MacroRingProps) {
+  const display = useNutritionDisplay()
   const pct = target > 0 ? Math.min(consumed / target, 1.1) : 0
   const fillPct = Math.min(pct, 1)
   const dashOffset = CIRCUMFERENCE * (1 - fillPct)
@@ -101,7 +103,7 @@ export default function MacroRing({ consumed, target, dailyScore, onScorePress }
               onPress={onScorePress}
               hitSlop={8}
               accessibilityRole="button"
-              accessibilityLabel={`Calidad del día ${dailyScore}. Ver cómo se calcula`}
+              accessibilityLabel={`${display.text('Calidad del día')} ${dailyScore}. ${display.text('Ver cómo se calcula')}`}
               className="mt-1.5 flex-row items-center gap-1 rounded-full bg-muted/60 px-2 py-0.5 active:bg-muted"
             >
               <Text className={`font-bebas text-base leading-none ${QUALITY_COLORS[dailyScore]}`}>

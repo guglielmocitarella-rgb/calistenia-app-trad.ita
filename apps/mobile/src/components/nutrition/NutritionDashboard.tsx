@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 /**
  * NutritionDashboard — gauges de calorías/macros + timeline de comidas del día.
  * Port móvil de apps/web/src/components/nutrition/NutritionDashboard.tsx
@@ -87,13 +88,14 @@ const SCORE_TEXT: Record<QualityScore, string> = {
 // ─── Quality score badge ──────────────────────────────────────────────────────
 
 function ScoreBadge({ score, pending }: { score?: QualityScore; pending?: boolean }) {
+  const display = useNutritionDisplay()
   // Pending '?' placeholder while async scoring runs on a freshly-logged meal
   // (parity with web QualityScoreBadge pending state).
   if (!score && pending) {
     return (
       <View
         className="h-5 w-5 items-center justify-center rounded-full border border-muted-foreground/20 bg-muted"
-        accessibilityLabel="Calidad pendiente"
+        accessibilityLabel={display.text('Calidad pendiente')}
       >
         <Text className="font-mono text-[10px] text-muted-foreground/50">?</Text>
       </View>
@@ -106,7 +108,7 @@ function ScoreBadge({ score, pending }: { score?: QualityScore; pending?: boolea
         'h-5 w-5 items-center justify-center rounded-full',
         SCORE_BG[score]
       )}
-      accessibilityLabel={`Calidad ${score}`}
+      accessibilityLabel={`${display.text('Calidad')} ${score}`}
     >
       <Text className={cn('font-mono text-[10px]', SCORE_TEXT[score])}>
         {score}
@@ -149,6 +151,7 @@ const MealCard = memo(function MealCard({
   cost,
 }: MealCardProps) {
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
 
   const mealLabelColor = MEAL_LABEL_COLOR[entry.mealType] ?? 'text-muted-foreground'
   const mealDotBg = MEAL_DOT_BG[entry.mealType] ?? 'bg-muted-foreground'
@@ -201,7 +204,7 @@ const MealCard = memo(function MealCard({
                 contentFit="cover"
                 recyclingKey={photoUrls[0]}
                 cachePolicy="memory-disk"
-                accessibilityLabel={`Foto de ${entry.mealType}`}
+                accessibilityLabel={display.italian ? t('nutrition.photoOf', { meal: display.meal(entry.mealType) }) : `Foto de ${entry.mealType}`}
               />
               {photoUrls.length > 1 && (
                 <View className="absolute bottom-0 right-0 rounded-tl bg-black/60 px-1 py-px">
@@ -218,7 +221,7 @@ const MealCard = memo(function MealCard({
             <View className={cn('flex-row items-center gap-1.5 rounded-md border px-2 py-0.5', mealBadge)}>
               <View className={cn('h-1.5 w-1.5 rounded-full', mealDotBg)} />
               <Text className={cn('font-mono text-[9px] tracking-[2px]', mealLabelColor)}>
-                {entry.mealType.toUpperCase()}
+                {display.meal(entry.mealType).toUpperCase()}
               </Text>
             </View>
 
@@ -325,7 +328,7 @@ const MealCard = memo(function MealCard({
                   contentFit="cover"
                   recyclingKey={url}
                   cachePolicy="memory-disk"
-                  accessibilityLabel={`Foto ${pi + 1} de ${entry.mealType}`}
+                  accessibilityLabel={display.italian ? `${t('nutrition.photo', { number: pi + 1 })} · ${display.meal(entry.mealType)}` : `Foto ${pi + 1} de ${entry.mealType}`}
                 />
               ))}
             </ScrollView>

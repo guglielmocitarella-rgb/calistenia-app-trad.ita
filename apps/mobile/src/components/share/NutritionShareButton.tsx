@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 /**
  * NutritionShareButton — captures NutritionShareCard off-screen via
  * ShareCardCapture, then shares the PNG via the native sheet.
@@ -100,6 +101,7 @@ export default function NutritionShareButton({
   entries = [],
 }: NutritionShareButtonProps) {
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
   const { width: screenW, height: screenH } = useWindowDimensions()
   const insets = useSafeAreaInsets()
   // Trigger icon must track the --lime token (not the fixed-canvas card LIME),
@@ -176,7 +178,11 @@ export default function NutritionShareButton({
       })
 
       // 5. Share.
-      await shareCardImage(uri, { message: `${message}\n${url}`, title: 'Compartir nutrición' }, {
+      const visualMessage = display.shareMessage(message, {
+        userName, date, calories: Math.round(totals.calories), goalCalories: goals?.dailyCalories,
+        qualityScore: derivedQualityScore ?? qualityScore,
+      })
+      await shareCardImage(uri, { message: `${visualMessage}\n${url}`, title: display.text('Compartir nutrición') }, {
         ...MOBILE_SHARE_CARD_CONTEXTS.nutrition,
         card_type: variant === 'rich' ? 'nutrition_rich' : 'nutrition',
         variant,
@@ -188,7 +194,7 @@ export default function NutritionShareButton({
     } finally {
       setSharing(false)
     }
-  }, [sharing, variant, meals, date, totals, goals, qualityScore, derivedQualityScore, userName, referralCode])
+  }, [display, sharing, variant, meals, date, totals, goals, qualityScore, derivedQualityScore, userName, referralCode])
 
   // ── Preview scale — fit CARD_W×CARD_H inside the modal preview area ──────
   // Modal inner width ≈ screenW - 48px padding
@@ -263,7 +269,7 @@ export default function NutritionShareButton({
 
             {/* ── Sheet header ── */}
             <View style={styles.sheetHeader}>
-              <Text style={styles.sheetTitle}>COMPARTIR</Text>
+              <Text style={styles.sheetTitle}>{display.text('COMPARTIR')}</Text>
               <Pressable
                 onPress={closeModal}
                 hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
@@ -333,7 +339,7 @@ export default function NutritionShareButton({
               {sharing ? (
                 <ActivityIndicator size="small" color={CARD_BG} />
               ) : (
-                <Text style={styles.shareBtnText}>COMPARTIR</Text>
+                <Text style={styles.shareBtnText}>{display.text('COMPARTIR')}</Text>
               )}
             </Pressable>
 

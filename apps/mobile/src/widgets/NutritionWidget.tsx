@@ -18,6 +18,7 @@ const CARBS_COLOR: ColorProp = '#fbbf24'
 const FAT_COLOR: ColorProp = '#ec4899'
 
 const STRINGS = {
+  it: { kcalGoal: '/ OBIETTIVO KCAL', remaining: 'RESTANTI', consumed: 'CONSUMATE', prot: 'PROT', carb: 'CARB', gras: 'GRASSI', camera: '📷  FOTO', text: '✍️  TESTO', stale: 'APRI L’APP' },
   es: {
     kcalGoal: '/ OBJETIVO KCAL',
     remaining: 'RESTANTES',

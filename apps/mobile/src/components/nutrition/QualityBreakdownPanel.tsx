@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 /**
  * QualityBreakdownPanel (mobile) — port of
  * apps/web/src/components/nutrition/QualityBreakdownPanel.tsx.
@@ -54,12 +55,14 @@ export function QualityScoreBadge({
   score: QualityScore
   size?: 'sm' | 'md' | 'lg'
 }) {
+  const display = useNutritionDisplay()
+  const { t } = useTranslation()
   const dims = size === 'lg' ? 'h-10 w-10' : size === 'md' ? 'h-7 w-7' : 'h-5 w-5'
   const txt = size === 'lg' ? 'text-lg' : size === 'md' ? 'text-sm' : 'text-[10px]'
   return (
     <View
       className={cn('items-center justify-center rounded-full', dims, SCORE_BG[score])}
-      accessibilityLabel={`Calidad ${score} — ${SCORE_LABEL[score]}`}
+      accessibilityLabel={display.italian ? `${display.text('Calidad')} ${score} — ${t(`nutrition.criteria${score}.label`)}` : `Calidad ${score} — ${SCORE_LABEL[score]}`}
     >
       <Text className={cn('font-bebas leading-none', txt, SCORE_TEXT[score])}>{score}</Text>
     </View>

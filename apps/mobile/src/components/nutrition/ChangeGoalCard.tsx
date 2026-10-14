@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 /**
  * ChangeGoalCard (#243 F4b, extraído en #470) — "Cambiar objetivo" con preview
  * del nuevo rango de macros antes de aplicar. Estado del picker (abierto /
@@ -42,6 +43,7 @@ interface ChangeGoalCardProps {
 
 export default function ChangeGoalCard({ goals, pace, onAdjust, onApply }: ChangeGoalCardProps) {
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
   const [open, setOpen] = useState(false)
   const [selectedGoal, setSelectedGoal] = useState<NutritionGoalType | null>(null)
 
@@ -129,7 +131,7 @@ export default function ChangeGoalCard({ goals, pace, onAdjust, onApply }: Chang
                     </View>
                     <View className="items-center">
                       <Text className="font-bebas text-2xl leading-none text-amber-400">{preview.dailyCarbs}</Text>
-                      <Text className="font-mono text-[9px] text-muted-foreground mt-0.5">CARBS</Text>
+                      <Text className="font-mono text-[9px] text-muted-foreground mt-0.5">{display.italian ? 'CARB' : 'CARBS'}</Text>
                     </View>
                     <View className="items-center">
                       <Text className="font-bebas text-2xl leading-none text-pink-400">{preview.dailyFat}</Text>
@@ -137,7 +139,7 @@ export default function ChangeGoalCard({ goals, pace, onAdjust, onApply }: Chang
                     </View>
                   </View>
                   <Text className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground border-t border-lime-400/10 pt-2">
-                    {t('nutrition.changeGoal.current')}: {goals.dailyCalories} kcal · {goals.dailyProtein}P · {goals.dailyCarbs}C · {goals.dailyFat}F
+                    {t('nutrition.changeGoal.current')}: {goals.dailyCalories} kcal · {goals.dailyProtein}P · {goals.dailyCarbs}C · {goals.dailyFat}{display.italian ? 'G' : 'F'}
                   </Text>
                 </View>
 

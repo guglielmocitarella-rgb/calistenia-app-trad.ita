@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 /** Cuerpo del coach nutricional (feedback por comida, badges, análisis semanal).
  *  El colapsable que lo contiene vive en la pantalla de nutrición; aquí solo
  *  el contenido + el toggle interno Día/Semana. */
@@ -157,6 +158,7 @@ function DailyView({
   badges: NutritionBadge[]
 }) {
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
 
   const coachMessages = useMemo(() => {
     return entries
@@ -248,7 +250,7 @@ function DailyView({
                 >
                   <Text className="text-[12px]">{def.icon}</Text>
                   <Text className="font-mono text-[9px] uppercase tracking-wider text-amber-400">
-                    {def.label}
+                    {display.badge(badge.badgeType, 'label', def.label)}
                   </Text>
                 </View>
               )

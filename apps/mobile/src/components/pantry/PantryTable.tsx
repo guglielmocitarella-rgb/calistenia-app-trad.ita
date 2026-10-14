@@ -1,6 +1,8 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 import { memo, useCallback, useMemo } from 'react'
-import { Alert, Pressable, SectionList, Text, View } from 'react-native'
+import { Alert, Platform, Pressable, SectionList, Text, View } from 'react-native'
 import { useTranslation } from 'react-i18next'
+import { pantryExampleCommand } from '@/lib/nutrition-ui-labels'
 import { Check, X } from 'lucide-react-native'
 import { daysUntil, groupPantryByCategory } from '@calistenia/core/lib/pantry'
 import { formatMoney, roundQty } from '@calistenia/core/lib/shopping'
@@ -39,6 +41,7 @@ const Row = memo(function Row({ item, today, expiredText, selecting, selected, o
   onToggleSelect: (item: PantryItem) => void
   onDelete?: (item: PantryItem) => void
 }) {
+  const display = useNutritionDisplay()
   const expiry = expiryLabel(item, today, expiredText)
   return (
     <Pressable
@@ -54,10 +57,10 @@ const Row = memo(function Row({ item, today, expiredText, selecting, selected, o
       ) : null}
       <View className={`size-1.5 rounded-full ${CONFIDENCE_DOT[item.confidence] ?? 'bg-muted-foreground'}`} />
       <Text className="flex-1 font-sans-medium text-foreground" numberOfLines={1}>{item.name}</Text>
-      {expiry && <Text className={`font-mono text-[10px] ${expiry.cls}`}>{expiry.text}</Text>}
-      <Text className="font-mono text-xs text-muted-foreground">{fmtQty(item)}</Text>
+      {expiry && <Text className={`font-mono text-[10px] ${expiry.cls}`}>{display.italian ? expiry.text.replace(/D$/, 'g') : expiry.text}</Text>}
+      <Text className="font-mono text-xs text-muted-foreground">{display.quantity(fmtQty(item), item.unit ?? '')}</Text>
       {item.priceTotal != null && (
-        <Text className="font-mono text-xs text-lime">${formatMoney(item.priceTotal)}</Text>
+        <Text className="font-mono text-xs text-lime">${display.number(formatMoney(item.priceTotal))}</Text>
       )}
       {onDelete && !selecting ? (
         <Pressable
@@ -91,7 +94,7 @@ export function PantryTable({ items, onPressItem, onExample, onDeleteItem, selec
   selectedIds: ReadonlySet<string>
   onToggleSelect: (item: PantryItem) => void
 }) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const today = todayStr()
   const expiredText = t('pantry.expired')
   // Estas tres se reconstruían en cada render y anulaban el `memo` de <Row/>:
@@ -109,7 +112,7 @@ export function PantryTable({ items, onPressItem, onExample, onDeleteItem, selec
     [onDeleteItem, t],
   )
   const sections = useMemo(() => groupPantryByCategory(items), [items])
-  const examples = useMemo(() => [t('pantry.example1'), t('pantry.example2')], [t])
+  const examples = useMemo(() => ['pantry.example1', 'pantry.example2'].map(key => ({ label: t(key), command: Platform.OS === 'android' ? pantryExampleCommand(key, i18n.language, i18n) : t(key) })), [t, i18n])
   const selecting = selectedIds.size > 0
 
   const renderSectionHeader = useCallback(
@@ -153,11 +156,11 @@ export function PantryTable({ items, onPressItem, onExample, onDeleteItem, selec
           </Text>
           {examples.map(ex => (
             <Pressable
-              key={ex}
-              onPress={() => onExample(ex)}
+              key={ex.command}
+              onPress={() => onExample(ex.command)}
               className="mb-2 w-full border border-border px-4 py-3 active:border-lime/40 active:bg-lime/10"
             >
-              <Text className="font-mono text-xs text-foreground">&quot;{ex}&quot;</Text>
+              <Text className="font-mono text-xs text-foreground">&quot;{ex.label}&quot;</Text>
             </Pressable>
           ))}
         </View>

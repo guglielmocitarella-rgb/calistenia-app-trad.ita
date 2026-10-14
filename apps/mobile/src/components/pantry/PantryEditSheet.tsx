@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 import { useEffect, useRef, useState } from 'react'
 import { Alert, Modal, Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
 import { KeyboardAvoidingView, KeyboardProvider } from 'react-native-keyboard-controller'
@@ -16,6 +17,7 @@ export function PantryEditSheet({ item, onSave, onDelete, onClose, onVerify, onG
   onGone: (item: PantryItem) => void
 }) {
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
   const insets = useSafeAreaInsets()
   const [qty, setQty] = useState('')
   const [price, setPrice] = useState('')
@@ -63,7 +65,7 @@ export function PantryEditSheet({ item, onSave, onDelete, onClose, onVerify, onG
             <View className="flex-row gap-3 px-4">
               <View className="flex-1">
                 <Text className="mb-1 font-mono text-[10px] uppercase tracking-[2px] text-muted-foreground">
-                  {t('pantry.quantity')}{item.unit ? ` (${item.unit})` : ''}
+                  {t('pantry.quantity')}{item.unit ? ` (${display.unit(item.unit)})` : ''}
                 </Text>
                 <TextInput
                   ref={qtyRef}

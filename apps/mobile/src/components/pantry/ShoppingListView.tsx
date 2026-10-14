@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 import { memo, useCallback, useMemo, useState } from 'react'
 import { Alert, FlatList, Pressable, TextInput, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
@@ -39,6 +40,7 @@ const REASON_CLS: Record<ShoppingReason, string> = {
 export function ShoppingListView({ userId }: { userId: string | null }) {
   const router = useRouter()
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
   const insets = useSafeAreaInsets()
   const { data: list } = useActiveShoppingList(userId)
   const { data: lastDone = null } = useLastPurchaseDate(userId)
@@ -315,12 +317,12 @@ export function ShoppingListView({ userId }: { userId: string | null }) {
           <View className="border-t border-border py-3">
             <View className="flex-row justify-between">
               <Text className="font-mono text-[10px] uppercase tracking-[2px] text-muted-foreground">
-                {t('shopping.totalEst')} <Text className="font-bebas text-lg text-foreground">{totals.est > 0 ? `~$${formatMoney(totals.est)}` : '—'}</Text>
+                {t('shopping.totalEst')} <Text className="font-bebas text-lg text-foreground">{totals.est > 0 ? `~$${display.number(formatMoney(totals.est))}` : '—'}</Text>
               </Text>
               <Text className="font-mono text-[10px] uppercase tracking-[2px] text-muted-foreground">
                 {t('shopping.totalReal')}{' '}
                 {checkedCount > 0 ? (
-                  <Text className="font-bebas text-lg text-lime">${formatMoney(totals.actual)}</Text>
+                  <Text className="font-bebas text-lg text-lime">${display.number(formatMoney(totals.actual))}</Text>
                 ) : (
                   // cero sin items marcados no es dato: — muted hasta que empiece la compra
                   <Text className="font-bebas text-lg text-muted-foreground">—</Text>
@@ -362,6 +364,7 @@ const ShoppingRow = memo(function ShoppingRow({
   onRemove: (index: number) => void
 }) {
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
   const value = draft ?? (it.actual_price != null ? String(it.actual_price) : '')
   const handlePress = useCallback(
     () => (selecting ? onToggleSelect(index) : onToggle(index, it)),
@@ -399,7 +402,7 @@ const ShoppingRow = memo(function ShoppingRow({
             {t(`shopping.reason.${r}`)}
           </Text>
         ))}
-        <Text className="font-mono text-xs text-muted-foreground">{formatQty(it.qty, it.unit)}</Text>
+        <Text className="font-mono text-xs text-muted-foreground">{display.quantity(formatQty(it.qty, it.unit), it.unit ?? '')}</Text>
         {it.checked ? (
           <TextInput
             keyboardType="numeric"
@@ -413,7 +416,7 @@ const ShoppingRow = memo(function ShoppingRow({
         ) : (
           it.est_price != null && (
             // muted, no lime: precio estimado es dato, no interacción
-            <Text className="font-mono text-xs text-muted-foreground">~${formatMoney(it.est_price)}</Text>
+            <Text className="font-mono text-xs text-muted-foreground">~${display.number(formatMoney(it.est_price))}</Text>
           )
         )}
         {selecting ? null : (
@@ -431,8 +434,8 @@ const ShoppingRow = memo(function ShoppingRow({
       {it.incompatible_have && (
         <Text className="mt-1 pl-8 font-mono text-[10px] text-amber-500">
           {t('shopping.incompatibleNote', {
-            have: formatQty(it.incompatible_have.qty, it.incompatible_have.unit),
-            need: formatQty(it.qty, it.unit),
+            have: display.quantity(formatQty(it.incompatible_have.qty, it.incompatible_have.unit), it.incompatible_have.unit ?? ''),
+            need: display.quantity(formatQty(it.qty, it.unit), it.unit ?? ''),
           })}
         </Text>
       )}
