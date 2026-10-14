@@ -16,7 +16,7 @@ Ogni controllo è **NON ESEGUITO sul telefono**. Registrare SUPERATO / PROBLEMA 
 | Piani | Generazione giornaliera/settimanale, attesa, retry, rigenera giorno, archivia, registra un pasto |
 | Ricette | Ingredienti, quantità e porzioni, disponibili/da acquistare, passaggi, salva/rimuovi, elenco ricette salvate |
 | IA | Titoli e messaggi UI italiani; nomi, ricette, note e consigli del server originali; nessun presunto supporto server IT |
-| Digiuno | Inizia ora/ora precedente, duration, timer durante sospensione e riavvio, termina/modifica/elimina, cronologia e obiettivi settimanali |
+| Digiuno | Inizia ora/ora precedente, durata, timer durante sospensione e riavvio, termina/modifica/elimina, cronologia e obiettivi settimanali |
 | Dispensa | Stato vuoto, esempi italiani con comando originario, aggiunta manuale/chat/scontrino, unità, scadenza, sottrazione/rimozione |
 | Spesa | Genera/rigenera lista, giorni, selezione, prezzi decimali, conferma acquisto, verifica inventario originale |
 | Acqua | Obiettivo, aggiunta 250/500 ml, litri con virgola, consultazione giorno precedente |
