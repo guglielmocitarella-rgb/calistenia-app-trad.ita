@@ -25,10 +25,12 @@ import { OptionSheet } from '@/components/ui/option-sheet'
 import { useAuthUser } from '@/lib/use-auth-user'
 import { parseReceiptMobile } from '@/lib/receipt-api'
 import { Sentry } from '@/lib/instrument'
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 
 export default function PantryScreen() {
   const router = useRouter()
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
   const authUser = useAuthUser()
   const userId = authUser?.id ?? null
   const insets = useSafeAreaInsets()
@@ -108,8 +110,8 @@ export default function PantryScreen() {
       setParseResult({ intent: 'add', items: result.items, reply: '' })
     } catch (e) {
       Sentry.captureException(e, { tags: { feature: 'pantry', op: 'parse_receipt' } })
-      // mensaje REAL del servidor si existe (lección del bug analyze-meal en release)
-      setReply(e instanceof Error && e.message ? e.message : t('pantry.receipt.error'))
+      // Conserva el error original en Sentry; la UI muestra una versión localizada.
+      setReply(display.serviceError(e instanceof Error ? e.message : null, t('pantry.receipt.error')))
     } finally {
       setBusy(false)
     }

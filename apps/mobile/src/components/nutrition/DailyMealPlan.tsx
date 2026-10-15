@@ -94,7 +94,7 @@ export default function DailyMealPlan({ remaining, loggedMealTypes, onSaveMeal }
       {/* Error */}
       {error && (
         <View className="rounded-xl border border-red-500/20 bg-red-500/10 px-4 py-3">
-          <Text className="font-sans text-sm text-red-400">{error}</Text>
+          <Text className="font-sans text-sm text-red-400">{display.serviceError(error, t('nutrition.dailyPlan.error'))}</Text>
         </View>
       )}
 

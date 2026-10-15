@@ -10,6 +10,7 @@ import { X, Camera, Image as ImageIcon, PenLine, RefreshCw, Plus, Check } from '
 import { Text } from '@/components/ui/text'
 import { Loader } from '@/components/ui/loader'
 import { cn } from '@/lib/utils'
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 
 import { MAX_PHOTOS, MEAL_OPTIONS } from './meal-logger-shared'
 import type { MealLoggerModel } from './use-meal-logger'
@@ -31,6 +32,7 @@ type StepProps = { model: MealLoggerModel }
 
 export function CaptureStep({ model }: StepProps) {
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
 
   if (model.captureSubView === 'repeatMeal') {
     return (
@@ -172,7 +174,7 @@ export function CaptureStep({ model }: StepProps) {
 
       {model.error && (
         <View className="p-3 rounded-lg bg-red-500/10 border border-red-500/20">
-          <Text className="text-sm text-red-400">{model.error}</Text>
+          <Text className="text-sm text-red-400">{display.serviceError(model.error, t('common.error'))}</Text>
         </View>
       )}
     </>
@@ -215,6 +217,7 @@ export function AnalyzingStep({ model }: StepProps) {
 
 export function ReviewStep({ model }: StepProps) {
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
   return (
     <>
       {/* Meal type quick switch */}
@@ -329,7 +332,7 @@ export function ReviewStep({ model }: StepProps) {
 
       {model.error && (
         <View className="p-3 rounded-lg bg-red-500/10 border border-red-500/20">
-          <Text className="text-sm text-red-400">{model.error}</Text>
+          <Text className="text-sm text-red-400">{display.serviceError(model.error, t('common.error'))}</Text>
         </View>
       )}
 

@@ -2,6 +2,7 @@ import { nutritionBadgeText } from './nutrition-badge-labels'
 import { Platform } from 'react-native'
 import { useTranslation } from 'react-i18next'
 import { isItalianNutrition, nutritionText, nutritionMealLabel, nutritionUnitLabel, nutritionLocale, nutritionNumber, nutritionShareMessage } from './nutrition-ui-labels'
+import { nutritionServiceError } from './nutrition-service-error'
 
 /** Rendering only. Do not use the results in editable state or API arguments. */
 export function useNutritionDisplay() {
@@ -18,5 +19,6 @@ export function useNutritionDisplay() {
     number: (original: string) => nutritionNumber(original, lang, os),
     quantity: (original: string, unit: string) => nutritionNumber(original, lang, os, unit),
     shareMessage: (original: string, input: Parameters<typeof nutritionShareMessage>[1]) => nutritionShareMessage(original, input, lang, os),
+    serviceError: (message: string | null | undefined, fallback: string) => nutritionServiceError(message, lang, os, fallback),
   }
 }
