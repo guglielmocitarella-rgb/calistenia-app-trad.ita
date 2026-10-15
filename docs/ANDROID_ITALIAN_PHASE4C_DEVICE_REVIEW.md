@@ -85,7 +85,23 @@ Gli errori non riconosciuti usano il fallback italiano già previsto dal relativ
 
 ## CI e APK correttivo
 
-Head PR iniziale `a0af040e`; commit applicativo di revisione e origine dell'APK: da compilazione finale. Riepilogo di run e job GitHub Actions, artifact e checksum SHA-256 verrà completato qui dopo la conclusione dei workflow. Il workflow usato resta `.github/workflows/build-android-test-apk.yml` (artifact temporaneo, senza release).
+Commit applicativo della revisione e origine dell'APK: `d3df971451699258b60f25d0b1bc5c71ba121dc2`. Su questo commit i workflow PR sono tutti `completed/success`; sono stati verificati anche tutti i singoli job. Gli step `Deploy App` e `Deploy AI API` risultano `completed/skipped`; le build Docker PR hanno `push: false`. PR #1 è rimasta aperta, non unita e in bozza. Nessuna release è stata creata.
+
+| Workflow | Run | Job e risultato |
+| --- | --- | --- |
+| [Security Checks](https://github.com/guglielmocitarella-rgb/calistenia-app-trad.ita/actions/runs/38733908617) | `38733908617` | Dependency review `116418226905` success; Secret leak detection `116418227365` success |
+| [CI (mobile)](https://github.com/guglielmocitarella-rgb/calistenia-app-trad.ita/actions/runs/38733908704) | `38733908704` | Typecheck, lint, test `116418227597` success; E2E smoke `116418227845` success |
+| [Build & Deploy App](https://github.com/guglielmocitarella-rgb/calistenia-app-trad.ita/actions/runs/38733908690) | `38733908690` | Typecheck, lint, test `116418227480` success; E2E smoke `116418227111` success; Build & push App `116422074829` success; Deploy App `116422904331` skipped |
+| [Build & Deploy AI API](https://github.com/guglielmocitarella-rgb/calistenia-app-trad.ita/actions/runs/38733908595) | `38733908595` | Typecheck & test AI API `116418228102` success; Typecheck, lint, test `116418228481` success; E2E smoke `116418229641` success; Build & push AI API `116421999142` success; Deploy AI API `116422780554` skipped |
+
+Il workflow `.github/workflows/build-android-test-apk.yml` (run [38733901010](https://github.com/guglielmocitarella-rgb/calistenia-app-trad.ita/actions/runs/38733901010)) ha completato con successo entrambi i job: build `116418202178` e smoke emulator `116425450183`. Bundle standalone incluso, firma Android Debug verificata, avvio API 35 senza Metro e senza accesso ai servizi remoti riuscito.
+
+- Artifact APK: [Calistenia-TEST-standalone-38733901010](https://github.com/guglielmocitarella-rgb/calistenia-app-trad.ita/actions/runs/38733901010/artifacts/11973316652), 57.294.327 byte; scadenza 18 ottobre 2026, 12:37 UTC.
+- SHA-256 APK `Calistenia-TEST-standalone.apk`: `df40857031d8ab9a744b757ba174557bc215ce653c73809b91e79bc49f546e89`.
+- SHA-256 dell'archivio artifact ZIP (digest GitHub): `615b581f88b430318214dc811d517ba859998013eeb785e241226acdfb7e940f`.
+- Prove di startup: [Calistenia-TEST-startup-38733901010](https://github.com/guglielmocitarella-rgb/calistenia-app-trad.ita/actions/runs/38733901010/artifacts/11974585963), 95.331 byte; scadenza 18 ottobre 2026, 12:39 UTC.
+
+La verifica APK riguarda la build del commit applicativo `d3df9714…`; un eventuale commit successivo aggiorna solo questo report. Nessuna fase 4D, migrazione ai server originali o release.
 
 ## Vincoli di arresto
 
