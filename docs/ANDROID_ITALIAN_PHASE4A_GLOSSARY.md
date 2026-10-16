@@ -68,3 +68,24 @@ Nei badge e nei contatori stretti: «Sett.», «Miei», «Cambia», «Serie», �
 | receipt | scontrino | |
 
 Date e decimali italiani soltanto nel rendering. Gli input e i parser numerici conservano il comportamento esistente; non cambiano quantità, unità, timestamp o strutture salvate. Nomi, ricette, ingredienti e messaggi IA remoti rimangono originali. Gli esempi dispensa mostrano italiano ma inviano esattamente la stringa originaria della baseline (EN per UI IT, ES/EN per le rispettive UI). Traduzione iniziale tramite DeepL e revisione contestuale locale; glossari remoti non disponibili sul piano Free e non modificati.
+
+## Estensione fase 4D
+
+| Termine di origine | Italiano UI | Contesto |
+| --- | --- | --- |
+| statistics | statistiche | Dati e filtri di allenamento |
+| achievements | traguardi | Titolo della schermata; etichette approvate del profilo conservate |
+| weekly streak | continuità settimanale | Numero di settimane consecutive con obiettivo raggiunto |
+| best streak | serie migliore | Contatore compatto; `{{count}} sett.` resta invariato |
+| weighted volume | volume con carico | Valore in kg già calcolato dall'app |
+| personal record | record personale | Record e celebrazioni |
+| body measurements | misurazioni corporee | Circonferenze in cm |
+| lean mass | massa magra | Valore stimato originale |
+| front / side / back | frontale / laterale / posteriore | Categorie delle foto; enum originali invariati |
+| back | schiena | Gruppo muscolare; non il comando «Indietro» |
+| insights | analisi / riepilogo | Cornice locale; contenuto IA originale |
+| wins / watch outs | risultati / da monitorare | Sezioni delle analisi |
+| arm left/right short | Br. sx / Br. dx | Cronologia misure |
+| thigh left/right short | Co. sx / Co. dx | Cronologia misure |
+
+Date di calendario mostrate come `gg/mm/aaaa` (o `gg/mm` nelle miniature), senza cambiare le stringhe ISO originali. Virgola decimale soltanto sulle stringhe numeriche di presentazione, mantenendo precisione e unità. Serie, ripetizioni, carichi e condizioni dei traguardi non cambiano. EN/ES e il glossario remoto non sono modificati.

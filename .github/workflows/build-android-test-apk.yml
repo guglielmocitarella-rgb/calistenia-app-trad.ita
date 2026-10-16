@@ -1,5 +1,5 @@
 name: Android TEST APK (standalone, no publication)
-# Rebuild the standalone test APK after the phase 4C device review.
+# Rebuild the standalone test APK for phase 4D Android UI localization.
 
 on:
   workflow_dispatch:

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "baseline": "f2fa7af7366239f4f37cabd47cf7b20f7c641cf3",
+  "residuals": [
+    {
+      "area": "Contenuti remoti e personali",
+      "status": "intenzionalmente originali",
+      "details": "Nomi esercizi/programmi/sessioni, note e nomi utente, headline, osservazioni, metriche libere, risultati e suggerimenti IA non sono tradotti né riscritti."
+    },
+    {
+      "area": "Editor esercizi",
+      "status": "residuo editoriale 4B conservato",
+      "details": "Nomi/descrizioni senza overlay italiano rimangono ES/EN. ID, enum, log, target e payload invariati."
+    },
+    {
+      "area": "Schermate legacy/web",
+      "status": "non nuova copertura Android",
+      "details": "Le famiglie progress.tab, summary, exerciseChart, phasePhotos, export, oneRepMax, volumeLoad e weightProgression includono chiavi del percorso web/legacy. Revisione terminologica completa non significa nuova funzionalità Android. Scanner per chiave nel relativo inventario."
+    },
+    {
+      "area": "Peso corporeo",
+      "status": "limite del percorso Android esistente",
+      "details": "Il collegamento Peso e misure apre Misurazioni; il peso è leggibile nel Calendario e gestito nei percorsi precedenti del profilo. Non è stato introdotto un nuovo tracker peso o un grafico del peso."
+    },
+    {
+      "area": "Sonno, salute, integrazioni e social",
+      "status": "fuori dalla 4D",
+      "details": "Le schermate autonome sleep, health, lumbar e battle/social e SleepInsightsCard restano per le fasi successive. I collegamenti già presenti nel Calendario/Progressi sono conservati; cornice cross-metrica tradotta."
+    },
+    {
+      "area": "Scheda PR tempo/carico",
+      "status": "limite preesistente conservato",
+      "details": "PRShareCard riceve oldValue/newValue e ha unità statica reps anche per eventi tempo/carico; la 4D traduce soltanto l’etichetta. Non cambia contratti/semantica dei record o struttura delle schede."
+    },
+    {
+      "area": "Errori remoti e sistema operativo",
+      "status": "lingua non controllata dall’app",
+      "details": "Testi arbitrari del server/SDK e dialoghi di sistema restano originali. I messaggi locali e i permessi foto usano le chiavi italiane esistenti."
+    },
+    {
+      "area": "Collaudo",
+      "status": "da eseguire sul telefono",
+      "details": "Nessuna verifica autenticata o di layout fisico. Restano font grandi/schermi stretti, grafici, input/salvataggi, condivisione, foto, offline e sync. Checklist dedicata."
+    }
+  ]
+}
