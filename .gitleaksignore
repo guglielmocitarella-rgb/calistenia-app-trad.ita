@@ -28,3 +28,11 @@
 6a0961da7cb2564417ee1d2dd186d810eb13bbda:docs/ANDROID_ITALIAN_LOCALIZATION_INVENTORY.json:generic-api-key:117399
 6a0961da7cb2564417ee1d2dd186d810eb13bbda:docs/ANDROID_ITALIAN_LOCALIZATION_INVENTORY.json:generic-api-key:117419
 6a0961da7cb2564417ee1d2dd186d810eb13bbda:docs/ANDROID_ITALIAN_LOCALIZATION_INVENTORY.json:generic-api-key:167881
+
+# Fase 4D: cinco identificadores públicos achievements.streak_*.desc; no credenciales.
+# Solo fingerprints históricos exactos; validación adicional en audit-gitleaks-fingerprints.test.ts.
+ca3e8ea1ae74d654541df420fbcd4ac2bd569597:docs/ANDROID_ITALIAN_PHASE4D_STRINGS.json:generic-api-key:301
+ca3e8ea1ae74d654541df420fbcd4ac2bd569597:docs/ANDROID_ITALIAN_PHASE4D_STRINGS.json:generic-api-key:363
+ca3e8ea1ae74d654541df420fbcd4ac2bd569597:docs/ANDROID_ITALIAN_PHASE4D_STRINGS.json:generic-api-key:425
+ca3e8ea1ae74d654541df420fbcd4ac2bd569597:docs/ANDROID_ITALIAN_PHASE4D_STRINGS.json:generic-api-key:487
+ca3e8ea1ae74d654541df420fbcd4ac2bd569597:docs/ANDROID_ITALIAN_PHASE4D_STRINGS.json:generic-api-key:549
