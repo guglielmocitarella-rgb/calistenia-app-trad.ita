@@ -1,3 +1,4 @@
+import { useProgressDisplay } from '@/lib/use-progress-display'
 /** Top ejercicios: filas expandibles con mejor serie y última vez. */
 import { memo, useCallback, useState } from 'react'
 import { View, Pressable } from 'react-native'
@@ -43,6 +44,7 @@ const ExerciseRow = memo(function ExerciseRow({
   onToggle: (key: string) => void
   t: TFunction
 }) {
+  const display = useProgressDisplay()
   const handlePress = useCallback(() => onToggle(exercise.key), [onToggle, exercise.key])
 
   return (
@@ -64,9 +66,9 @@ const ExerciseRow = memo(function ExerciseRow({
                 : exercise.best.kind === 'time'
                   ? t('stats.bestTime', { seconds: exercise.best.seconds })
                   : t('stats.bestWeight', {
-                      weight: exercise.best.weight,
+                      weight: display.number(exercise.best.weight),
                       reps: exercise.best.reps,
-                      e1rm: exercise.best.e1rm,
+                      e1rm: display.number(exercise.best.e1rm),
                     })}
             </Text>
           ) : null}

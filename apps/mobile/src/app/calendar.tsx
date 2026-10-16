@@ -1,3 +1,4 @@
+import { useProgressDisplay } from '@/lib/use-progress-display'
 import { useState, useMemo, useEffect, useCallback, useRef } from 'react'
 import { View, ScrollView, Pressable, Modal, useWindowDimensions } from 'react-native'
 import { Image } from 'expo-image'
@@ -56,6 +57,7 @@ const ymd = (y: number, m0: number, d: number) => `${y}-${pad(m0 + 1)}-${pad(d)}
 
 export default function CalendarScreen() {
   const { t } = useTranslation()
+  const display = useProgressDisplay()
   const router = useRouter()
   const user = useAuthUser()
   const userId = user?.id ?? null
@@ -314,7 +316,7 @@ export default function CalendarScreen() {
                   : e.type === 'circuit' ? (e.name || t('nav.circuit'))
                   : workoutTitle(e.workoutKey)
                 const meta = e.type === 'cardio'
-                  ? `${e.distanceKm.toFixed(2)} km${e.durationSeconds ? ` · ${Math.floor(e.durationSeconds / 60)} min` : ''}`
+                  ? `${display.number(e.distanceKm.toFixed(2))} km${e.durationSeconds ? ` · ${Math.floor(e.durationSeconds / 60)} min` : ''}`
                   : e.type === 'circuit'
                     ? [
                         e.roundsCompleted != null && e.roundsTarget != null ? `${e.roundsCompleted}/${e.roundsTarget}` : null,
@@ -391,7 +393,7 @@ export default function CalendarScreen() {
                   {data.weightByDate[selectedDate] && (
                     <View className={cn('flex-row items-center gap-2 rounded-lg border px-3 py-2', ACCENT.weight.chip)}>
                       <Scale size={13} color={ACCENT.weight.icon} />
-                      <Text className="font-mono text-[11px] text-foreground">{data.weightByDate[selectedDate].weight_kg} kg</Text>
+                      <Text className="font-mono text-[11px] text-foreground">{display.number(data.weightByDate[selectedDate].weight_kg)} kg</Text>
                     </View>
                   )}
                   {data.measurementByDate[selectedDate] && (

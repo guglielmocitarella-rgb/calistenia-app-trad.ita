@@ -1,3 +1,4 @@
+import { useProgressDisplay } from '@/lib/use-progress-display'
 /**
  * Comparador antes/después (native) — port del PhotoComparator de web.
  * Slider arrastrable que revela la foto "antes" sobre la "después" (mismo
@@ -34,6 +35,7 @@ interface Props {
 
 export default function PhotoComparator({ photos, onClose }: Props) {
   const { t } = useTranslation()
+  const display = useProgressDisplay()
   const MUTED = 'rgba(255,255,255,0.55)'
   const { width } = useWindowDimensions()
 
@@ -166,10 +168,10 @@ export default function PhotoComparator({ photos, onClose }: Props) {
               </Animated.View>
               {/* Fechas */}
               <View className="absolute bottom-2 left-2 rounded bg-black/70 px-2 py-1">
-                <Text className="font-mono text-[10px] text-white">{left.date}</Text>
+                <Text className="font-mono text-[10px] text-white">{display.date(left.date)}</Text>
               </View>
               <View className="absolute bottom-2 right-2 rounded bg-black/70 px-2 py-1">
-                <Text className="font-mono text-[10px] text-white">{right.date}</Text>
+                <Text className="font-mono text-[10px] text-white">{display.date(right.date)}</Text>
               </View>
             </View>
           </GestureDetector>
@@ -182,7 +184,7 @@ export default function PhotoComparator({ photos, onClose }: Props) {
               </Kicker>
               <View className="flex-row flex-wrap gap-1.5">
                 {filtered.map((p, i) => (
-                  <DateChip key={p.id} uri={p.url} label={p.date.slice(5)} active={leftIdx === i} onPress={() => { haptics.selection(); setLeftIdx(i) }} />
+                  <DateChip key={p.id} uri={p.url} label={display.italian ? display.date(p.date, true) : p.date.slice(5)} active={leftIdx === i} onPress={() => { haptics.selection(); setLeftIdx(i) }} />
                 ))}
               </View>
             </View>
@@ -192,7 +194,7 @@ export default function PhotoComparator({ photos, onClose }: Props) {
               </Kicker>
               <View className="flex-row flex-wrap gap-1.5">
                 {filtered.map((p, i) => (
-                  <DateChip key={p.id} uri={p.url} label={p.date.slice(5)} active={rightIdx === i} onPress={() => { haptics.selection(); setRightIdx(i) }} />
+                  <DateChip key={p.id} uri={p.url} label={display.italian ? display.date(p.date, true) : p.date.slice(5)} active={rightIdx === i} onPress={() => { haptics.selection(); setRightIdx(i) }} />
                 ))}
               </View>
             </View>

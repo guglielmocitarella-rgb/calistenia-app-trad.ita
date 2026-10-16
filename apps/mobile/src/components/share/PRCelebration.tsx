@@ -1,3 +1,4 @@
+import { useProgressDisplay } from '@/lib/use-progress-display'
 /**
  * PRCelebration — RN top-toast overlay for new personal records.
  * Slides in from top (RN Animated), auto-dismisses after 8s.
@@ -40,6 +41,7 @@ export default function PRCelebration({
   workoutId,
   onDismiss,
 }: PRCelebrationProps) {
+  const { italian, text, number, prMessage } = useProgressDisplay()
   const insets = useSafeAreaInsets()
   const translateY = useRef(new Animated.Value(-200)).current
   const captureRef = useRef<ShareCardCaptureHandle>(null)
@@ -75,14 +77,14 @@ export default function PRCelebration({
         userName,
         referralCode,
       })
-      await shareCardImage(uri, { message }, {
+      await shareCardImage(uri, { message: prMessage(message, { exerciseName, userName, oldValue: prEvent.oldValue, newValue: prEvent.newValue }) }, {
         ...MOBILE_SHARE_CARD_CONTEXTS.personalRecord,
         workout_id: workoutId,
       })
     } catch (e) {
       // silent – share not available
     }
-  }, [exerciseName, prEvent, userName, referralCode, workoutId])
+  }, [exerciseName, prEvent, userName, referralCode, workoutId, prMessage])
 
   return (
     <>
@@ -113,20 +115,20 @@ export default function PRCelebration({
           {/* Content */}
           <View style={styles.content}>
             <Text className="font-mono text-[10px] tracking-widest text-lime-400 uppercase">
-              NUEVO RÉCORD
+              {text('NUEVO RÉCORD', 'pr.celebration')}
             </Text>
             <Text className="font-bebas text-base text-white mt-0.5" numberOfLines={1}>
               {exerciseName}
             </Text>
             <View style={styles.valueRow}>
               <Text className="font-mono text-xs text-zinc-500">
-                {prEvent.oldValue ?? '—'}
+                {prEvent.oldValue != null ? number(prEvent.oldValue) : '—'}
               </Text>
               <Text className="font-mono text-xs text-lime-400 mx-1.5">→</Text>
               <Text className="font-mono-semibold text-xs text-lime-400">
                 {prEvent.kind === 'weight'
-                  ? `${prEvent.newValue} kg × ${prEvent.reps ?? 1}`
-                  : `${prEvent.newValue} ${isTimer ? 's' : 'reps'}`}
+                  ? `${number(prEvent.newValue)} kg × ${prEvent.reps ?? 1}`
+                  : `${number(prEvent.newValue)} ${isTimer ? 's' : italian ? 'rip.' : 'reps'}`}
               </Text>
             </View>
           </View>
@@ -142,7 +144,7 @@ export default function PRCelebration({
             }}
           >
             <Text className="font-mono text-[10px] tracking-widest text-lime-400 uppercase">
-              COMPARTIR
+              {text('COMPARTIR', 'common.share')}
             </Text>
           </Button>
         </Pressable>

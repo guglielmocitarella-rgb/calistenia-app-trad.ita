@@ -7,8 +7,6 @@
     "apps/mobile/src/app/health.tsx": 12,
     "apps/mobile/src/app/u/[id].tsx": 8,
     "apps/mobile/src/components/share/NutritionShareCard.tsx": 1,
-    "apps/mobile/src/components/share/PRCelebration.tsx": 2,
-    "apps/mobile/src/components/share/PRShareCard.tsx": 2,
     "apps/mobile/src/components/share/WorkoutShareCard.tsx": 6,
     "apps/mobile/src/components/social/CommentsSheet.tsx": 4,
     "apps/web/src/components/cardio/ElevationProfile.tsx": 1,

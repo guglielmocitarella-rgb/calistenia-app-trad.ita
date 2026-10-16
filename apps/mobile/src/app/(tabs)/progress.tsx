@@ -1,3 +1,4 @@
+import { useProgressDisplay } from '@/lib/use-progress-display'
 /**
  * Pestaña Progreso (#859, épica #852). Antes era el historial (`/history`,
  * que ahora redirige aquí).
@@ -62,6 +63,7 @@ const STREAK_WEEKS = STREAK_HISTORY_WEEKS
 
 export default function ProgressScreen() {
   const { t, i18n } = useTranslation()
+  const { number: displayNumber } = useProgressDisplay()
   const router = useRouter()
   const user = useAuthUser()
   const { colorScheme } = useColorScheme()
@@ -224,8 +226,8 @@ export default function ProgressScreen() {
         {/* Mapa del mes */}
         <View className="gap-2.5">
           <View className="flex-row justify-between">
-            <Kicker>{monthName}</Kicker>
-            <Kicker className="tracking-[1px]">{t('progressTab.daysTrained', { count: monthDaysTrained })}</Kicker>
+            <Kicker className="shrink">{monthName}</Kicker>
+            <Kicker className="min-w-0 flex-1 text-right tracking-[1px]">{t('progressTab.daysTrained', { count: monthDaysTrained })}</Kicker>
           </View>
           <MonthGrid activity={monthActivity} today={today} />
         </View>
@@ -239,7 +241,7 @@ export default function ProgressScreen() {
             <LinkRow
               title={t('nav.cardio')}
               sub={cardioWeek.count > 0
-                ? t('progressTab.cardioWeek', { km: cardioWeek.km.toFixed(1), count: cardioWeek.count })
+                ? t('progressTab.cardioWeek', { km: displayNumber(cardioWeek.km.toFixed(1)), count: cardioWeek.count })
                 : t('progressTab.cardioNone')}
               onPress={() => go('/cardio/history')}
             />
@@ -279,6 +281,7 @@ export default function ProgressScreen() {
       monthActivity,
       today,
       cardioWeek,
+      displayNumber,
       battleRecord,
       rows.length,
     ],
@@ -391,6 +394,7 @@ const CardioRow = memo(function CardioRow({
   onPress: (id: string) => void
 }) {
   const { t } = useTranslation()
+  const { number: displayNumber } = useProgressDisplay()
   const handlePress = useCallback(() => {
     if (session.id) onPress(session.id)
   }, [onPress, session.id])
@@ -405,7 +409,7 @@ const CardioRow = memo(function CardioRow({
       </View>
       <View className="flex-1">
         <Text className="font-sans-medium text-foreground" numberOfLines={1}>
-          {t(`cardio.${session.activity_type}`, { defaultValue: session.activity_type })} · {dist} km
+          {t(`cardio.${session.activity_type}`, { defaultValue: session.activity_type })} · {displayNumber(dist)} km
         </Text>
         <Text className="text-xs text-muted-foreground">
           <Text className="font-mono text-[11px] text-muted-foreground/70">{relativeDate(utcToLocalDateStr(session.started_at))}</Text>

@@ -1,3 +1,4 @@
+import { useProgressDisplay } from '@/lib/use-progress-display'
 /**
  * "Tus semanas" — historial de insights cross-métrica ya generados (épica #128
  * Fase 3, issue #132). Lista de resúmenes semanales/mensuales, más recientes
@@ -35,14 +36,14 @@ import { sortByStrength, CorrelationRow, Disclaimer, relativeTime } from '@/comp
 import { EmptyState } from '@/components/ui/empty-state'
 
 /** "Semana del 23 jun" / "Mes de junio 2026" — a partir de period_start (YYYY-MM-DD local). */
-function periodLabel(periodStart: string, periodType: InsightPeriodType, t: TFunction): string {
+function periodLabel(periodStart: string, periodType: InsightPeriodType, t: TFunction, locale: string): string {
   const d = new Date(`${periodStart}T12:00:00`)
   if (Number.isNaN(d.getTime())) return periodStart
   if (periodType === 'monthly') {
-    const month = d.toLocaleDateString('es', { month: 'long', year: 'numeric' })
+    const month = d.toLocaleDateString(locale, { month: 'long', year: 'numeric' })
     return t('insights.history.monthOf', 'Mes de {{month}}', { month })
   }
-  const date = d.toLocaleDateString('es', { day: 'numeric', month: 'short' })
+  const date = d.toLocaleDateString(locale, { day: 'numeric', month: 'short' })
   return t('insights.history.weekOf', 'Semana del {{date}}', { date })
 }
 
@@ -55,6 +56,7 @@ interface WeekCardProps {
 
 /** Una fila del historial — colapsada muestra headline + periodo; expandida, el payload completo. */
 function WeekCard({ insight, expanded, onToggle, t }: WeekCardProps) {
+  const display = useProgressDisplay()
   const reduceMotion = useReducedMotion()
   const rotation = useSharedValue(0)
   useEffect(() => {
@@ -80,8 +82,8 @@ function WeekCard({ insight, expanded, onToggle, t }: WeekCardProps) {
             {insight.payload.headline}
           </Text>
           <Text className="font-mono text-[9px] uppercase tracking-widest text-muted-foreground">
-            {periodLabel(insight.periodStart, insight.periodType, t)}
-            {!!insight.generatedAt && ` · ${relativeTime(insight.generatedAt)}`}
+            {periodLabel(insight.periodStart, insight.periodType, t, display.locale('es'))}
+            {!!insight.generatedAt && ` · ${display.relativeTime(relativeTime(insight.generatedAt), insight.generatedAt)}`}
           </Text>
         </View>
         {hasBody && (

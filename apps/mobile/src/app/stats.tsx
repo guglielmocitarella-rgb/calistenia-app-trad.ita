@@ -1,3 +1,4 @@
+import { useProgressDisplay } from '@/lib/use-progress-display'
 /**
  * /stats — Estadísticas de entrenamiento: músculos, ejercicios, récords y
  * tendencia sobre el `ProgressMap` ya cargado. Todo el cálculo vive en
@@ -36,7 +37,7 @@ function StatCard({ value, label }: { value: number | string; label: string }) {
       <Text className="font-bebas text-3xl leading-none text-foreground" numberOfLines={1}>
         {value}
       </Text>
-      <Text className="mt-1.5 font-mono text-[9px] uppercase tracking-[1.5px] text-muted-foreground" numberOfLines={1}>
+      <Text className="mt-1.5 font-mono text-[9px] uppercase tracking-[1.5px] text-muted-foreground" numberOfLines={2}>
         {label}
       </Text>
     </View>
@@ -50,7 +51,7 @@ function MiniStat({ value, label }: { value: number | string; label: string }) {
       <Text className="font-bebas text-lg leading-none text-lime" numberOfLines={1}>
         {value}
       </Text>
-      <Text className="mt-1 font-mono text-[8px] uppercase tracking-[1px] text-muted-foreground" numberOfLines={1}>
+      <Text className="mt-1 font-mono text-[8px] uppercase tracking-[1px] text-muted-foreground" numberOfLines={2}>
         {label}
       </Text>
     </View>
@@ -59,6 +60,7 @@ function MiniStat({ value, label }: { value: number | string; label: string }) {
 
 export default function StatsScreen() {
   const { t } = useTranslation()
+  const display = useProgressDisplay()
   const router = useRouter()
   const { progress } = useWorkoutState()
   const { getWorkout } = useWorkoutActions()
@@ -126,15 +128,15 @@ export default function StatsScreen() {
                   <StatCard value={stats.totals.minutes} label={t('stats.minutes')} />
                 </View>
                 <View className="mt-1 flex-row gap-2">
-                  <MiniStat value={stats.totals.avgSetsPerSession} label={t('stats.setsPerSession')} />
-                  <MiniStat value={stats.totals.avgMinutesPerSession} label={t('stats.minPerSession')} />
+                  <MiniStat value={display.number(stats.totals.avgSetsPerSession)} label={t('stats.setsPerSession')} />
+                  <MiniStat value={display.number(stats.totals.avgMinutesPerSession)} label={t('stats.minPerSession')} />
                 </View>
                 {stats.totals.volumeKg > 0 ? (
                   <View className="mt-1 flex-row items-center justify-between rounded-lg bg-muted/40 px-3 py-2">
                     <Text className="font-mono text-[10px] uppercase tracking-[1px] text-muted-foreground">
                       {t('stats.volume')}
                     </Text>
-                    <Text className="font-bebas text-lg leading-none text-lime">{stats.totals.volumeKg} kg</Text>
+                    <Text className="font-bebas text-lg leading-none text-lime">{display.number(stats.totals.volumeKg)} kg</Text>
                   </View>
                 ) : null}
               </CardContent>

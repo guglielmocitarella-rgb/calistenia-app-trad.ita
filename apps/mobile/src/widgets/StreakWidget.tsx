@@ -12,6 +12,7 @@ const LIME: ColorProp = '#a3e635'
 const MUTED: ColorProp = '#8a8782'
 
 const STRINGS = {
+  it: { streak: 'SERIE', week: 'SETTIMANA', weeks: 'SETTIMANE', stale: 'APRI L’APP', none: 'NESSUNA SERIE' },
   // La racha cuenta semanas desde #801.
   es: { streak: 'RACHA', week: 'SEMANA', weeks: 'SEMANAS', stale: 'ABRE LA APP', none: 'SIN RACHA' },
   en: { streak: 'STREAK', week: 'WEEK', weeks: 'WEEKS', stale: 'OPEN THE APP', none: 'NO STREAK' },

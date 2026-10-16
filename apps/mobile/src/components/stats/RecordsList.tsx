@@ -1,3 +1,4 @@
+import { useProgressDisplay } from '@/lib/use-progress-display'
 /** Lista de récords por ejercicio — chip lima "Nuevo" cuando cae dentro del periodo. */
 import { memo, useCallback, useState } from 'react'
 import { View, Pressable } from 'react-native'
@@ -45,13 +46,14 @@ const RecordRow = memo(function RecordRow({
   isLast: boolean
   t: TFunction
 }) {
+  const display = useProgressDisplay()
   const { best } = record
   const valueLabel =
     best.kind === 'reps'
       ? t('stats.bestReps', { reps: best.reps })
       : best.kind === 'time'
         ? t('stats.bestTime', { seconds: best.seconds })
-        : t('stats.bestWeight', { weight: best.weight, reps: best.reps, e1rm: best.e1rm })
+        : t('stats.bestWeight', { weight: display.number(best.weight), reps: best.reps, e1rm: display.number(best.e1rm) })
 
   return (
     <View
@@ -62,7 +64,7 @@ const RecordRow = memo(function RecordRow({
     >
       <View className="flex-1 gap-0.5">
         <View className="flex-row items-center gap-1.5">
-          <Text className="font-sans-medium text-sm text-foreground" numberOfLines={1}>
+          <Text className="min-w-0 flex-1 font-sans-medium text-sm text-foreground" numberOfLines={1}>
             {record.name}
           </Text>
           {record.isNew ? (
@@ -71,7 +73,7 @@ const RecordRow = memo(function RecordRow({
             </View>
           ) : null}
         </View>
-        <Text className="font-mono text-[10px] text-muted-foreground" numberOfLines={1}>
+        <Text className="font-mono text-[10px] text-muted-foreground" numberOfLines={2}>
           {valueLabel}
         </Text>
       </View>

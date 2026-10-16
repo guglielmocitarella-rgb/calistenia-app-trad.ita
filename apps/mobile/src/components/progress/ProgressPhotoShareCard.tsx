@@ -1,3 +1,4 @@
+import { useProgressDisplay } from '@/lib/use-progress-display'
 /**
  * ProgressPhotoShareCard — shareable before/after image for body progress photos.
  *
@@ -16,6 +17,7 @@
  * variant names (BebasNeue_400Regular / DMSans_*) directly.
  */
 import React, { memo } from 'react'
+import { useTranslation } from 'react-i18next'
 import { View, StyleSheet } from 'react-native'
 import { Image } from 'expo-image'
 import Svg, { Rect, Line } from 'react-native-svg'
@@ -72,6 +74,8 @@ const ProgressPhotoShareCard = memo(function ProgressPhotoShareCard({
   width = BASE_W,
   height = BASE_H,
 }: ProgressPhotoShareCardProps) {
+  const display = useProgressDisplay()
+  const { t } = useTranslation()
   const S = width / BASE_W
   const r = (n: number) => Math.round(n * S)
   const s = makeStyles(width, height, r)
@@ -86,7 +90,8 @@ const ProgressPhotoShareCard = memo(function ProgressPhotoShareCard({
   const deltaUnit = useWeeks ? labels.weeks : labels.days
 
   const category = after.category || before.category
-  const catLabel = CATEGORY_LABEL[category] ?? category?.toUpperCase() ?? ''
+  const catLabel = display.italian && ['front', 'side', 'back'].includes(category)
+    ? t(`progress.bodyPhotos.${category}`) : CATEGORY_LABEL[category] ?? category?.toUpperCase() ?? ''
   const displayName = userName?.trim() || 'Atleta'
 
   const panel = (photo: BodyPhoto, tag: string, isAfter: boolean) => (
@@ -100,7 +105,7 @@ const ProgressPhotoShareCard = memo(function ProgressPhotoShareCard({
       {/* Label bar (solid bg → captures reliably) */}
       <View style={s.labelBar}>
         <Text style={[s.labelTag, isAfter && { color: LIME }]}>{tag.toUpperCase()}</Text>
-        <Text style={s.labelDate}>{photo.date}</Text>
+        <Text style={s.labelDate}>{display.date(photo.date)}</Text>
       </View>
     </View>
   )
