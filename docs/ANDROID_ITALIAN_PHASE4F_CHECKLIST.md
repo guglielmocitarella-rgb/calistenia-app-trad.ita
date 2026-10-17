@@ -1,6 +1,6 @@
 # Collaudo Android — fase 4F e correzione residua 4E
 
-APK/commit: da riportare dal report finale. Dispositivo: __. Android: __. Lingua sistema: __. Scala testo: __. Risoluzione/larghezza: __.
+APK: **Calistenia-4F-9bef28a5.apk**. Commit: `9bef28a573757d913aea950b5b448174b1e61bf2`. SHA-256: `53a70ec6827d2be4919676f9d3f2c778b9bf0a55928dc63897cdab0bbeefeb5a`. Dispositivo: __. Android: __. Lingua sistema: __. Scala testo: __. Risoluzione/larghezza: __.
 
 Per ciascuna voce registrare SUPERATO / PROBLEMA / NON ESEGUITO, eventuale screenshot e descrizione. Tutte le voci seguenti sono inizialmente **NON ESEGUITE sul telefono**. Le prove su emulatore non le chiudono automaticamente.
 

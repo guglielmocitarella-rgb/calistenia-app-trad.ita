@@ -36,6 +36,6 @@ Queste prove indicano la fattibilità di alcune interazioni con IA esterne. Non 
 
 ## Stato 4F — 17 ottobre 2026
 
-4F implementata con correzione residua 4E nello stesso APK finale; verifiche CI/build e collaudo descritti nel report 4F. Collaudo 4E registrato fedelmente: 67 controlli, 22 superati, 1 difetto grafico, 28 non eseguiti, 16 da verificare. Nessuna regressione confermata 4A–4D. I controlli social aperti passano alla fase 6, senza considerarli superati.
+4F implementata con correzione residua 4E nello stesso APK finale; quattro workflow applicativi riusciti, build standalone e smoke su emulatore riusciti sul commit `9bef28a5`; collaudo telefonico ancora da eseguire, dettagli nel report 4F. Collaudo 4E registrato fedelmente: 67 controlli, 22 superati, 1 difetto grafico, 28 non eseguiti, 16 da verificare. Nessuna regressione confermata 4A–4D. I controlli social aperti passano alla fase 6, senza considerarli superati.
 
 Roadmap conservata: 4G catalogo italiano esercizi; 5 audit finale; 6 collaudo integrale Android; 7 IA personale configurabile; 8 manutenzione e aggiornamenti upstream. Evidenze MCP/OAuth precedenti conservate come documentazione; nessun provider personale implementato. Health Connect esiste già; nessuna nuova integrazione introdotta dalla 4F.
