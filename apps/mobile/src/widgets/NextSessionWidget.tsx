@@ -12,6 +12,7 @@ const LIME: ColorProp = '#a3e635'
 const MUTED: ColorProp = '#8a8782'
 
 const STRINGS = {
+  it: {"tomorrow": "DOMANI", "rest": "RIPOSO", "none": "SCEGLI UN PROGRAMMA", "stale": "APRI L’APP", "ex": "ES"},
   es: { tomorrow: 'MAÑANA', rest: 'DESCANSO', none: 'ELIGE UN PROGRAMA', stale: 'ABRE LA APP', ex: 'EJ' },
   en: { tomorrow: 'TOMORROW', rest: 'REST DAY', none: 'PICK A PROGRAM', stale: 'OPEN THE APP', ex: 'EX' },
 }

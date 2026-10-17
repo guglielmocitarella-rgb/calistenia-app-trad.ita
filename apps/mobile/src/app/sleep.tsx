@@ -1,3 +1,4 @@
+import { useSecondaryDisplay } from '@/lib/use-secondary-display'
 /**
  * Sleep — screen nativa de registro/historial de sueño (issue #244, F1).
  * Puerto de apps/web/src/pages/SleepPage.tsx: resumen de "anoche" (o de la
@@ -112,6 +113,7 @@ function StatCard({ label, value, color }: { label: string; value: string; color
 }
 
 export default function SleepScreen() {
+  const display = useSecondaryDisplay()
   const { t } = useTranslation()
   const router = useRouter()
   const user = useAuthUser()
@@ -160,14 +162,14 @@ export default function SleepScreen() {
     const items: { label: string; value: string; color?: string }[] = []
     if (weeklyStats.entryCount === 0) return items
     items.push({ label: t('sleep.avgDuration'), value: formatDuration(Math.round(weeklyStats.avgDuration)), color: INDIGO })
-    items.push({ label: t('sleep.avgQuality'), value: `${weeklyStats.avgQuality.toFixed(1)} / 5`, color: weeklyStats.avgQuality >= 3 ? '#10b981' : '#fbbf24' })
-    items.push({ label: t('sleep.avgAwakenings'), value: weeklyStats.avgAwakenings.toFixed(1), color: weeklyStats.avgAwakenings <= 1 ? '#10b981' : '#fbbf24' })
+    items.push({ label: t('sleep.avgQuality'), value: `${display.number(weeklyStats.avgQuality.toFixed(1))} / 5`, color: weeklyStats.avgQuality >= 3 ? '#10b981' : '#fbbf24' })
+    items.push({ label: t('sleep.avgAwakenings'), value: display.number(weeklyStats.avgAwakenings.toFixed(1)), color: weeklyStats.avgAwakenings <= 1 ? '#10b981' : '#fbbf24' })
     items.push({ label: t('sleep.scheduleRegularity'), value: `±${Math.round(weeklyStats.scheduleRegularity)}m`, color: weeklyStats.scheduleRegularity <= 30 ? '#10b981' : '#fbbf24' })
     if (weeklyStats.avgAwakeMinutes > 0) {
       items.push({ label: t('sleep.avgAwakeTime'), value: `${Math.round(weeklyStats.avgAwakeMinutes)}m`, color: weeklyStats.avgAwakeMinutes <= 15 ? '#10b981' : '#fbbf24' })
     }
     return items
-  }, [weeklyStats, t])
+  }, [weeklyStats, t, display])
 
   const statRows = useMemo(() => {
     const rows: { label: string; value: string; color?: string }[][] = []

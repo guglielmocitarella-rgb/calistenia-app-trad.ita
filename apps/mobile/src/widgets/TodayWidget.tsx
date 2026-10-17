@@ -13,6 +13,7 @@ const MUTED = '#8a8782' as const
 const FG = '#fafaf9' as const
 
 const STRINGS = {
+  it: {"today": "ALLENAMENTO DI OGGI", "done": "COMPLETATO", "rest": "GIORNO DI RIPOSO", "none": "SCEGLI UN PROGRAMMA", "stale": "APRI L’APP PER AGGIORNARE", "streak": "SERIE", "week": "SETTIMANA"},
   es: { today: 'ENTRENAMIENTO DE HOY', done: 'COMPLETADO', rest: 'DÍA DE DESCANSO', none: 'ELIGE UN PROGRAMA', stale: 'ABRE LA APP PARA ACTUALIZAR', streak: 'RACHA', week: 'SEMANA' },
   en: { today: "TODAY'S WORKOUT", done: 'COMPLETED', rest: 'REST DAY', none: 'PICK A PROGRAM', stale: 'OPEN THE APP TO UPDATE', streak: 'STREAK', week: 'WEEK' },
 }

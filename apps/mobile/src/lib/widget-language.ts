@@ -5,7 +5,7 @@ export function widgetLanguage(value?: string | null, platform = 'android'): Wid
   const base = value?.toLowerCase().split(/[-_]/)[0]
   return base === 'it' || base === 'en' ? base : 'es'
 }
-/** IT usa temporalmente los textos ingleses; snapshots antiguos mantienen ES/EN. */
+/** Dizionari IT locali; snapshot precedenti conservano il fallback ES/EN. */
 export function widgetStrings<T>(strings: { es: T; en: T; it?: T }, language?: string | null): T {
   const locale = widgetLanguage(language)
   return locale === 'it' ? strings.it ?? strings.en : strings[locale]

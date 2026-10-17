@@ -100,3 +100,12 @@ Date di calendario mostrate come `gg/mm/aaaa` (o `gg/mm` nelle miniature), senza
 - Report / block / unblock → Segnala / Blocca / Sblocca.
 - Rounds → Giri; reps → rip.; ordinali → 1º, 2º, 3º.
 - Username, commenti, titoli personali, codici, ID e URL rimangono originali.
+
+## Estensione 4F — interfacce secondarie e correzione residua 4E
+
+- Social → Profilo: SESSIONI (sempre per esteso), SERIE (continuità attuale), RECORD (migliore continuità), LIVELLO.
+- Reminder: promemoria; active break: pausa attiva; rest timer: timer di recupero.
+- Watch & health: Orologio e salute; sync: sincronizzazione; body fat: grasso corporeo.
+- Sleep: sonno; awakening: risveglio; sleep quality: qualità del sonno; history: cronologia.
+- Free session: sessione libera; circuit round: giro; added weight: peso aggiuntivo; record toast: avviso di record.
+- Le note storiche descrivono le funzioni delle versioni originali; non certificano modifiche al backend del fork.

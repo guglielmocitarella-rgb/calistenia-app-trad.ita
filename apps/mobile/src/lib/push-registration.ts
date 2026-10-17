@@ -1,3 +1,5 @@
+import i18n from 'i18next'
+import { secondaryLabel } from './secondary-ui-labels'
 /**
  * push-registration.ts
  *
@@ -50,7 +52,7 @@ export async function registerPushTokenAsync(
     // ── 2. Canal Android (idempotente) ────────────────────────────────────────
     if (Platform.OS === 'android') {
       await Notifications.setNotificationChannelAsync(PUSH_CHANNEL_ID, {
-        name: 'Notificaciones',
+        name: secondaryLabel('Notificaciones', i18n.language ?? 'es', Platform.OS),
         importance: Notifications.AndroidImportance.HIGH,
         vibrationPattern: [0, 200, 100, 200],
       })

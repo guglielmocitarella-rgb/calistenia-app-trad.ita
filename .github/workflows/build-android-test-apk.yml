@@ -1,5 +1,5 @@
 name: Android TEST APK (standalone, no publication)
-# Rebuild the standalone test APK for phase 4E Android social UI with final date and distance display localization.
+# Phase 4F: Italian secondary screens, native labels and residual 4E profile layout.
 
 on:
   workflow_dispatch:

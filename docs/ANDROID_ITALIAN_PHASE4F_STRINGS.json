@@ -1,0 +1,4697 @@
+{
+  "baseline": "8a71be8feb4a0a8e50a76ea157ee12dd826b31b2",
+  "phase": "4F",
+  "reviewedKeys": 154,
+  "changedItalianValues": 153,
+  "protectedEarlierPhaseKeys": 2807,
+  "catalogCountPerLanguage": 5315,
+  "entries": [
+    {
+      "key": "discoverySurvey.goalLearnSkill",
+      "english": "Learn an exercise",
+      "italianBefore": "Learn an exercise",
+      "italian": "Impara un esercizio",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/discovery-survey.ts",
+          "line": 42,
+          "column": 34,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): labelKey: 'discoverySurvey.goalLearnSkill'"
+        }
+      ]
+    },
+    {
+      "key": "discoverySurvey.goalOther",
+      "english": "Something else",
+      "italianBefore": "Something else",
+      "italian": "Qualcos’altro",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/discovery-survey.ts",
+          "line": 45,
+          "column": 28,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): labelKey: 'discoverySurvey.goalOther'"
+        }
+      ]
+    },
+    {
+      "key": "discoverySurvey.goalQuestion",
+      "english": "What were you looking for when you arrived?",
+      "italianBefore": "What were you looking for when you arrived?",
+      "italian": "Cosa stavi cercando quando sei arrivato?",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/DiscoverySurvey.tsx",
+          "line": 102,
+          "column": 32,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/DiscoverySurvey.tsx",
+          "line": 94,
+          "column": 38,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "discoverySurvey.goalRoutine",
+      "english": "A calisthenics routine",
+      "italianBefore": "A calisthenics routine",
+      "italian": "Una routine di calisthenics",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/discovery-survey.ts",
+          "line": 41,
+          "column": 30,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): labelKey: 'discoverySurvey.goalRoutine'"
+        }
+      ]
+    },
+    {
+      "key": "discoverySurvey.goalTrackProgress",
+      "english": "Track my progress",
+      "italianBefore": "Track my progress",
+      "italian": "Monitorare i miei progressi",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/discovery-survey.ts",
+          "line": 43,
+          "column": 37,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): labelKey: 'discoverySurvey.goalTrackProgress'"
+        }
+      ]
+    },
+    {
+      "key": "discoverySurvey.goalTrainAtHome",
+      "english": "Train at home",
+      "italianBefore": "Train at home",
+      "italian": "Allenati a casa",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/discovery-survey.ts",
+          "line": 44,
+          "column": 36,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): labelKey: 'discoverySurvey.goalTrainAtHome'"
+        }
+      ]
+    },
+    {
+      "key": "discoverySurvey.notNow",
+      "english": "Not now",
+      "italianBefore": "Not now",
+      "italian": "Non adesso",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/DiscoverySurvey.tsx",
+          "line": 122,
+          "column": 62,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/DiscoverySurvey.tsx",
+          "line": 124,
+          "column": 54,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "discoverySurvey.submit",
+      "english": "Send",
+      "italianBefore": "Send",
+      "italian": "Invia",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/DiscoverySurvey.tsx",
+          "line": 124,
+          "column": 84,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/DiscoverySurvey.tsx",
+          "line": 126,
+          "column": 76,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "discoverySurvey.subtitle",
+      "english": "It's optional and takes under a minute.",
+      "italianBefore": "It's optional and takes under a minute.",
+      "italian": "È facoltativo e ci vuole meno di un minuto.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/DiscoverySurvey.tsx",
+          "line": 100,
+          "column": 65,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/DiscoverySurvey.tsx",
+          "line": 101,
+          "column": 31,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "discoverySurvey.title",
+      "english": "Help us improve Calistenia",
+      "italianBefore": "Help us improve Calistenia",
+      "italian": "Aiutaci a migliorare Calistenia",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/DiscoverySurvey.tsx",
+          "line": 99,
+          "column": 69,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/DiscoverySurvey.tsx",
+          "line": 100,
+          "column": 25,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "health.emptyToday",
+      "english": "No data yet today. Tap \"Sync\" after your watch uploads its data to Health Connect.",
+      "italianBefore": "No data yet today. Tap \"Sync\" after your watch uploads its data to Health Connect.",
+      "italian": "Oggi non ci sono ancora dati. Tocca \"Sincronizza\" dopo che l'orologio avrà caricato i dati su Health Connect.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/health.tsx",
+          "line": 147,
+          "column": 22,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "liveSession.continue",
+      "english": "CONTINUE",
+      "italianBefore": "CONTINUE",
+      "italian": "CONTINUA",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/lib/use-live-session.ts",
+          "line": 57,
+          "column": 21,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "liveSession.inProgress",
+      "english": "Workout in progress",
+      "italianBefore": "Workout in progress",
+      "italian": "Allenamento in corso",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/lib/use-live-session.ts",
+          "line": 59,
+          "column": 21,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "liveSession.logSet",
+      "english": "SET DONE",
+      "italianBefore": "SET DONE",
+      "italian": "SERIE COMPLETATA",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/lib/use-live-session.ts",
+          "line": 55,
+          "column": 15,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "liveSession.skipRest",
+      "english": "SKIP REST",
+      "italianBefore": "SKIP REST",
+      "italian": "SALTA LA PAUSA",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/lib/use-live-session.ts",
+          "line": 56,
+          "column": 15,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "liveSession.stop",
+      "english": "STOP",
+      "italianBefore": "STOP",
+      "italian": "STOP",
+      "changed": false,
+      "sources": [
+        {
+          "file": "apps/mobile/src/lib/use-live-session.ts",
+          "line": 58,
+          "column": 15,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "notif.achievement",
+      "english": "Unlocked: {{name}}",
+      "italianBefore": "Unlocked: {{name}}",
+      "italian": "Sbloccato: {{name}}",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 78,
+          "column": 52,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/NotificationsPage.tsx",
+          "line": 70,
+          "column": 52,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "notif.anAchievement",
+      "english": "an achievement",
+      "italianBefore": "an achievement",
+      "italian": "un risultato",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 78,
+          "column": 199,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 78,
+          "column": 256,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/NotificationsPage.tsx",
+          "line": 70,
+          "column": 199,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/pages/NotificationsPage.tsx",
+          "line": 70,
+          "column": 256,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/pages/NotificationsPage.tsx",
+          "line": 84,
+          "column": 104,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "notif.default",
+      "english": "{{name}} interacted with you",
+      "italianBefore": "{{name}} interacted with you",
+      "italian": "{{name}} ha interagito con te",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 118,
+          "column": 14,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/NotificationsPage.tsx",
+          "line": 108,
+          "column": 14,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "notif.inactivity14d",
+      "english": "It's still a good time for your first workout",
+      "italianBefore": "It's still a good time for your first workout",
+      "italian": "È ancora un buon momento per il tuo primo allenamento",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 114,
+          "column": 14,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 114,
+          "column": 92,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): n.data?.segment === 'trained_then_stopped' ? 'notif.inactivity14dStopped' : 'notif.inactivity14d'"
+        },
+        {
+          "file": "apps/web/src/pages/NotificationsPage.tsx",
+          "line": 104,
+          "column": 14,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "notif.inactivity14dStopped",
+      "english": "Two weeks don't erase anything: your progress is waiting",
+      "italianBefore": "Two weeks don't erase anything: your progress is waiting",
+      "italian": "Due settimane non cancellano nulla: i tuoi progressi ti aspettano",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 114,
+          "column": 14,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 114,
+          "column": 61,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): n.data?.segment === 'trained_then_stopped' ? 'notif.inactivity14dStopped' : 'notif.inactivity14d'"
+        },
+        {
+          "file": "apps/web/src/pages/NotificationsPage.tsx",
+          "line": 104,
+          "column": 14,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "notif.inactivity24h",
+      "english": "Your first workout is still waiting 💪",
+      "italianBefore": "Your first workout is still waiting 💪",
+      "italian": "Il tuo primo allenamento ti sta ancora aspettando 💪",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 106,
+          "column": 14,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/NotificationsPage.tsx",
+          "line": 96,
+          "column": 14,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "notif.inactivity72h",
+      "english": "Three days without training: today's session is ready",
+      "italianBefore": "Three days without training: today's session is ready",
+      "italian": "Tre giorni senza allenamento: la sessione di oggi è pronta",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 108,
+          "column": 14,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/NotificationsPage.tsx",
+          "line": 98,
+          "column": 14,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "notif.inactivity7d",
+      "english": "Your first week hasn't started yet: a short workout is enough",
+      "italianBefore": "Your first week hasn't started yet: a short workout is enough",
+      "italian": "La tua prima settimana non è ancora iniziata: basta un breve allenamento",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 112,
+          "column": 14,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 112,
+          "column": 91,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): n.data?.segment === 'trained_then_stopped' ? 'notif.inactivity7dStopped' : 'notif.inactivity7d'"
+        },
+        {
+          "file": "apps/web/src/pages/NotificationsPage.tsx",
+          "line": 102,
+          "column": 14,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "notif.inactivity7dStopped",
+      "english": "A week without training: one session today and you're back in rhythm",
+      "italianBefore": "A week without training: one session today and you're back in rhythm",
+      "italian": "Una settimana senza allenamenti: una sessione oggi e torni in forma",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 112,
+          "column": 14,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 112,
+          "column": 61,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): n.data?.segment === 'trained_then_stopped' ? 'notif.inactivity7dStopped' : 'notif.inactivity7d'"
+        },
+        {
+          "file": "apps/web/src/pages/NotificationsPage.tsx",
+          "line": 102,
+          "column": 14,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "notif.inactivityNewStart",
+      "english": "New week, fresh start: today's session is ready",
+      "italianBefore": "New week, fresh start: today's session is ready",
+      "italian": "Nuova settimana, nuovo inizio: la sessione di oggi è pronta",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 116,
+          "column": 14,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/NotificationsPage.tsx",
+          "line": 106,
+          "column": 14,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "notif.programDeleted",
+      "english": "Your enrollment ended: the author deleted the program {{name}}",
+      "italianBefore": "Your enrollment ended: the author deleted the program {{name}}",
+      "italian": "La tua iscrizione è terminata: l’autore ha eliminato il programma {{name}}",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 102,
+          "column": 14,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/NotificationsPage.tsx",
+          "line": 92,
+          "column": 14,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "notif.streak",
+      "english": "{{days}} consecutive days training!",
+      "italianBefore": "{{days}} consecutive days training!",
+      "italian": "{{days}} giorni consecutivi di allenamento!",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 82,
+          "column": 11,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/NotificationsPage.tsx",
+          "line": 74,
+          "column": 11,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "notif.streakWeeks",
+      "english": "{{weeks}} weeks in a row!",
+      "italianBefore": "{{weeks}} weeks in a row!",
+      "italian": "{{weeks}} settimane di fila!",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 81,
+          "column": 11,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/NotificationsPage.tsx",
+          "line": 73,
+          "column": 11,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "notifications.emptyBody",
+      "english": "Reactions, comments, new followers and challenges will show up here.",
+      "italianBefore": "Reactions, comments, new followers and challenges will show up here.",
+      "italian": "Qui verranno visualizzate reazioni, commenti, nuovi follower e sfide.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 397,
+          "column": 23,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "notifications.emptyTitle",
+      "english": "No notifications yet",
+      "italianBefore": "No notifications yet",
+      "italian": "Non ci sono ancora notifiche",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 396,
+          "column": 24,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "notifications.markAllShort",
+      "english": "Mark all",
+      "italianBefore": "Mark all",
+      "italian": "Segna tutte",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 328,
+          "column": 18,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "notifications.unreadCount",
+      "english": "{{count}} unread",
+      "italianBefore": "{{count}} unread",
+      "italian": "{{count}} da leggere",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/notifications.tsx",
+          "line": 316,
+          "column": 16,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "offline.message",
+      "english": "Offline — data is saved locally",
+      "italianBefore": "Offline — data is saved locally",
+      "italian": "Offline — i dati vengono salvati localmente",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/OfflineBanner.tsx",
+          "line": 49,
+          "column": 12,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/OfflineBanner.tsx",
+          "line": 28,
+          "column": 10,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "pushPrompt.accept",
+      "english": "Turn on alerts",
+      "italianBefore": "Turn on alerts",
+      "italian": "Attiva gli avvisi",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/session/PushPermissionCard.tsx",
+          "line": 126,
+          "column": 78,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/session/PushPermissionCard.tsx",
+          "line": 111,
+          "column": 16,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "pushPrompt.decline",
+      "english": "Not now",
+      "italianBefore": "Not now",
+      "italian": "Non adesso",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/session/PushPermissionCard.tsx",
+          "line": 122,
+          "column": 16,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/session/PushPermissionCard.tsx",
+          "line": 119,
+          "column": 16,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "pushPrompt.denied",
+      "english": "You can turn them on in Settings any time.",
+      "italianBefore": "You can turn them on in Settings any time.",
+      "italian": "Puoi attivarle in qualsiasi momento nelle Impostazioni.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/session/PushPermissionCard.tsx",
+          "line": 116,
+          "column": 61,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/session/PushPermissionCard.tsx",
+          "line": 99,
+          "column": 61,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "pushPrompt.desc",
+      "english": "One reminder so the streak doesn’t stop at one.",
+      "italianBefore": "One reminder so the streak doesn’t stop at one.",
+      "italian": "Un promemoria per evitare che la serie si interrompa dopo la prima volta.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/session/PushPermissionCard.tsx",
+          "line": 63,
+          "column": 7,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/session/PushPermissionCard.tsx",
+          "line": 55,
+          "column": 7,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "pushPrompt.descWithSchedule",
+      "english": "One alert on your training days ({{days}}), at {{time}}.",
+      "italianBefore": "One alert on your training days ({{days}}), at {{time}}.",
+      "italian": "Un avviso nei giorni in cui ti alleni ({{days}}), alle {{time}}.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/session/PushPermissionCard.tsx",
+          "line": 59,
+          "column": 7,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/components/session/PushPermissionCard.tsx",
+          "line": 59,
+          "column": 71,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): schedule.isEveryDay ? 'pushPrompt.descWithScheduleEveryDay' : 'pushPrompt.descWithSchedule'"
+        },
+        {
+          "file": "apps/web/src/components/session/PushPermissionCard.tsx",
+          "line": 51,
+          "column": 7,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "pushPrompt.descWithScheduleEveryDay",
+      "english": "One alert every day, at {{time}}.",
+      "italianBefore": "One alert every day, at {{time}}.",
+      "italian": "Un avviso al giorno, alle {{time}}.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/session/PushPermissionCard.tsx",
+          "line": 59,
+          "column": 7,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/components/session/PushPermissionCard.tsx",
+          "line": 59,
+          "column": 31,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): schedule.isEveryDay ? 'pushPrompt.descWithScheduleEveryDay' : 'pushPrompt.descWithSchedule'"
+        },
+        {
+          "file": "apps/web/src/components/session/PushPermissionCard.tsx",
+          "line": 51,
+          "column": 7,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "pushPrompt.granted",
+      "english": "Alerts on",
+      "italianBefore": "Alerts on",
+      "italian": "Avvisi attivati",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/session/PushPermissionCard.tsx",
+          "line": 116,
+          "column": 35,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/session/PushPermissionCard.tsx",
+          "line": 99,
+          "column": 35,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "pushPrompt.title",
+      "english": "Want a nudge for the next one?",
+      "italianBefore": "Want a nudge for the next one?",
+      "italian": "Vuoi un promemoria per il prossimo allenamento?",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/session/PushPermissionCard.tsx",
+          "line": 109,
+          "column": 71,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/session/PushPermissionCard.tsx",
+          "line": 94,
+          "column": 10,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "reminders.blockedBody",
+      "english": "Your reminders are saved but you won't get alerts. Go to your device Settings → Notifications and allow this app.",
+      "italianBefore": "Your reminders are saved but you won't get alerts. Go to your device Settings → Notifications and allow this app.",
+      "italian": "I tuoi promemoria sono stati salvati, ma non riceverai alcuna notifica. Vai su Impostazioni → Notifiche sul tuo dispositivo e autorizza questa app.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 846,
+          "column": 16,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "reminders.blockedTitle",
+      "english": "Notifications blocked",
+      "italianBefore": "Notifications blocked",
+      "italian": "Notifiche bloccate",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 843,
+          "column": 16,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "reminders.emptyBody",
+      "english": "Schedule alerts so you don't skip meals, workouts or active breaks during work.",
+      "italianBefore": "Schedule alerts so you don't skip meals, workouts or active breaks during work.",
+      "italian": "Imposta degli avvisi per non saltare i pasti, gli allenamenti o le pause attive durante il lavoro.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 1040,
+          "column": 16,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "reminders.emptyTitle",
+      "english": "No reminders",
+      "italianBefore": "No reminders",
+      "italian": "Nessun promemoria",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 1034,
+          "column": 16,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/WorkoutReminderWidget.tsx",
+          "line": 150,
+          "column": 14,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "reminders.hourLabel",
+      "english": "Hour",
+      "italianBefore": "Hour",
+      "italian": "Ora",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 145,
+          "column": 31,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "reminders.mealType",
+      "english": "MEAL",
+      "italianBefore": "MEAL",
+      "italian": "PASTO",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 260,
+          "column": 17,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 551,
+          "column": 33,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 592,
+          "column": 50,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 933,
+          "column": 33,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/RemindersPage.tsx",
+          "line": 71,
+          "column": 47,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/pages/RemindersPage.tsx",
+          "line": 321,
+          "column": 31,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/pages/RemindersPage.tsx",
+          "line": 355,
+          "column": 43,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "reminders.minuteLabel",
+      "english": "Minutes",
+      "italianBefore": "Minutes",
+      "italian": "Minuti",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 156,
+          "column": 31,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "reminders.notifActiveStatus",
+      "english": "notifs on",
+      "italianBefore": "notifs on",
+      "italian": "notifiche attive",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 569,
+          "column": 20,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "reminders.notifBlockedStatus",
+      "english": "notifs blocked",
+      "italianBefore": "notifs blocked",
+      "italian": "notifiche bloccate",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 574,
+          "column": 22,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "reminders.notifEnableCta",
+      "english": "enable notifs",
+      "italianBefore": "enable notifs",
+      "italian": "attiva le notifiche",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 580,
+          "column": 22,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "reminders.pauseEndLabel",
+      "english": "End time",
+      "italianBefore": "End time",
+      "italian": "Ora di fine",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 751,
+          "column": 41,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "reminders.pauseHoursLabel",
+      "english": "Work hours",
+      "italianBefore": "Work hours",
+      "italian": "Orario di lavoro",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 719,
+          "column": 20,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "reminders.pauseIntervalLabel",
+      "english": "Every",
+      "italianBefore": "Every",
+      "italian": "Ogni",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 690,
+          "column": 20,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "reminders.pauseStartLabel",
+      "english": "Start time",
+      "italianBefore": "Start time",
+      "italian": "Ora di inizio",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 728,
+          "column": 41,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "reminders.pauseType",
+      "english": "BREAK",
+      "italianBefore": "BREAK",
+      "italian": "PAUSA",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 263,
+          "column": 17,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 563,
+          "column": 34,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 594,
+          "column": 50,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 936,
+          "column": 33,
+          "kind": "android_direct"
+        },
+        {
+          "file": "packages/core/hooks/useReminderTimeline.ts",
+          "line": 83,
+          "column": 37,
+          "kind": "android_indirect"
+        },
+        {
+          "file": "apps/web/src/pages/RemindersPage.tsx",
+          "line": 73,
+          "column": 49,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/pages/RemindersPage.tsx",
+          "line": 333,
+          "column": 32,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/pages/RemindersPage.tsx",
+          "line": 357,
+          "column": 44,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "reminders.permissionNeeded",
+      "english": "You need to allow notifications to receive reminders.",
+      "italianBefore": "You need to allow notifications to receive reminders.",
+      "italian": "Devi abilitare le notifiche per ricevere i promemoria.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 418,
+          "column": 9,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 805,
+          "column": 20,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/RemindersPage.tsx",
+          "line": 133,
+          "column": 20,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "reminders.saveError",
+      "english": "Could not save. Please try again.",
+      "italianBefore": "Could not save. Please try again.",
+      "italian": "Impossibile salvare. Riprovare.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 107,
+          "column": 25,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 107,
+          "column": 69,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/RemindersPage.tsx",
+          "line": 210,
+          "column": 16,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "reminders.saveErrorAuth",
+      "english": "Sign in to save reminders.",
+      "italianBefore": "Sign in to save reminders.",
+      "italian": "Accedi per salvare i promemoria.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 103,
+          "column": 12,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "reminders.saveErrorOffline",
+      "english": "No connection: the reminder wasn't saved. Reminders are sent from the server, so they need to be saved online.",
+      "italianBefore": "No connection: the reminder wasn't saved. Reminders are sent from the server, so they need to be saved online.",
+      "italian": "Nessuna connessione: il promemoria non è stato salvato. I promemoria vengono inviati dal server, quindi devono essere salvati online.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 100,
+          "column": 12,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "reminders.startBeforeEnd",
+      "english": "Start time must be before end time.",
+      "italianBefore": "Start time must be before end time.",
+      "italian": "L'ora di inizio deve essere precedente all'ora di fine.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 448,
+          "column": 20,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/RemindersPage.tsx",
+          "line": 202,
+          "column": 20,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "reminders.title",
+      "english": "REMINDERS",
+      "italianBefore": "REMINDERS",
+      "italian": "PROMEMORIA",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 544,
+          "column": 66,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/RemindersPage.tsx",
+          "line": 315,
+          "column": 12,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "reminders.toggleOffLabel",
+      "english": "Turn off",
+      "italianBefore": "Turn off",
+      "italian": "Disattiva",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 964,
+          "column": 63,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "reminders.toggleOnLabel",
+      "english": "Turn on",
+      "italianBefore": "Turn on",
+      "italian": "Attiva",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 964,
+          "column": 95,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "reminders.updateError",
+      "english": "Could not update. Please try again.",
+      "italianBefore": "Could not update. Please try again.",
+      "italian": "Impossibile eseguire l'aggiornamento. Riprovare.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 490,
+          "column": 16,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/RemindersPage.tsx",
+          "line": 173,
+          "column": 63,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "reminders.workoutType",
+      "english": "WORKOUT",
+      "italianBefore": "WORKOUT",
+      "italian": "ALLENAMENTO",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 262,
+          "column": 17,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 557,
+          "column": 36,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 593,
+          "column": 50,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/app/reminders.tsx",
+          "line": 935,
+          "column": 33,
+          "kind": "android_direct"
+        },
+        {
+          "file": "packages/core/hooks/useReminderTimeline.ts",
+          "line": 85,
+          "column": 35,
+          "kind": "android_indirect"
+        },
+        {
+          "file": "apps/web/src/pages/RemindersPage.tsx",
+          "line": 72,
+          "column": 53,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/pages/RemindersPage.tsx",
+          "line": 327,
+          "column": 34,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/pages/RemindersPage.tsx",
+          "line": 356,
+          "column": 46,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.addEntry",
+      "english": "+ LOG",
+      "italianBefore": "+ LOG",
+      "italian": "+ REGISTRA",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 274,
+          "column": 82,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 352,
+          "column": 14,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.avgAwakeTime",
+      "english": "Avg. awake time",
+      "italianBefore": "Avg. awake time",
+      "italian": "Tempo medio di veglia",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 169,
+          "column": 27,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 334,
+          "column": 24,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.avgAwakenings",
+      "english": "Awakenings",
+      "italianBefore": "Awakenings",
+      "italian": "Risvegli",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 166,
+          "column": 25,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 323,
+          "column": 22,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.avgDuration",
+      "english": "Average duration",
+      "italianBefore": "Average duration",
+      "italian": "Durata media",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 164,
+          "column": 25,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 313,
+          "column": 22,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.avgQuality",
+      "english": "Average quality",
+      "italianBefore": "Average quality",
+      "italian": "Qualità media",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 165,
+          "column": 25,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 318,
+          "column": 22,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.awakeFor",
+      "english": "Awake",
+      "italianBefore": "Awake",
+      "italian": "Sveglio",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 91,
+          "column": 78,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 223,
+          "column": 107,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 284,
+          "column": 71,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 119,
+          "column": 65,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepWeekChart.tsx",
+          "line": 110,
+          "column": 52,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepWeekChart.tsx",
+          "line": 222,
+          "column": 68,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 103,
+          "column": 78,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 252,
+          "column": 97,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.awakeTime",
+      "english": "Time awake",
+      "italianBefore": "Time awake",
+      "italian": "Tempo trascorso da sveglio",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 314,
+          "column": 111,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 192,
+          "column": 14,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.awakeTimeHint",
+      "english": "Total time you were awake",
+      "italianBefore": "Total time you were awake",
+      "italian": "Tempo totale in cui sei stato sveglio",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 324,
+          "column": 89,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 222,
+          "column": 16,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.awakenings",
+      "english": "Night awakenings",
+      "italianBefore": "Night awakenings",
+      "italian": "Risvegli notturni",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 297,
+          "column": 109,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 155,
+          "column": 12,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepWeekChart.tsx",
+          "line": 124,
+          "column": 52,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.awakeningsCount_one",
+      "english": "{{count}} awakening",
+      "italianBefore": "{{count}} awakening",
+      "italian": "{{count}} risveglio",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 224,
+          "column": 63,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 104,
+          "column": 19,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 253,
+          "column": 55,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.awakeningsCount_other",
+      "english": "{{count}} awakenings",
+      "italianBefore": "{{count}} awakenings",
+      "italian": "{{count}} risvegli",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 224,
+          "column": 63,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 104,
+          "column": 19,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 253,
+          "column": 55,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.bedtime",
+      "english": "Bedtime",
+      "italianBefore": "Bedtime",
+      "italian": "Ora di andare a letto",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 291,
+          "column": 33,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 128,
+          "column": 14,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.caffeineAfter14",
+      "english": "Caffeine after 2:00 PM",
+      "italianBefore": "Caffeine after 2:00 PM",
+      "italian": "Caffeina dopo le 14:00",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 377,
+          "column": 68,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 307,
+          "column": 61,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.caffeineExamples",
+      "english": "Coffee, tea, energy drinks",
+      "italianBefore": "Coffee, tea, energy drinks",
+      "italian": "Caffè, tè, bevande energetiche",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 378,
+          "column": 91,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 308,
+          "column": 67,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.deleteConfirm",
+      "english": "Delete sleep entry for {{date}}? This action cannot be undone.",
+      "italianBefore": "Delete sleep entry for {{date}}? This action cannot be undone.",
+      "italian": "Elimina la registrazione del sonno relativa al {{date}}? Questa azione non può essere annullata.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 149,
+          "column": 7,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 129,
+          "column": 16,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.deleteEntry",
+      "english": "Delete entry",
+      "italianBefore": "Delete entry",
+      "italian": "Elimina voce",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 148,
+          "column": 7,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 126,
+          "column": 29,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.duration",
+      "english": "Duration",
+      "italianBefore": "Duration",
+      "italian": "Durata",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 280,
+          "column": 105,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 110,
+          "column": 93,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepWeekChart.tsx",
+          "line": 105,
+          "column": 50,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.editEntry",
+      "english": "Edit entry",
+      "italianBefore": "Edit entry",
+      "italian": "Modifica voce",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 260,
+          "column": 24,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 388,
+          "column": 31,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.historyLabel",
+      "english": "History",
+      "italianBefore": "History",
+      "italian": "Cronologia",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 271,
+          "column": 26,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 346,
+          "column": 88,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.howSleptLastNight",
+      "english": "How did you sleep last night?",
+      "italianBefore": "How did you sleep last night?",
+      "italian": "Come hai dormito stanotte?",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 243,
+          "column": 38,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 284,
+          "column": 63,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.inBed",
+      "english": "In bed",
+      "italianBefore": "In bed",
+      "italian": "A letto",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 284,
+          "column": 20,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 119,
+          "column": 14,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.avgDuration",
+      "english": "Avg duration",
+      "italianBefore": "Avg duration",
+      "italian": "Durata media",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 184,
+          "column": 20,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/insights/SleepInsightsCard.tsx",
+          "line": 143,
+          "column": 18,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.avgQuality",
+      "english": "Avg quality",
+      "italianBefore": "Avg quality",
+      "italian": "Qualità media",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 192,
+          "column": 20,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/insights/SleepInsightsCard.tsx",
+          "line": 151,
+          "column": 18,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.bedtimeConsistency.consistent",
+      "english": "Consistent",
+      "italianBefore": "Consistent",
+      "italian": "Regolare",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 39,
+          "column": 46,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): key: 'sleep.insight.bedtimeConsistency.consistent'"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.bedtimeConsistency.irregular",
+      "english": "Irregular",
+      "italianBefore": "Irregular",
+      "italian": "Irregolare",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 41,
+          "column": 52,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): key: 'sleep.insight.bedtimeConsistency.irregular'"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.bedtimeConsistency.variable",
+      "english": "Variable",
+      "italianBefore": "Variable",
+      "italian": "Variabile",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 40,
+          "column": 49,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): key: 'sleep.insight.bedtimeConsistency.variable'"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.bedtimeConsistencyLabel",
+      "english": "Bedtime consistency",
+      "italianBefore": "Bedtime consistency",
+      "italian": "Regolarità nell'ora di andare a letto",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 203,
+          "column": 20,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/insights/SleepInsightsCard.tsx",
+          "line": 162,
+          "column": 18,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.disclaimer",
+      "english": "Observed patterns, not causes or medical advice.",
+      "italianBefore": "Observed patterns, not causes or medical advice.",
+      "italian": "Si tratta di osservazioni, non di cause né di consigli medici.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 90,
+          "column": 8,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/insights/SleepInsightsCard.tsx",
+          "line": 75,
+          "column": 8,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.empty",
+      "english": "Discover your sleep patterns",
+      "italianBefore": "Discover your sleep patterns",
+      "italian": "Scopri le tue abitudini di sonno",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 227,
+          "column": 16,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/insights/SleepInsightsCard.tsx",
+          "line": 264,
+          "column": 14,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.emptyBody",
+      "english": "Duration, quality, consistency and more from your week.",
+      "italianBefore": "Duration, quality, consistency and more from your week.",
+      "italian": "Durata, qualità, costanza e altro ancora dalla tua settimana.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 230,
+          "column": 16,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/insights/SleepInsightsCard.tsx",
+          "line": 267,
+          "column": 14,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.failed",
+      "english": "Couldn't generate it. Try again.",
+      "italianBefore": "Couldn't generate it. Try again.",
+      "italian": "Impossibile generarlo. Riprova.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 220,
+          "column": 16,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/insights/SleepInsightsCard.tsx",
+          "line": 254,
+          "column": 52,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.generate",
+      "english": "Generate summary",
+      "italianBefore": "Generate summary",
+      "italian": "Genera un riepilogo",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 79,
+          "column": 71,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/insights/SleepInsightsCard.tsx",
+          "line": 249,
+          "column": 20,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/components/insights/SleepInsightsCard.tsx",
+          "line": 258,
+          "column": 20,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/components/insights/SleepInsightsCard.tsx",
+          "line": 272,
+          "column": 20,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.generating",
+      "english": "Generating…",
+      "italianBefore": "Generating…",
+      "italian": "Generazione in corso…",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 79,
+          "column": 25,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 286,
+          "column": 33,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/insights/SleepInsightsCard.tsx",
+          "line": 65,
+          "column": 23,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/components/insights/SleepInsightsCard.tsx",
+          "line": 232,
+          "column": 37,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.kicker",
+      "english": "YOUR SLEEP",
+      "italianBefore": "YOUR SLEEP",
+      "italian": "IL TUO SONNO",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 137,
+          "column": 14,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/insights/SleepInsightsCard.tsx",
+          "line": 103,
+          "column": 10,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.needsMoreData",
+      "english": "Keep logging — you need at least {{n}} nights with data.",
+      "italianBefore": "Keep logging — you need at least {{n}} nights with data.",
+      "italian": "Continua a registrare i dati: ti servono almeno {{n}} notti con dati disponibili.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 211,
+          "column": 16,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/insights/SleepInsightsCard.tsx",
+          "line": 242,
+          "column": 14,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.patterns",
+      "english": "PATTERNS",
+      "italianBefore": "PATTERNS",
+      "italian": "ANDAMENTI",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 259,
+          "column": 18,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/insights/SleepInsightsCard.tsx",
+          "line": 198,
+          "column": 24,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.refresh",
+      "english": "Refresh",
+      "italianBefore": "Refresh",
+      "italian": "Aggiorna",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 286,
+          "column": 79,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/insights/SleepInsightsCard.tsx",
+          "line": 232,
+          "column": 83,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.seeLess",
+      "english": "See less",
+      "italianBefore": "See less",
+      "italian": "Nascondi",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 281,
+          "column": 18,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/insights/SleepInsightsCard.tsx",
+          "line": 223,
+          "column": 22,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.seeMore",
+      "english": "See more",
+      "italianBefore": "See more",
+      "italian": "Mostra di più",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 242,
+          "column": 18,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/insights/SleepInsightsCard.tsx",
+          "line": 176,
+          "column": 18,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.suggestion",
+      "english": "SUGGESTION",
+      "italianBefore": "SUGGESTION",
+      "italian": "SUGGERIMENTO",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 272,
+          "column": 18,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/insights/SleepInsightsCard.tsx",
+          "line": 211,
+          "column": 24,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.trend.declining",
+      "english": "Declining",
+      "italianBefore": "Declining",
+      "italian": "In calo",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 32,
+          "column": 62,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): key: 'sleep.insight.trend.declining'"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.trend.improving",
+      "english": "Improving",
+      "italianBefore": "Improving",
+      "italian": "Miglioramento",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 30,
+          "column": 57,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): key: 'sleep.insight.trend.improving'"
+        }
+      ]
+    },
+    {
+      "key": "sleep.insight.trend.stable",
+      "english": "Stable",
+      "italianBefore": "Stable",
+      "italian": "Stabile",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/insights/SleepInsightsCard.tsx",
+          "line": 31,
+          "column": 66,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): key: 'sleep.insight.trend.stable'"
+        }
+      ]
+    },
+    {
+      "key": "sleep.lastNight",
+      "english": "Last night",
+      "italianBefore": "Last night",
+      "italian": "La notte scorsa",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 213,
+          "column": 38,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 244,
+          "column": 95,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.lessDetail",
+      "english": "LESS DETAIL",
+      "italianBefore": "LESS DETAIL",
+      "italian": "MENO DETTAGLI",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 367,
+          "column": 29,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 301,
+          "column": 14,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.loadingData",
+      "english": "Loading sleep data...",
+      "italianBefore": "Loading sleep data...",
+      "italian": "Caricamento dei dati relativi al sonno in corso...",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 199,
+          "column": 77,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 219,
+          "column": 27,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.moreDetail",
+      "english": "MORE DETAIL",
+      "italianBefore": "MORE DETAIL",
+      "italian": "MAGGIORI DETTAGLI",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 367,
+          "column": 53,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 286,
+          "column": 12,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.noEntries",
+      "english": "No sleep entries",
+      "italianBefore": "No sleep entries",
+      "italian": "Nessuna registrazione relativa al sonno",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 282,
+          "column": 70,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 360,
+          "column": 68,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.none",
+      "english": "None",
+      "italianBefore": "None",
+      "italian": "Nessuno",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 306,
+          "column": 39,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 183,
+          "column": 33,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.noteOptional",
+      "english": "Note (optional)",
+      "italianBefore": "Note (optional)",
+      "italian": "Nota (facoltativa)",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 427,
+          "column": 113,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 381,
+          "column": 16,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.notePlaceholder",
+      "english": "Anything you want to remember about tonight...",
+      "italianBefore": "Anything you want to remember about tonight...",
+      "italian": "Qualcosa che vuoi ricordare di questa notte...",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 431,
+          "column": 34,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 386,
+          "column": 28,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.quality",
+      "english": "Sleep quality",
+      "italianBefore": "Sleep quality",
+      "italian": "Qualità del sonno",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 331,
+          "column": 107,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 247,
+          "column": 12,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepWeekChart.tsx",
+          "line": 115,
+          "column": 50,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.quality.1",
+      "english": "Very bad",
+      "italianBefore": "Very bad",
+      "italian": "Pessimo",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 41,
+          "column": 33,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): ['', 'sleep.quality.1', 'sleep.quality.2', 'sleep.quality.3', 'sleep.quality.4', 'sleep.quality.5']"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 261,
+          "column": 20,
+          "kind": "web_dynamic",
+          "expression": "`sleep.quality.${todayEntry.quality}`"
+        }
+      ]
+    },
+    {
+      "key": "sleep.quality.2",
+      "english": "Bad",
+      "italianBefore": "Bad",
+      "italian": "Cattivo",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 41,
+          "column": 52,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): ['', 'sleep.quality.1', 'sleep.quality.2', 'sleep.quality.3', 'sleep.quality.4', 'sleep.quality.5']"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 261,
+          "column": 20,
+          "kind": "web_dynamic",
+          "expression": "`sleep.quality.${todayEntry.quality}`"
+        }
+      ]
+    },
+    {
+      "key": "sleep.quality.3",
+      "english": "Fair",
+      "italianBefore": "Fair",
+      "italian": "Discreto",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 41,
+          "column": 71,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): ['', 'sleep.quality.1', 'sleep.quality.2', 'sleep.quality.3', 'sleep.quality.4', 'sleep.quality.5']"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 261,
+          "column": 20,
+          "kind": "web_dynamic",
+          "expression": "`sleep.quality.${todayEntry.quality}`"
+        }
+      ]
+    },
+    {
+      "key": "sleep.quality.4",
+      "english": "Good",
+      "italianBefore": "Good",
+      "italian": "Buono",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 41,
+          "column": 90,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): ['', 'sleep.quality.1', 'sleep.quality.2', 'sleep.quality.3', 'sleep.quality.4', 'sleep.quality.5']"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 261,
+          "column": 20,
+          "kind": "web_dynamic",
+          "expression": "`sleep.quality.${todayEntry.quality}`"
+        }
+      ]
+    },
+    {
+      "key": "sleep.quality.5",
+      "english": "Excellent",
+      "italianBefore": "Excellent",
+      "italian": "Eccellente",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 41,
+          "column": 109,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): ['', 'sleep.quality.1', 'sleep.quality.2', 'sleep.quality.3', 'sleep.quality.4', 'sleep.quality.5']"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 261,
+          "column": 20,
+          "kind": "web_dynamic",
+          "expression": "`sleep.quality.${todayEntry.quality}`"
+        }
+      ]
+    },
+    {
+      "key": "sleep.qualityBad",
+      "english": "Bad",
+      "italianBefore": "Bad",
+      "italian": "Cattivo",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 29,
+          "column": 57,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): ['', 'sleep.qualityVeryBad', 'sleep.qualityBad', 'sleep.qualityFair', 'sleep.qualityGood', 'sleep.qualityExcellent']"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepWeekChart.tsx",
+          "line": 91,
+          "column": 58,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.qualityExcellent",
+      "english": "Excellent",
+      "italianBefore": "Excellent",
+      "italian": "Eccellente",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 29,
+          "column": 119,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): ['', 'sleep.qualityVeryBad', 'sleep.qualityBad', 'sleep.qualityFair', 'sleep.qualityGood', 'sleep.qualityExcellent']"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepWeekChart.tsx",
+          "line": 91,
+          "column": 129,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.qualityFair",
+      "english": "Fair",
+      "italianBefore": "Fair",
+      "italian": "Discreto",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 29,
+          "column": 77,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): ['', 'sleep.qualityVeryBad', 'sleep.qualityBad', 'sleep.qualityFair', 'sleep.qualityGood', 'sleep.qualityExcellent']"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepWeekChart.tsx",
+          "line": 91,
+          "column": 81,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.qualityGood",
+      "english": "Good",
+      "italianBefore": "Good",
+      "italian": "Buono",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 29,
+          "column": 98,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): ['', 'sleep.qualityVeryBad', 'sleep.qualityBad', 'sleep.qualityFair', 'sleep.qualityGood', 'sleep.qualityExcellent']"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepWeekChart.tsx",
+          "line": 91,
+          "column": 105,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.qualityVeryBad",
+      "english": "Very bad",
+      "italianBefore": "Very bad",
+      "italian": "Pessimo",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 29,
+          "column": 33,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): ['', 'sleep.qualityVeryBad', 'sleep.qualityBad', 'sleep.qualityFair', 'sleep.qualityGood', 'sleep.qualityExcellent']"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepWeekChart.tsx",
+          "line": 91,
+          "column": 31,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.register",
+      "english": "Log sleep",
+      "italianBefore": "Log sleep",
+      "italian": "Registra il sonno",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 241,
+          "column": 88,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 260,
+          "column": 47,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 283,
+          "column": 88,
+          "kind": "web"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 388,
+          "column": 54,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.scheduleRegularity",
+      "english": "Schedule regularity",
+      "italianBefore": "Schedule regularity",
+      "italian": "Regolarità degli orari",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 167,
+          "column": 25,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 328,
+          "column": 22,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.screenBeforeBed",
+      "english": "Screen before bed",
+      "italianBefore": "Screen before bed",
+      "italian": "L'uso dello schermo prima di andare a letto",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 391,
+          "column": 68,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 330,
+          "column": 61,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.screenLastHour",
+      "english": "Screen use in the last hour",
+      "italianBefore": "Screen use in the last hour",
+      "italian": "Utilizzo dello schermo nell'ultima ora",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 392,
+          "column": 91,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 331,
+          "column": 67,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.startTracking",
+      "english": "Start tracking your sleep to see trends",
+      "italianBefore": "Start tracking your sleep to see trends",
+      "italian": "Inizia a monitorare il tuo sonno per individuare le tendenze",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 283,
+          "column": 82,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 361,
+          "column": 63,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.stats7days",
+      "english": "Statistics (7 days)",
+      "italianBefore": "Statistics (7 days)",
+      "italian": "Statistiche (7 giorni)",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 256,
+          "column": 26,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 310,
+          "column": 93,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.stressHigh",
+      "english": "High",
+      "italianBefore": "High",
+      "italian": "Alto",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 38,
+          "column": 96,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): ['', 'sleep.stressVeryLow', 'sleep.stressLow', 'sleep.stressMedium', 'sleep.stressHigh', 'sleep.stressVeryHigh']"
+        }
+      ]
+    },
+    {
+      "key": "sleep.stressLevel",
+      "english": "Stress level",
+      "italianBefore": "Stress level",
+      "italian": "Livello di stress",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 404,
+          "column": 111,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 353,
+          "column": 16,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.stressLow",
+      "english": "Low",
+      "italianBefore": "Low",
+      "italian": "Basso",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 38,
+          "column": 55,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): ['', 'sleep.stressVeryLow', 'sleep.stressLow', 'sleep.stressMedium', 'sleep.stressHigh', 'sleep.stressVeryHigh']"
+        }
+      ]
+    },
+    {
+      "key": "sleep.stressMedium",
+      "english": "Medium",
+      "italianBefore": "Medium",
+      "italian": "Medio",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 38,
+          "column": 74,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): ['', 'sleep.stressVeryLow', 'sleep.stressLow', 'sleep.stressMedium', 'sleep.stressHigh', 'sleep.stressVeryHigh']"
+        }
+      ]
+    },
+    {
+      "key": "sleep.stressVeryHigh",
+      "english": "Very high",
+      "italianBefore": "Very high",
+      "italian": "Molto alto",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 38,
+          "column": 116,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): ['', 'sleep.stressVeryLow', 'sleep.stressLow', 'sleep.stressMedium', 'sleep.stressHigh', 'sleep.stressVeryHigh']"
+        }
+      ]
+    },
+    {
+      "key": "sleep.stressVeryLow",
+      "english": "Very low",
+      "italianBefore": "Very low",
+      "italian": "Molto basso",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 38,
+          "column": 32,
+          "kind": "android_potential",
+          "expression": "catalog-key literal outside t(): ['', 'sleep.stressVeryLow', 'sleep.stressLow', 'sleep.stressMedium', 'sleep.stressHigh', 'sleep.stressVeryHigh']"
+        }
+      ]
+    },
+    {
+      "key": "sleep.subtitle",
+      "english": "Track and analyze your sleep patterns",
+      "italianBefore": "Track and analyze your sleep patterns",
+      "italian": "Monitora e analizza i tuoi schemi di sonno",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 195,
+          "column": 75,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 227,
+          "column": 55,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.times",
+      "english": "{{count}} time",
+      "italianBefore": "{{count}} time",
+      "italian": "{{count}} volta",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 306,
+          "column": 57,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 183,
+          "column": 51,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.times_other",
+      "english": "{{count}} times",
+      "italianBefore": "{{count}} times",
+      "italian": "{{count}} volte",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 306,
+          "column": 57,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 183,
+          "column": 51,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.title",
+      "english": "Sleep",
+      "italianBefore": "Sleep",
+      "italian": "Sonno",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/sleep.tsx",
+          "line": 193,
+          "column": 68,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/pages/SleepPage.tsx",
+          "line": 226,
+          "column": 76,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "sleep.wakeTime",
+      "english": "Wake time",
+      "italianBefore": "Wake time",
+      "italian": "Ora di sveglia",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/sleep/SleepLoggerSheet.tsx",
+          "line": 292,
+          "column": 33,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/sleep/SleepForm.tsx",
+          "line": 140,
+          "column": 14,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "update.cta",
+      "english": "Update now",
+      "italianBefore": "Update now",
+      "italian": "Aggiorna ora",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/UpdateGate.tsx",
+          "line": 76,
+          "column": 22,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "update.ctaShort",
+      "english": "Update",
+      "italianBefore": "Update",
+      "italian": "Aggiorna",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/UpdateGate.tsx",
+          "line": 106,
+          "column": 20,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "update.latestVersion",
+      "english": "Version {{version}}",
+      "italianBefore": "Version {{version}}",
+      "italian": "Versione {{version}}",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/UpdateGate.tsx",
+          "line": 67,
+          "column": 18,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/mobile/src/components/UpdateGate.tsx",
+          "line": 100,
+          "column": 16,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "update.optionalTitle",
+      "english": "A new version is out",
+      "italianBefore": "A new version is out",
+      "italian": "È uscita una nuova versione",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/UpdateGate.tsx",
+          "line": 96,
+          "column": 14,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "update.requiredBody",
+      "english": "This version is no longer supported. Update to keep training.",
+      "italianBefore": "This version is no longer supported. Update to keep training.",
+      "italian": "Questa versione non è più supportata. Aggiorna per continuare ad allenarti.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/UpdateGate.tsx",
+          "line": 63,
+          "column": 26,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "update.requiredTitle",
+      "english": "Update the app",
+      "italianBefore": "Update the app",
+      "italian": "Aggiorna l'app",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/UpdateGate.tsx",
+          "line": 60,
+          "column": 16,
+          "kind": "android_direct"
+        }
+      ]
+    },
+    {
+      "key": "update.reasonSecurity",
+      "english": "This version has a security issue that is already fixed. Update to keep training.",
+      "italianBefore": "This version has a security issue that is already fixed. Update to keep training.",
+      "italian": "Questa versione presenta un problema di sicurezza già risolto. Aggiorna per continuare ad allenarti.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/UpdateGate.tsx",
+          "expression": "messageKey from app-config selects this local key"
+        }
+      ]
+    },
+    {
+      "key": "update.reasonIncompatible",
+      "english": "This version can no longer read your data correctly. Update to keep training.",
+      "italianBefore": "This version can no longer read your data correctly. Update to keep training.",
+      "italian": "Questa versione non può più leggere correttamente i tuoi dati. Aggiorna per continuare ad allenarti.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/components/UpdateGate.tsx",
+          "expression": "messageKey from app-config selects this local key"
+        }
+      ]
+    }
+  ],
+  "localContentOverlay": {
+    "1.14.1/summary": {
+      "source": "Finishing a workout now marks it done on Home right away, the new-record toast no longer vibrates nonstop, and fasting tracking arrives in Nutrition.",
+      "italian": "Una volta terminato un allenamento, questo viene immediatamente contrassegnato come completato nella schermata Home; la notifica relativa al nuovo record non vibra più ininterrottamente e la funzione di monitoraggio del digiuno è ora disponibile nella sezione “Alimentazione”."
+    },
+    "1.14.1/0/title": {
+      "source": "Home up to date after training",
+      "italian": "Schermata iniziale aggiornata dopo l’allenamento"
+    },
+    "1.14.1/0/body": {
+      "source": "When you come back from a workout, the day shows as done and your program stays put, even late at night or on a flaky connection.",
+      "italian": "Quando torni dall'allenamento, la giornata viene contrassegnata come completata e il tuo programma rimane invariato, anche a tarda notte o con una connessione instabile."
+    },
+    "1.14.1/1/title": {
+      "source": "New-record toast stops vibrating",
+      "italian": "Avviso di record senza vibrazioni continue"
+    },
+    "1.14.1/1/body": {
+      "source": "Beating a record vibrates once and the toast closes on its own.",
+      "italian": "Quando batti un record, il telefono vibra una sola volta e l’avviso si chiude da solo."
+    },
+    "1.14.1/2/title": {
+      "source": "Fasting in Nutrition",
+      "italian": "Digiuno in Alimentazione"
+    },
+    "1.14.1/2/body": {
+      "source": "Track 12–48 h fasts or set your own target, with a timer, weekly goal and editable history.",
+      "italian": "Tieni traccia dei digiuni da 12 a 48 ore oppure imposta il tuo obiettivo personalizzato, con un timer, un obiettivo settimanale e una cronologia modificabile."
+    },
+    "1.14.1/3/title": {
+      "source": "Battles on the web",
+      "italian": "Battaglie sul web"
+    },
+    "1.14.1/3/body": {
+      "source": "The web gets battles, picking a day on Today and a «Done today» card with your minutes and sets, like the app.",
+      "italian": "Sul web arrivano le battaglie, la selezione del giorno in «Oggi» e una scheda «Completato oggi» con minuti e serie, come nell’app."
+    },
+    "1.14.0/summary": {
+      "source": "A new home that tells you what to do today, a Community tab, weekly streaks, achievements, challenges and battles with your own days, and the whole app in English.",
+      "italian": "Una nuova schermata iniziale che ti suggerisce cosa fare oggi, una scheda Community, continuità settimanale, traguardi, sfide e battaglie con giornate personalizzate, e tutta l’app in inglese."
+    },
+    "1.14.0/0/title": {
+      "source": "Today-first home",
+      "italian": "Una schermata iniziale centrata su oggi"
+    },
+    "1.14.0/0/body": {
+      "source": "Home shows today's workout, your week and «For you» picks. Simpler until your 3rd workout.",
+      "italian": "La pagina Home mostra l'allenamento di oggi, la tua settimana e i suggerimenti della sezione «Per te». Più semplice fino al tuo terzo allenamento."
+    },
+    "1.14.0/1/title": {
+      "source": "5 tabs and Profile from your avatar",
+      "italian": "5 schede e il profilo dal tuo avatar"
+    },
+    "1.14.0/1/body": {
+      "source": "New navigation: Home, Train, Progress, Community and more; open your Profile from your avatar.",
+      "italian": "Nuova navigazione: Inizio, Allenati, Progressi, Community e Altro; apri il profilo dal tuo avatar."
+    },
+    "1.14.0/2/title": {
+      "source": "Community tab",
+      "italian": "Scheda \"Comunità\""
+    },
+    "1.14.0/2/body": {
+      "source": "Activity, challenges, battles and weekly ranking in one place, with suggestions of active people to follow.",
+      "italian": "Attività, sfide, battaglie e classifica settimanale tutte in un unico posto, con suggerimenti su persone attive da seguire."
+    },
+    "1.14.0/3/title": {
+      "source": "Weekly streak and missed days",
+      "italian": "Serie settimanale e giorni saltati"
+    },
+    "1.14.0/3/body": {
+      "source": "Your streak counts by weeks against your real goal, and a missed day is flagged gently.",
+      "italian": "La continuità viene conteggiata per settimane rispetto al tuo obiettivo effettivo; i giorni saltati vengono segnalati con discrezione."
+    },
+    "1.14.0/4/title": {
+      "source": "Achievements, challenges and battles",
+      "italian": "Successi, sfide e battaglie"
+    },
+    "1.14.0/4/body": {
+      "source": "Early milestones and an achievements screen, the «Your first pull-up» challenge, and battles from a program day or your own.",
+      "italian": "I primi traguardi raggiunti e una schermata dei risultati, la sfida «Il tuo primo pull-up» e le sfide di una giornata del programma o di tua scelta."
+    },
+    "1.14.0/5/title": {
+      "source": "App in English",
+      "italian": "App in inglese"
+    },
+    "1.14.0/5/body": {
+      "source": "Exercises, reps, macros, reminders and first workout translated; notifications arrive in your language.",
+      "italian": "Esercizi, ripetizioni, macronutrienti, promemoria e il primo allenamento tradotti; le notifiche ti arrivano nella tua lingua."
+    },
+    "1.14.0/6/title": {
+      "source": "Reminders that bring you back",
+      "italian": "Promemoria che ti invitano a riprendere"
+    },
+    "1.14.0/6/body": {
+      "source": "Comeback nudges at 7 and 14 days, Monday fresh starts, and rest-end alerts with the screen off.",
+      "italian": "Promemoria di ripresa dopo 7 e 14 giorni, nuovi inizi il lunedì e avvisi di fine riposo con lo schermo spento."
+    },
+    "1.13.2/summary": {
+      "source": "The workout notification now has a button to stop it, and programs show what each day contains and progress week by week.",
+      "italian": "La notifica dell'allenamento ora presenta un pulsante per interromperla, mentre i programmi mostrano il contenuto di ogni giornata e i progressi settimana per settimana."
+    },
+    "1.13.2/0/title": {
+      "source": "Stop the workout notification",
+      "italian": "Interrompi la notifica dell'allenamento"
+    },
+    "1.13.2/0/body": {
+      "source": "The workout-in-progress notification has a STOP button and shows your set progress during rest too. Your workout stays open in the app.",
+      "italian": "La notifica dell'allenamento in corso presenta un pulsante STOP e mostra l'avanzamento della serie anche durante il riposo. L'allenamento rimane aperto nell'app."
+    },
+    "1.13.2/1/title": {
+      "source": "Every program day, inside out",
+      "italian": "Ogni giornata del programma, dentro e fuori"
+    },
+    "1.13.2/1/body": {
+      "source": "On a program's page you can open each day and see its exercises before you start.",
+      "italian": "Nella pagina dedicata a un programma puoi aprire ogni giornata e visualizzarne gli esercizi prima di iniziare."
+    },
+    "1.13.2/2/title": {
+      "source": "Week-by-week progression",
+      "italian": "Progressi settimana per settimana"
+    },
+    "1.13.2/2/body": {
+      "source": "Programs ramp up within each phase and lighten the last week so you recover.",
+      "italian": "I programmi aumentano di intensità man mano che si procede in ciascuna fase e si alleggeriscono nell'ultima settimana per consentirti di recuperare."
+    },
+    "1.13.1/summary": {
+      "source": "This one also brings everything from the previous version: your first workout right after sign-up, reminders at your time and notifications fixed. New here: your charts no longer duplicate exercises.",
+      "italian": "Anche questa versione include tutte le funzionalità della versione precedente: il primo allenamento subito dopo la registrazione, i promemoria all’ora desiderata e le notifiche corrette. Novità: nei grafici gli esercizi non vengono più duplicati."
+    },
+    "1.13.1/0/title": {
+      "source": "Tell us how you found us",
+      "italian": "Raccontaci come ci hai trovati"
+    },
+    "1.13.1/0/body": {
+      "source": "On the welcome screen you can tell us where you heard about the app. One tap, and you can skip it.",
+      "italian": "Nella schermata di benvenuto puoi dirci dove hai sentito parlare dell'app. Basta un tocco per saltare questa fase."
+    },
+    "1.13.1/1/title": {
+      "source": "One exercise, one row",
+      "italian": "Un esercizio, una riga"
+    },
+    "1.13.1/1/body": {
+      "source": "In your charts and stats the same exercise could show up twice depending on how the set was saved. Now they group by the actual exercise.",
+      "italian": "Nei tuoi grafici e nelle tue statistiche, lo stesso esercizio poteva comparire due volte a seconda di come era stata salvata la serie. Ora vengono raggruppati in base all'esercizio effettivo."
+    },
+    "1.13.1/2/title": {
+      "source": "No gaps in the catalog",
+      "italian": "Nessuna lacuna nel catalogo"
+    },
+    "1.13.1/2/body": {
+      "source": "Some exercises used by the programs had no catalog entry and showed their internal name. Filled in.",
+      "italian": "Alcuni esercizi utilizzati dai programmi non avevano una voce nel catalogo e riportavano il loro nome interno. Sono state inserite le voci mancanti."
+    },
+    "1.13.0/summary": {
+      "source": "Onboarding now ends with a short first workout and a reminder at your time. Also: follow, reaction and comment notifications arrive again, and programs show in Spanish with their timers.",
+      "italian": "L'onboarding ora si conclude con un breve primo allenamento e un promemoria all'orario da te scelto. Inoltre: tornano le notifiche relative a \"Segui\", \"Reazioni\" e \"Commenti\", e i programmi vengono visualizzati in spagnolo con i relativi timer."
+    },
+    "1.13.0/0/title": {
+      "source": "Your first workout, right after sign-up",
+      "italian": "Il tuo primo allenamento, subito dopo l'iscrizione"
+    },
+    "1.13.0/0/body": {
+      "source": "When onboarding ends you start a short 4-exercise session instead of landing on the home screen. Once you finish it, the app asks whether you want notifications.",
+      "italian": "Al termine della procedura di registrazione, invece di passare alla schermata iniziale, si avvia una breve sessione composta da 4 esercizi. Una volta completata, l'app chiede se si desidera ricevere le notifiche."
+    },
+    "1.13.0/1/title": {
+      "source": "A reminder from day one",
+      "italian": "Un promemoria fin dal primo giorno"
+    },
+    "1.13.0/1/body": {
+      "source": "Pick your days and time during onboarding and the app reminds you then. Go 24 or 72 hours without training and you get a nudge; tapping it opens today’s workout.",
+      "italian": "Scegli i giorni e l'orario durante la fase di registrazione e l'app te lo ricorderà al momento giusto. Se trascorri 24 o 72 ore senza allenarti, riceverai un promemoria; toccandolo, si aprirà l'allenamento di oggi."
+    },
+    "1.13.0/2/title": {
+      "source": "Notifications arrive again",
+      "italian": "Le notifiche ricominciano ad arrivare"
+    },
+    "1.13.0/2/body": {
+      "source": "Alerts for new followers, reactions, comments, achievements and streaks were not reaching the phone. Fixed on the server.",
+      "italian": "Le notifiche relative a nuovi follower, reazioni, commenti, obiettivi raggiunti e serie consecutive non venivano ricevute sul telefono. Problema risolto a livello di server."
+    },
+    "1.13.0/3/title": {
+      "source": "Programs in Spanish, with timers",
+      "italian": "Programmi in spagnolo, con timer"
+    },
+    "1.13.0/3/body": {
+      "source": "Some exercises showed in English or with underscores, timed exercises had no timer and copying a program broke its name. All fixed.",
+      "italian": "Alcuni esercizi venivano visualizzati in inglese o con dei trattini bassi; gli esercizi a tempo non avevano il timer e, copiando un programma, il nome veniva alterato. Tutto risolto."
+    },
+    "1.12.3/summary": {
+      "source": "Health Connect now only reads sleep, weight and body fat. Also: cardio history shows again, official programs come with their instructions and nutrition no longer asks twice.",
+      "italian": "Health Connect ora rileva solo il sonno, il peso e il grasso corporeo. Inoltre: la cronologia degli allenamenti cardio è di nuovo visibile, i programmi ufficiali sono corredati dalle relative istruzioni e la sezione nutrizione non richiede più la conferma due volte."
+    },
+    "1.12.3/0/title": {
+      "source": "Leaner health access",
+      "italian": "Accesso ridotto ai dati sulla salute"
+    },
+    "1.12.3/0/body": {
+      "source": "The app no longer reads steps or heart rate from Health Connect: it only requests sleep, weight and body fat, all read-only. Heart-rate data from your past workouts is kept.",
+      "italian": "L'app non legge più i passi né la frequenza cardiaca da Health Connect: richiede solo i dati relativi al sonno, al peso e al grasso corporeo, tutti in sola lettura. I dati sulla frequenza cardiaca relativi agli allenamenti precedenti vengono conservati."
+    },
+    "1.12.3/1/title": {
+      "source": "Cardio history",
+      "italian": "Cronologia cardio"
+    },
+    "1.12.3/1/body": {
+      "source": "History showed up blank and the list took over the whole Cardio screen. Fixed.",
+      "italian": "La sezione \"Cronologia\" appariva vuota e l'elenco occupava l'intera schermata \"Cardio\". Problema risolto."
+    },
+    "1.12.3/2/title": {
+      "source": "Programs with instructions",
+      "italian": "Programmi con istruzioni"
+    },
+    "1.12.3/2/body": {
+      "source": "The 15 official programs got a deep review: exercises, dosing and previously empty instructions are now complete.",
+      "italian": "I 15 programmi ufficiali sono stati sottoposti a una revisione approfondita: gli esercizi, le indicazioni su serie e ripetizioni e le istruzioni, che prima erano incomplete, sono ora completi."
+    },
+    "1.12.3/3/title": {
+      "source": "Nutrition without repeat questions",
+      "italian": "Nutrizione senza domande ripetitive"
+    },
+    "1.12.3/3/body": {
+      "source": "When setting up your nutrition goals, what you already answered during onboarding comes pre-filled.",
+      "italian": "Quando definisci i tuoi obiettivi nutrizionali, le risposte che hai già fornito durante la procedura di registrazione vengono inserite automaticamente."
+    },
+    "1.12.2/summary": {
+      "source": "Hotfix: 1.12.1 did not start on Android. Includes everything from 1.12.1 (leaner Health Connect access, workout notification and Android 16).",
+      "italian": "Hotfix: la versione 1.12.1 non si avviava su Android. Include tutte le novità della versione 1.12.1 (accesso ottimizzato a Health Connect, notifiche relative agli allenamenti e Android 16)."
+    },
+    "1.12.2/0/title": {
+      "source": "The app starts again",
+      "italian": "L'app si riavvia"
+    },
+    "1.12.2/0/body": {
+      "source": "A date-library update produced an invalid 'today' on Android and the streak calculation crashed the app on launch. The good version is pinned and the streak can no longer break startup.",
+      "italian": "Un aggiornamento della libreria delle date ha generato un valore \"oggi\" non valido su Android e il calcolo della serie ininterrotta causava il crash dell'app all'avvio. La versione corretta è stata fissata e la serie ininterrotta non causa più il crash all'avvio."
+    },
+    "1.12.1/summary": {
+      "source": "Google Play compliance update: fewer health data types, the workout notification on the right service type, and Android 16 support.",
+      "italian": "Aggiornamento sulle linee guida di Google Play: riduzione dei tipi di dati relativi alla salute, notifica degli allenamenti per il tipo di servizio corretto e supporto per Android 16."
+    },
+    "1.12.1/0/title": {
+      "source": "Health Connect asks only for what it shows",
+      "italian": "Health Connect richiede solo ciò che mostra"
+    },
+    "1.12.1/0/body": {
+      "source": "The app no longer reads active calories or resting heart rate. Steps, workout heart rate, sleep, weight and body fat remain. If you were already connected, reconnect from Watch & health so the dialog reflects the 5 types.",
+      "italian": "L'app non rileva più le calorie attive né la frequenza cardiaca a riposo. Rimangono invece i passi, la frequenza cardiaca durante l'allenamento, il sonno, il peso e il grasso corporeo. Se eri già connesso, riconnettiti dalla sezione \"Orologio e salute\" in modo che la finestra di dialogo mostri le 5 voci."
+    },
+    "1.12.1/1/title": {
+      "source": "Workout notification and Android 16",
+      "italian": "Notifiche relative all'allenamento e Android 16"
+    },
+    "1.12.1/1/body": {
+      "source": "The live workout timer now runs as a health service, the type Android reserves for exercise apps, and the app now targets Android 16.",
+      "italian": "Il timer per gli allenamenti in tempo reale ora funziona come un servizio di salute, ovvero il tipo di servizio che Android riserva alle app dedicate all'attività fisica, e l'app è ora compatibile con Android 16."
+    },
+    "1.12.0/summary": {
+      "source": "The training-programs release: build and edit them end to end, share or remix them with credit to the author, and the app tells you which week you are on and how many reps you owe today. Training stats also land, and circuit days finally work.",
+      "italian": "I programmi di allenamento sono ora disponibili: puoi crearli e modificarli dall’inizio alla fine, condividerli o riadattarli citando l’autore, e l’app ti indica a che settimana sei e quante ripetizioni devi fare oggi. Sono disponibili anche le statistiche di allenamento e finalmente funzionano le sessioni a circuito."
+    },
+    "1.12.0/0/title": {
+      "source": "Build and edit full programs from your phone",
+      "italian": "Crea e modifica programmi completi direttamente dal tuo telefono"
+    },
+    "1.12.0/0/body": {
+      "source": "The editor covers the whole program: phases, days, exercises and their catalog fields, with validation on steps 3 and 4 so you never publish a half-finished program. You can copy a day or an entire phase, upload the cover and an image or video per exercise, and from the program page edit, duplicate, leave or delete it.",
+      "italian": "L'editor copre l'intero programma: fasi, giorni, esercizi e i relativi campi del catalogo, con una verifica di validità nei passaggi 3 e 4, in modo da non pubblicare mai un programma incompleto. È possibile copiare un giorno o un'intera fase, caricare la copertina e un'immagine o un video per ogni esercizio e, dalla pagina del programma, modificarlo, duplicarlo, abbandonarlo o eliminarlo."
+    },
+    "1.12.0/1/title": {
+      "source": "Auto progression: the app tells you what to do today",
+      "italian": "Progressione automatica: l'app ti dice cosa fare oggi"
+    },
+    "1.12.0/1/body": {
+      "source": "Each program exercise looks at what you did last time and suggests today’s reps or seconds. When a variation gets too easy it proposes the next one, so you keep progressing without tracking it yourself.",
+      "italian": "Ogni esercizio del programma tiene conto di ciò che hai fatto l'ultima volta e ti suggerisce il numero di ripetizioni o i secondi da eseguire oggi. Quando una variante diventa troppo facile, ti propone quella successiva, così puoi continuare a progredire senza dover tenere traccia da solo dei tuoi progressi."
+    },
+    "1.12.0/2/title": {
+      "source": "You always know which week and phase you are on",
+      "italian": "Sai sempre a che settimana e in quale fase ti trovi"
+    },
+    "1.12.0/2/body": {
+      "source": "The program shows “week X of Y” and moves to the next phase on its own as you advance, with no setting to touch. Progress is computed from what you actually trained.",
+      "italian": "Il programma mostra “settimana X di Y” e passa automaticamente alla fase successiva man mano che procedi, senza che tu debba modificare alcuna impostazione. I progressi vengono calcolati in base a quanto ti sei effettivamente allenato."
+    },
+    "1.12.0/3/title": {
+      "source": "Share your programs and remix other people’s",
+      "italian": "Condividi i tuoi programmi e crea delle versioni personalizzate di quelli degli altri"
+    },
+    "1.12.0/3/body": {
+      "source": "Every program picks whether it is private, link-only or public, and the link opens a page anyone can see without an account. If you start from someone else’s program, your copy carries a “based on X by @author” credit, and each program shows how many people follow it.",
+      "italian": "Ogni programma può essere privato, accessibile solo tramite link o pubblico; nel caso del link, si apre una pagina visibile a chiunque senza bisogno di un account. Se si parte dal programma di qualcun altro, la propria copia riporta la dicitura “basato su X di @autore”, e ogni programma mostra quante persone lo seguono."
+    },
+    "1.12.0/4/title": {
+      "source": "Training stats",
+      "italian": "Statistiche di allenamento"
+    },
+    "1.12.0/4/body": {
+      "source": "A new view with the muscles you train most, your most frequent exercises, your personal records and the trend over recent weeks.",
+      "italian": "Una nuova schermata con i muscoli che alleni di più, gli esercizi che esegui più spesso, i tuoi record personali e l'andamento delle ultime settimane."
+    },
+    "1.12.0/5/title": {
+      "source": "Circuit days finally work",
+      "italian": "Finalmente funzionano i giorni a circuito"
+    },
+    "1.12.0/5/body": {
+      "source": "A circuit day now starts an actual circuit and, once finished, marks the day done and counts toward the program milestone — before it stayed blocked forever. And if the author deletes a program you were enrolled in, we now tell you instead of leaving you with a dead enrollment.",
+      "italian": "Un giorno a circuito ora avvia un vero circuito e, una volta completato, viene segnato come concluso e conteggiato per il traguardo del programma; prima rimaneva bloccato. Inoltre, se l’autore elimina un programma a cui sei iscritto, ora ricevi un avviso invece di ritrovarti con un’iscrizione inattiva."
+    },
+    "1.11.1/summary": {
+      "source": "The cardio history gets filters by type, opens the detail straight from the row and adds a competition search. The app also now asks Health Connect only for the data it actually uses.",
+      "italian": "La cronologia delle attività cardiovascolari viene filtrata per tipo, consente di aprire i dettagli direttamente dalla riga e aggiunge una funzione di ricerca per competizione. Inoltre, l'app ora richiede a Health Connect solo i dati che utilizza effettivamente."
+    },
+    "1.11.1/0/title": {
+      "source": "Cardio history with filters and direct detail",
+      "italian": "Cronologia delle sessioni cardio con filtri e dettagli diretti"
+    },
+    "1.11.1/0/body": {
+      "source": "You can filter the history by session type and open the detail by tapping the row, with no extra steps. A search box for finding competitions is also included.",
+      "italian": "È possibile filtrare la cronologia in base al tipo di sessione e aprire i dettagli toccando la riga, senza ulteriori passaggi. È inclusa anche una casella di ricerca per trovare le competizioni."
+    },
+    "1.11.1/1/title": {
+      "source": "Health Connect asks for less of your data",
+      "italian": "Health Connect richiede meno dati personali"
+    },
+    "1.11.1/1/body": {
+      "source": "The app used to request twelve health data types and several went unused. It now requests only seven, each with a screen that shows it to you: steps, active calories, heart rate, resting HR, sleep, weight and body fat. As a trade-off, the HRV and VO₂ max metrics are gone from “Watch & health”. If your watch was already connected, revoke and re-grant the permissions in Health Connect for the change to apply.",
+      "italian": "In precedenza l'app richiedeva dodici tipi di dati sanitari, molti dei quali non venivano utilizzati. Ora ne richiede solo sette, ciascuno con una schermata dedicata: passi, calorie attive, frequenza cardiaca, frequenza cardiaca a riposo, sonno, peso e grasso corporeo. In cambio, le metriche HRV e VO₂ max non sono più disponibili nella sezione “Orologio e salute”. Se l'orologio era già collegato, revoca e concedi nuovamente le autorizzazioni in Health Connect affinché la modifica abbia effetto."
+    },
+    "1.11.0/summary": {
+      "source": "The feed now covers everything you do — free sessions, cardio, circuits, challenges, races and battles — your profile gets an athlete card with your numbers and personal bests, and you can make your account private and approve who follows you.",
+      "italian": "Il feed ora copre tutte le tue attività — sessioni libere, cardio, circuiti, sfide, gare e battaglie — il tuo profilo include una scheda atleta con i tuoi dati e i tuoi record personali, e puoi rendere privato il tuo account e approvare chi ti segue."
+    },
+    "1.11.0/0/title": {
+      "source": "The feed covers all your activity",
+      "italian": "Il feed riporta tutte le tue attività"
+    },
+    "1.11.0/0/body": {
+      "source": "Until now the feed only showed program workouts, and free sessions appeared with no title. It now covers six kinds of activity: program session, free session, cardio, circuit, challenge, race and battle. Scrolling down no longer repeats posts either.",
+      "italian": "Finora il feed mostrava solo gli allenamenti del programma, mentre le sessioni libere apparivano senza titolo. Ora comprende sei tipi di attività: sessione del programma, sessione libera, cardio, circuito, sfida, gara e battaglia. Inoltre, scorrendo verso il basso i post non vengono più ripetuti."
+    },
+    "1.11.0/1/title": {
+      "source": "Profile with an athlete card",
+      "italian": "Profilo con scheda dell'atleta"
+    },
+    "1.11.0/1/body": {
+      "source": "Your profile now leads with you: level, program week, your numbers and your skills. Settings move to the bottom as a list with one row per topic that unfolds in place, so you edit without leaving the screen.",
+      "italian": "Il tuo profilo ora ti presenta in primo piano: livello, settimana del programma, i tuoi punteggi e le tue abilità. Le impostazioni vengono spostate in fondo alla pagina sotto forma di elenco, con una riga per ogni argomento che si apre direttamente nella stessa schermata, così puoi modificarle senza uscire dalla schermata."
+    },
+    "1.11.0/2/title": {
+      "source": "Private accounts with approval",
+      "italian": "Account privati con approvazione"
+    },
+    "1.11.0/2/body": {
+      "source": "Turn on \"Private account\" and anyone who wants to follow you has to ask: you approve or decline from notifications. The button becomes REQUEST / REQUESTED, private profiles show a lock instead of zeros, and in challenge leaderboards private accounts are hidden from others without throwing off the participant count.",
+      "italian": "Attiva l'opzione \"Account privato\" e chiunque voglia seguirti dovrà farti una richiesta: potrai approvarla o rifiutarla tramite le notifiche. Il pulsante diventerà RICHIEDI / RICHIESTA INVIATA, i profili privati mostreranno un lucchetto al posto degli zeri e, nelle classifiche delle sfide, gli account privati saranno nascosti agli altri senza alterare il conteggio dei partecipanti."
+    },
+    "1.11.0/3/title": {
+      "source": "Sharing a session, and seeing all of it",
+      "italian": "Condividere una sessione e visualizzarla per intero"
+    },
+    "1.11.0/3/body": {
+      "source": "The link you share for a session used to show the person opening it their own progress instead of yours — fixed. And a session with no sets now lists its timed exercises instead of just saying \"no sets recorded\".",
+      "italian": "Il link che condividi per una sessione prima mostrava alla persona che lo apriva i propri progressi invece dei tuoi — problema risolto. Inoltre, una sessione senza serie ora elenca gli esercizi cronometrati invece di limitarsi a indicare \"nessuna serie registrata\"."
+    },
+    "1.11.0/4/title": {
+      "source": "The leaderboard stops reloading itself",
+      "italian": "La classifica smette di aggiornarsi automaticamente"
+    },
+    "1.11.0/4/body": {
+      "source": "The leaderboard screen kept reloading itself in the background, burning data and battery. It now loads once, and usage stats reflect what you actually do.",
+      "italian": "La schermata della classifica continuava a ricaricarsi in background, consumando dati e batteria. Ora si carica una sola volta e le statistiche di utilizzo riflettono effettivamente la tua attività."
+    },
+    "1.10.2/summary": {
+      "source": "Official programs show their training days again: the week no longer looks like rest only. Plus internal stability improvements.",
+      "italian": "I programmi ufficiali riportano nuovamente le giornate di allenamento: la settimana non sembra più dedicata esclusivamente al riposo. Inoltre, sono stati apportati miglioramenti alla stabilità interna."
+    },
+    "1.10.2/0/title": {
+      "source": "Programs have their week back",
+      "italian": "I programmi ritrovano la loro settimana"
+    },
+    "1.10.2/0/body": {
+      "source": "Twelve official programs showed an empty week (only Saturday and Sunday as rest) with nothing to train. They now have their Monday-to-Saturday days with the right workout type, and if any is still off, the app fixes it on load.",
+      "italian": "Dodici programmi ufficiali presentavano una settimana vuota (con solo sabato e domenica come giorni di riposo) senza alcun allenamento previsto. Ora i giorni dal lunedì al sabato sono associati al tipo di allenamento corretto e, se dovesse esserci ancora qualche errore, l'app lo corregge al momento del caricamento."
+    },
+    "1.10.1/summary": {
+      "source": "Home-screen widgets for your streak, meals, water and next session; private accounts with follower approval; battle results with rematch and a share card; and a solid batch of fixes to cardio and offline saving.",
+      "italian": "Widget sulla schermata iniziale per la tua serie di giorni consecutivi, i pasti, l’acqua e la prossima sessione; account privati con approvazione dei follower; risultati delle sfide con opzione di rivincita e scheda di condivisione; e una serie di correzioni per le attività cardio e il salvataggio offline."
+    },
+    "1.10.1/0/title": {
+      "source": "Home-screen widgets",
+      "italian": "Widget della schermata iniziale"
+    },
+    "1.10.1/0/body": {
+      "source": "Add your streak (also as a 2x2, now showing the real current streak), your meal streak, today's water and your next session to your home screen. The Today widget shows more at a glance.",
+      "italian": "Aggiungi alla schermata iniziale la tua serie di giorni consecutivi (anche in formato 2x2, che ora mostra la serie effettiva attuale), la tua serie di pasti, l'acqua bevuta oggi e la tua prossima sessione. Il widget \"Oggi\" ti permette di vedere più informazioni a colpo d'occhio."
+    },
+    "1.10.1/1/title": {
+      "source": "Private accounts",
+      "italian": "Account privati"
+    },
+    "1.10.1/1/body": {
+      "source": "You can now make your account private: anyone who wants to follow you has to ask, and you approve or decline. The server decides what is visible, so your workouts stay out of the feed and leaderboards of anyone you haven't approved.",
+      "italian": "Ora puoi rendere privato il tuo account: chiunque voglia seguirti dovrà farti richiesta e tu potrai approvarla o rifiutarla. È il server a decidere cosa è visibile, quindi i tuoi allenamenti non appariranno nel feed né nelle classifiche di chi non hai approvato."
+    },
+    "1.10.1/2/title": {
+      "source": "Battles: results, rematch and share card",
+      "italian": "Battaglie: risultati, rivincita e scheda da condividere"
+    },
+    "1.10.1/2/body": {
+      "source": "When a battle ends you get a results screen with everyone's placing, a one-tap rematch and a share card. Ties now show as ties on the scoreboard, the waiting room and history, and timed work shows up on the scoreboard.",
+      "italian": "Al termine di una battaglia, viene visualizzata una schermata dei risultati con la classifica di tutti i partecipanti, la possibilità di giocare una rivincita con un solo tocco e una scheda di condivisione. I pareggi ora vengono indicati come tali nella classifica, nella sala d'attesa e nella cronologia, mentre i lavori a tempo vengono visualizzati nella classifica."
+    },
+    "1.10.1/3/title": {
+      "source": "Challenges: Push-up Builder and a new detail view",
+      "italian": "Sfide: Push-up Builder e una nuova vista dettagliata"
+    },
+    "1.10.1/3/body": {
+      "source": "A new ready-made challenge, Push-up Builder, with cumulative scoring. The challenge detail now has two views, goal and ranking, and expired challenges are closed automatically on the server instead of lingering open.",
+      "italian": "Una nuova sfida predefinita, Push-up Builder, con punteggio cumulativo. La pagina dei dettagli della sfida presenta ora due visualizzazioni, \"Obiettivo\" e \"Classifica\", e le sfide scadute vengono chiuse automaticamente sul server invece di rimanere aperte."
+    },
+    "1.10.1/4/title": {
+      "source": "Profile photo from the app",
+      "italian": "Foto del profilo dall'app"
+    },
+    "1.10.1/4/body": {
+      "source": "Change your profile photo right from your phone, no need to go through the web.",
+      "italian": "Cambia la tua foto del profilo direttamente dal tuo telefono, senza bisogno di passare dal sito web."
+    },
+    "1.10.1/5/title": {
+      "source": "More reliable offline saving",
+      "italian": "Salvataggio offline più affidabile"
+    },
+    "1.10.1/5/body": {
+      "source": "Sets, sessions and circuits that can't be saved without signal are queued and retried on their own once you're back online.",
+      "italian": "Le serie, le sessioni e i circuiti che non possono essere salvati in assenza di segnale vengono messi in coda e riprovati automaticamente non appena si torna online."
+    },
+    "1.10.1/6/title": {
+      "source": "Cardio: history and accidental sessions",
+      "italian": "Cardio: cronologia e sessioni avviate per errore"
+    },
+    "1.10.1/6/body": {
+      "source": "The cardio history and some other lists could show up empty on open — fixed. Stopping a cardio session after a few seconds now discards it instead of saving a 0-metre workout, and the stray English text in cardio and races is translated.",
+      "italian": "La cronologia delle sessioni cardio e alcune altre liste potevano apparire vuote all'apertura — problema risolto. Interrompendo una sessione cardio dopo pochi secondi, ora questa viene eliminata anziché salvare un allenamento di 0 metri, e il testo in inglese presente per errore nelle sezioni \"cardio\" e \"gare\" è stato tradotto."
+    },
+    "1.10.1/7/title": {
+      "source": "Small fixes",
+      "italian": "Piccole correzioni"
+    },
+    "1.10.1/7/body": {
+      "source": "Text on the lime colour is readable in light mode, collapsible chevrons rotate properly, push notifications keep arriving after switching accounts on the same phone, and saving a program no longer deletes and recreates its days.",
+      "italian": "Il testo sul sfondo color lime è leggibile in modalità chiara, le frecce a forma di V comprimibili ruotano correttamente, le notifiche push continuano ad arrivare dopo aver cambiato account sullo stesso telefono e il salvataggio di un programma non comporta più l'eliminazione e la ricreazione dei giorni."
+    },
+    "1.9.0/summary": {
+      "source": "Community programs with weekly milestones so you can follow a real plan, profile stats that finally count every workout you do, and battles that now use the same training screen as a regular session.",
+      "italian": "Programmi comunitari con obiettivi settimanali per permetterti di seguire un vero e proprio piano, statistiche del profilo che finalmente tengono conto di ogni allenamento che fai e sfide che ora utilizzano la stessa schermata di allenamento delle sessioni normali."
+    },
+    "1.9.0/0/title": {
+      "source": "Community programs",
+      "italian": "Programmi comunitari"
+    },
+    "1.9.0/0/body": {
+      "source": "Join \"30 days of calisthenics\" and follow a plan with weekly milestones. Your week 1 starts the day you join — no waiting for a Monday — and progress is worked out from what you actually train: edit or delete a session and the milestone corrects itself. You can leave and come back without losing your place.",
+      "italian": "Iscriviti a \"30 giorni di ginnastica a corpo libero\" e segui un programma con obiettivi settimanali. La tua prima settimana inizia il giorno stesso dell'iscrizione — non devi aspettare il lunedì — e i progressi vengono calcolati in base a quanto ti alleni effettivamente: se modifichi o elimini una sessione, l'obiettivo si aggiorna automaticamente. Puoi interrompere il programma e riprenderlo in un secondo momento senza perdere i progressi fatti."
+    },
+    "1.9.0/1/title": {
+      "source": "Your stats count again",
+      "italian": "Le tue statistiche contano di nuovo"
+    },
+    "1.9.0/1/body": {
+      "source": "Your profile and the Leaderboard showed 0 sessions and a 0-day streak if you trained with strength sessions, even when the calendar on that same screen had your data. All three session types — strength, circuit and cardio — now count towards your total and your streak.",
+      "italian": "Il tuo profilo e la classifica mostravano 0 sessioni e una serie di 0 giorni consecutivi se ti allenavi con sessioni di forza, anche quando il calendario nella stessa schermata riportava i tuoi dati. Tutti e tre i tipi di sessione — forza, circuito e cardio — ora vengono conteggiati nel tuo totale e nella tua serie di giorni consecutivi."
+    },
+    "1.9.0/2/title": {
+      "source": "Battles with the real training screen",
+      "italian": "Battaglie con la schermata di allenamento completa"
+    },
+    "1.9.0/2/body": {
+      "source": "Circuit battles now use the same rest screen and timer as a regular session, with the same cues and haptics, instead of a half-built screen of their own. On top of that, anyone you have blocked can no longer join your battle or watch the live scoreboard.",
+      "italian": "Le battaglie a circuito ora utilizzano la stessa schermata di pausa e lo stesso timer di una sessione normale, con gli stessi segnali e le stesse vibrazioni, invece di una schermata ad hoc ancora incompleta. Inoltre, chiunque tu abbia bloccato non potrà più partecipare alla tua battaglia né visualizzare il tabellone in tempo reale."
+    },
+    "1.9.0/3/title": {
+      "source": "Your route on the results card",
+      "italian": "Il tuo percorso sulla scheda dei risultati"
+    },
+    "1.9.0/3/body": {
+      "source": "When you finish a race, the results card now draws the route you ran. And if you hit save before the route has loaded, the workout is no longer saved without it.",
+      "italian": "Una volta terminata una gara, la scheda dei risultati ora traccia il percorso che hai percorso. Inoltre, se premi \"Salva\" prima che il percorso sia stato caricato, l'allenamento non verrà più salvato senza di esso."
+    },
+    "1.9.0/4/title": {
+      "source": "Creating and following challenges, simpler",
+      "italian": "Creare e seguire le sfide: più semplice"
+    },
+    "1.9.0/4/body": {
+      "source": "The metric picker shows the four common ones and tucks the rest behind \"More metrics\", so creating a challenge is no longer a wall of options. Challenge dates read as dates instead of stray times, the empty state no longer kicks you out to the browser, and express challenges work end to end.",
+      "italian": "Il selettore delle metriche mostra le quattro più comuni e nasconde le altre dietro un pulsante; lo stato vuoto ti permette di iniziare senza rimandarti al browser."
+    },
+    "1.9.0/5/title": {
+      "source": "A bit more privacy",
+      "italian": "Un po' più di privacy"
+    },
+    "1.9.0/5/body": {
+      "source": "The GPS track of your races is now yours alone: other people see your position and your result, but not the streets you ran. And your account’s private data no longer travels to other people when your name and photo show up on a wall or a leaderboard.",
+      "italian": "Il tracciato GPS delle tue gare ora è solo tuo: gli altri possono vedere la tua posizione e il tuo risultato, ma non le strade che hai percorso. Inoltre, i dati privati del tuo account non vengono più condivisi con altre persone quando il tuo nome e la tua foto compaiono su una bacheca o in una classifica."
+    },
+    "1.9.0/6/title": {
+      "source": "Referrals: status and reward in plain sight",
+      "italian": "Inviti: stato e ricompensa in evidenza"
+    },
+    "1.9.0/6/body": {
+      "source": "You can now see who you invited, what state each invitation is in and which reward you have earned, both in the app and on the web.",
+      "italian": "Ora puoi vedere chi hai invitato, a che punto è ogni invito e quale ricompensa hai ottenuto, sia nell'app che sul sito web."
+    },
+    "1.8.0/summary": {
+      "source": "Real-time circuit battles against your friends, plus a thorough privacy pass: your health data is no longer visible to anyone else.",
+      "italian": "Sfide in tempo reale contro i tuoi amici, oltre a un sistema di protezione della privacy completo: i tuoi dati sanitari non saranno più visibili a nessun altro."
+    },
+    "1.8.0/0/title": {
+      "source": "Circuit battles",
+      "italian": "Battaglie a circuito"
+    },
+    "1.8.0/0/body": {
+      "source": "Challenge your friends to a circuit and race them live, seeing where everyone is in real time. Floating bar while it runs, alerts when someone joins or it starts, rest between exercises, and a history with head-to-head comparison in Progress.",
+      "italian": "Sfida i tuoi amici a un circuito e gareggia con loro in diretta, vedendo in tempo reale la posizione di ciascuno. Barra mobile durante l'allenamento, notifiche quando qualcuno si unisce o quando inizia la sessione, pause tra un esercizio e l'altro e una cronologia con confronto diretto nella sezione \"Progressi\"."
+    },
+    "1.8.0/1/title": {
+      "source": "Your health data stays yours",
+      "italian": "I tuoi dati sanitari rimangono di tua proprietà"
+    },
+    "1.8.0/1/body": {
+      "source": "The heart rate and calories your watch measures, your water and weekly training goals, and your food and weight logs are no longer visible to other people. The wall and the ranking work exactly as before: only what you see on screen is shared.",
+      "italian": "La frequenza cardiaca e le calorie misurate dall'orologio, i tuoi obiettivi relativi all'assunzione di acqua e all'allenamento settimanale, nonché i registri relativi all'alimentazione e al peso non sono più visibili agli altri. La bacheca e la classifica funzionano esattamente come prima: viene condiviso solo ciò che vedi sullo schermo."
+    },
+    "1.8.0/2/title": {
+      "source": "Blocking now really blocks",
+      "italian": "Il blocco ora funziona davvero"
+    },
+    "1.8.0/2/body": {
+      "source": "When you block someone, they can no longer see your profile, your workouts or your live position in a race, and none of their notifications reach you. Before, they were only stopped from interacting.",
+      "italian": "Quando blocchi qualcuno, questa persona non potrà più vedere il tuo profilo, i tuoi allenamenti o la tua posizione in tempo reale durante una gara, e non riceverai più nessuna delle sue notifiche. Prima, le veniva semplicemente impedito di interagire con te."
+    },
+    "1.8.0/3/title": {
+      "source": "Easier challenges to start",
+      "italian": "Sfide più facili per iniziare"
+    },
+    "1.8.0/3/body": {
+      "source": "Ready-made challenges you can join from zero with one tap, cumulative scoring that adds up everything you do during the challenge, and a featured challenge on the home screen.",
+      "italian": "Sfide già pronte a cui puoi partecipare partendo da zero con un solo tocco, un punteggio cumulativo che somma tutto ciò che fai durante la sfida e una sfida in primo piano sulla schermata iniziale."
+    },
+    "1.8.0/4/title": {
+      "source": "Free sessions",
+      "italian": "Sessioni libere"
+    },
+    "1.8.0/4/body": {
+      "source": "Train without following a program: build the session as you go and it gets logged like any other, in your history and your calendar.",
+      "italian": "Allenati senza seguire un programma: organizza la sessione man mano che procedi e verrà registrata come qualsiasi altra, nella cronologia e nel calendario."
+    },
+    "1.8.0/5/title": {
+      "source": "Friend search works now",
+      "italian": "La ricerca degli amici ora funziona"
+    },
+    "1.8.0/5/body": {
+      "source": "Searching for someone by name never returned anything, because of a bug in the search itself. It finds people now.",
+      "italian": "La ricerca di una persona per nome non restituiva mai alcun risultato, a causa di un bug nel sistema di ricerca stesso. Ora riesce a trovare le persone."
+    },
+    "1.7.1/summary": {
+      "source": "Fixes 1.7.0: the app rendered completely broken, with no styles or fonts. It now looks the way it should.",
+      "italian": "Correzioni versione 1.7.0: l'app veniva visualizzata in modo completamente errato, senza stili né caratteri. Ora appare come dovrebbe."
+    },
+    "1.7.1/0/title": {
+      "source": "The app looks right again",
+      "italian": "L'app sembra di nuovo a posto"
+    },
+    "1.7.1/0/body": {
+      "source": "If the app looked broken after updating to 1.7.0 — text stuck to the edge, no fonts — it is fixed now. Nothing for you to do: your data and session are untouched.",
+      "italian": "Se dopo l'aggiornamento alla versione 1.7.0 l'app sembrava non funzionare correttamente (testo incastrato ai bordi, assenza di caratteri), ora il problema è stato risolto. Non devi fare nulla: i tuoi dati e la tua sessione sono rimasti intatti."
+    },
+    "1.7.0/summary": {
+      "source": "Edit each food portion and macros recalculate automatically, a tidier AI suggestion, in-app account deletion, and more privacy for your cardio routes.",
+      "italian": "Modifica ogni porzione di cibo e i macronutrienti verranno ricalcolati automaticamente; suggerimenti dell’IA più chiari; cancellazione dell’account dall’app e maggiore privacy per i tuoi percorsi cardio."
+    },
+    "1.7.0/0/title": {
+      "source": "Editable portion",
+      "italian": "Porzione modificabile"
+    },
+    "1.7.0/0/body": {
+      "source": "Adjust each food amount right on its card and calories and macros recalculate instantly.",
+      "italian": "Modifica la quantità di ogni alimento direttamente sulla relativa scheda: le calorie e i macronutrienti verranno ricalcolati all’istante."
+    },
+    "1.7.0/1/title": {
+      "source": "Collapsible AI suggestion",
+      "italian": "Suggerimento IA a scomparsa"
+    },
+    "1.7.0/1/body": {
+      "source": "The coach suggestion when logging a meal now starts collapsed: open it only when you want it.",
+      "italian": "Il suggerimento dell'allenatore quando si registra un pasto ora viene visualizzato chiuso: aprilo solo quando lo desideri."
+    },
+    "1.7.0/2/title": {
+      "source": "Account deletion",
+      "italian": "Cancellazione dell'account"
+    },
+    "1.7.0/2/body": {
+      "source": "Delete your account and all your data right from the app, no external steps.",
+      "italian": "Elimina il tuo account e tutti i tuoi dati direttamente dall'app, senza bisogno di operazioni esterne."
+    },
+    "1.7.0/3/title": {
+      "source": "Challenge-ended alert",
+      "italian": "Avviso di fine sfida"
+    },
+    "1.7.0/3/body": {
+      "source": "The challenge-ended notification now arrives at the right moment, when the challenge actually ends.",
+      "italian": "La notifica di fine sfida ora arriva al momento giusto, ovvero quando la sfida termina effettivamente."
+    },
+    "1.7.0/4/title": {
+      "source": "Private cardio routes",
+      "italian": "Percorsi cardio privati"
+    },
+    "1.7.0/4/body": {
+      "source": "Your cardio GPS routes are now visible only to you: no one else can look them up.",
+      "italian": "I tuoi percorsi cardio registrati con il GPS sono ora visibili solo a te: nessun altro può consultarli."
+    },
+    "1.7.0/5/title": {
+      "source": "Cleaner meal analysis",
+      "italian": "Analisi più accurata dei pasti"
+    },
+    "1.7.0/5/body": {
+      "source": "Meal photo analysis texts no longer show odd citations or URLs from web search.",
+      "italian": "I testi delle analisi delle foto dei pasti non contengono più citazioni o URL anomali provenienti da ricerche sul web."
+    },
+    "1.6.0/summary": {
+      "source": "Build your own programs on mobile, log your sleep with an AI summary, change your nutrition goal anytime, and celebrate your achievements properly.",
+      "italian": "Crea i tuoi programmi personalizzati su dispositivo mobile, registra il tuo sonno con un riepilogo generato dall'intelligenza artificiale, modifica in qualsiasi momento il tuo obiettivo nutrizionale e festeggia come si deve i tuoi traguardi raggiunti."
+    },
+    "1.6.0/0/title": {
+      "source": "Program editor",
+      "italian": "Editor dei programmi"
+    },
+    "1.6.0/0/body": {
+      "source": "Create and edit your own programs on mobile: phases, days (strength, cardio or circuit) and catalog exercises, in a 4-step wizard.",
+      "italian": "Crea e modifica i tuoi programmi direttamente sul cellulare: fasi, giorni (forza, cardio o circuito) e catalogo degli esercizi, grazie a una procedura guidata in 4 passaggi."
+    },
+    "1.6.0/1/title": {
+      "source": "Sleep with AI summary",
+      "italian": "Sonno con riepilogo IA"
+    },
+    "1.6.0/1/body": {
+      "source": "Log your sleep right in the app and get an AI analysis of your pattern: consistency, caffeine, screens and more.",
+      "italian": "Registra il tuo sonno direttamente nell'app e ottieni un'analisi basata sull'intelligenza artificiale delle tue abitudini: regolarità, caffeina, uso dei dispositivi elettronici e altro ancora."
+    },
+    "1.6.0/2/title": {
+      "source": "Editable goal",
+      "italian": "Obiettivo modificabile"
+    },
+    "1.6.0/2/body": {
+      "source": "Change your nutrition goal anytime with a calorie and macro preview, and edit your body data from your profile.",
+      "italian": "Modifica in qualsiasi momento il tuo obiettivo nutrizionale grazie all'anteprima delle calorie e dei macronutrienti e modifica i dati relativi al tuo corpo dal tuo profilo."
+    },
+    "1.6.0/3/title": {
+      "source": "Achievement celebration",
+      "italian": "Festa per celebrare i risultati raggiunti"
+    },
+    "1.6.0/3/body": {
+      "source": "Nutrition badges now get a proper celebration screen — earn several at once and see them in sequence.",
+      "italian": "I badge nutrizionali ora hanno una schermata di celebrazione dedicata: guadagnane diversi contemporaneamente e guardali uno dopo l'altro."
+    },
+    "1.6.0/4/title": {
+      "source": "Report content",
+      "italian": "Segnala contenuti"
+    },
+    "1.6.0/4/body": {
+      "source": "Report inappropriate users or comments from their profile or the comments sheet; our team reviews them.",
+      "italian": "Segnala gli utenti o i commenti inappropriati dal loro profilo o dalla sezione dei commenti; il nostro team provvederà a esaminarli."
+    },
+    "1.6.0/5/title": {
+      "source": "Sturdier onboarding",
+      "italian": "Un processo di inserimento più solido"
+    },
+    "1.6.0/5/body": {
+      "source": "Sign-up can no longer silently lose your profile: if saving fails you are told and can retry.",
+      "italian": "La procedura di registrazione non può più cancellare il tuo profilo senza avvisarti: se il salvataggio non va a buon fine, riceverai un avviso e potrai riprovare."
+    },
+    "1.5.0/summary": {
+      "source": "A guided getting-started checklist on Home, a «Discover» directory of all 21 app features, and empty screens that now teach you how to use them.",
+      "italian": "Una checklist guidata per iniziare nella schermata Home, una sezione «Scopri» che elenca tutte le 21 funzionalità dell'app e schermate vuote che ora ti spiegano come utilizzarle."
+    },
+    "1.5.0/0/title": {
+      "source": "Getting started",
+      "italian": "Per iniziare"
+    },
+    "1.5.0/0/body": {
+      "source": "A new Home checklist with 6 activation steps, a progress bar, and a shortcut to each one.",
+      "italian": "Una nuova checklist per la Home con 6 passaggi di attivazione, una barra di avanzamento e un collegamento diretto a ciascuno di essi."
+    },
+    "1.5.0/1/title": {
+      "source": "Discover",
+      "italian": "Scopri"
+    },
+    "1.5.0/1/body": {
+      "source": "A new section in your profile lists all 21 app features by category, each one a tap away.",
+      "italian": "Una nuova sezione del tuo profilo elenca tutte le 21 funzionalità dell'app suddivise per categoria: basta un semplice tocco per accedervi."
+    },
+    "1.5.0/2/title": {
+      "source": "Guided empty states",
+      "italian": "Stati vuoti guidati"
+    },
+    "1.5.0/2/body": {
+      "source": "History, library, calendar and other screens now explain what to do when they're empty, with a direct action button.",
+      "italian": "Le schermate \"Cronologia\", \"Libreria\", \"Calendario\" e altre ora spiegano cosa fare quando sono vuote, con un pulsante di azione diretta."
+    },
+    "1.5.0/3/title": {
+      "source": "Session-swipe crash",
+      "italian": "Arresto anomalo causato dallo scorrimento della sessione"
+    },
+    "1.5.0/3/body": {
+      "source": "Fixed the app closing unexpectedly when swiping between exercises mid-workout.",
+      "italian": "È stato risolto il problema che causava la chiusura imprevista dell'app quando si passava da un esercizio all'altro durante l'allenamento."
+    },
+    "1.4.0/summary": {
+      "source": "Smarter onboarding: set your primary goal, measure your waist-to-height ratio and pick your language. Plus, resume your strength session on any device.",
+      "italian": "Un percorso di inserimento più intelligente: definisci il tuo obiettivo principale, misura il rapporto vita-altezza e scegli la lingua. Inoltre, riprendi la tua sessione di allenamento della forza su qualsiasi dispositivo."
+    },
+    "1.4.0/0/title": {
+      "source": "Primary goal",
+      "italian": "Obiettivo principale"
+    },
+    "1.4.0/0/body": {
+      "source": "Onboarding now asks for your primary goal in a structured way and tailors recommendations to it.",
+      "italian": "Il processo di onboarding ora richiede di specificare il tuo obiettivo principale in modo strutturato e adatta i consigli in base a esso."
+    },
+    "1.4.0/1/title": {
+      "source": "Waist-to-height ratio",
+      "italian": "Rapporto vita-altezza"
+    },
+    "1.4.0/1/body": {
+      "source": "New waist measurement during onboarding to compute your waist-to-height ratio (WHtR), a more reliable health indicator than BMI alone.",
+      "italian": "Nuova misurazione del girovita durante la registrazione per calcolare il rapporto girovita-altezza (WHtR), un indicatore di salute più affidabile rispetto al solo indice di massa corporea (BMI)."
+    },
+    "1.4.0/2/title": {
+      "source": "ES/EN language",
+      "italian": "Lingua ES/EN"
+    },
+    "1.4.0/2/body": {
+      "source": "Choose between Spanish and English right from onboarding, on web and in the app.",
+      "italian": "Scegli tra spagnolo e inglese fin dalla fase di registrazione, sia sul sito web che nell'app."
+    },
+    "1.4.0/3/title": {
+      "source": "Resume your session anywhere",
+      "italian": "Riprendi la sessione ovunque ti trovi"
+    },
+    "1.4.0/3/body": {
+      "source": "Your in-progress strength session syncs to the server: start on your phone and continue on the web, or the other way around.",
+      "italian": "La sessione di allenamento di forza in corso si sincronizza con il server: inizia sul telefono e continua sul web, o viceversa."
+    },
+    "1.3.2/summary": {
+      "source": "Tap a friend's name in the feed to open their profile.",
+      "italian": "Tocca il nome di un amico nel feed per aprire il suo profilo."
+    },
+    "1.3.2/0/title": {
+      "source": "Profile from the feed",
+      "italian": "Profilo dal feed"
+    },
+    "1.3.2/0/body": {
+      "source": "Tapping an activity's author opens their profile. We also warn you if block/unblock fails.",
+      "italian": "Toccando l'autore di un'attività si apre il suo profilo. Ti avvisiamo inoltre se l'operazione di blocco/sblocco non va a buon fine."
+    },
+    "1.3.1/summary": {
+      "source": "Blocking users is now clearer and faster from the profile.",
+      "italian": "Bloccare gli utenti dal profilo è ora più intuitivo e veloce."
+    },
+    "1.3.1/0/title": {
+      "source": "Block redesigned",
+      "italian": "Blocco riprogettato"
+    },
+    "1.3.1/0/body": {
+      "source": "New ⋯ menu on profiles to block, and a clear notice with an unblock button when a user is blocked.",
+      "italian": "Nuovo ⋯ menu nei profili per bloccare gli utenti e un avviso chiaro con un pulsante per sbloccare quando un utente viene bloccato."
+    },
+    "1.3.0/summary": {
+      "source": "You can now block users: their activity disappears for you across the whole app.",
+      "italian": "Ora puoi bloccare gli utenti: la loro attività non ti apparirà più in nessuna parte dell'app."
+    },
+    "1.3.0/0/title": {
+      "source": "Block users",
+      "italian": "Blocca utenti"
+    },
+    "1.3.0/0/body": {
+      "source": "Block any user from their profile: you unfollow each other and their activity disappears from your feed, comments, reactions, leaderboards and challenges.",
+      "italian": "Blocca qualsiasi utente dal suo profilo: vi smetterete di seguirvi a vicenda e le sue attività scompariranno dal tuo feed, dai commenti, dalle reazioni, dalle classifiche e dalle sfide."
+    },
+    "1.3.0/1/title": {
+      "source": "Blocked users management",
+      "italian": "Gestione degli utenti bloccati"
+    },
+    "1.3.0/1/body": {
+      "source": "New screen in your profile to review and unblock users anytime.",
+      "italian": "Una nuova schermata nel tuo profilo per controllare e sbloccare gli utenti in qualsiasi momento."
+    },
+    "1.3.0/2/title": {
+      "source": "No noise",
+      "italian": "Nessun rumore"
+    },
+    "1.3.0/2/body": {
+      "source": "A blocked user can't comment on your activity, follow you or send you notifications.",
+      "italian": "Un utente bloccato non può commentare i tuoi post, seguirti né inviarti notifiche."
+    },
+    "1.2.1/summary": {
+      "source": "Mejoras y correcciones de esta versión.",
+      "italian": "Miglioramenti e correzioni di questa versione."
+    },
+    "1.2.1/0/title": {
+      "source": "web",
+      "italian": "web"
+    },
+    "1.2.1/0/body": {
+      "source": "Página de eliminación de cuenta para Google Play",
+      "italian": "Pagina di cancellazione dell'account su Google Play"
+    },
+    "1.2.1/1/title": {
+      "source": "web",
+      "italian": "web"
+    },
+    "1.2.1/1/body": {
+      "source": "Página de política de privacidad para Google Play",
+      "italian": "Pagina relativa all'informativa sulla privacy di Google Play"
+    },
+    "1.2.1/2/title": {
+      "source": "mcp",
+      "italian": "mcp"
+    },
+    "1.2.1/2/body": {
+      "source": "Widgets visuales para despensa y recetas (8 nuevos, 19 total) (#202)",
+      "italian": "Widget visivi per la dispensa e le ricette (8 nuovi, 19 in totale) (#202)"
+    },
+    "1.2.1/3/title": {
+      "source": "deps",
+      "italian": "dipendenze"
+    },
+    "1.2.1/3/body": {
+      "source": "Tailwindcss+vitest bumps in apps/web (#146 parte 3a) — Vite 8 reverted, blocked upstream (#200)",
+      "italian": "Aggiornamenti di Tailwindcss e Vitest in apps/web (#146 parte 3a) — aggiornamento a Vite 8 annullato, bloccato a monte (#200)"
+    },
+    "1.2.0/summary": {
+      "source": "Timed races get real ranking and a red countdown, and going offline no longer logs you out or loses your data.",
+      "italian": "Le gare a tempo hanno una classifica reale e un conto alla rovescia rosso, e quando ci si disconnette non si viene più disconnessi né si perdono i dati."
+    },
+    "1.2.0/0/title": {
+      "source": "Real ranking in timed races",
+      "italian": "Classifica effettiva nelle gare a tempo"
+    },
+    "1.2.0/0/body": {
+      "source": "Timed races now rank by distance covered instead of who synced first. The winner is tagged \"Went furthest\".",
+      "italian": "Le gare a tempo ora prevedono una classifica basata sulla distanza percorsa, anziché su chi ha sincronizzato per primo. Il vincitore viene indicato come chi ha percorso la distanza maggiore."
+    },
+    "1.2.0/1/title": {
+      "source": "Red final countdown",
+      "italian": "Conto alla rovescia finale rosso"
+    },
+    "1.2.0/1/body": {
+      "source": "The race's final 10 seconds turn red with a haptic + sound tick every second, so you know exactly when to push.",
+      "italian": "Gli ultimi 10 secondi della gara si colorano di rosso, accompagnati da un segnale tattile e sonoro ogni secondo, così saprai esattamente quando dare il massimo."
+    },
+    "1.2.0/2/title": {
+      "source": "No connection no longer logs you out",
+      "italian": "L'assenza di connessione non comporta più la disconnessione"
+    },
+    "1.2.0/2/body": {
+      "source": "Opening the app without internet used to log you out and could silently lose workouts saved while offline. Fixed — your session and offline data now survive starting up with no connection.",
+      "italian": "In precedenza, l'apertura dell'app senza connessione a Internet comportava la disconnessione dall'account e poteva causare la perdita silenziosa degli allenamenti salvati mentre si era offline. Problema risolto: ora la sessione e i dati offline vengono mantenuti anche all'avvio dell'app senza connessione."
+    },
+    "1.2.0/3/title": {
+      "source": "Zero now counts",
+      "italian": "Ora lo zero conta"
+    },
+    "1.2.0/3/body": {
+      "source": "Setting a macro to 0g or a circuit rest to 0s used to fall back to a default instead of respecting the zero you picked. Now it sticks.",
+      "italian": "In precedenza, quando si impostava una macro su 0 g o un tempo di riposo del circuito su 0 s, il sistema ricorreva al valore predefinito invece di rispettare lo zero selezionato. Ora il valore rimane invariato."
+    },
+    "1.2.0/4/title": {
+      "source": "Dependencies updated",
+      "italian": "Dipendenze aggiornate"
+    },
+    "1.2.0/4/body": {
+      "source": "Updated the PocketBase SDK and patched a low-severity vulnerability in an internal library.",
+      "italian": "È stato aggiornato l'SDK di PocketBase ed è stata corretta una vulnerabilità di bassa gravità in una libreria interna."
+    },
+    "1.1.0/summary": {
+      "source": "Your weekly insights level up: history, trends, an actionable tip, and an automatic summary every Monday.",
+      "italian": "Approfondimenti settimanali di livello superiore: storia, tendenze, un consiglio pratico e un riepilogo automatico ogni lunedì."
+    },
+    "1.1.0/0/title": {
+      "source": "Your weeks: insights history",
+      "italian": "Le tue settimane: cronologia delle analisi"
+    },
+    "1.1.0/0/body": {
+      "source": "A new screen collects your past weekly summaries so you can spot patterns over time. Filter them by week or month.",
+      "italian": "Una nuova schermata raccoglie i tuoi riepiloghi settimanali precedenti, così potrai individuare le tendenze nel tempo. Filtrali per settimana o per mese."
+    },
+    "1.1.0/1/title": {
+      "source": "Actionable suggestion",
+      "italian": "Suggerimento concreto"
+    },
+    "1.1.0/1/body": {
+      "source": "When it fits, your summary proposes a concrete next step and takes you there in one tap (reminders, nutrition, or a free session).",
+      "italian": "Quando è opportuno, il tuo riepilogo propone un passo concreto da compiere e ti porta direttamente lì con un solo tocco (promemoria, alimentazione o una sessione libera)."
+    },
+    "1.1.0/2/title": {
+      "source": "Weekly trend",
+      "italian": "Andamento settimanale"
+    },
+    "1.1.0/2/body": {
+      "source": "Each summary shows whether you're trending up, flat, or down versus last week with an ↑ / → / ↓ badge.",
+      "italian": "Ogni riepilogo indica se si registra un andamento in crescita, stabile o in calo rispetto alla settimana scorsa, tramite un simbolo ↑ / → / ↓."
+    },
+    "1.1.0/3/title": {
+      "source": "Automatic weekly summary",
+      "italian": "Riepilogo settimanale automatico"
+    },
+    "1.1.0/3/body": {
+      "source": "No need to generate it by hand anymore — every Monday morning we prepare your summary and let you know with a notification.",
+      "italian": "Non dovrai più crearlo manualmente: ogni lunedì mattina prepariamo il tuo riepilogo e ti avvisiamo con una notifica."
+    },
+    "1.0.9/summary": {
+      "source": "Weekly insights across your metrics, plus a 1,578-exercise catalog with filters and challenges.",
+      "italian": "Analisi settimanali dei tuoi dati, oltre a un catalogo di 1.578 esercizi con filtri e sfide."
+    },
+    "1.0.9/0/title": {
+      "source": "Your weekly insights",
+      "italian": "Le tue analisi settimanali"
+    },
+    "1.0.9/0/body": {
+      "source": "The app cross-references your sleep, workouts, nutrition, water and weight to surface your week's patterns with one actionable tip. Tap \"Generate\" on Home.",
+      "italian": "L'app mette in relazione i dati relativi al sonno, agli allenamenti, all'alimentazione, all'assunzione di acqua e al peso per evidenziare le tendenze della settimana con un consiglio pratico. Tocca \"Genera\" nella schermata Home."
+    },
+    "1.0.9/1/title": {
+      "source": "Catalog expanded to 1,578 exercises",
+      "italian": "Il catalogo è stato ampliato a 1.578 esercizi"
+    },
+    "1.0.9/1/body": {
+      "source": "The exercise catalog grows from 307 to 1,578 exercises, with Spanish names and instructions (98% with a description). No third-party GIFs for now.",
+      "italian": "Il catalogo degli esercizi passa da 307 a 1.578 esercizi, con nomi e istruzioni in spagnolo (il 98% con una descrizione). Per ora non sono presenti GIF di terze parti."
+    },
+    "1.0.9/2/title": {
+      "source": "Library filters on mobile",
+      "italian": "Filtri della libreria sui dispositivi mobili"
+    },
+    "1.0.9/2/body": {
+      "source": "Filter the library by difficulty, equipment and muscle group — now matching the web.",
+      "italian": "Filtra la libreria in base alla difficoltà, all’attrezzatura e al gruppo muscolare — ora in linea con il sito web."
+    },
+    "1.0.9/3/title": {
+      "source": "\"No equipment\" filter",
+      "italian": "Filtro \"Nessuna attrezzatura\""
+    },
+    "1.0.9/3/body": {
+      "source": "New filter to show only pure bodyweight exercises (454 in the catalog).",
+      "italian": "Nuovo filtro per visualizzare solo gli esercizi a corpo libero (454 nel catalogo)."
+    },
+    "1.0.9/4/title": {
+      "source": "Muscle groups and level-based variants",
+      "italian": "Gruppi muscolari e varianti in base al livello"
+    },
+    "1.0.9/4/body": {
+      "source": "Filter chips for 15 canonical muscle groups, plus a new \"Variants\" section on every exercise grouped by level — easier, same level, harder.",
+      "italian": "Schede di filtraggio per i 15 gruppi muscolari canonici, oltre a una nuova sezione “Varianti” per ogni esercizio, raggruppate per livello: più facile, stesso livello, più difficile."
+    },
+    "1.0.9/5/title": {
+      "source": "Related exercises",
+      "italian": "Esercizi correlati"
+    },
+    "1.0.9/5/body": {
+      "source": "Every exercise now suggests \"Related\" picks — similar movements by muscle that aren't variations of the same exercise.",
+      "italian": "Ogni esercizio ora propone dei suggerimenti \"Correlati\": movimenti simili a livello muscolare che non sono varianti dello stesso esercizio."
+    },
+    "1.0.9/6/title": {
+      "source": "Per-exercise challenges",
+      "italian": "Sfide per ogni esercizio"
+    },
+    "1.0.9/6/body": {
+      "source": "Create a challenge on any catalog exercise (e.g. \"30-day pull-up PR\") from the web; the leaderboard scores your best logged set.",
+      "italian": "Crea una sfida su qualsiasi esercizio del catalogo (ad esempio, “Record personale di pull-up in 30 giorni”) dal sito web; la classifica tiene conto della tua migliore serie registrata."
+    },
+    "1.0.9/7/title": {
+      "source": "PRs with added weight",
+      "italian": "PR con peso aggiuntivo"
+    },
+    "1.0.9/7/body": {
+      "source": "Personal records now estimate your e1RM when you log added weight.",
+      "italian": "I record personali ora calcolano il tuo e1RM quando registri un peso aggiuntivo."
+    },
+    "1.0.9/8/title": {
+      "source": "AI free session skips gym by default",
+      "italian": "La sessione libera IA esclude la palestra per impostazione predefinita"
+    },
+    "1.0.9/8/body": {
+      "source": "The AI free session skips gym-equipment exercises unless you turn them on.",
+      "italian": "La sessione libera IA esclude gli esercizi con attrezzi da palestra, a meno che non li abiliti."
+    },
+    "1.0.9/9/title": {
+      "source": "Translation fixes",
+      "italian": "Correzioni alla traduzione"
+    },
+    "1.0.9/9/body": {
+      "source": "8 exercises (like Muscle up) no longer show their description in English when the app is set to Spanish, and the difficulty chip on the exercise detail now translates correctly.",
+      "italian": "8 esercizi (come il Muscle up) non mostrano più la descrizione in inglese quando l'app è impostata in spagnolo, mentre l'indicatore di difficoltà nella scheda dettagliata dell'esercizio ora viene tradotto correttamente."
+    },
+    "1.0.7/summary": {
+      "source": "When a meal-photo analysis fails, you now see the real error instead of a silent failure.",
+      "italian": "Quando l'analisi delle foto dei pasti non va a buon fine, ora viene visualizzato l'errore effettivo invece di un errore silenzioso."
+    },
+    "1.0.7/0/title": {
+      "source": "Clearer meal-analysis errors",
+      "italian": "Errori più evidenti nell'analisi dei pasti"
+    },
+    "1.0.7/0/body": {
+      "source": "If a meal-photo analysis fails, the app shows the real error message so you know what happened. Failures are also reported automatically so they get fixed sooner.",
+      "italian": "Se l'analisi della foto di un pasto non va a buon fine, l'app mostra il messaggio di errore effettivo in modo che tu possa capire cosa è successo. Gli errori vengono inoltre segnalati automaticamente, in modo che possano essere risolti più rapidamente."
+    },
+    "1.0.6/summary": {
+      "source": "Pick the app theme —light, dark or automatic— and reopen what's new anytime to browse every version.",
+      "italian": "Scegli il tema dell'app — chiaro, scuro o automatico — e riapri la sezione \"Novità\" in qualsiasi momento per sfogliare tutte le versioni."
+    },
+    "1.0.6/0/title": {
+      "source": "Light & dark theme",
+      "italian": "Tema chiaro e scuro"
+    },
+    "1.0.6/0/body": {
+      "source": "Switch between light, dark or system mode from your profile. Your choice is remembered next time you open the app.",
+      "italian": "Puoi passare dalla modalità chiara a quella scura o alla modalità di sistema dal tuo profilo. La tua scelta verrà memorizzata per la prossima volta che aprirai l'app."
+    },
+    "1.0.6/1/title": {
+      "source": "What's-new history",
+      "italian": "Cronologia delle novità"
+    },
+    "1.0.6/1/body": {
+      "source": "Open what's new anytime from your profile and review every previous version.",
+      "italian": "Accedi in qualsiasi momento alla sezione \"Novità\" dal tuo profilo e consulta tutte le versioni precedenti."
+    },
+    "1.0.5/summary": {
+      "source": "Circuits and timed workouts, smartwatch data import, and richer nutrition sharing.",
+      "italian": "Circuiti e allenamenti a tempo, importazione dei dati dallo smartwatch e condivisione più completa delle informazioni nutrizionali."
+    },
+    "1.0.5/0/title": {
+      "source": "Circuits in free sessions",
+      "italian": "Circuiti nelle sessioni libere"
+    },
+    "1.0.5/0/body": {
+      "source": "Build circuits with rounds, rest between exercises and between rounds — then train them with a full-screen timer.",
+      "italian": "Crea circuiti con più giri e pause tra gli esercizi e tra i giri, poi allenati con un timer a schermo intero."
+    },
+    "1.0.5/1/title": {
+      "source": "Timed workouts",
+      "italian": "Allenamenti a tempo"
+    },
+    "1.0.5/1/body": {
+      "source": "Timed mode: set work and rest seconds per exercise and let the app guide you through it.",
+      "italian": "Modalità a tempo: imposta i secondi di esercizio e di riposo per ogni esercizio e lascia che l'app ti guidi durante l'allenamento."
+    },
+    "1.0.5/2/title": {
+      "source": "Smartwatch import",
+      "italian": "Importazione dei dati dallo smartwatch"
+    },
+    "1.0.5/2/body": {
+      "source": "Connect Health Connect to bring steps, sleep, heart rate, weight and more into your calendar and nutrition.",
+      "italian": "Collega Health Connect per integrare i passi, il sonno, la frequenza cardiaca, il peso e altro ancora nel tuo calendario e nel tuo programma alimentare."
+    },
+    "1.0.5/3/title": {
+      "source": "Nutrition share cards",
+      "italian": "Schede nutrizionali da condividere"
+    },
+    "1.0.5/3/body": {
+      "source": "New nutrition cards to share your day with each meal's thumbnail, name and macros.",
+      "italian": "Nuove schede nutrizionali per condividere la tua giornata con l'anteprima, il nome e i macronutrienti di ogni pasto."
+    },
+    "1.0.5/4/title": {
+      "source": "Cardio share maps",
+      "italian": "Condivisione delle mappe cardio"
+    },
+    "1.0.5/4/body": {
+      "source": "Fixed the blank map when sharing cardio sessions — your route shows up again.",
+      "italian": "È stato risolto il problema della mappa vuota durante la condivisione delle sessioni cardio: il percorso viene nuovamente visualizzato."
+    },
+    "1.0.4/summary": {
+      "source": "A unified calendar, meal timing, and a full look back at your past sessions.",
+      "italian": "Un calendario unico, gli orari dei pasti e una panoramica completa delle sessioni passate."
+    },
+    "1.0.4/0/title": {
+      "source": "Unified calendar",
+      "italian": "Calendario unificato"
+    },
+    "1.0.4/0/body": {
+      "source": "See all your activity — workouts, cardio, meals, sleep, water and weight — in one monthly view.",
+      "italian": "Visualizza tutte le tue attività — allenamenti, cardio, pasti, sonno, assunzione di acqua e peso — in un'unica panoramica mensile."
+    },
+    "1.0.4/1/title": {
+      "source": "Meal timing",
+      "italian": "Orari dei pasti"
+    },
+    "1.0.4/1/body": {
+      "source": "Log when you eat and how long each meal lasts, with a daily nutrition-quality score.",
+      "italian": "Registra quando mangi e quanto dura ogni pasto, con un punteggio giornaliero relativo alla qualità nutrizionale."
+    },
+    "1.0.4/2/title": {
+      "source": "Past-session details",
+      "italian": "Dettagli delle sessioni precedenti"
+    },
+    "1.0.4/2/body": {
+      "source": "Tap any past workout or cardio to see the full breakdown: sets, reps, route and map.",
+      "italian": "Tocca un qualsiasi allenamento o sessione di cardio precedenti per visualizzarne il dettaglio completo: serie, ripetizioni, percorso e mappa."
+    },
+    "1.0.4/3/title": {
+      "source": "Quick-access menu",
+      "italian": "Menu di accesso rapido"
+    },
+    "1.0.4/3/body": {
+      "source": "A new ☰ menu takes you in one tap to free sessions, community, races and reminders.",
+      "italian": "Un nuovo menu ☰ ti permette di accedere con un solo tocco alle sessioni libere, alla community, alle gare e ai promemoria."
+    },
+    "1.0.4/4/title": {
+      "source": "Free-session templates",
+      "italian": "Modelli per sessioni libere"
+    },
+    "1.0.4/4/body": {
+      "source": "Save your AI free sessions and reuse them anytime — no need to regenerate.",
+      "italian": "Salva le tue sessioni libere di IA e riutilizzale quando vuoi: non è necessario rigenerarle."
+    },
+    "1.0.4/5/title": {
+      "source": "Clearer exercise guides",
+      "italian": "Guide agli esercizi più chiare"
+    },
+    "1.0.4/5/body": {
+      "source": "Exercises now include tempo cues and clearer demo media to keep your form sharp.",
+      "italian": "Gli esercizi ora includono indicazioni sul ritmo e filmati dimostrativi più chiari per aiutarti a mantenere una tecnica impeccabile."
+    },
+    "1.0.4/6/title": {
+      "source": "Lock-screen controls",
+      "italian": "Controlli dalla schermata di blocco"
+    },
+    "1.0.4/6/body": {
+      "source": "Your live workout and cardio now stay visible and controllable from the lock screen (incl. Xiaomi/MIUI).",
+      "italian": "Ora puoi visualizzare e controllare i tuoi allenamenti in tempo reale e le sessioni di cardio direttamente dalla schermata di blocco (compresi Xiaomi/MIUI)."
+    },
+    "1.0.4/7/title": {
+      "source": "Smoother app",
+      "italian": "App più fluida"
+    },
+    "1.0.4/7/body": {
+      "source": "A performance sweep across several screens so everything feels lighter.",
+      "italian": "Ottimizzazioni delle prestazioni in diverse schermate, per un’app più fluida."
+    },
+    "1.0.3/summary": {
+      "source": "Push notifications and richer social activity.",
+      "italian": "Notifiche push e attività social più ricche."
+    },
+    "1.0.3/0/title": {
+      "source": "Push notifications",
+      "italian": "Notifiche push"
+    },
+    "1.0.3/0/body": {
+      "source": "Get notified when friends hit streaks, finish workouts or send you a nudge.",
+      "italian": "Ricevi una notifica quando i tuoi amici raggiungono una serie di giorni consecutivi, completano un allenamento o ti mandano un promemoria."
+    },
+    "1.0.3/1/title": {
+      "source": "Friend activity",
+      "italian": "Attività degli amici"
+    },
+    "1.0.3/1/body": {
+      "source": "Friend streaks, achievements and workouts now show up in your feed and notifications.",
+      "italian": "Le serie di attività degli amici, gli obiettivi raggiunti e gli allenamenti ora compaiono nel tuo feed e nelle notifiche."
+    },
+    "1.0.2/summary": {
+      "source": "An activity feed, shareable cards, and a more delightful session finish.",
+      "italian": "Un feed delle attività, schede condivisibili e una conclusione della sessione ancora più piacevole."
+    },
+    "1.0.2/0/title": {
+      "source": "Activity feed",
+      "italian": "Feed delle attività"
+    },
+    "1.0.2/0/body": {
+      "source": "See recent friend and personal activity on Home, with program search and filters.",
+      "italian": "Visualizza le attività recenti dei tuoi amici e le tue attività personali nella pagina Home, con la funzione di ricerca e i filtri."
+    },
+    "1.0.2/1/title": {
+      "source": "Session-complete delight",
+      "italian": "Festeggiamenti a fine sessione"
+    },
+    "1.0.2/1/body": {
+      "source": "Confetti, dynamic taglines and timing animations when you finish a workout.",
+      "italian": "Coriandoli, slogan accattivanti e animazioni a tempo al termine di un allenamento."
+    },
+    "1.0.2/2/title": {
+      "source": "Shareable cards",
+      "italian": "Schede condivisibili"
+    },
+    "1.0.2/2/body": {
+      "source": "Share your streak and session summary as an image.",
+      "italian": "Condividi la tua serie di allenamenti e il riepilogo della sessione sotto forma di immagine."
+    },
+    "1.0.2/3/title": {
+      "source": "Google login fix",
+      "italian": "Risoluzione del problema di accesso a Google"
+    },
+    "1.0.2/3/body": {
+      "source": "Fixes the infinite hang when signing in with Google on Honor/MagicOS.",
+      "italian": "Risolve il blocco infinito che si verificava durante l'accesso con Google su Honor/MagicOS."
+    },
+    "1.0.1/summary": {
+      "source": "Redesigned comments with push, local reminders, and better performance.",
+      "italian": "Commenti riprogettati con notifiche push, promemoria locali e prestazioni migliorate."
+    },
+    "1.0.1/0/title": {
+      "source": "Redesigned comments",
+      "italian": "Commenti riprogettati"
+    },
+    "1.0.1/0/body": {
+      "source": "A new comments UI with native keyboard and push notifications for comments and reactions.",
+      "italian": "Una nuova interfaccia utente per i commenti con tastiera nativa e notifiche push per commenti e reazioni."
+    },
+    "1.0.1/1/title": {
+      "source": "Local reminders",
+      "italian": "Promemoria locali"
+    },
+    "1.0.1/1/body": {
+      "source": "Schedule workout reminders right on your phone.",
+      "italian": "Imposta i promemoria per gli allenamenti direttamente sul tuo telefono."
+    },
+    "1.0.1/2/title": {
+      "source": "Data performance",
+      "italian": "Prestazioni dei dati"
+    },
+    "1.0.1/2/body": {
+      "source": "Faster data loading and sync.",
+      "italian": "Caricamento e sincronizzazione dei dati più rapidi."
+    },
+    "1.0.0/summary": {
+      "source": "The first mobile release: onboarding, programs, AI nutrition and guided sessions.",
+      "italian": "La prima versione per dispositivi mobili: onboarding, programmi, nutrizione basata sull’intelligenza artificiale e sessioni guidate."
+    },
+    "1.0.0/0/title": {
+      "source": "First mobile release",
+      "italian": "Prima versione per dispositivi mobili"
+    },
+    "1.0.0/0/body": {
+      "source": "The Calistenia app arrives on Android with your program, sessions and progress.",
+      "italian": "L'app Calistenia arriva su Android con il tuo programma, le tue sessioni e i tuoi progressi."
+    },
+    "1.0.0/1/title": {
+      "source": "Smart onboarding",
+      "italian": "Onboarding intelligente"
+    },
+    "1.0.0/1/body": {
+      "source": "We match you with the right programs based on your level and goals.",
+      "italian": "Ti proponiamo i programmi più adatti a te in base al tuo livello e ai tuoi obiettivi."
+    },
+    "1.0.0/2/title": {
+      "source": "AI meal logging",
+      "italian": "Registrazione dei pasti tramite IA"
+    },
+    "1.0.0/2/body": {
+      "source": "Log meals by describing them in text and let AI estimate the macros.",
+      "italian": "Registra i pasti descrivendoli con un testo e lascia che l'IA ne stimi i macronutrienti."
+    },
+    "1.0.0/3/title": {
+      "source": "Guided sessions",
+      "italian": "Sessioni guidate"
+    },
+    "1.0.0/3/body": {
+      "source": "Train with step-by-step sessions that respect your injured joints.",
+      "italian": "Allenati con sessioni guidate passo dopo passo che tengono conto delle tue articolazioni infortunate."
+    },
+    "feature/programs/title": {
+      "source": "Programs",
+      "italian": "Programmi"
+    },
+    "feature/programs/body": {
+      "source": "Phased calisthenics plans with weekly progression.",
+      "italian": "Piani di calisthenics per fasi con progressione settimanale."
+    },
+    "feature/library/title": {
+      "source": "Exercise library",
+      "italian": "Libreria di esercizi"
+    },
+    "feature/library/body": {
+      "source": "1,500+ exercises with demos, muscles and technique.",
+      "italian": "Oltre 1.500 esercizi con dimostrazioni, indicazione dei muscoli coinvolti e spiegazione della tecnica."
+    },
+    "feature/free_session/title": {
+      "source": "Free session",
+      "italian": "Sessione libera"
+    },
+    "feature/free_session/body": {
+      "source": "Ask AI for a tailored session or build your own in seconds.",
+      "italian": "Chiedi all'IA una sessione personalizzata oppure creane una tu stesso in pochi secondi."
+    },
+    "feature/circuit/title": {
+      "source": "Circuits & timed mode",
+      "italian": "Circuiti e modalità a tempo"
+    },
+    "feature/circuit/body": {
+      "source": "Timed rounds and stations, guided from your program or free session.",
+      "italian": "Giri e stazioni a tempo, guidati dal tuo programma o dalla sessione libera."
+    },
+    "feature/cardio_gps/title": {
+      "source": "GPS cardio",
+      "italian": "Cardio con GPS"
+    },
+    "feature/cardio_gps/body": {
+      "source": "Run with live route, pace and personal records.",
+      "italian": "Corri con percorso in tempo reale, passo e record personali."
+    },
+    "feature/races/title": {
+      "source": "Races with friends",
+      "italian": "Gare con gli amici"
+    },
+    "feature/races/body": {
+      "source": "Create races, share the code and compete in real time.",
+      "italian": "Crea gare, condividi il codice e gareggia in tempo reale."
+    },
+    "feature/meal_photo/title": {
+      "source": "Photo logging",
+      "italian": "Registrazione con foto"
+    },
+    "feature/meal_photo/body": {
+      "source": "Snap your meal and AI calculates calories and macros.",
+      "italian": "Fotografa il tuo pasto: l’IA calcola calorie e macronutrienti."
+    },
+    "feature/meal_plan/title": {
+      "source": "Weekly plan + AI coach",
+      "italian": "Programma settimanale + coach basato sull'intelligenza artificiale"
+    },
+    "feature/meal_plan/body": {
+      "source": "Plan your week with the coach and track your nutrition score.",
+      "italian": "Organizza la tua settimana con il coach e monitora il tuo punteggio nutrizionale."
+    },
+    "feature/pantry/title": {
+      "source": "Pantry with AI chat",
+      "italian": "Dispensa con chat basata sull'intelligenza artificiale"
+    },
+    "feature/pantry/body": {
+      "source": "Track what you have at home and ask for recipes with it.",
+      "italian": "Tieni traccia di ciò che hai in casa e chiedi ricette che lo prevedano."
+    },
+    "feature/saved_recipes/title": {
+      "source": "Saved recipes",
+      "italian": "Ricette salvate"
+    },
+    "feature/saved_recipes/body": {
+      "source": "Your favorite coach recipes, ready to repeat.",
+      "italian": "Le tue ricette preferite del coach, pronte da preparare di nuovo."
+    },
+    "feature/history/title": {
+      "source": "History & PRs",
+      "italian": "Cronologia e record personali"
+    },
+    "feature/history/body": {
+      "source": "All your strength and cardio sessions in one timeline.",
+      "italian": "Tutte le tue sessioni di forza e cardio in un'unica cronologia."
+    },
+    "feature/calendar/title": {
+      "source": "Unified calendar",
+      "italian": "Calendario unificato"
+    },
+    "feature/calendar/body": {
+      "source": "Workouts, meals, cardio and more: 6 metrics crossed per day.",
+      "italian": "Allenamenti, pasti, cardio e altro: 6 metriche a confronto per ogni giorno."
+    },
+    "feature/insights/title": {
+      "source": "Weekly AI insights",
+      "italian": "Analisi settimanali IA"
+    },
+    "feature/insights/body": {
+      "source": "AI crosses your data and tells you what's working.",
+      "italian": "L’IA mette in relazione i tuoi dati e ti indica cosa funziona."
+    },
+    "feature/progress_photos/title": {
+      "source": "Progress photos",
+      "italian": "Foto dei progressi"
+    },
+    "feature/progress_photos/body": {
+      "source": "Compare your physique month to month with private photos.",
+      "italian": "Confronta il tuo fisico di mese in mese con foto private."
+    },
+    "feature/health/title": {
+      "source": "Watch & health",
+      "italian": "Orologio e salute"
+    },
+    "feature/health/body": {
+      "source": "Connect your smartwatch via Health Connect.",
+      "italian": "Collega il tuo smartwatch tramite Health Connect."
+    },
+    "feature/friends/title": {
+      "source": "Friends",
+      "italian": "Amici"
+    },
+    "feature/friends/body": {
+      "source": "Follow your friends and train together.",
+      "italian": "Segui i tuoi amici e allenatevi insieme."
+    },
+    "feature/social_feed/title": {
+      "source": "Social feed",
+      "italian": "Feed social"
+    },
+    "feature/social_feed/body": {
+      "source": "React and comment on activity from people you follow.",
+      "italian": "Reagisci e commenta i post delle persone che segui."
+    },
+    "feature/leaderboard/title": {
+      "source": "Leaderboard",
+      "italian": "Classifica"
+    },
+    "feature/leaderboard/body": {
+      "source": "Compete on sessions, streak and volume with your friends.",
+      "italian": "Confrontati con gli amici per sessioni, serie consecutive e volume di allenamento."
+    },
+    "feature/challenges/title": {
+      "source": "Challenges",
+      "italian": "Sfide"
+    },
+    "feature/challenges/body": {
+      "source": "Join challenges and stay consistent.",
+      "italian": "Partecipa alle sfide e mantieni la costanza."
+    },
+    "feature/reminders/title": {
+      "source": "Reminders",
+      "italian": "Promemoria"
+    },
+    "feature/reminders/body": {
+      "source": "Local reminders for meals, workouts and active breaks.",
+      "italian": "Promemoria locali per i pasti, gli allenamenti e le pause attive."
+    },
+    "feature/widgets/title": {
+      "source": "Android widgets",
+      "italian": "Widget Android"
+    },
+    "feature/widgets/body": {
+      "source": "Your day on the home screen: long-press your launcher → Widgets.",
+      "italian": "La tua giornata nella schermata iniziale: tieni premuto sulla schermata Home → Widget."
+    }
+  },
+  "localContentCounts": {
+    "changelogVersions": 35,
+    "changelogTexts": 317,
+    "discoveryFeatures": 21,
+    "discoveryTexts": 42
+  }
+}

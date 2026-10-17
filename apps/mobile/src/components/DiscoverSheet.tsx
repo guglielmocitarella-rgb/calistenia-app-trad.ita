@@ -1,3 +1,4 @@
+import { localContentLabel } from '@/lib/secondary-content-labels'
 /**
  * DiscoverSheet — sección «Descubre» de Perfil (issue #236): bottom sheet con
  * el directorio completo de features de la app agrupado por categoría, cada una
@@ -13,7 +14,7 @@
  * con drag-to-close en la cabecera.
  */
 import { useMemo } from 'react'
-import { Modal, Pressable, ScrollView, StyleSheet, View, useWindowDimensions } from 'react-native'
+import { Modal, Platform, Pressable, ScrollView, StyleSheet, View, useWindowDimensions } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { Gesture, GestureDetector, GestureHandlerRootView } from 'react-native-gesture-handler'
 import Animated, {
@@ -57,7 +58,7 @@ import {
 import { Text } from '@/components/ui/text'
 import { COLORS } from '@/lib/theme'
 import { op } from '@calistenia/core/lib/analytics'
-import { groupFeatures, pickLang, type FeatureEntry } from '@calistenia/core/lib/discover'
+import { groupFeatures, type FeatureEntry } from '@calistenia/core/lib/discover'
 import featuresJson from '@calistenia/core/data/features.json'
 
 // Mapa nombre→icono: resolución estática de los nombres del JSON.
@@ -229,10 +230,10 @@ export function DiscoverSheet({ visible, onClose }: { visible: boolean; onClose:
                             </View>
                             <View className="flex-1">
                               <Text className="font-sans-medium text-sm text-foreground">
-                                {pickLang(f.title, i18n.language)}
+                                {localContentLabel(f.title, `feature/${f.id}/title`, i18n.language, Platform.OS)}
                               </Text>
                               <Text className="mt-0.5 text-xs leading-snug text-muted-foreground">
-                                {pickLang(f.body, i18n.language)}
+                                {localContentLabel(f.body, `feature/${f.id}/body`, i18n.language, Platform.OS)}
                               </Text>
                             </View>
                             {f.route && <ChevronRight size={16} color={COLORS.mutedIcon} />}
