@@ -7,7 +7,7 @@ const labels: Record<string, string> = {
   'Error al buscar. ¿Reintentar?': 'Errore durante la ricerca. Riprovare?', REINTENTAR: 'RIPROVA',
   'Buscar amigos...': 'Cerca amici...', Perfil: 'Profilo',
   'No se pudo cargar el perfil.': 'Impossibile caricare il profilo.',
-  Sesiones: 'Sessioni', Racha: 'Continuità', Mejor: 'Migliore', Nivel: 'Livello', sem: 'sett.',
+  Sesiones: 'Sessioni', Racha: 'Serie', Mejor: 'Record', Nivel: 'Livello', sem: 'sett.',
   'Programa actual': 'Programma attuale', Fase: 'Fase', 'Records personales': 'Record personali',
   'Actividad este mes': 'Attività di questo mese', 'Sesiones recientes': 'Sessioni recenti',
   Comentarios: 'Commenti', total: 'totale', 'Respondiendo a': 'In risposta a',

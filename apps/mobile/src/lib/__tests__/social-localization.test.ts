@@ -56,3 +56,11 @@ it('localizes battle share wording while preserving rank, ties and circuit names
   expect(socialBattleMessage('original', input, 'en', 'android')).toBe('original')
   expect(input.rank).toBe(2)
 })
+
+
+it('keeps the full sessions label and distinguishes current and record streaks', () => {
+  expect(['Sesiones', 'Racha', 'Mejor', 'Nivel'].map(label => socialLabel(label, 'it', 'android')))
+    .toEqual(['Sessioni', 'Serie', 'Record', 'Livello'])
+  expect(socialLabel('Racha', 'en', 'android')).toBe('Racha')
+  expect(socialLabel('Mejor', 'it', 'ios')).toBe('Mejor')
+})

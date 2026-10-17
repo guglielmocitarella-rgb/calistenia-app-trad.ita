@@ -5,7 +5,7 @@ import { useSocialDisplay } from '@/lib/use-social-display'
  * Ruta: /u/[id] (la usa friends.tsx al tocar un usuario).
  */
 import { useState } from 'react'
-import { View, ScrollView, Image, ActivityIndicator, Pressable, Alert, Platform } from 'react-native'
+import { View, ScrollView, Image, ActivityIndicator, Pressable, Alert, Platform, useWindowDimensions } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useLocalSearchParams, useRouter } from 'expo-router'
 import { X, MoreVertical, UserX, Flag, ChevronRight, Lock } from 'lucide-react-native'
@@ -35,13 +35,16 @@ const PR_DEFS: { key: keyof ProfilePRs; label: string; unit: string; accent: str
 ]
 
 function StatBox({ label, value, accent, unit }: { label: string; value: number; accent: string; unit?: string }) {
+  const { i18n } = useTranslation()
+  const { width, fontScale } = useWindowDimensions()
+  const compactItalian = Platform.OS === 'android' && i18n.language.toLowerCase().split(/[-_]/)[0] === 'it'
   return (
-    <View className="flex-1 rounded-xl border border-border bg-card p-4">
+    <View className={cn('flex-1 rounded-xl border border-border bg-card py-4', compactItalian ? 'px-1' : 'px-4')} style={compactItalian && (fontScale > 1.15 || width < 320) ? { flexBasis: '45%' } : undefined}>
       <Text className={cn('font-bebas text-3xl leading-none', accent)}>
         {value}
         {unit ? <Text className="font-bebas text-lg text-muted-foreground"> {unit}</Text> : null}
       </Text>
-      <Text className="mt-1 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">{label}</Text>
+      <Text className={cn('mt-1 font-mono text-[10px] uppercase text-muted-foreground', compactItalian ? 'tracking-normal' : 'tracking-widest')}>{label}</Text>
     </View>
   )
 }
@@ -296,7 +299,7 @@ export default function UserProfileScreen() {
         {!blocked && !locked ? (<>
 
         {/* Stats */}
-        <View className="mb-6 flex-row gap-2">
+        <View className={cn('mb-6 flex-row gap-2', Platform.OS === 'android' && i18n.language.toLowerCase().split(/[-_]/)[0] === 'it' && 'flex-wrap')}>
           <StatBox label={sd.label('Sesiones')} value={profile.totalSessions} accent="text-lime" />
           <StatBox label={sd.label('Racha')} value={profile.currentStreak} accent="text-sky-500" unit={sd.label('sem')} />
           <StatBox label={sd.label('Mejor')} value={profile.bestStreak} accent="text-amber-400" unit={sd.label('sem')} />
