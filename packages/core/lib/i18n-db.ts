@@ -1,3 +1,5 @@
+import { getLanguagePolicy } from '../platform'
+
 /**
  * Helpers for reading translated PocketBase JSON fields.
  *
@@ -28,6 +30,9 @@ export function localize(
  * Used when saving user-created content to PocketBase.
  */
 export function toTranslatable(value: string, locale: string): Record<string, string> {
+  if (getLanguagePolicy() && locale !== 'es' && locale !== 'en') {
+    throw new Error('Idioma de contenido no compatible con el servidor')
+  }
   return { [locale]: value }
 }
 
@@ -49,6 +54,9 @@ export function duplicatedName(
   field: TranslatableField | undefined | null,
   locale: string,
 ): Record<string, string> {
+  if (getLanguagePolicy() && locale !== 'es' && locale !== 'en') {
+    throw new Error('Idioma de contenido no compatible con el servidor')
+  }
   const suffixed = (text: string, loc: string) =>
     `${text} ${COPY_SUFFIX[loc] ?? COPY_SUFFIX.es}`.trim()
   const entries = field && typeof field === 'object' ? Object.entries(field) : []

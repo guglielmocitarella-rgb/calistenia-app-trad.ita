@@ -1,3 +1,4 @@
+import { useSocialDisplay } from '@/lib/use-social-display'
 /**
  * Carrera en vivo — port móvil del RaceLive web: stats propias, barra de
  * progreso hacia el objetivo, mapa con participantes y leaderboard realtime.
@@ -35,6 +36,7 @@ function cartoStyle(dark: boolean) {
 
 export default function RaceLive() {
   const { t } = useTranslation()
+  const sd = useSocialDisplay()
   const { colorScheme } = useColorScheme()
   const { race, participants, me, myStats, actions, lastError, clearError } = useRaceContext()
 
@@ -123,7 +125,7 @@ export default function RaceLive() {
       {/* Mis stats */}
       <View className="flex-row gap-2">
         <View className="flex-1 items-center rounded-xl bg-muted/60 p-3">
-          <Text className="font-bebas text-4xl leading-none text-lime">{(myStats?.distance_km ?? 0).toFixed(2)}</Text>
+          <Text className="font-bebas text-4xl leading-none text-lime">{sd.number((myStats?.distance_km ?? 0).toFixed(2))}</Text>
           <Text className="mt-1 font-mono text-[9px] uppercase tracking-widest text-muted-foreground">{t('race.km')}</Text>
         </View>
         <View className={cn('flex-1 items-center rounded-xl bg-muted/60 p-3', inFinalCountdown && 'bg-red-500/10')}>
@@ -198,7 +200,7 @@ export default function RaceLive() {
               ) : (
                 <>
                   <Text className="font-mono text-[11px] text-sky-500">{formatPace(p.avg_pace)}</Text>
-                  <Text className="w-16 text-right font-bebas text-lg text-foreground">{dist.toFixed(2)} km</Text>
+                  <Text className="w-16 text-right font-bebas text-lg text-foreground">{sd.number(dist.toFixed(2))} km</Text>
                 </>
               )}
             </View>

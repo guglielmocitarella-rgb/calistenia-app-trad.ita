@@ -1,3 +1,4 @@
+import { widgetLanguage } from './widget-language'
 /**
  * Sincroniza los widgets de nutrición: escribe el snapshot en AsyncStorage
  * y fuerza el refresh de NutritionWidget + NutritionRingWidget + MealStreakWidget
@@ -51,7 +52,7 @@ export async function syncNutritionWidget(
       mealStreakToday: meal.mealStreakToday,
       waterMl: water.waterMl,
       waterGoalMl: water.waterGoalMl,
-      lang: i18n.language?.startsWith('en') ? 'en' : 'es',
+      lang: widgetLanguage(i18n.language),
       tz: getTimezone(),
     }
 

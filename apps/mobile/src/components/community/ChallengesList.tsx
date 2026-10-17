@@ -1,3 +1,4 @@
+import { useSocialDisplay } from '@/lib/use-social-display'
 /**
  * Lista de retos (filtro Activos/Finalizados + catálogo de presets), sin cabecera.
  *
@@ -39,6 +40,7 @@ type TabFilter = 'active' | 'past'
 
 export default function ChallengesList() {
   const { t } = useTranslation()
+  const sd = useSocialDisplay()
   const router = useRouter()
   const user = useAuthUser()
   const userId = user?.id ?? null
@@ -96,7 +98,7 @@ export default function ChallengesList() {
     Alert.alert(
       t('challenge.preset.confirmTitle'),
       t('challenge.preset.confirmBody', {
-        title: t(preset.titleKey),
+        title: sd.presetKey(t(preset.titleKey), preset.titleKey),
         startsAt: dates.startsAt,
         endsAt: dates.endsAt,
       }),
@@ -207,6 +209,7 @@ interface ChallengeCardProps {
 
 function ChallengeCard({ challenge: ch, onOpen }: ChallengeCardProps) {
   const { t } = useTranslation()
+  const sd = useSocialDisplay()
   const isActive = ch.status === 'active'
   const metricLabel = getMetricLabel(ch.metric, ch.custom_metric, ch.exercise_slug)
   const daysLeft = daysRemaining(ch.ends_at, ch.starts_at)
@@ -217,7 +220,7 @@ function ChallengeCard({ challenge: ch, onOpen }: ChallengeCardProps) {
       <View className="flex-row items-start justify-between gap-3">
         <View className="flex-1 min-w-0">
           <Text className="font-sans-medium text-foreground" numberOfLines={2}>
-            {resolvePresetChallengeTitle(ch)}
+            {sd.preset(resolvePresetChallengeTitle(ch), ch)}
           </Text>
         </View>
       </View>
@@ -267,7 +270,7 @@ function ChallengeCard({ challenge: ch, onOpen }: ChallengeCardProps) {
       {/* Description if present */}
       {ch.description ? (
         <Text className="font-mono text-[10px] text-muted-foreground/70 leading-relaxed" numberOfLines={2}>
-          {resolvePresetChallengeDescription(ch)}
+          {sd.preset(resolvePresetChallengeDescription(ch), ch, true)}
         </Text>
       ) : null}
     </Pressable>
@@ -284,6 +287,7 @@ function BeginnerPresetCatalog({
   onOpen: (challengeId: string) => void
 }) {
   const { t } = useTranslation()
+  const sd = useSocialDisplay()
 
   return (
     // Sin px-4: el padding horizontal ya lo pone el contentContainer de la lista.
@@ -303,8 +307,8 @@ function BeginnerPresetCatalog({
           <View key={preset.id} className={cn('rounded-xl border bg-card p-4 gap-3', preset.enabled ? 'border-border' : 'border-border/60 opacity-70')}>
             <View className="flex-row items-start justify-between gap-3">
               <View className="flex-1">
-                <Text className="font-sans-medium text-foreground">{t(preset.titleKey)}</Text>
-                <Text className="font-sans text-xs leading-relaxed text-muted-foreground mt-1">{t(preset.descriptionKey)}</Text>
+                <Text className="font-sans-medium text-foreground">{sd.presetKey(t(preset.titleKey), preset.titleKey)}</Text>
+                <Text className="font-sans text-xs leading-relaxed text-muted-foreground mt-1">{sd.presetKey(t(preset.descriptionKey), preset.descriptionKey)}</Text>
               </View>
               <Text className="font-mono text-[10px] uppercase tracking-widest text-lime">{t('challenge.preset.difficulty')}</Text>
             </View>

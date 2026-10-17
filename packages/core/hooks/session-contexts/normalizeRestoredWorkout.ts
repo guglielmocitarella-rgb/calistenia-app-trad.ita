@@ -28,7 +28,7 @@
  * efecto que persiste, así que un objeto nuevo en cada montaje re-renderizaría
  * media app y reescribiría el storage sin motivo.
  */
-import i18n from 'i18next'
+import { contentLanguage } from '../../lib/content-language'
 import type { CircuitDefinition, CircuitExercise, Exercise, Workout } from '../../types'
 import { resolveExerciseDisplayName, resolveExerciseNameField } from '../../lib/exercise-resolver'
 import { inferTimerFromReps } from '../../lib/exercise-timer-inference'
@@ -58,7 +58,7 @@ function normalizeExercise(ex: Exercise, locale: string): Exercise {
  * El `Workout` de una sesión de fuerza restaurada, con nombres y cronómetros
  * al día. Misma referencia si ningún ejercicio cambió.
  */
-export function normalizeRestoredWorkout(workout: Workout, locale: string = i18n.language): Workout {
+export function normalizeRestoredWorkout(workout: Workout, locale: string = contentLanguage()): Workout {
   const exercises = workout.exercises
   if (!Array.isArray(exercises) || exercises.length === 0) return workout
   let changed = false
@@ -73,7 +73,7 @@ export function normalizeRestoredWorkout(workout: Workout, locale: string = i18n
 /** `normalizeRestoredWorkout` tolerante a un snapshot ausente. */
 export function normalizeRestoredWorkoutOrNull(
   workout: Workout | null | undefined,
-  locale: string = i18n.language,
+  locale: string = contentLanguage(),
 ): Workout | null {
   if (!workout) return null
   return normalizeRestoredWorkout(workout, locale)

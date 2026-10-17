@@ -1,3 +1,4 @@
+import { useTrainingLabels } from '@/lib/use-training-labels'
 /**
  * Pantalla de detalle de una sesión de cardio — accesible desde el feed de amigos
  * o desde el historial propio. Carga la sesión completa (incluyendo gps_points)
@@ -6,7 +7,8 @@
  * Ruta: /cardio/[id]
  */
 import { useEffect } from 'react'
-import { View, ScrollView, ActivityIndicator, Pressable } from 'react-native'
+import { useTranslation } from 'react-i18next'
+import { View, ScrollView, ActivityIndicator, Pressable, Platform } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useLocalSearchParams, useRouter } from 'expo-router'
 import { ArrowLeft } from 'lucide-react-native'
@@ -26,12 +28,14 @@ import { CANONICAL_ANALYTICS_EVENTS, trackCanonicalEvent } from '@calistenia/cor
 const LIME = 'hsl(74 90% 45%)'
 
 export default function CardioDetailScreen() {
+  const { label } = useTrainingLabels()
+  const { i18n } = useTranslation()
   const { id } = useLocalSearchParams<{ id: string }>()
   const router = useRouter()
   const me = useAuthUser()
 
   const { session, authorName, loading, error: loadFailed, isOwn: isOwnSession } = useCardioSessionDetail(id, me?.id)
-  const error = loadFailed ? 'No se pudo cargar la sesión.' : null
+  const error = loadFailed ? label('No se pudo cargar la sesión.', 'cardio.historyError') : null
 
   // Mismo evento y misma propiedad que web (#636 §5).
   const sessionLoaded = !!session
@@ -71,7 +75,7 @@ export default function CardioDetailScreen() {
         <View className="flex-1 items-center justify-center px-8">
           <Text className="text-2xl">😕</Text>
           <Text className="mt-2 text-center text-sm text-muted-foreground">
-            {error ?? 'Sesión no encontrada.'}
+            {error ?? label('Sesión no encontrada.', 'cardio.sessionNotFound')}
           </Text>
         </View>
       </SafeAreaView>
@@ -79,7 +83,7 @@ export default function CardioDetailScreen() {
   }
 
   const activity = session.activity_type
-  const activityLabel = activity.charAt(0).toUpperCase() + activity.slice(1)
+  const activityLabel = label(activity.charAt(0).toUpperCase() + activity.slice(1), `cardio.${activity}`)
 
   return (
     <SafeAreaView className="flex-1 bg-background" edges={['top', 'bottom']}>
@@ -100,7 +104,7 @@ export default function CardioDetailScreen() {
             </Text>
           ) : null}
           <Text className="font-mono text-[10px] uppercase tracking-[2px] text-muted-foreground mt-0.5">
-            {formatCardioDate(session.finished_at)}
+            {formatCardioDate(session.finished_at, Platform.OS === 'android' && i18n.language.split('-')[0] === 'it' ? 'it' : 'es')}
           </Text>
         </View>
 
@@ -127,7 +131,7 @@ export default function CardioDetailScreen() {
           />
           <StatBox
             value={formatDuration(session.duration_seconds)}
-            label="TIEMPO"
+            label={label('TIEMPO', 'cardio.duration')}
             accent="text-foreground"
           />
           <StatBox
@@ -151,7 +155,7 @@ export default function CardioDetailScreen() {
           />
           <StatBox
             value={`${session.elevation_gain ?? 0}m`}
-            label="DESNIVEL"
+            label={label('DESNIVEL', 'cardio.elevation')}
             accent="text-amber-400"
             small
           />
@@ -161,7 +165,7 @@ export default function CardioDetailScreen() {
                 ? formatSpeed(session.max_speed_kmh ?? 0)
                 : formatPace(session.max_pace ?? 0)
             }
-            label={isCycling ? 'VEL. MÁX' : 'MEJOR RITMO'}
+            label={label(isCycling ? 'VEL. MÁX' : 'MEJOR RITMO', isCycling ? 'cardio.maxSpeed' : 'cardio.bestPace')}
             accent="text-pink-500"
             small
           />
@@ -172,19 +176,19 @@ export default function CardioDetailScreen() {
           <View className="flex-row gap-3">
             <StatBox
               value={session.hr_avg ? String(session.hr_avg) : '—'}
-              label="FC MEDIA"
+              label={label('FC MEDIA')}
               accent="text-red-500"
               small
             />
             <StatBox
               value={session.hr_max ? String(session.hr_max) : '—'}
-              label="FC MÁX"
+              label={label('FC MÁX')}
               accent="text-red-500"
               small
             />
             <StatBox
               value={session.calories_actual ? String(session.calories_actual) : '—'}
-              label="KCAL RELOJ"
+              label={label('KCAL RELOJ')}
               accent="text-red-500"
               small
             />
@@ -195,7 +199,7 @@ export default function CardioDetailScreen() {
         {session.splits && session.splits.length > 0 && (
           <View className="gap-2">
             <Kicker>
-              SPLITS
+              {label('SPLITS', 'cardio.splits')}
             </Kicker>
             <SplitsTable splits={session.splits} />
           </View>
@@ -205,7 +209,7 @@ export default function CardioDetailScreen() {
         {Boolean(session.note) && (
           <View className="rounded-xl border border-border bg-muted/20 px-4 py-3">
             <Text className="font-mono text-[10px] uppercase tracking-[2px] text-muted-foreground mb-1.5">
-              NOTA
+              {label('NOTA', 'session.note')}
             </Text>
             <Text className="font-sans-italic text-sm text-muted-foreground leading-5">
               &quot;{session.note}&quot;
@@ -227,13 +231,14 @@ export default function CardioDetailScreen() {
 // ── Sub-components ────────────────────────────────────────────────────────────
 
 function Header({ router, title }: { router: ReturnType<typeof useRouter>; title: string }) {
+  const { label } = useTrainingLabels()
   return (
     <View className="flex-row items-center gap-2 px-2 py-1">
       <Pressable
         onPress={() => router.back()}
         hitSlop={8}
         className="p-2"
-        accessibilityLabel="Volver"
+        accessibilityLabel={label('Volver', 'common.back')}
       >
         <ArrowLeft size={20} color="hsl(0 0% 55%)" />
       </Pressable>
@@ -266,11 +271,11 @@ function StatBox({ value, label, accent, small }: StatBoxProps) {
   )
 }
 
-function formatCardioDate(iso?: string): string {
+function formatCardioDate(iso?: string, locale = 'es'): string {
   if (!iso) return ''
   try {
     const d = new Date(iso.replace(' ', 'T'))
-    return d.toLocaleDateString('es', {
+    return d.toLocaleDateString(locale, {
       weekday: 'long',
       day: 'numeric',
       month: 'long',

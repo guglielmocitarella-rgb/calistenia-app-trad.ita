@@ -1,3 +1,4 @@
+import { useSecondaryDisplay } from '@/lib/use-secondary-display'
 /**
  * WorkoutShareCard — RN View replica of web WorkoutShareCard.
  * Layout (flex column, space-between so it fills the frame at any height):
@@ -52,11 +53,11 @@ export interface WorkoutShareCardProps {
   height?: number
 }
 
-function formatDate(dateStr?: string): string {
+function formatDate(dateStr?: string, locale = 'es'): string {
   if (!dateStr) return ''
   try {
     const d = new Date(`${dateStr}T12:00:00`)
-    return d.toLocaleDateString('es', {
+    return d.toLocaleDateString(locale, {
       weekday: 'long',
       day: 'numeric',
       month: 'long',
@@ -103,6 +104,7 @@ function WorkoutShareCard({
   width = BASE_W,
   height = 640,
 }: WorkoutShareCardProps) {
+  const display = useSecondaryDisplay()
   const s = makeStyles(width, height)
   const initials = (userName ?? '?')[0].toUpperCase()
   const exList = (exercises ?? []).slice(0, 8)
@@ -134,7 +136,7 @@ function WorkoutShareCard({
                 {userName ?? 'Atleta'}
               </Text>
               <Text className="font-mono" style={s.dateText}>
-                {formatDate(date)}
+                {formatDate(date, display.locale('es'))}
               </Text>
             </View>
           </View>
@@ -142,7 +144,7 @@ function WorkoutShareCard({
           {/* "SESIÓN COMPLETADA" badge */}
           <View style={s.badge}>
             <Text className="font-mono-semibold" style={s.badgeText}>
-              SESIÓN COMPLETADA
+              {display.label("SESIÓN COMPLETADA")}
             </Text>
           </View>
 
@@ -153,9 +155,9 @@ function WorkoutShareCard({
 
           {/* Stats row */}
           <View style={s.statsRow}>
-            <StatBox icon="🔥" value={String(totalSets)} label="SERIES" color={C.lime} s={s} />
-            <StatBox icon="⏱" value={String(durationMin)} label="MINUTOS" color={C.blue} s={s} />
-            <StatBox icon="💪" value={String(exercises?.length ?? 0)} label="EJERCICIOS" color={C.pink} s={s} />
+            <StatBox icon="🔥" value={String(totalSets)} label={display.label("SERIES")} color={C.lime} s={s} />
+            <StatBox icon="⏱" value={String(durationMin)} label={display.label("MINUTOS")} color={C.blue} s={s} />
+            <StatBox icon="💪" value={String(exercises?.length ?? 0)} label={display.label("EJERCICIOS")} color={C.pink} s={s} />
           </View>
         </View>
 
@@ -163,7 +165,7 @@ function WorkoutShareCard({
         {exList.length > 0 && (
           <View style={s.exListContainer}>
             <Text className="font-mono" style={s.exListHeader}>
-              EJERCICIOS · TIEMPO
+              {display.label("EJERCICIOS · TIEMPO")}
             </Text>
             <View style={s.exListCard}>
               {exList.map((ex, i) => {
@@ -198,7 +200,7 @@ function WorkoutShareCard({
               })}
               {extraCount > 0 && (
                 <Text className="font-mono" style={s.exMore}>
-                  +{extraCount} más
+                  +{extraCount} {display.label('más')}
                 </Text>
               )}
             </View>

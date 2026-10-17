@@ -29,3 +29,15 @@ describe('resolveInitialLanguage (#821)', () => {
     expect(resolveInitialLanguage('de', 'en')).toBe('en')
   })
 })
+
+describe('Italian UI preference', () => {
+  it.each(['it', 'it-IT', 'IT'])('recognizes Italian device %s', tag => {
+    expect(resolveInitialLanguage(tag)).toBe('it')
+  })
+  it('persists manual Italian and preserves ES/EN precedence', () => {
+    expect(resolveInitialLanguage('es', 'it')).toBe('it')
+    expect(resolveInitialLanguage('it', 'es')).toBe('es')
+    expect(resolveInitialLanguage('it', 'en')).toBe('en')
+    expect(['it', 'en', 'es', 'it'].map(saved => resolveInitialLanguage('it', saved))).toEqual(['it', 'en', 'es', 'it'])
+  })
+})

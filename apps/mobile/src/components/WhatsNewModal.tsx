@@ -1,3 +1,5 @@
+import { localContentLabel } from '@/lib/secondary-content-labels'
+import { secondaryLabel } from '@/lib/secondary-ui-labels'
 /**
  * "Novedades" — hoja inferior que se desliza al abrir la app por primera vez tras
  * una actualización. Muestra los cambios curados (resumen + highlights bilingües)
@@ -15,7 +17,7 @@
  * aparecer solo cuando el usuario llega al inicio y nunca durante una sesión.
  */
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { Modal, Pressable, ScrollView, StyleSheet, View, useWindowDimensions } from 'react-native'
+import { Modal, Platform, Pressable, ScrollView, StyleSheet, View, useWindowDimensions } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { Gesture, GestureDetector, GestureHandlerRootView } from 'react-native-gesture-handler'
 import Animated, {
@@ -42,7 +44,6 @@ import {
   compareVersions,
   dotColorForType,
   getUnseenVersions,
-  pickLang,
   type ChangelogData,
   type ChangelogVersion,
 } from '@calistenia/core/lib/whats-new'
@@ -340,7 +341,7 @@ function WhatsNewSheet({
 
                       {/* Resumen */}
                       <Text className="text-[13px] leading-snug text-muted-foreground">
-                        {pickLang(version.summary, lang)}
+                        {localContentLabel(version.summary, `${version.version}/summary`, lang, Platform.OS)}
                       </Text>
 
                       {/* Highlights */}
@@ -357,11 +358,11 @@ function WhatsNewSheet({
                                   style={{ backgroundColor: dotColorForType(h.type) }}
                                 />
                                 <Text className="font-sans-bold text-[15px] leading-tight text-foreground">
-                                  {pickLang(h.title, lang)}
+                                  {localContentLabel(h.title, `${version.version}/${i}/title`, lang, Platform.OS)}
                                 </Text>
                               </View>
                               <Text className="mt-1 text-[13px] leading-snug text-muted-foreground">
-                                {pickLang(h.body, lang)}
+                                {localContentLabel(h.body, `${version.version}/${i}/body`, lang, Platform.OS)}
                               </Text>
                             </View>
                           </View>
@@ -404,7 +405,7 @@ function WhatsNewSheet({
                             (version.groups ?? []).map((group) => (
                               <View key={`${version.version}-${group.type}`} className="gap-1.5">
                                 <Text className="font-mono text-[9px] uppercase tracking-[2px] text-muted-foreground/70">
-                                  {group.emoji} {group.label}
+                                  {group.emoji} {secondaryLabel(group.label, lang, Platform.OS)}
                                 </Text>
                                 {group.items.map((item, ii) => (
                                   <View key={ii} className="flex-row gap-2 pl-1">
@@ -449,7 +450,8 @@ function WhatsNewSheet({
 
 function formatDate(iso: string, lang: string): string {
   try {
-    return new Date(iso + 'T00:00:00').toLocaleDateString(lang.startsWith('en') ? 'en' : 'es', {
+    const locale = Platform.OS === 'android' && lang.startsWith('it') ? 'it' : lang.startsWith('en') ? 'en' : 'es'
+    return new Date(iso + 'T00:00:00').toLocaleDateString(locale, {
       day: 'numeric',
       month: 'short',
     })

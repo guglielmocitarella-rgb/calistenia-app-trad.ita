@@ -1,3 +1,4 @@
+import { useSocialDisplay } from '@/lib/use-social-display'
 /** Overlay de cuenta atrás — port móvil del RaceCountdown web. */
 import { useEffect, useRef } from 'react'
 import { View } from 'react-native'
@@ -9,6 +10,7 @@ import * as sounds from '@/lib/sounds'
 
 export default function RaceCountdown() {
   const { t } = useTranslation()
+  const sd = useSocialDisplay()
   const { secondsLeft } = useRaceCountdown()
 
   // 3-2-1 con tick (sonido + háptica) y golpe fuerte en GO — en la salida el
@@ -34,7 +36,7 @@ export default function RaceCountdown() {
         {t('race.startingSoon')}
       </Text>
       <Text className="mt-4 font-bebas text-[140px] leading-none text-lime">
-        {secondsLeft > 0 ? secondsLeft : 'GO'}
+        {secondsLeft > 0 ? secondsLeft : sd.label('GO')}
       </Text>
     </View>
   )

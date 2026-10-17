@@ -1,3 +1,4 @@
+import { useSocialDisplay } from '@/lib/use-social-display'
 /**
  * Notificaciones — pantalla apilada (stacked route).
  * Lista todas las notificaciones del usuario con marca de lectura.
@@ -209,6 +210,7 @@ interface NotificationRowProps {
 
 function NotificationRow({ item, onPress, requestId, onAccept, onReject }: NotificationRowProps) {
   const { t } = useTranslation()
+  const sd = useSocialDisplay()
   const l = useLocalize()
   const isUnread = !item.read
 
@@ -243,7 +245,7 @@ function NotificationRow({ item, onPress, requestId, onAccept, onReject }: Notif
           {getNotificationMessage(item, t, l)}
         </Text>
         <Text className="mt-0.5 font-mono text-[10px] text-muted-foreground/60">
-          {timeAgoShort(item.created)}
+          {sd.time(timeAgoShort(item.created), item.created)}
         </Text>
         {requestId && onAccept && onReject ? (
           <RequestActions requestId={requestId} onAccept={onAccept} onReject={onReject} />

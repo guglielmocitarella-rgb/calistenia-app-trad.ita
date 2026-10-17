@@ -1,3 +1,5 @@
+import type { WidgetLanguage } from './widget-language'
+
 /**
  * Contrato del snapshot que la app escribe para los widgets (App Group en iOS,
  * AsyncStorage en Android). Ver docs/superpowers/specs/2026-06-10-mobile-widgets-design.md.
@@ -34,7 +36,7 @@ export interface WidgetSnapshot {
   streakToday: boolean
   weeklyDone: number
   weeklyGoal: number
-  lang: 'es' | 'en'
+  lang: WidgetLanguage
 }
 
 export const WIDGET_SNAPSHOT_KEY = 'widget_snapshot'
@@ -42,7 +44,7 @@ export const WIDGET_SNAPSHOT_KEY = 'widget_snapshot'
 export function buildWidgetSnapshot(args: {
   today: string
   tz: string
-  lang: 'es' | 'en'
+  lang: WidgetLanguage
   programName: string | null
   programPhase: number
   todayId: string

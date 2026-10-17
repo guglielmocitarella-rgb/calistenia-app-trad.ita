@@ -1,3 +1,4 @@
+import { useProgressDisplay } from '@/lib/use-progress-display'
 /**
  * PRShareCard — RN View replica of web PRShareCard.
  * Layout mirrors the canvas version: profile row → "NUEVO RÉCORD PERSONAL"
@@ -35,11 +36,11 @@ export interface PRShareCardProps {
   referralCode?: string | null
 }
 
-function formatDate(dateStr?: string): string {
+function formatDate(dateStr: string | undefined, locale = 'es'): string {
   if (!dateStr) return ''
   try {
     const d = new Date(`${dateStr}T12:00:00`)
-    return d.toLocaleDateString('es', {
+    return d.toLocaleDateString(locale, {
       weekday: 'long',
       day: 'numeric',
       month: 'long',
@@ -51,6 +52,7 @@ function formatDate(dateStr?: string): string {
 }
 
 function PRShareCard({ exerciseName, oldValue, newValue, date, userName, avatarUrl, referralCode }: PRShareCardProps) {
+  const display = useProgressDisplay()
   const initials = (userName ?? '?')[0].toUpperCase()
 
   return (
@@ -75,7 +77,7 @@ function PRShareCard({ exerciseName, oldValue, newValue, date, userName, avatarU
               {userName ?? 'Atleta'}
             </Text>
             <Text className="font-mono" style={styles.dateText}>
-              {formatDate(date)}
+              {formatDate(date, display.locale('es'))}
             </Text>
           </View>
         </View>
@@ -83,7 +85,7 @@ function PRShareCard({ exerciseName, oldValue, newValue, date, userName, avatarU
         {/* ── "NUEVO RÉCORD PERSONAL" badge ── */}
         <View style={styles.badge}>
           <Text className="font-mono-semibold" style={styles.badgeText}>
-            NUEVO RÉCORD PERSONAL
+            {display.text('NUEVO RÉCORD PERSONAL', 'pr.newRecord')}
           </Text>
         </View>
 
@@ -98,23 +100,23 @@ function PRShareCard({ exerciseName, oldValue, newValue, date, userName, avatarU
         {/* ── PR values: old → new ── */}
         <View style={styles.prRow}>
           <Text className="font-bebas" style={styles.oldValue}>
-            {oldValue != null ? String(oldValue) : '—'}
+            {oldValue != null ? display.number(oldValue) : '—'}
           </Text>
           <Text className="font-bebas" style={styles.arrowText}>→</Text>
           <Text className="font-bebas" style={styles.newValue}>
-            {String(newValue)}
+            {display.number(newValue)}
           </Text>
         </View>
 
         {/* REPS label */}
-        <Text className="font-mono" style={styles.repsLabel}>REPS</Text>
+        <Text className="font-mono" style={styles.repsLabel}>{display.text('REPS', 'stats.reps')}</Text>
 
         {/* ── Divider ── */}
         <View style={styles.divider} />
 
         {/* ── Motivational line ── */}
         <Text className="font-sans-italic" style={styles.motivational}>
-          💪 New limits. New strength.
+          {display.italian ? '💪 Nuovi limiti. Nuova forza.' : '💪 New limits. New strength.'}
         </Text>
 
         {/* ── Footer ── */}

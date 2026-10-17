@@ -1,7 +1,7 @@
+import { contentLanguage } from '@calistenia/core/lib/content-language'
 /** Arranque del primer entreno del día 0 (#694). Mismo patrón que start-free-session. */
 import { useCallback } from 'react'
 import { useRouter } from 'expo-router'
-import { useTranslation } from 'react-i18next'
 import { useActiveSession } from '@/contexts/ActiveSessionContext'
 import {
   buildFirstWorkout,
@@ -18,18 +18,17 @@ import {
  */
 export function useStartFirstWorkout() {
   const router = useRouter()
-  const { i18n } = useTranslation()
   const { startSession } = useActiveSession()
 
   return useCallback(
     (level: string | null | undefined, source: FirstWorkoutSource) => {
       const lv = normalizeFirstWorkoutLevel(level)
-      const workout = buildFirstWorkout(lv, i18n.language)
+      const workout = buildFirstWorkout(lv, contentLanguage())
       const key = firstWorkoutKey()
       startSession(workout, key, 'free')
       trackFirstWorkoutStarted({ source, level: lv, workoutKey: key })
       router.replace('/session')
     },
-    [router, startSession, i18n.language],
+    [router, startSession],
   )
 }

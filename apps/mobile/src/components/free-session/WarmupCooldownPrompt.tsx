@@ -1,3 +1,4 @@
+import { useTrainingLabels } from '@/lib/use-training-labels'
 import { useState, useMemo } from 'react'
 import { View, Modal, Pressable } from 'react-native'
 import { Text } from '@/components/ui/text'
@@ -16,6 +17,7 @@ function SectionToggle({ checked, onToggle, label, count, color }: {
   count: number
   color: 'amber' | 'sky'
 }) {
+  const { label: displayLabel } = useTrainingLabels()
   return (
     <Pressable
       onPress={onToggle}
@@ -42,13 +44,14 @@ function SectionToggle({ checked, onToggle, label, count, color }: {
         {label}
       </Text>
       <Text className="font-mono text-[10px] text-muted-foreground">
-        {count} ejercicios
+        {displayLabel(`${count} ejercicios`, 'freeSession.exerciseCount', { count })}
       </Text>
     </Pressable>
   )
 }
 
 function ExercisePreviewRow({ exercise, color }: { exercise: Exercise; color: 'amber' | 'sky' }) {
+  const { repsLabel, label } = useTrainingLabels()
   return (
     <View className="flex-row items-center gap-2 px-2 py-1">
       <View className={cn(
@@ -57,7 +60,7 @@ function ExercisePreviewRow({ exercise, color }: { exercise: Exercise; color: 'a
       )} />
       <Text className="flex-1 text-[12px] text-muted-foreground" numberOfLines={1}>{exercise.name}</Text>
       <Text className="font-mono text-[10px] text-muted-foreground/60 shrink-0">
-        {exercise.sets}×{exercise.reps}
+        {label(String(exercise.sets))}×{repsLabel(exercise.reps)}
       </Text>
     </View>
   )
@@ -73,6 +76,7 @@ interface WarmupCooldownPromptProps {
 }
 
 export function WarmupCooldownPrompt({ mainExercises, visible, onCancel, onConfirm }: WarmupCooldownPromptProps) {
+  const { label } = useTrainingLabels()
   const [includeWarmup, setIncludeWarmup] = useState(true)
   const [includeCooldown, setIncludeCooldown] = useState(true)
 
@@ -101,10 +105,10 @@ export function WarmupCooldownPrompt({ mainExercises, visible, onCancel, onConfi
         >
           {/* Header */}
           <Text className="font-mono text-[10px] uppercase tracking-[3px] text-muted-foreground mb-1">
-            {dayType}
+            {label(dayType, `dayType.${dayType}`)}
           </Text>
           <Text className="font-bebas text-[28px] leading-none text-foreground mb-5">
-            ¿Agregar calentamiento y estiramiento?
+            {label('¿Agregar calentamiento y estiramiento?', 'warmupCooldown.freeSession.prompt')}
           </Text>
 
           {/* Toggles */}
@@ -113,7 +117,7 @@ export function WarmupCooldownPrompt({ mainExercises, visible, onCancel, onConfi
               <SectionToggle
                 checked={includeWarmup}
                 onToggle={() => setIncludeWarmup(v => !v)}
-                label="Incluir calentamiento"
+                label={label('Incluir calentamiento', 'warmupCooldown.freeSession.warmupToggle')}
                 count={tpl.warmup.length}
                 color="amber"
               />
@@ -122,7 +126,7 @@ export function WarmupCooldownPrompt({ mainExercises, visible, onCancel, onConfi
               <SectionToggle
                 checked={includeCooldown}
                 onToggle={() => setIncludeCooldown(v => !v)}
-                label="Incluir estiramiento"
+                label={label('Incluir estiramiento', 'warmupCooldown.freeSession.cooldownToggle')}
                 count={tpl.cooldown.length}
                 color="sky"
               />
@@ -135,7 +139,7 @@ export function WarmupCooldownPrompt({ mainExercises, visible, onCancel, onConfi
               {includeWarmup && hasWarmup && (
                 <View className="mb-2">
                   <Text className="font-mono text-[10px] uppercase tracking-[2px] text-amber-400 mb-1">
-                    Calentamiento
+                    {label('Calentamiento', 'warmupCooldown.sections.warmup')}
                   </Text>
                   {tpl.warmup.map(ex => (
                     <ExercisePreviewRow key={ex.id} exercise={ex} color="amber" />
@@ -145,7 +149,7 @@ export function WarmupCooldownPrompt({ mainExercises, visible, onCancel, onConfi
               {includeCooldown && hasCooldown && (
                 <View>
                   <Text className="font-mono text-[10px] uppercase tracking-[2px] text-sky-400 mb-1">
-                    Estiramiento
+                    {label('Estiramiento', 'warmupCooldown.sections.cooldown')}
                   </Text>
                   {tpl.cooldown.map(ex => (
                     <ExercisePreviewRow key={ex.id} exercise={ex} color="sky" />
@@ -163,14 +167,14 @@ export function WarmupCooldownPrompt({ mainExercises, visible, onCancel, onConfi
               includeCooldown && hasCooldown ? tpl.cooldown : [],
             )}
           >
-            <Text className="font-bebas text-lg tracking-wide">Empezar sesión</Text>
+            <Text className="font-bebas text-lg tracking-wide">{label('Empezar sesión', 'freeSession.startSession')}</Text>
           </Button>
           <Button
             variant="ghost"
             className="w-full"
             onPress={onCancel}
           >
-            <Text className="font-mono text-[11px] tracking-wide text-muted-foreground">Cancelar</Text>
+            <Text className="font-mono text-[11px] tracking-wide text-muted-foreground">{label('Cancelar', 'common.cancel')}</Text>
           </Button>
         </Pressable>
       </Pressable>

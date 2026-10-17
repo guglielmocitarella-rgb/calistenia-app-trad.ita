@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 import { useEffect, useState } from 'react'
 import { Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native'
 import { KeyboardAvoidingView, KeyboardProvider } from 'react-native-keyboard-controller'
@@ -31,6 +32,7 @@ export function PantryConfirmSheet({ visible, result, matches, onConfirmAdd, onC
   pricing?: { currency: string; prefillRate: number | null } | null
 }) {
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
   const insets = useSafeAreaInsets()
   const [draft, setDraft] = useState<PantryParsedItem[]>([])
   const [showRaw, setShowRaw] = useState(false)
@@ -120,7 +122,7 @@ export function PantryConfirmSheet({ visible, result, matches, onConfirmAdd, onC
                   <Text className="font-mono text-[10px] text-muted-foreground">{currencySymbol(currency)}</Text>
                   {totalUsd != null && (
                     <Text className="ml-auto font-mono text-[11px] text-lime-400">
-                      ≈ ${formatMoney(totalUsd)}
+                      ≈ ${display.number(formatMoney(totalUsd))}
                     </Text>
                   )}
                 </View>
@@ -195,7 +197,7 @@ export function PantryConfirmSheet({ visible, result, matches, onConfirmAdd, onC
                         {UNITS.map(u => (
                           <Chip
                             key={u ?? 'none'}
-                            label={u ?? '—'}
+                            label={u == null ? '—' : display.unit(u)}
                             active={it.unit === u}
                             onPress={() => updateDraft(i, { unit: u })}
                             className="px-2.5 py-1.5"

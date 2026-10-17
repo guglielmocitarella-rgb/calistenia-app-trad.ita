@@ -1,3 +1,4 @@
+import { useSecondaryDisplay } from '@/lib/use-secondary-display'
 /**
  * CardioShareButton — renders CardioShareCard off-screen via ShareCardCapture,
  * prefetches all map tile images so the snapshot isn't blank, then captures +
@@ -35,6 +36,7 @@ export default function CardioShareButton({
   referralCode,
   label,
 }: CardioShareButtonProps) {
+  const display = useSecondaryDisplay()
   const onCapture = useCallback(
     async (uri: string) => {
       // Build share message.
@@ -90,7 +92,7 @@ export default function CardioShareButton({
         onPress={() => void share()}
       >
         <Text className="font-mono text-[10px] tracking-widest text-sky-400 uppercase">
-          {label ?? 'COMPARTIR'}
+          {label ?? display.label('COMPARTIR')}
         </Text>
       </Button>
     </>

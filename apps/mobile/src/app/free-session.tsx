@@ -1,3 +1,5 @@
+import { useTrainingLabels } from '@/lib/use-training-labels'
+import { contentLanguage } from '@calistenia/core/lib/content-language'
 /** Sesión libre — picker de ejercicios del catálogo + warmup/cooldown prompt. */
 import { memo, useCallback, useState, useMemo } from 'react'
 import {
@@ -36,8 +38,8 @@ import type { CircuitDefinition, Exercise, FreeSessionTemplate } from '@calisten
 
 export default function FreeSessionScreen() {
   const router = useRouter()
-  const { t, i18n } = useTranslation()
-  const locale = i18n.language || 'es'
+  const { t } = useTranslation()
+  const locale = contentLanguage()
   const startFreeSession = useStartFreeSession()
   const { startCircuit } = useCircuitSession()
   const authUser = useAuthUser()
@@ -319,6 +321,7 @@ function PickView({
   onDeleteTemplate: (id: string) => void
 }) {
   const { t } = useTranslation()
+  const { categoryLabel } = useTrainingLabels()
   const categories = ['todos', ...CATALOG_CATEGORIES]
   // Las plantillas solo se muestran en la vista "limpia" (sin búsqueda ni
   // filtro) para no estorbar al buscar ejercicios.
@@ -374,7 +377,7 @@ function PickView({
               'font-mono text-[10px] uppercase tracking-wide',
               cat === activeCategory ? 'text-lime' : 'text-muted-foreground',
             )}>
-              {cat}
+              {categoryLabel(cat)}
             </Text>
           </Pressable>
         ))}

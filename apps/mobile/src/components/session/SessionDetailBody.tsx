@@ -1,3 +1,4 @@
+import { useTrainingLabels } from '@/lib/use-training-labels'
 /**
  * Cuerpo de la pantalla de detalle de una sesión de fuerza/yoga/libre.
  *
@@ -53,6 +54,7 @@ export default function SessionDetailBody({
   shareSlot,
   onOpenExercise,
 }: SessionDetailBodyProps) {
+  const { label } = useTrainingLabels()
   const totalSets = exercises.reduce((sum, ex) => sum + ex.sets.length, 0)
   // Una sesión libre de isométricos no registra series, así que `exercises`
   // viene vacío y la tira decía "0 EJERCICIOS" justo encima de la lista de los
@@ -91,9 +93,9 @@ export default function SessionDetailBody({
       {/* FC / calorías reales del reloj (Health Connect) */}
       {hrMetrics && (
         <View className="flex-row gap-3">
-          <StatBox value={hrMetrics.hr_avg ? String(hrMetrics.hr_avg) : '—'} label="FC MEDIA" accent="text-red-500" />
-          <StatBox value={hrMetrics.hr_max ? String(hrMetrics.hr_max) : '—'} label="FC MÁX" accent="text-red-500" />
-          <StatBox value={hrMetrics.calories_actual ? String(hrMetrics.calories_actual) : '—'} label="KCAL RELOJ" accent="text-red-500" />
+          <StatBox value={hrMetrics.hr_avg ? String(hrMetrics.hr_avg) : '—'} label={label('FC MEDIA')} accent="text-red-500" />
+          <StatBox value={hrMetrics.hr_max ? String(hrMetrics.hr_max) : '—'} label={label('FC MÁX')} accent="text-red-500" />
+          <StatBox value={hrMetrics.calories_actual ? String(hrMetrics.calories_actual) : '—'} label={label('KCAL RELOJ')} accent="text-red-500" />
         </View>
       )}
 
@@ -210,6 +212,7 @@ function ExerciseCard({
   t: TFunction
   onOpen?: () => void
 }) {
+  const { repsLabel } = useTrainingLabels()
   const idx = String(index).padStart(2, '0')
   return (
     <View className="rounded-xl border border-border bg-card px-4 py-3.5">
@@ -267,7 +270,7 @@ function ExerciseCard({
             <View className={cn('flex-row items-center py-2', !isLast && 'border-b border-border/30')}>
               <Text className="w-9 font-mono text-xs text-muted-foreground/70">{set.setNumber}</Text>
               <Text className={cn('flex-1 text-sm', isBest ? 'font-sans-medium text-lime' : 'text-foreground')}>
-                {set.reps}
+                {repsLabel(set.reps)}
               </Text>
               {exercise.hasWeight && (
                 <Text className={cn('w-16 text-right text-sm', isBest ? 'text-lime' : 'text-foreground')}>

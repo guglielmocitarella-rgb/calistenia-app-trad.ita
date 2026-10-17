@@ -1,3 +1,4 @@
+import { useSocialDisplay } from '@/lib/use-social-display'
 /** Sala de espera de la carrera — port móvil del RaceLobby web. */
 import { useEffect, useRef, useState } from 'react'
 import { View, Pressable, Share, Alert, Platform } from 'react-native'
@@ -15,6 +16,7 @@ import { WEB_BASE_URL } from '@calistenia/core/lib/app-urls'
 
 export default function RaceLobby({ displayName }: { displayName: string }) {
   const { t } = useTranslation()
+  const sd = useSocialDisplay()
   const { race, participants, me, isCreator, hasJoined, actions } = useRaceContext()
   const [busy, setBusy] = useState(false)
 
@@ -31,7 +33,7 @@ export default function RaceLobby({ displayName }: { displayName: string }) {
   if (!race) return null
 
   const target = race.mode === 'distance'
-    ? `${race.target_distance_km} km`
+    ? `${sd.number(String(race.target_distance_km))} km`
     : `${Math.round(race.target_duration_seconds / 60)} min`
 
   const handleShare = async () => {
@@ -100,7 +102,7 @@ export default function RaceLobby({ displayName }: { displayName: string }) {
               {race.creator === p.user ? '  👑' : ''}
             </Text>
             {p.user === me?.user && (
-              <Text className="rounded bg-lime/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[1px] text-lime">YOU</Text>
+              <Text className="rounded bg-lime/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[1px] text-lime">{sd.label('YOU')}</Text>
             )}
             {p.status === 'ready' && (
               <Text className="rounded bg-emerald-400/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[1px] text-emerald-400">

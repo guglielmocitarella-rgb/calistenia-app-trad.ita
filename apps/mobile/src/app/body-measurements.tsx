@@ -1,3 +1,4 @@
+import { useProgressDisplay } from '@/lib/use-progress-display'
 /**
  * Medidas corporales + % grasa corporal (método US Navy) — issue #227.
  * Port nativo del BodyMeasurementsTracker web: form de medidas (cm), panel de
@@ -73,6 +74,7 @@ function TrendLine({ values, color }: { values: number[]; color: string }) {
 
 export default function BodyMeasurementsScreen() {
   const { t } = useTranslation()
+  const display = useProgressDisplay()
   const router = useRouter()
   const { colorScheme } = useColorScheme()
   const LIME = colorScheme === 'dark' ? 'hsl(74 90% 57%)' : 'hsl(74 90% 38%)'
@@ -146,7 +148,7 @@ export default function BodyMeasurementsScreen() {
         >
           <ChevronLeft size={24} color={MUTED} />
         </Pressable>
-        <View className="flex-row items-end justify-between pb-4">
+        <View className="flex-row items-end justify-between gap-3 pb-4">
           <View className="flex-1">
             <Kicker>
               {t('progress.bodyFat.kicker')}
@@ -175,7 +177,7 @@ export default function BodyMeasurementsScreen() {
                   <Pressable hitSlop={8} onPress={() => setDate((d) => addDays(d, -1))}>
                     <ChevronLeft size={18} color={MUTED} />
                   </Pressable>
-                  <Text className="font-mono text-[13px] text-foreground">{date}</Text>
+                  <Text className="font-mono text-[13px] text-foreground">{display.date(date)}</Text>
                   <Pressable
                     hitSlop={8}
                     disabled={date >= todayStr()}
@@ -236,7 +238,7 @@ export default function BodyMeasurementsScreen() {
                 <View className="flex-row items-end gap-6">
                   <View>
                     <Text className={cn('font-bebas text-5xl leading-none', category ? bodyFatColorClass(category) : 'text-foreground')}>
-                      {bfLatest.pct}%
+                      {display.number(bfLatest.pct)}%
                     </Text>
                     {category && (
                       <Text className="mt-1 font-mono text-[10px] uppercase tracking-wide text-muted-foreground">
@@ -250,7 +252,7 @@ export default function BodyMeasurementsScreen() {
                         'font-bebas text-2xl leading-none',
                         bfDelta > 0 ? 'text-amber-400' : bfDelta < 0 ? 'text-emerald-500' : 'text-muted-foreground',
                       )}>
-                        {bfDelta > 0 ? '+' : ''}{bfDelta}
+                        {bfDelta > 0 ? '+' : ''}{display.number(bfDelta)}
                       </Text>
                       <Text className="mt-0.5 font-mono text-[9px] uppercase tracking-wide text-muted-foreground">
                         {t('progress.bodyFat.sinceLast')}
@@ -259,7 +261,7 @@ export default function BodyMeasurementsScreen() {
                   )}
                   {lean !== null && (
                     <View className="items-center">
-                      <Text className="font-bebas text-2xl leading-none text-sky-500">{lean} kg</Text>
+                      <Text className="font-bebas text-2xl leading-none text-sky-500">{display.number(lean)} kg</Text>
                       <Text className="mt-0.5 font-mono text-[9px] uppercase tracking-wide text-muted-foreground">
                         {t('progress.bodyFat.leanMass')}
                       </Text>
@@ -291,20 +293,20 @@ export default function BodyMeasurementsScreen() {
                   return (
                     <View key={f.key} className="flex-row items-center gap-3 py-1">
                       <Text className="w-24 font-sans text-[12px] text-muted-foreground">{t(f.labelKey)}</Text>
-                      <Text className="font-mono text-[13px] text-foreground">{cur} cm</Text>
+                      <Text className="font-mono text-[13px] text-foreground">{display.number(cur)} cm</Text>
                       {diff !== null && (
                         <Text className={cn(
                           'font-mono text-[10px]',
                           diff > 0 ? 'text-amber-400' : diff < 0 ? 'text-emerald-500' : 'text-muted-foreground',
                         )}>
-                          {diff > 0 ? '+' : ''}{diff}
+                          {diff > 0 ? '+' : ''}{display.number(diff)}
                         </Text>
                       )}
                     </View>
                   )
                 })}
                 <Text className="mt-1 border-t border-border pt-2 font-mono text-[10px] text-muted-foreground">
-                  {latest.date}{latest.note ? ` — ${latest.note}` : ''}
+                  {display.date(latest.date)}{latest.note ? ` — ${latest.note}` : ''}
                 </Text>
               </CardContent>
             </Card>
@@ -321,7 +323,7 @@ export default function BodyMeasurementsScreen() {
               {measurements.slice(1, 11).map((m) => (
                 <Card key={m.id}>
                   <CardContent className="gap-1.5 py-3">
-                    <Text className="font-mono text-[10px] text-sky-400">{m.date}</Text>
+                    <Text className="font-mono text-[10px] text-sky-400">{display.date(m.date)}</Text>
                     <View className="flex-row flex-wrap gap-x-4 gap-y-1">
                       {FIELDS.map((f) => {
                         const v = m[f.key] as number | undefined
@@ -329,7 +331,7 @@ export default function BodyMeasurementsScreen() {
                         return (
                           <Text key={f.key} className="font-mono text-[11px] text-foreground">
                             <Text className="font-mono text-[9px] uppercase text-muted-foreground">{t(f.shortKey)} </Text>
-                            {v}
+                            {display.number(v)}
                           </Text>
                         )
                       })}

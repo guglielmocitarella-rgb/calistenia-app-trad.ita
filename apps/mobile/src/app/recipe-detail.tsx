@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 /**
  * Detalle de receta de un plan pantry-aware (#171).
  * La receta viaja serializada en params (los planes del día no se persisten);
@@ -28,6 +29,7 @@ const LIME = '#a3e635' // = text-lime-400: mismo tono que los acentos lime de es
 
 export default function RecipeDetailScreen() {
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
   const router = useRouter()
   const params = useLocalSearchParams<{ label?: string; recipe?: string }>()
 
@@ -200,7 +202,7 @@ export default function RecipeDetailScreen() {
                   )}
                 </View>
                 <Text className="font-bebas text-2xl text-lime-400">
-                  {cost!.hasEstimates ? '~' : ''}${formatMoney(cost!.perServing)}
+                  {cost!.hasEstimates ? '~' : ''}${display.number(formatMoney(cost!.perServing))}
                 </Text>
               </View>
               {showBreakdown &&
@@ -208,7 +210,7 @@ export default function RecipeDetailScreen() {
                   <View key={i} className="mt-1 flex-row justify-between">
                     <Text className="font-sans text-xs text-muted-foreground">{b.name}</Text>
                     <Text className={`font-mono text-xs ${b.source === 'sin_precio' ? 'text-muted-foreground' : b.source === 'estimada' ? 'text-amber-500' : 'text-foreground'}`}>
-                      {b.cost != null ? `${b.source === 'estimada' ? '~' : ''}$${formatMoney(b.cost)}` : t('shopping.noPrice')}
+                      {b.cost != null ? `${b.source === 'estimada' ? '~' : ''}$${display.number(formatMoney(b.cost))}` : t('shopping.noPrice')}
                     </Text>
                   </View>
                 ))}
@@ -242,7 +244,7 @@ export default function RecipeDetailScreen() {
                       </Text>
                       {ing.qty != null && (
                         <Text className="font-mono text-xs text-muted-foreground">
-                          {scaleQty(ing.qty, factor)} {ing.unit ?? ''}
+                          {display.number(scaleQty(ing.qty, factor))} {display.unit(ing.unit ?? '')}
                         </Text>
                       )}
                     </View>

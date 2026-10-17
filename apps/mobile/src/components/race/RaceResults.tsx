@@ -1,3 +1,4 @@
+import { useSocialDisplay } from '@/lib/use-social-display'
 /** Resultados de carrera — podio + ranking + guardar como entrenamiento. */
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { View, Pressable } from 'react-native'
@@ -19,6 +20,7 @@ import { fetchRaceRoute } from '@calistenia/core/lib/raceRoutes'
 
 export default function RaceResults({ celebrate = false }: { celebrate?: boolean }) {
   const { t } = useTranslation()
+  const sd = useSocialDisplay()
   const queryClient = useQueryClient()
   const { race, participants, me } = useRaceContext()
   const user = useAuthUser()
@@ -77,7 +79,7 @@ export default function RaceResults({ celebrate = false }: { celebrate?: boolean
           </Text>
           <Text className="mt-1 font-bebas text-3xl text-foreground">{winner.display_name}</Text>
           <Text className="mt-1 font-mono text-xs text-muted-foreground">
-            {winner.distance_km.toFixed(2)} km · {formatDuration(winner.duration_seconds)} · {formatPace(winner.avg_pace)} /km
+            {sd.number(winner.distance_km.toFixed(2))} km · {formatDuration(winner.duration_seconds)} · {formatPace(winner.avg_pace)} /km
           </Text>
         </View>
       )}
@@ -106,7 +108,7 @@ export default function RaceResults({ celebrate = false }: { celebrate?: boolean
                     : t('race.dnf')}
                 </Text>
               </View>
-              <Text className="font-bebas text-xl text-foreground">{p.distance_km.toFixed(2)} km</Text>
+              <Text className="font-bebas text-xl text-foreground">{sd.number(p.distance_km.toFixed(2))} km</Text>
             </View>
           )
         })}

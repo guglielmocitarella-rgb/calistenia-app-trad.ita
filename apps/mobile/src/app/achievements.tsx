@@ -1,3 +1,4 @@
+import { useProgressDisplay } from '@/lib/use-progress-display'
 /**
  * Pantalla de logros (#802). Paridad con `apps/web/src/pages/AchievementsPage.tsx`.
  * La lógica (catálogo, estado, orden) vive en `@calistenia/core/lib/achievements`.
@@ -24,6 +25,7 @@ import type { AchievementItem } from '@calistenia/core/lib/achievements'
 
 function AchievementRow({ item }: { item: AchievementItem }) {
   const { t } = useTranslation()
+  const display = useProgressDisplay()
   const pct = Math.round((item.progress / item.target) * 100)
   return (
     <Card
@@ -41,7 +43,7 @@ function AchievementRow({ item }: { item: AchievementItem }) {
         </View>
         <View className="flex-1">
           <View className="flex-row items-center justify-between gap-2">
-            <Text className="flex-1 font-sans-medium text-base text-foreground" numberOfLines={1}>
+            <Text className="flex-1 font-sans-medium text-base text-foreground" numberOfLines={2}>
               {t(`achievements.${item.key}.name`)}
             </Text>
             <Text className={cn('font-mono text-[10px] uppercase tracking-[2px]', item.unlocked ? 'text-lime' : 'text-muted-foreground')}>
@@ -52,7 +54,7 @@ function AchievementRow({ item }: { item: AchievementItem }) {
           {item.unlocked ? (
             item.unlockedAt ? (
               <Text className="mt-1 font-sans text-xs text-muted-foreground">
-                {t('achievements.unlockedOn', { date: utcToLocalDateStr(item.unlockedAt) })}
+                {t('achievements.unlockedOn', { date: display.date(utcToLocalDateStr(item.unlockedAt)) })}
               </Text>
             ) : null
           ) : (

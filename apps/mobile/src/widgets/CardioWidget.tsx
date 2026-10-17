@@ -1,6 +1,8 @@
 'use no memo'
+import { progressNumber } from '../lib/progress-ui-labels'
 // React Compiler inyecta useMemoCache y rompe el renderer headless de react-native-android-widget
 import React from 'react'
+import { widgetStrings } from '../lib/widget-language'
 import { FlexWidget, TextWidget } from 'react-native-android-widget'
 import type { CardioWidgetSnapshot } from '../lib/cardio-widget-snapshot'
 
@@ -14,6 +16,7 @@ const FG = '#fafaf9' as const
 const ICONS: Record<string, string> = { running: '🏃', walking: '🚶', cycling: '🚴' }
 
 const STRINGS = {
+  it: {"title": "CARDIO", "week": "QUESTA SETTIMANA", "sessions": "SESSIONI", "last": "ULTIMA", "none": "NESSUNA SESSIONE", "open": "TOCCA PER INIZIARE"},
   es: { title: 'CARDIO', week: 'ESTA SEMANA', sessions: 'SESIONES', last: 'ÚLTIMA', none: 'SIN SESIONES AÚN', open: 'TOCA PARA EMPEZAR' },
   en: { title: 'CARDIO', week: 'THIS WEEK', sessions: 'SESSIONS', last: 'LAST', none: 'NO SESSIONS YET', open: 'TAP TO START' },
 }
@@ -35,7 +38,7 @@ function fmtPace(minPerKm: number): string {
 }
 
 export function CardioWidget({ snapshot }: { snapshot: CardioWidgetSnapshot | null }) {
-  const tr = STRINGS[snapshot?.lang ?? 'es']
+  const tr = widgetStrings(STRINGS, snapshot?.lang)
   const last = snapshot?.lastSession ?? null
 
   return (
@@ -53,7 +56,7 @@ export function CardioWidget({ snapshot }: { snapshot: CardioWidgetSnapshot | nu
         <FlexWidget style={{ flexDirection: 'column' }}>
           <TextWidget text={`${tr.title} · ${tr.week}`} style={{ fontSize: 9, color: MUTED, fontFamily: 'JetBrainsMono_400Regular', letterSpacing: 0.3 }} />
           <FlexWidget style={{ flexDirection: 'row', alignItems: 'flex-end', marginTop: 2 }}>
-            <TextWidget text={snapshot ? snapshot.weekKm.toFixed(1) : '–'} style={{ fontSize: 30, color: LIME, fontFamily: 'BebasNeue_400Regular' }} />
+            <TextWidget text={snapshot ? progressNumber(snapshot.weekKm.toFixed(1), snapshot.lang ?? 'es', 'android') : '–'} style={{ fontSize: 30, color: LIME, fontFamily: 'BebasNeue_400Regular' }} />
             <TextWidget text=" KM" style={{ fontSize: 11, color: MUTED, fontFamily: 'JetBrainsMono_400Regular' }} />
           </FlexWidget>
         </FlexWidget>
@@ -67,7 +70,7 @@ export function CardioWidget({ snapshot }: { snapshot: CardioWidgetSnapshot | nu
       {last ? (
         <FlexWidget style={{ flexDirection: 'row', width: 'match_parent', justifyContent: 'space-between', alignItems: 'center' }}>
           <TextWidget
-            text={`${ICONS[last.activity] ?? '🏃'} ${last.distanceKm.toFixed(2)} km · ${fmtDuration(last.durationSeconds)}`}
+            text={`${ICONS[last.activity] ?? '🏃'} ${progressNumber(last.distanceKm.toFixed(2), snapshot?.lang ?? 'es', 'android')} km · ${fmtDuration(last.durationSeconds)}`}
             style={{ fontSize: 12, color: FG, fontFamily: 'JetBrainsMono_400Regular' }}
           />
           <TextWidget text={`${fmtPace(last.paceMinKm)} /km`} style={{ fontSize: 12, color: SKY, fontFamily: 'JetBrainsMono_700Bold' }} />

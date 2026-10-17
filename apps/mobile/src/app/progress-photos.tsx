@@ -1,3 +1,4 @@
+import { useProgressDisplay } from '@/lib/use-progress-display'
 /**
  * Fotos de progreso (native) — parity con la tab "Cuerpo" de web.
  * Timeline en grid + subida (cámara/galería) con categoría, fecha y nota.
@@ -50,6 +51,7 @@ type Filter = 'all' | Category
 
 export default function ProgressPhotosScreen() {
   const { t } = useTranslation()
+  const display = useProgressDisplay()
   const router = useRouter()
   const { colorScheme } = useColorScheme()
   const LIME = colorScheme === 'dark' ? 'hsl(74 90% 57%)' : 'hsl(74 90% 38%)'
@@ -207,7 +209,7 @@ export default function ProgressPhotosScreen() {
         <Text className="font-mono text-[9px] uppercase tracking-wide text-lime">
           {catLabel(item.category)}
         </Text>
-        <Text className="font-mono text-[10px] text-foreground">{item.date}</Text>
+        <Text className="font-mono text-[10px] text-foreground">{display.date(item.date)}</Text>
         {!!item.note && (
           <Text numberOfLines={1} className="font-sans text-[10px] text-muted-foreground">
             {item.note}
@@ -410,7 +412,7 @@ export default function ProgressPhotosScreen() {
                   <ChevronLeft size={18} color={MUTED} />
                 </Pressable>
                 <Text className="font-mono text-base text-foreground">
-                  {date === todayStr() ? t('progress.bodyPhotos.today') || 'Hoy' : date}
+                  {date === todayStr() ? t('progress.bodyPhotos.today') || 'Hoy' : display.date(date)}
                 </Text>
                 <Pressable
                   disabled={date >= todayStr()}
@@ -467,7 +469,7 @@ export default function ProgressPhotosScreen() {
           <SafeAreaView className="flex-1" edges={['top', 'bottom']}>
             <View className="flex-row items-center justify-between px-4 py-2">
               <Text className="font-mono text-[11px] uppercase tracking-wide text-white/70">
-                {lightbox ? `${catLabel(lightbox.category)} · ${lightbox.date}` : ''}
+                {lightbox ? `${catLabel(lightbox.category)} · ${display.date(lightbox.date)}` : ''}
               </Text>
               <Pressable onPress={() => setLightbox(null)} hitSlop={8} className="size-9 items-center justify-center">
                 <X size={24} color="white" />

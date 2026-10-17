@@ -24,9 +24,10 @@ import { Text } from '@/components/ui/text'
 import { Kicker } from '@/components/ui/kicker'
 import { GoogleIcon } from '@/components/ui/google-icon'
 import { loginWithGoogle, isAuthCancelled } from '@/lib/auth'
+import { authErrorLabel } from '@/lib/italian-ui-labels'
 
 export default function LoginScreen() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const router = useRouter()
   const { mode: requestedMode } = useLocalSearchParams<{ mode?: string }>()
   const { signInWithEmail, signUpWithEmail, isLoading, authError } = useAuth()
@@ -38,7 +39,7 @@ export default function LoginScreen() {
   const [localError, setLocalError] = useState<string | null>(null)
   const [googleLoading, setGoogleLoading] = useState(false)
 
-  const error = authError ?? localError
+  const error = authErrorLabel(authError, i18n.language, Platform.OS, t) ?? localError
 
   // Espeja el de web (#636 §4).
   useEffect(() => {

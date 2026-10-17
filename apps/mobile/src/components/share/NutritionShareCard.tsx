@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 /**
  * NutritionShareCard — shareable image for a nutrition day summary.
  *
@@ -88,10 +89,10 @@ export interface NutritionShareCardProps {
 }
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
-function formatNutritionDate(iso: string): string {
+function formatNutritionDate(iso: string, locale: string): string {
   try {
     const d = new Date(iso + 'T12:00:00')
-    return d.toLocaleDateString('es', { weekday: 'long', day: 'numeric', month: 'long' })
+    return d.toLocaleDateString(locale, { weekday: 'long', day: 'numeric', month: 'long' })
   } catch {
     return iso
   }
@@ -219,8 +220,9 @@ interface MealRowProps {
 }
 
 function MealRow({ meal, r }: MealRowProps) {
+  const display = useNutritionDisplay()
   const accentColor = MEAL_TYPE_HEX[meal.mealType] ?? LIME
-  const firstLetter = (meal.title || meal.mealType || '?').trim()[0]?.toUpperCase() ?? '?'
+  const firstLetter = (meal.title || display.meal(meal.mealType) || '?').trim()[0]?.toUpperCase() ?? '?'
   const qColor = meal.qualityScore ? QUALITY_COLOR[meal.qualityScore] : null
 
   return (
@@ -285,7 +287,7 @@ function MealRow({ meal, r }: MealRowProps) {
             marginBottom: r(2),
           }}
         >
-          {meal.title || meal.mealType}
+          {meal.title || display.meal(meal.mealType)}
         </Text>
         <Text style={{
           fontFamily: 'JetBrainsMono_400Regular',
@@ -364,6 +366,7 @@ const NutritionShareCard = memo(function NutritionShareCard({
   const r = (n: number) => Math.round(n * S)
   const s = makeStyles(width, height, r)
 
+  const display = useNutritionDisplay()
   const initials = (userName ?? 'A').trim()[0]?.toUpperCase() ?? 'A'
   const displayName = userName ?? 'Atleta'
 
@@ -399,15 +402,15 @@ const NutritionShareCard = memo(function NutritionShareCard({
           <View style={s.headerLeft}>
             <View style={s.kickerRow}>
               <View style={s.accentDot} />
-              <Text style={s.kicker}>NUTRICIÓN</Text>
+              <Text style={s.kicker}>{display.text('NUTRICIÓN')}</Text>
             </View>
-            <Text style={s.dateText}>{formatNutritionDate(date)}</Text>
+            <Text style={s.dateText}>{formatNutritionDate(date, display.locale('es'))}</Text>
           </View>
           {/* Daily grade badge — only when available */}
           {headerQScore && headerQColor ? (
             <View style={[s.qualityBadge, { borderColor: headerQColor + '55', backgroundColor: headerQColor + '18' }]}>
               <Text style={[s.qualityLetter, { color: headerQColor }]}>{headerQScore}</Text>
-              <Text style={[s.qualityLabel, { color: headerQColor }]}>CALIDAD</Text>
+              <Text style={[s.qualityLabel, { color: headerQColor }]}>{display.text('Calidad').toUpperCase()}</Text>
             </View>
           ) : null}
         </View>
@@ -445,7 +448,7 @@ const NutritionShareCard = memo(function NutritionShareCard({
 
         {/* ── Divider + COMIDAS label ── */}
         <View style={[s.divider, { marginTop: r(12), marginBottom: r(10) }]} />
-        <Text style={s.sectionLabel}>COMIDAS</Text>
+        <Text style={s.sectionLabel}>{display.text('COMIDAS')}</Text>
 
         {/* ── Meal rows (up to 4) ── */}
         <View style={{ flex: 1 }}>
@@ -460,7 +463,7 @@ const NutritionShareCard = memo(function NutritionShareCard({
               letterSpacing: r(1),
               marginTop: r(2),
             }}>
-              +{mealsOverflow} más
+              +{mealsOverflow} {display.text('más')}
             </Text>
           )}
         </View>
@@ -485,11 +488,11 @@ const NutritionShareCard = memo(function NutritionShareCard({
         <View style={s.headerLeft}>
           <View style={s.kickerRow}>
             <View style={s.accentDot} />
-            <Text style={s.kicker}>NUTRICIÓN</Text>
+            <Text style={s.kicker}>{display.text('NUTRICIÓN')}</Text>
           </View>
-          <Text style={s.dateText}>{formatNutritionDate(date)}</Text>
+          <Text style={s.dateText}>{formatNutritionDate(date, display.locale('es'))}</Text>
           {mealCount != null && mealCount > 0 && (
-            <Text style={s.mealCount}>{mealCount} COMIDA{mealCount !== 1 ? 'S' : ''}</Text>
+            <Text style={s.mealCount}>{display.italian ? translate('nutrition.logger.mealCount', { count: mealCount }).toUpperCase() : <>{mealCount} COMIDA{mealCount !== 1 ? 'S' : ''}</>}</Text>
           )}
         </View>
         <View style={s.avatar}>
@@ -511,7 +514,7 @@ const NutritionShareCard = memo(function NutritionShareCard({
           {qualityScore && (
             <View style={[s.qualityBadge, { borderColor: qColor + '55', backgroundColor: qColor + '18' }]}>
               <Text style={[s.qualityLetter, { color: qColor }]}>{qualityScore}</Text>
-              <Text style={[s.qualityLabel, { color: qColor }]}>CALIDAD</Text>
+              <Text style={[s.qualityLabel, { color: qColor }]}>{display.text('Calidad').toUpperCase()}</Text>
             </View>
           )}
         </View>
@@ -533,10 +536,10 @@ const NutritionShareCard = memo(function NutritionShareCard({
 
       {/* ── Macros ── */}
       <View style={s.macros}>
-        <Text style={s.sectionLabel}>MACRONUTRIENTES</Text>
-        <MacroRow label="PROTEÍNA" value={totals.protein} goal={goals?.dailyProtein}   unit="g" color={BLUE}  r={r} />
-        <MacroRow label="CARBOS"   value={totals.carbs}   goal={goals?.dailyCarbs}     unit="g" color={AMBER} r={r} />
-        <MacroRow label="GRASA"    value={totals.fat}     goal={goals?.dailyFat}       unit="g" color={PINK}  r={r} />
+        <Text style={s.sectionLabel}>{display.text('MACRONUTRIENTES')}</Text>
+        <MacroRow label={display.text('PROTEÍNA').toUpperCase()} value={totals.protein} goal={goals?.dailyProtein}   unit="g" color={BLUE}  r={r} />
+        <MacroRow label={display.italian ? 'CARB' : 'CARBOS'}   value={totals.carbs}   goal={goals?.dailyCarbs}     unit="g" color={AMBER} r={r} />
+        <MacroRow label={display.text('GRASA').toUpperCase()}    value={totals.fat}     goal={goals?.dailyFat}       unit="g" color={PINK}  r={r} />
       </View>
 
       {/* ── Water row ── */}
@@ -545,12 +548,12 @@ const NutritionShareCard = memo(function NutritionShareCard({
           <View style={s.divider} />
           <View style={s.waterSection}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: r(5) }}>
-              <Text style={s.sectionLabel}>AGUA</Text>
+              <Text style={s.sectionLabel}>{display.text('AGUA').toUpperCase()}</Text>
               <Text style={s.waterValue}>
-                {waterLitres} L
+                {display.number(waterLitres)} L
                 {waterGoalL ? (
                   <Text style={{ color: INK_FAINT, fontFamily: 'BebasNeue_400Regular', fontSize: r(13) }}>
-                    {' / '}{waterGoalL} L
+                    {' / '}{display.number(waterGoalL)} L
                   </Text>
                 ) : null}
               </Text>

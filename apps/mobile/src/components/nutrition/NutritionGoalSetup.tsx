@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 /**
  * NutritionGoalSetup — wizard de 4 pasos para configurar metas nutricionales.
  * Port móvil de apps/web/src/components/nutrition/NutritionGoalSetup.tsx
@@ -128,6 +129,7 @@ export default function NutritionGoalSetup({
   initialPace,
 }: NutritionGoalSetupProps) {
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
 
   const [step, setStep] = useState(0)
   const [saving, setSaving] = useState(false)
@@ -199,7 +201,7 @@ export default function NutritionGoalSetup({
       {/* Header */}
       <View className="px-4 pt-4 pb-2">
         <Text className="font-mono text-[10px] uppercase tracking-[3px] text-muted-foreground mb-1">
-          CONFIGURACIÓN
+          {display.text('CONFIGURACIÓN')}
         </Text>
         <Text className="font-bebas text-4xl leading-none text-foreground">
           {t('nutrition.setup.title', { defaultValue: 'OBJETIVOS NUTRICIONALES' })}
@@ -332,7 +334,7 @@ export default function NutritionGoalSetup({
                       activityLevel === level.id ? 'text-lime-400' : 'text-foreground'
                     )}
                   >
-                    {level.label}
+                    {display.text(level.label)}
                   </Text>
                 </Pressable>
               ))}
@@ -368,7 +370,7 @@ export default function NutritionGoalSetup({
                           goal === g.id ? 'text-lime-400' : 'text-foreground'
                         )}
                       >
-                        {g.label}
+                        {display.text(g.label)}
                       </Text>
                     </Pressable>
                   ))}
@@ -381,13 +383,13 @@ export default function NutritionGoalSetup({
               <Card>
                 <CardContent className="py-5 gap-3">
                   <Kicker>
-                    RITMO
+                    {display.text('RITMO')}
                   </Kicker>
                   <View className="flex-row gap-2">
                     {PACES.map(p => (
                       <SelectorChip
                         key={p.id}
-                        label={p.label}
+                        label={display.text(p.label)}
                         selected={pace === p.id}
                         onPress={() => setPace(p.id)}
                       />
@@ -406,13 +408,13 @@ export default function NutritionGoalSetup({
             <Card>
               <CardContent className="py-5 gap-2">
                 <Text className="font-mono text-[10px] uppercase tracking-[3px] text-muted-foreground mb-1">
-                  RESUMEN
+                  {display.text('RESUMEN')}
                 </Text>
 
                 {[
                   { label: t('nutrition.setup.weight', { defaultValue: 'Peso' }), value: `${weight} kg` },
                   { label: t('nutrition.setup.height', { defaultValue: 'Altura' }), value: `${height} cm` },
-                  { label: t('nutrition.setup.age', { defaultValue: 'Edad' }), value: `${age} años` },
+                  { label: t('nutrition.setup.age', { defaultValue: 'Edad' }), value: `${age} ${display.italian ? t('nutrition.setup.years') : 'años'}` },
                   {
                     label: t('nutrition.setup.sex', { defaultValue: 'Sexo' }),
                     value: sex === 'male'
@@ -421,11 +423,11 @@ export default function NutritionGoalSetup({
                   },
                   {
                     label: t('nutrition.setup.activityLevel', { defaultValue: 'Actividad' }),
-                    value: ACTIVITY_LEVELS.find(l => l.id === activityLevel)?.label ?? activityLevel,
+                    value: display.text(ACTIVITY_LEVELS.find(l => l.id === activityLevel)?.label ?? activityLevel),
                   },
                   {
                     label: t('nutrition.setup.objective', { defaultValue: 'Objetivo' }),
-                    value: GOALS.find(g => g.id === goal)?.label ?? goal,
+                    value: display.text(GOALS.find(g => g.id === goal)?.label ?? goal),
                   },
                 ].map(row => (
                   <View key={row.label} className="flex-row justify-between items-center py-1">
@@ -440,7 +442,7 @@ export default function NutritionGoalSetup({
             <Card>
               <CardContent className="py-5 gap-4">
                 <Kicker>
-                  MACROS CALCULADOS
+                  {display.text('MACROS CALCULADOS')}
                 </Kicker>
 
                 {/* Visual summary ring */}

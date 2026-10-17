@@ -88,6 +88,8 @@ vi.mock('@calistenia/core/lib/pocketbase', () => {
 // Sin `initCore()` `getPlatform()` lanza, y esa excepción taparía la que se
 // quiere observar.
 vi.mock('@calistenia/core/platform', () => ({
+  // Web no instala la política de idiomas exclusiva de Android.
+  getLanguagePolicy: () => undefined,
   getPlatform: () => ({ reportError: vi.fn() }),
 }))
 

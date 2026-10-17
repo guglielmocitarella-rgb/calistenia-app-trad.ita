@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 /** Weekly calorie bar chart — 7-day history vs goal. */
 import { View } from 'react-native'
 import { useTranslation } from 'react-i18next'
@@ -19,10 +20,10 @@ interface WeeklyNutritionChartProps {
 
 const CHART_HEIGHT = 96 // h-24 in px
 
-function getDayLabel(dateStr: string, isToday: boolean, t: (key: string, fallback: string) => string): string {
+function getDayLabel(dateStr: string, isToday: boolean, t: (key: string, fallback: string) => string, locale: string): string {
   if (isToday) return t('common.today', 'Hoy')
   try {
-    return new Date(dateStr).toLocaleDateString('es-ES', { weekday: 'short' })
+    return new Date(dateStr).toLocaleDateString(locale, { weekday: 'short' })
   } catch {
     return '—'
   }
@@ -35,6 +36,7 @@ function isToday(dateStr: string): boolean {
 
 export default function WeeklyNutritionChart({ history, calorieGoal }: WeeklyNutritionChartProps) {
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
   const maxCalories = calorieGoal * 1.2
   // Goal line position from bottom (as % of chart height)
   const goalLinePct = Math.min(calorieGoal / maxCalories, 1)
@@ -76,7 +78,7 @@ export default function WeeklyNutritionChart({ history, calorieGoal }: WeeklyNut
                   ? Math.round(Math.min(day.calories / maxCalories, 1) * CHART_HEIGHT)
                   : 4
               const barColor = over ? '#f87171' : '#a3e635' // red-400 : lime-400
-              const dayLabel = getDayLabel(day.date, today, t)
+              const dayLabel = getDayLabel(day.date, today, t, display.locale('es-ES'))
 
               return (
                 <View key={i} className="flex-1 items-center justify-end" style={{ height: CHART_HEIGHT }}>
@@ -106,7 +108,7 @@ export default function WeeklyNutritionChart({ history, calorieGoal }: WeeklyNut
         <View className="flex-row gap-1.5 px-0.5 mt-1.5">
           {history.map((day, i) => {
             const today = isToday(day.date)
-            const dayLabel = getDayLabel(day.date, today, t)
+            const dayLabel = getDayLabel(day.date, today, t, display.locale('es-ES'))
             return (
               <View key={i} className="flex-1 items-center gap-0.5">
                 <Text

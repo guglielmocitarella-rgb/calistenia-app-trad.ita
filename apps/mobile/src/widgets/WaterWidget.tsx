@@ -1,6 +1,8 @@
 'use no memo'
 // React Compiler inyecta useMemoCache y rompe el renderer headless de react-native-android-widget
 import React from 'react'
+import { nutritionNumber } from '../lib/nutrition-ui-labels'
+import { widgetStrings } from '../lib/widget-language'
 import { FlexWidget, TextWidget } from 'react-native-android-widget'
 import type { ColorProp } from 'react-native-android-widget'
 import type { NutritionWidgetSnapshot } from '../lib/nutrition-widget-snapshot'
@@ -11,6 +13,7 @@ const SKY: ColorProp = '#38bdf8'
 const MUTED: ColorProp = '#8a8782'
 
 const STRINGS = {
+  it: { water: 'ACQUA', goal: '/ OBIETTIVO L', stale: 'APRI L’APP' },
   es: { water: 'AGUA', goal: '/ OBJ L', stale: 'ABRE LA APP' },
   en: { water: 'WATER', goal: '/ GOAL L', stale: 'OPEN THE APP' },
 }
@@ -45,7 +48,7 @@ const SHELL = {
  * lectura + deep-link; la acción rápida queda para una iteración con QA real.
  */
 export function WaterWidget({ snapshot, today }: { snapshot: NutritionWidgetSnapshot | null; today: string }) {
-  const tr = STRINGS[snapshot?.lang ?? 'es']
+  const tr = widgetStrings(STRINGS, snapshot?.lang)
 
   if (!snapshot || snapshot.date !== today) {
     return (
@@ -57,8 +60,8 @@ export function WaterWidget({ snapshot, today }: { snapshot: NutritionWidgetSnap
 
   const ml = snapshot.waterMl ?? 0
   const goalMl = snapshot.waterGoalMl ?? 0
-  const liters = (ml / 1000).toFixed(1)
-  const goalLiters = (goalMl / 1000).toFixed(1)
+  const liters = nutritionNumber((ml / 1000).toFixed(1), snapshot.lang ?? 'es', 'android')
+  const goalLiters = nutritionNumber((goalMl / 1000).toFixed(1), snapshot.lang ?? 'es', 'android')
   const { filled, empty } = barWeights(ml, goalMl)
 
   return (

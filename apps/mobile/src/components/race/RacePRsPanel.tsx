@@ -1,3 +1,4 @@
+import { useSocialDisplay } from '@/lib/use-social-display'
 /** Records de races (wins, finishes, 1K/5K/10K) — port móvil del RacePRsPanel web. */
 import { View } from 'react-native'
 import { useTranslation } from 'react-i18next'
@@ -9,6 +10,7 @@ import { formatDuration, formatPace } from '@calistenia/core/lib/geo'
 
 export default function RacePRsPanel({ userId }: { userId: string | null }) {
   const { t } = useTranslation()
+  const sd = useSocialDisplay()
   const { prs, loading } = useRacePRs(userId)
 
   if (loading || (!prs.finishes && !prs.wins)) return null
@@ -51,7 +53,7 @@ export default function RacePRsPanel({ userId }: { userId: string | null }) {
           )}
           {prs.longestRace && (
             <Text className="font-mono text-[10px] text-muted-foreground">
-              {t('race.prsLongest')}: {prs.longestRace.distanceKm.toFixed(2)} km
+              {t('race.prsLongest')}: {sd.number(prs.longestRace.distanceKm.toFixed(2))} km
             </Text>
           )}
         </View>

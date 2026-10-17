@@ -1,3 +1,5 @@
+import i18n from 'i18next'
+import { secondaryLabel } from './secondary-ui-labels'
 /**
  * reminder-scheduler.ts
  *
@@ -42,7 +44,7 @@ const PUSH_CHANNEL_ID = 'push-notifications'
 export async function ensureAndroidChannel(): Promise<void> {
   if (Platform.OS !== 'android') return
   await Notifications.setNotificationChannelAsync(PUSH_CHANNEL_ID, {
-    name: 'Notificaciones',
+    name: secondaryLabel('Notificaciones', i18n.language ?? 'es', Platform.OS),
     importance: Notifications.AndroidImportance.HIGH,
     vibrationPattern: [0, 200, 100, 200],
   })

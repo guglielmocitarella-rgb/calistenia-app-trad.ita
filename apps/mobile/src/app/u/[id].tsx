@@ -1,9 +1,11 @@
+import { profileSkillLabel } from '@/lib/italian-ui-labels'
+import { useSocialDisplay } from '@/lib/use-social-display'
 /**
  * Perfil público de usuario — port móvil mínimo de apps/web/src/pages/UserProfilePage.tsx.
  * Ruta: /u/[id] (la usa friends.tsx al tocar un usuario).
  */
 import { useState } from 'react'
-import { View, ScrollView, Image, ActivityIndicator, Pressable, Alert } from 'react-native'
+import { View, ScrollView, Image, ActivityIndicator, Pressable, Alert, Platform, useWindowDimensions } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useLocalSearchParams, useRouter } from 'expo-router'
 import { X, MoreVertical, UserX, Flag, ChevronRight, Lock } from 'lucide-react-native'
@@ -33,21 +35,25 @@ const PR_DEFS: { key: keyof ProfilePRs; label: string; unit: string; accent: str
 ]
 
 function StatBox({ label, value, accent, unit }: { label: string; value: number; accent: string; unit?: string }) {
+  const { i18n } = useTranslation()
+  const { width, fontScale } = useWindowDimensions()
+  const compactItalian = Platform.OS === 'android' && i18n.language.toLowerCase().split(/[-_]/)[0] === 'it'
   return (
-    <View className="flex-1 rounded-xl border border-border bg-card p-4">
+    <View className={cn('flex-1 rounded-xl border border-border bg-card py-4', compactItalian ? 'px-1' : 'px-4')} style={compactItalian && (fontScale > 1.15 || width < 320) ? { flexBasis: '45%' } : undefined}>
       <Text className={cn('font-bebas text-3xl leading-none', accent)}>
         {value}
         {unit ? <Text className="font-bebas text-lg text-muted-foreground"> {unit}</Text> : null}
       </Text>
-      <Text className="mt-1 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">{label}</Text>
+      <Text className={cn('mt-1 font-mono text-[10px] uppercase text-muted-foreground', compactItalian ? 'tracking-normal' : 'tracking-widest')}>{label}</Text>
     </View>
   )
 }
 
 export default function UserProfileScreen() {
+  const sd = useSocialDisplay()
   const { id: userId } = useLocalSearchParams<{ id: string }>()
   const router = useRouter()
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const l = useLocalize()
   const me = useAuthUser()
   const currentUserId = me?.id ?? null
@@ -109,7 +115,7 @@ export default function UserProfileScreen() {
     <View className="flex-row items-start justify-between px-4 pt-2 pb-3">
       <View>
         <Kicker>SOCIAL</Kicker>
-        <Text className="font-bebas text-4xl leading-none text-foreground">Perfil</Text>
+        <Text className="font-bebas text-4xl leading-none text-foreground">{sd.label('Perfil')}</Text>
       </View>
       <View className="mt-1 flex-row items-center gap-2">
         {canAct ? (
@@ -171,7 +177,7 @@ export default function UserProfileScreen() {
         {Menu}
         <View className="flex-1 items-center justify-center px-8">
           <Text className="text-2xl">🚫</Text>
-          <Text className="mt-2 text-center text-sm text-muted-foreground">No se pudo cargar el perfil.</Text>
+          <Text className="mt-2 text-center text-sm text-muted-foreground">{sd.label('No se pudo cargar el perfil.')}</Text>
         </View>
       </SafeAreaView>
     )
@@ -212,7 +218,7 @@ export default function UserProfileScreen() {
           <View className="flex-1">
             <Text className="font-bebas text-3xl leading-none text-foreground" numberOfLines={1}>{displayName}</Text>
             <Text className="mt-1 font-mono text-[11px] text-muted-foreground">
-              Miembro desde {profile.memberSince} · Fase {profile.phase}
+              {sd.label('Miembro desde')} {sd.date(profile.memberSince)} · Fase {profile.phase}
             </Text>
           </View>
         </View>
@@ -293,17 +299,17 @@ export default function UserProfileScreen() {
         {!blocked && !locked ? (<>
 
         {/* Stats */}
-        <View className="mb-6 flex-row gap-2">
-          <StatBox label="Sesiones" value={profile.totalSessions} accent="text-lime" />
-          <StatBox label="Racha" value={profile.currentStreak} accent="text-sky-500" unit="sem" />
-          <StatBox label="Mejor" value={profile.bestStreak} accent="text-amber-400" unit="sem" />
-          <StatBox label="Nivel" value={profile.level} accent="text-pink-500" />
+        <View className={cn('mb-6 flex-row gap-2', Platform.OS === 'android' && i18n.language.toLowerCase().split(/[-_]/)[0] === 'it' && 'flex-wrap')}>
+          <StatBox label={sd.label('Sesiones')} value={profile.totalSessions} accent="text-lime" />
+          <StatBox label={sd.label('Racha')} value={profile.currentStreak} accent="text-sky-500" unit={sd.label('sem')} />
+          <StatBox label={sd.label('Mejor')} value={profile.bestStreak} accent="text-amber-400" unit={sd.label('sem')} />
+          <StatBox label={sd.label('Nivel')} value={profile.level} accent="text-pink-500" />
         </View>
 
         {/* Programa actual */}
         {profile.activeProgram ? (
           <View className="mb-6 rounded-xl border border-border bg-card p-4">
-            <Text className="mb-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Programa actual</Text>
+            <Text className="mb-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">{sd.label('Programa actual')}</Text>
             <Text className="font-sans-medium text-foreground">{l(profile.activeProgram.name)}</Text>
             <Text className="font-mono text-[11px] text-muted-foreground">Fase {profile.phase}</Text>
           </View>
@@ -311,13 +317,13 @@ export default function UserProfileScreen() {
 
         {/* PRs */}
         <View className="mb-6 rounded-xl border border-border bg-card p-4">
-          <Text className="mb-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Records personales</Text>
+          <Text className="mb-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">{sd.label('Records personales')}</Text>
           <View className="gap-2.5">
             {PR_DEFS.map((pr) => (
               <View key={pr.key} className="flex-row items-center justify-between">
-                <Text className="text-sm text-foreground">{pr.label}</Text>
+                <Text className="text-sm text-foreground">{profileSkillLabel(pr.key, pr.label, i18n.language, Platform.OS, t)}</Text>
                 <Text className={cn('font-sans-medium text-sm', pr.accent)}>
-                  {profile.prs[pr.key] || 0}{pr.unit}
+                  {profile.prs[pr.key] || 0}{sd.label(pr.unit)}
                 </Text>
               </View>
             ))}
@@ -326,7 +332,7 @@ export default function UserProfileScreen() {
 
         {/* Calendario de actividad */}
         <View className="mb-6">
-          <Text className="mb-3 font-mono text-[10px] uppercase tracking-[3px] text-muted-foreground">Actividad este mes</Text>
+          <Text className="mb-3 font-mono text-[10px] uppercase tracking-[3px] text-muted-foreground">{sd.label('Actividad este mes')}</Text>
           <View className="flex-row flex-wrap gap-1">
             {Object.entries(profile.monthActivity).map(([date, active]) => (
               <View
@@ -343,11 +349,11 @@ export default function UserProfileScreen() {
         {/* Sesiones recientes */}
         {profile.recentSessions.length > 0 ? (
           <View>
-            <Text className="mb-3 font-mono text-[10px] uppercase tracking-[3px] text-muted-foreground">Sesiones recientes</Text>
+            <Text className="mb-3 font-mono text-[10px] uppercase tracking-[3px] text-muted-foreground">{sd.label('Sesiones recientes')}</Text>
             <View className="gap-1.5">
               {profile.recentSessions.map((s) => {
                 const d = new Date(s.completedAt.replace(' ', 'T'))
-                const fdate = d.toLocaleDateString('es', { weekday: 'short', day: 'numeric', month: 'short' })
+                const fdate = d.toLocaleDateString(sd.locale('es'), { weekday: 'short', day: 'numeric', month: 'short' })
                 // Título y nota llegan crudos del hook: se localizan aquí.
                 const workoutTitle = l(s.workoutTitle)
                 const note = l(s.note)

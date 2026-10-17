@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "baseline": "f2fa7af7366239f4f37cabd47cf7b20f7c641cf3",
+  "localTextForms": 19,
+  "groups": [
+    {
+      "file": "apps/mobile/src/components/share/PRCelebration.tsx",
+      "forms": [
+        "NUEVO RÉCORD",
+        "COMPARTIR",
+        "reps"
+      ],
+      "rendering": "Lookup catalogo IT o abbreviazione rip. solo in Android italiano; dati PREvent e parametri condivisi invariati."
+    },
+    {
+      "file": "apps/mobile/src/components/share/PRShareCard.tsx",
+      "forms": [
+        "NUEVO RÉCORD PERSONAL",
+        "REPS",
+        "💪 New limits. New strength."
+      ],
+      "rendering": "Cornice della scheda IT, carichi/numeri e data formattati solo nel rendering."
+    },
+    {
+      "file": "apps/mobile/src/components/progress/ProgressPhotoShareCard.tsx",
+      "forms": [
+        "FRONTAL",
+        "PERFIL",
+        "ESPALDA"
+      ],
+      "rendering": "Lookup categorie note nel catalogo solo in Android IT; categorie sconosciute e metadati originali conservati."
+    },
+    {
+      "file": "apps/mobile/src/components/insights/InsightsCard.tsx",
+      "forms": [
+        "ahora",
+        "hace ${hours}h",
+        "ayer",
+        "hace ${days}d"
+      ],
+      "rendering": "Adattatore progressRelativeTime nei consumer Analisi e cronologia; algoritmo e formatter originale EN/ES/iOS conservati."
+    },
+    {
+      "file": "apps/mobile/src/lib/progress-ui-labels.ts",
+      "forms": [
+        "${from} → ${newValue} reps 🏆"
+      ],
+      "rendering": "Messaggio nativo PR costruito dalla forma originale riconosciuta; nomi e suffisso con URL referral conservati. share.ts invariato."
+    },
+    {
+      "file": "apps/mobile/src/widgets/StreakWidget.tsx",
+      "forms": [
+        "STREAK",
+        "WEEK",
+        "WEEKS",
+        "OPEN THE APP",
+        "NO STREAK"
+      ],
+      "rendering": "Dizionario locale IT aggiunto al reader; EN/ES e snapshot/writer invariati."
+    }
+  ],
+  "formatting": [
+    "Date ISO visuali in Misurazioni, Traguardi, Foto/comparatore/condivisione",
+    "Locale it-IT per periodi Analisi e date delle schede PR",
+    "Virgole decimali in Statistiche, Calendario, Progressi, Misurazioni e record",
+    "Riduzione a zero di due eccezioni JSX pregresse; nessun test indebolito"
+  ]
+}

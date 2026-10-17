@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 /**
  * NutritionPage (mobile) — pantalla de nutrición con tres sub-vistas:
  * HOY (seguimiento: date nav, ring + macros, agua, comidas, coach/tendencia)
@@ -75,6 +76,7 @@ import { Sentry } from '@/lib/instrument'
 
 export default function NutritionTab() {
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
   const authUser = useAuthUser()
   const userId = authUser?.id ?? null
   const router = useRouter()
@@ -414,7 +416,7 @@ export default function NutritionTab() {
 
   const formatDate = (dateStr: string) => {
     const d = new Date(dateStr + 'T12:00:00')
-    return d.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })
+    return d.toLocaleDateString(display.locale('es-ES'), { weekday: 'long', day: 'numeric', month: 'long' })
   }
 
   const nutritionHeader = (

@@ -1,3 +1,4 @@
+import { contentLanguage } from '@calistenia/core/lib/content-language'
 /**
  * Bloque «Hoy» del inicio (#858): una variante por `kind` de `getHomeState`
  * (#853). Cada una es un tablero del lienzo de #852 (Main, Cardio, Descarga,
@@ -8,7 +9,8 @@
  * la analítica (#854) delante.
  */
 import { useCallback, useState } from 'react'
-import { View } from 'react-native'
+import { View, Platform } from 'react-native'
+import { trainingRepsLabel, trainingUiLabel } from '@/lib/training-ui-labels'
 import { useRouter, useFocusEffect } from 'expo-router'
 import { useTranslation } from 'react-i18next'
 
@@ -72,7 +74,7 @@ function exerciseRows(exercises: readonly Exercise[], lang: string): TodayRow[] 
   return exercises.slice(0, MAX_ROWS).map((ex, i) => ({
     key: `${ex.id}_${i}`,
     name: ex.name,
-    detail: `${ex.sets} × ${localizeReps(ex.reps, lang)}`,
+    detail: `${trainingUiLabel(String(ex.sets), undefined, lang, Platform.OS)} × ${trainingRepsLabel(ex.reps, localizeReps(ex.reps, lang), lang, Platform.OS)}`,
   }))
 }
 
@@ -160,7 +162,7 @@ function TrainingToday({ view, day, chosen, deload, actions, onChangeDay, onBack
     rows = (circuit?.exercises ?? []).slice(0, MAX_ROWS).map((ex, i) => ({
       key: `${ex.exerciseId}_${i}`,
       name: l(ex.name),
-      detail: ex.reps ? localizeReps(ex.reps, i18n.language) : undefined,
+      detail: ex.reps ? trainingRepsLabel(ex.reps, localizeReps(ex.reps, i18n.language), i18n.language, Platform.OS) : undefined,
     }))
     primary = t('home.action.startCircuit')
   } else {
@@ -283,7 +285,7 @@ function FirstWorkoutToday({ onPrimary, onSecondary }: TodayBlockProps) {
   const startFirstWorkout = useStartFirstWorkout()
   const level = normalizeFirstWorkoutLevel(user?.level as string | undefined)
   const minutes = estimateFirstWorkoutMinutes(level)
-  const workout = buildFirstWorkout(level, i18n.language)
+  const workout = buildFirstWorkout(level, contentLanguage())
 
   return (
     <View className="gap-5">

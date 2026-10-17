@@ -38,7 +38,7 @@ export default function ProgramEditorScreen() {
   const { refreshPrograms } = useWorkoutActions()
 
   const {
-    state, setStep, updateInfo, redistributeWeeks, addPhase, removePhase, updatePhase,
+    state, contentLocale, setStep, updateInfo, redistributeWeeks, addPhase, removePhase, updatePhase,
     updateDay, addExercise, removeExercise, updateExercise, moveExercise,
     copyDay, copyPhase,
     loadProgram, saveProgram, validate, resetEditor,
@@ -255,6 +255,7 @@ export default function ProgramEditorScreen() {
       </KeyboardAvoidingView>
 
       <ExercisePickerSheet
+        contentLocale={contentLocale}
         visible={showCatalog}
         onClose={() => setShowCatalog(false)}
         onAdd={handleAddFromCatalog}

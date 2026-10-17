@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 import { useState } from 'react'
 import { ActivityIndicator, Pressable, View } from 'react-native'
 import { useTranslation } from 'react-i18next'
@@ -28,9 +29,9 @@ function cleanLimiting(raw: string): string {
 }
 
 // "2026-07-06" → "dom, 6 jul" (misma convención que formatWeekRange en WeeklyMealPlan)
-function formatDayLabel(dateStr: string, lang: string): string {
+function formatDayLabel(dateStr: string, locale: string): string {
   try {
-    return new Date(`${dateStr}T12:00:00`).toLocaleDateString(lang === 'en' ? 'en-US' : 'es-ES', {
+    return new Date(`${dateStr}T12:00:00`).toLocaleDateString(locale, {
       weekday: 'short',
       day: 'numeric',
       month: 'short',
@@ -47,6 +48,7 @@ interface PantryPlanSectionProps {
 
 export function PantryPlanSection({ userId, goals }: PantryPlanSectionProps) {
   const { t, i18n } = useTranslation()
+  const display = useNutritionDisplay()
   const router = useRouter()
   const { hasPantry, generateDay, howManyMeals } = usePantryPlan(userId)
   const [target, setTarget] = useState<'today' | 'tomorrow'>('tomorrow') // default Mañana (caso de uso: qué cocino mañana)
@@ -123,7 +125,7 @@ export function PantryPlanSection({ userId, goals }: PantryPlanSectionProps) {
         <View className="mt-3">
           <Text className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-2">
             {t('pantryPlan.planFor', {
-              date: formatDayLabel(dayPlan.target_date ?? isoDate(target === 'tomorrow' ? 1 : 0), i18n.language),
+              date: formatDayLabel(dayPlan.target_date ?? isoDate(target === 'tomorrow' ? 1 : 0), display.locale(i18n.language === 'en' ? 'en-US' : 'es-ES')),
             })}
           </Text>
           {dayPlan.meals.map((meal, i) => (

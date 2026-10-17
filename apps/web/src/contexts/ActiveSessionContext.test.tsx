@@ -30,6 +30,8 @@ vi.mock('@calistenia/core/lib/analytics', () => ({
 // que exige initCore(). Se inyecta aquí respaldado por el localStorage de jsdom,
 // para que los tests sigan asertando sobre `window.localStorage`.
 vi.mock('@calistenia/core/platform', () => ({
+  // Web no instala la política de idiomas exclusiva de Android.
+  getLanguagePolicy: () => undefined,
   storage: {
     getItem: (k: string) => window.localStorage.getItem(k),
     setItem: (k: string, v: string) => window.localStorage.setItem(k, v),

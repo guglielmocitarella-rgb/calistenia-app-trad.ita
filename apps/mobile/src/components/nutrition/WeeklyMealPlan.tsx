@@ -1,3 +1,4 @@
+import { useNutritionDisplay } from '@/lib/use-nutrition-display'
 /** Weekly AI meal plan — mobile port of web WeeklyMealPlan. */
 import { useState, useCallback } from 'react'
 import { View, Pressable, ScrollView, ActivityIndicator } from 'react-native'
@@ -39,14 +40,14 @@ function getTodayDayIndex(): number {
   return dow === 0 ? 6 : dow - 1  // 0=Mon
 }
 
-function formatWeekRange(planDays: WeeklyPlanDay[]): string {
+function formatWeekRange(planDays: WeeklyPlanDay[], locale: string): string {
   if (!planDays.length) return ''
   const first = planDays[0]?.date?.slice(0, 10) ?? ''
   const last = planDays[planDays.length - 1]?.date?.slice(0, 10) ?? ''
   if (!first) return ''
   try {
-    const f = new Date(first).toLocaleDateString('es-ES', { day: 'numeric', month: 'short' })
-    const l = new Date(last).toLocaleDateString('es-ES', { day: 'numeric', month: 'short' })
+    const f = new Date(first).toLocaleDateString(locale, { day: 'numeric', month: 'short' })
+    const l = new Date(last).toLocaleDateString(locale, { day: 'numeric', month: 'short' })
     return `${f} — ${l}`
   } catch {
     return first
@@ -70,6 +71,7 @@ interface MealCardProps {
 
 function MealCard({ meal, dayId, onLog, onDelete, onOpenRecipe }: MealCardProps) {
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
   const [logging, setLogging] = useState(false)
   const [deleting, setDeleting] = useState(false)
   const colors = MEAL_TYPE_COLORS[meal.meal_type] || MEAL_TYPE_COLORS.snack
@@ -85,7 +87,7 @@ function MealCard({ meal, dayId, onLog, onDelete, onOpenRecipe }: MealCardProps)
       <View className="flex-row items-center justify-between">
         <View className={cn('rounded border px-2 py-0.5', colors.bg)}>
           <Text className={cn('font-mono text-[9px] uppercase tracking-widest', colors.text)}>
-            {meal.meal_type}
+            {display.meal(meal.meal_type)}
           </Text>
         </View>
         <Text className="font-bebas text-lg leading-none text-foreground">
@@ -197,6 +199,7 @@ export default function WeeklyMealPlan({
   onGenerateFromPantry,
 }: WeeklyMealPlanProps) {
   const { t } = useTranslation()
+  const display = useNutritionDisplay()
   const router = useRouter()
   const todayIndex = getTodayDayIndex()
   const hasBuyItems = planDays.some((d) =>
@@ -324,7 +327,7 @@ export default function WeeklyMealPlan({
   }
 
   const selectedDay = planDays.find((d) => d.day_index === selectedDayIndex)
-  const weekRange = formatWeekRange(planDays)
+  const weekRange = formatWeekRange(planDays, display.locale('es-ES'))
 
   return (
     <View className="gap-3">
@@ -406,7 +409,7 @@ export default function WeeklyMealPlan({
         showsHorizontalScrollIndicator={false}
         contentContainerClassName="flex-row gap-2 px-0.5"
       >
-        {DAY_NAMES_SHORT.map((name, idx) => {
+        {(display.italian ? ['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom'] : DAY_NAMES_SHORT).map((name, idx) => {
           const day = planDays.find((d) => d.day_index === idx)
           const isSelected = idx === selectedDayIndex
           const isToday = idx === todayIndex

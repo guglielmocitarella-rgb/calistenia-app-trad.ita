@@ -1,6 +1,7 @@
 'use no memo'
 // React Compiler inyecta useMemoCache y rompe el renderer headless de react-native-android-widget
 import React from 'react'
+import { widgetStrings } from '../lib/widget-language'
 import { FlexWidget, TextWidget } from 'react-native-android-widget'
 import type { ColorProp } from 'react-native-android-widget'
 import type { WidgetSnapshot } from '../lib/widget-snapshot'
@@ -11,6 +12,7 @@ const LIME: ColorProp = '#a3e635'
 const MUTED: ColorProp = '#8a8782'
 
 const STRINGS = {
+  it: { streak: 'SERIE', week: 'SETTIMANA', weeks: 'SETTIMANE', stale: 'APRI L’APP', none: 'NESSUNA SERIE' },
   // La racha cuenta semanas desde #801.
   es: { streak: 'RACHA', week: 'SEMANA', weeks: 'SEMANAS', stale: 'ABRE LA APP', none: 'SIN RACHA' },
   en: { streak: 'STREAK', week: 'WEEK', weeks: 'WEEKS', stale: 'OPEN THE APP', none: 'NO STREAK' },
@@ -23,7 +25,7 @@ const SHELL = {
 } as const
 
 export function StreakWidget({ snapshot, today }: { snapshot: WidgetSnapshot | null; today: string }) {
-  const tr = STRINGS[snapshot?.lang ?? 'es']
+  const tr = widgetStrings(STRINGS, snapshot?.lang)
 
   // El proceso headless no corre setTimezone(): `today` llega recalculado en la
   // tz del snapshot para que este guard no salte en falso (ver widget-task-handler).

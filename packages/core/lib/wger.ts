@@ -1,3 +1,5 @@
+import { getLanguagePolicy } from '../platform'
+import { resolveAndroidWgerLanguage } from './android-language'
 /**
  * wger API client — search and fetch exercise data from wger.de
  */
@@ -68,6 +70,7 @@ export interface WgerExerciseInfo {
 // ── API functions ───────────────────────────────────────────────────────────
 
 export async function searchWger(term: string, language = 'es'): Promise<WgerSearchSuggestion[]> {
+  if (getLanguagePolicy()) language = resolveAndroidWgerLanguage(language)
   try {
     const url = `${WGER_BASE}/exercisesearch/?term=${encodeURIComponent(term)}&language=${language}&format=json`
     const res = await fetch(url, { signal: AbortSignal.timeout(5000) })

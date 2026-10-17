@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from 'react'
-import { Pressable, View } from 'react-native'
+import { Platform, Pressable, View } from 'react-native'
 import { useTranslation } from 'react-i18next'
 import Animated, { FadeInDown } from 'react-native-reanimated'
 import { Button } from '@/components/ui/button'
@@ -56,17 +56,20 @@ export function StepPersonalizing({
     const delta = Math.abs(goalWeightKg - currentWeightKg)
     if (delta < 0.1) return null
     const weeks = Math.max(1, Math.ceil(delta / kgPerWeek))
-    const lang = i18n.language.startsWith('en') ? 'en' : 'es'
+    const lang = Platform.OS === 'android' && i18n.language.startsWith('it')
+      ? 'it'
+      : i18n.language.startsWith('en') ? 'en' : 'es'
     const targetDate = new Date()
     targetDate.setDate(targetDate.getDate() + weeks * 7)
     const months: Record<string, string[]> = {
       en: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
       es: ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],
+      it: Array.from({ length: 12 }, (_, month) => t(`month.${month}`).slice(0, 3)),
     }
     const m = months[lang] ?? months['en']!
     const dateLabel = `${targetDate.getDate()} ${m[targetDate.getMonth()]} ${targetDate.getFullYear()}`
     return { weeks, dateLabel }
-  }, [currentWeightKg, goalWeightKg, pace, i18n.language])
+  }, [currentWeightKg, goalWeightKg, pace, i18n.language, t])
 
   return (
     <View>

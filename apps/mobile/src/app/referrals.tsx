@@ -1,3 +1,4 @@
+import { useSocialDisplay } from '@/lib/use-social-display'
 /**
  * ReferralsScreen — estado de referidos en nativo (issue #354).
  *
@@ -365,6 +366,7 @@ function ErrorCard({
 
 function ReferralRows({ referrals, pendingCount }: { referrals: Referral[]; pendingCount: number }) {
   const { t } = useTranslation()
+  const sd = useSocialDisplay()
 
   if (referrals.length === 0) {
     return (
@@ -407,7 +409,7 @@ function ReferralRows({ referrals, pendingCount }: { referrals: Referral[]; pend
                 {name}
               </Text>
               <Text className="font-mono text-[10px] text-muted-foreground">
-                {ref.created ? utcToLocalDateStr(ref.created) : ''}
+                {ref.created ? sd.date(utcToLocalDateStr(ref.created)) : ''}
               </Text>
             </View>
             <View
@@ -432,6 +434,7 @@ function ReferralRows({ referrals, pendingCount }: { referrals: Referral[]; pend
 
 function HistoryRows({ transactions }: { transactions: PointTransaction[] }) {
   const { t } = useTranslation()
+  const sd = useSocialDisplay()
 
   if (transactions.length === 0) {
     return (
@@ -455,7 +458,7 @@ function HistoryRows({ transactions }: { transactions: PointTransaction[] }) {
                 {tx.description}
               </Text>
               <Text className="font-mono text-[10px] text-muted-foreground">
-                {tx.created ? utcToLocalDateStr(tx.created) : ''}
+                {tx.created ? sd.date(utcToLocalDateStr(tx.created)) : ''}
               </Text>
             </View>
             <Text

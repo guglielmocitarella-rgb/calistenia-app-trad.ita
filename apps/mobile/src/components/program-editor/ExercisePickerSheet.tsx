@@ -1,3 +1,6 @@
+import { useTrainingLabels } from '@/lib/use-training-labels'
+import { contentLanguage } from '@calistenia/core/lib/content-language'
+import { catalogToEditorExercise } from '@/lib/editor-exercise'
 /**
  * Picker de ejercicios del catálogo para el editor de programas (#223).
  * Port nativo de apps/web/src/components/ExerciseCatalogPicker.tsx (FlatList +
@@ -27,13 +30,15 @@ import type { EditorExercise } from '@calistenia/core/hooks/useProgramEditor'
 const LIME = 'hsl(74 90% 45%)'
 
 interface ExercisePickerSheetProps {
+  contentLocale?: string
   visible: boolean
   onClose: () => void
   /** Añade el ejercicio al día activo; el sheet queda abierto para añadir más. */
   onAdd: (exercise: EditorExercise) => void
 }
 
-export function ExercisePickerSheet({ visible, onClose, onAdd }: ExercisePickerSheetProps) {
+export function ExercisePickerSheet({ visible, onClose, onAdd, contentLocale }: ExercisePickerSheetProps) {
+  const { categoryLabel, repsLabel, label } = useTrainingLabels()
   const { t } = useTranslation()
   const l = useLocalize()
   const { exercises: catalog } = useCatalogExerciseList()
@@ -59,23 +64,9 @@ export function ExercisePickerSheet({ visible, onClose, onAdd }: ExercisePickerS
 
   const handleAdd = useCallback((ex: CatalogExercise) => {
     haptics.light()
-    onAdd({
-      // `slug` y no `id`: la identidad canónica es la que viaja a `sets_log`, y
-      // para un ejercicio venido de PB el `id` es aleatorio (#474).
-      exerciseId: ex.slug,
-      name: l(ex.name),
-      sets: ex.sets,
-      reps: ex.reps,
-      rest: ex.rest,
-      muscles: l(ex.muscles),
-      note: l(ex.note),
-      youtube: ex.youtube,
-      priority: ex.priority,
-      isTimer: !!ex.isTimer,
-      timerSeconds: ex.timerSeconds ?? 0,
-    })
+    onAdd(catalogToEditorExercise(ex, contentLocale ?? contentLanguage()))
     setAddedIds(prev => new Set(prev).add(ex.slug))
-  }, [onAdd, l])
+  }, [onAdd, contentLocale])
 
   const handleClose = () => {
     setAddedIds(new Set())
@@ -94,7 +85,7 @@ export function ExercisePickerSheet({ visible, onClose, onAdd }: ExercisePickerS
             {l(ex.name)}
           </Text>
           <Text className="mt-0.5 font-mono text-[10px] uppercase tracking-wide text-muted-foreground" numberOfLines={1}>
-            {String(ex.sets)}×{ex.reps} · {l(ex.muscles)}
+            {label(String(ex.sets))}×{repsLabel(ex.reps)} · {l(ex.muscles)}
           </Text>
         </View>
         <View
@@ -107,7 +98,7 @@ export function ExercisePickerSheet({ visible, onClose, onAdd }: ExercisePickerS
         </View>
       </Pressable>
     )
-  }, [addedIds, handleAdd, l])
+  }, [addedIds, handleAdd, l, repsLabel, label])
 
   return (
     <Modal visible={visible} animationType="slide" onRequestClose={handleClose} statusBarTranslucent>
@@ -165,7 +156,7 @@ export function ExercisePickerSheet({ visible, onClose, onAdd }: ExercisePickerS
                   )}
                 >
                   <Text className={cn('font-mono text-[10px] uppercase tracking-wide', active ? 'text-lime' : 'text-muted-foreground')}>
-                    {cat === 'all' ? t('exerciseLibrary.allMuscles') : cat.replace(/_/g, ' ')}
+                    {cat === 'all' ? t('exerciseLibrary.allMuscles') : categoryLabel(cat)}
                   </Text>
                 </Pressable>
               )

@@ -1,6 +1,7 @@
 'use no memo'
 // React Compiler inyecta useMemoCache y rompe el renderer headless de react-native-android-widget
 import React from 'react'
+import { widgetStrings } from '../lib/widget-language'
 import { FlexWidget, TextWidget } from 'react-native-android-widget'
 import type { ColorProp } from 'react-native-android-widget'
 import type { NutritionWidgetSnapshot } from '../lib/nutrition-widget-snapshot'
@@ -17,6 +18,7 @@ const CARBS_COLOR: ColorProp = '#fbbf24'
 const FAT_COLOR: ColorProp = '#ec4899'
 
 const STRINGS = {
+  it: { kcalGoal: '/ OBIETTIVO KCAL', remaining: 'RESTANTI', consumed: 'CONSUMATE', prot: 'PROT', carb: 'CARB', gras: 'GRASSI', camera: '📷  FOTO', text: '✍️  TESTO', stale: 'APRI L’APP' },
   es: {
     kcalGoal: '/ OBJETIVO KCAL',
     remaining: 'RESTANTES',
@@ -97,7 +99,7 @@ function MacroRow({ label, value, goal, color }: MacroRowProps) {
 
 export function NutritionWidget({ snapshot, today }: { snapshot: NutritionWidgetSnapshot | null; today: string }) {
   const lang = snapshot?.lang ?? 'es'
-  const tr = STRINGS[lang]
+  const tr = widgetStrings(STRINGS, lang)
 
   // Stale guard
   if (!snapshot || snapshot.date !== today) {

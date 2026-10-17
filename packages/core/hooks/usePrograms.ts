@@ -29,7 +29,7 @@ import { getPlatform } from '../platform'
 import { CANONICAL_ANALYTICS_EVENTS, op, setAnalyticsProgramId, trackCanonicalEvent } from '../lib/analytics'
 import { qk } from '../lib/query-keys'
 import type { Phase, WeekDay, Workout, WorkoutsMap, Exercise, ProgramMeta, DayId, CardioDayConfig, CardioActivityType, CircuitDefinition, CircuitExercise } from '../types'
-import i18n from 'i18next'
+import { contentLanguage, contentT } from '../lib/content-language'
 import { duplicatedName, localize } from '../lib/i18n-db'
 import { resolveExerciseDisplayName, resolveExerciseNameField } from '../lib/exercise-resolver'
 import { inferTimerFromReps } from '../lib/exercise-timer-inference'
@@ -43,7 +43,7 @@ import { useProgramOverrides } from './useAutoProgression'
 // ─── helpers ────────────────────────────────────────────────────────────────
 
 function buildPhases(phaseRecords: RecordModel[]): Phase[] {
-  const locale = i18n.language
+  const locale = contentLanguage()
   return [...phaseRecords]
     .sort((a, b) => a.sort_order - b.sort_order)
     .map(p => ({
@@ -113,7 +113,7 @@ function toCircuitDefinition(dayConfig: RecordModel, exerciseRecords: RecordMode
 
 function buildWeekDays(exerciseRecords: RecordModel[], dayConfigRecords: RecordModel[] = []): WeekDay[] {
   const ORDER: string[] = ['lun', 'mar', 'mie', 'jue', 'vie', 'sab', 'dom']
-  const locale = i18n.language
+  const locale = contentLanguage()
   const seen: Record<string, WeekDay> = {}
 
   dayConfigRecords.forEach(dc => {
@@ -156,8 +156,8 @@ function buildWeekDays(exerciseRecords: RecordModel[], dayConfigRecords: RecordM
   })
 
   const defaults: Record<string, WeekDay> = {
-    sab: { id: 'sab', name: i18n.t('day.saturday'),  focus: i18n.t('day.activeWalk'), type: 'rest', color: '#888899' },
-    dom: { id: 'dom', name: i18n.t('day.sunday'), focus: i18n.t('day.totalRest'),  type: 'rest', color: '#888899' },
+    sab: { id: 'sab', name: contentT()('day.saturday'),  focus: contentT()('day.activeWalk'), type: 'rest', color: '#888899' },
+    dom: { id: 'dom', name: contentT()('day.sunday'), focus: contentT()('day.totalRest'),  type: 'rest', color: '#888899' },
   }
   for (const id of ['sab', 'dom']) {
     if (!seen[id]) seen[id] = defaults[id]
@@ -213,7 +213,7 @@ export function buildCircuitDayConfigs(
  * `toCircuitExercises` y `buildCircuitDayConfigs`.
  */
 export function buildWorkoutsMap(exerciseRecords: RecordModel[]): WorkoutsMap {
-  const locale = i18n.language
+  const locale = contentLanguage()
   const map: WorkoutsMap = {}
   exerciseRecords.forEach(r => {
     const key = `p${r.phase_number}_${r.day_id}`
@@ -437,7 +437,7 @@ async function fetchCatalog(userId: string | null): Promise<ProgramMeta[]> {
     expand: 'created_by,forked_from,forked_from.created_by',
     $autoCancel: false,
   })
-  const locale = i18n.language
+  const locale = contentLanguage()
   const programIds = catalogItems.map(p => p.id)
   // Un `OR` con TODOS los ids del catálogo va en la query string, así que crece
   // con el catálogo hasta chocar contra el límite de longitud de URL (un 414, o
@@ -539,7 +539,7 @@ export interface ActiveEnrollment {
 function toEnrollment(rec: RecordModel): ActiveEnrollment {
   const expanded = rec.expand?.program as RecordModel | undefined
   return {
-    programMeta: expanded ? toProgramMeta(expanded, i18n.language, 'calistenia') : undefined,
+    programMeta: expanded ? toProgramMeta(expanded, contentLanguage(), 'calistenia') : undefined,
     id: rec.id,
     program: rec.program as string,
     started_at: (rec.started_at as string) || '',
@@ -823,7 +823,7 @@ export function usePrograms(userId: string | null = null): UseProgramsReturn {
     try {
       const original = await pb.collection('programs').getOne(programId)
       const newProgramData: Record<string, unknown> = {
-        name: duplicatedName(original.name, i18n.language), description: original.description,
+        name: duplicatedName(original.name, contentLanguage()), description: original.description,
         duration_weeks: original.duration_weeks, is_active: true, created_by: userId,
       }
       if ('is_official' in original) newProgramData.is_official = false

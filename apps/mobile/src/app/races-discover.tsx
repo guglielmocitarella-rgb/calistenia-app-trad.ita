@@ -1,3 +1,4 @@
+import { useSocialDisplay } from '@/lib/use-social-display'
 /** Races públicas cerca — port móvil de RacesDiscoverPage (useDiscoverRaces de core). */
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { View, ScrollView, Pressable, TextInput, RefreshControl } from 'react-native'
@@ -17,6 +18,7 @@ const RADII = [5, 10, 25, 50, 100]
 
 export default function RacesDiscoverScreen() {
   const { t } = useTranslation()
+  const sd = useSocialDisplay()
   const router = useRouter()
 
   const [search, setSearch] = useState('')
@@ -152,14 +154,14 @@ export default function RacesDiscoverScreen() {
                   <Text className="font-sans-medium text-foreground" numberOfLines={1}>{race.name}</Text>
                   <Text className="mt-0.5 font-mono text-[10px] uppercase tracking-wide text-muted-foreground">
                     {race.mode === 'distance'
-                      ? `${race.target_distance_km} km`
+                      ? `${sd.number(String(race.target_distance_km))} km`
                       : `${Math.round(race.target_duration_seconds / 60)} min`}
                     {' · '}
                     {t(race.status === 'countdown' ? 'race.startingSoon' : 'race.waitingLabel')}
                   </Text>
                 </View>
                 {race.distanceKm != null && (
-                  <Text className="font-mono text-[11px] text-lime">{race.distanceKm.toFixed(1)} km</Text>
+                  <Text className="font-mono text-[11px] text-lime">{sd.number(race.distanceKm.toFixed(1))} km</Text>
                 )}
               </Pressable>
             ))}

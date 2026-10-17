@@ -1,6 +1,7 @@
 'use no memo'
 // React Compiler inyecta useMemoCache y rompe el renderer headless de react-native-android-widget
 import React from 'react'
+import { widgetStrings } from '../lib/widget-language'
 import { FlexWidget, TextWidget } from 'react-native-android-widget'
 import type { ColorProp } from 'react-native-android-widget'
 import type { WidgetSnapshot } from '../lib/widget-snapshot'
@@ -11,6 +12,7 @@ const LIME: ColorProp = '#a3e635'
 const MUTED: ColorProp = '#8a8782'
 
 const STRINGS = {
+  it: {"tomorrow": "DOMANI", "rest": "RIPOSO", "none": "SCEGLI UN PROGRAMMA", "stale": "APRI L’APP", "ex": "ES"},
   es: { tomorrow: 'MAÑANA', rest: 'DESCANSO', none: 'ELIGE UN PROGRAMA', stale: 'ABRE LA APP', ex: 'EJ' },
   en: { tomorrow: 'TOMORROW', rest: 'REST DAY', none: 'PICK A PROGRAM', stale: 'OPEN THE APP', ex: 'EX' },
 }
@@ -28,7 +30,7 @@ const SHELL = {
  * "mañana" a la que deep-linkear).
  */
 export function NextSessionWidget({ snapshot, today }: { snapshot: WidgetSnapshot | null; today: string }) {
-  const tr = STRINGS[snapshot?.lang ?? 'es']
+  const tr = widgetStrings(STRINGS, snapshot?.lang)
   // El proceso headless no corre setTimezone(): `today` llega recalculado en la
   // tz del snapshot para que este guard no salte en falso (ver widget-task-handler).
   const fresh = !!snapshot && snapshot.date === today

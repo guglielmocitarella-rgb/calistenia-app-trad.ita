@@ -1,3 +1,4 @@
+import { useSocialDisplay } from '@/lib/use-social-display'
 /**
  * Una fila de actividad de un amigo («Ana completó Tirón + core · hace 2 h»).
  *
@@ -20,6 +21,7 @@ const MUTED = 'hsl(0 0% 55%)'
 
 export default function FriendActivityRow({ item, meId }: { item: FeedItem; meId: string | null }) {
   const router = useRouter()
+  const sd = useSocialDisplay()
   const isOwn = item.userId === meId
   const openProfile = () => router.push({ pathname: '/u/[id]', params: { id: item.userId } })
 
@@ -70,7 +72,7 @@ export default function FriendActivityRow({ item, meId }: { item: FeedItem; meId
           </Text>
         </Pressable>
         <Text className="font-mono text-[10px] text-muted-foreground" numberOfLines={1}>
-          {describeFeedItem(item).title} · {timeAgo(item.completedAt)}
+          {describeFeedItem(item).title} · {sd.time(timeAgo(item.completedAt), item.completedAt)}
         </Text>
       </View>
       <ChevronRight size={16} color={MUTED} />

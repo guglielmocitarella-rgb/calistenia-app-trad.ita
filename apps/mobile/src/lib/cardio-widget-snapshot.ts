@@ -1,3 +1,5 @@
+import type { WidgetLanguage } from './widget-language'
+
 /** Contrato del snapshot del widget de cardio. Puro: testeable sin react-native. */
 export interface CardioWidgetSnapshot {
   /** YYYY-MM-DD local de la última escritura — el widget marca stale si es viejo. */
@@ -12,7 +14,7 @@ export interface CardioWidgetSnapshot {
     /** YYYY-MM-DD local */
     date: string
   } | null
-  lang: 'es' | 'en'
+  lang: WidgetLanguage
 }
 
 export const CARDIO_WIDGET_SNAPSHOT_KEY = 'cardio_widget_snapshot'

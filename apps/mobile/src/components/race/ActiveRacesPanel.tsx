@@ -1,3 +1,4 @@
+import { useSocialDisplay } from '@/lib/use-social-display'
 /**
  * Búsqueda de competencias activas (públicas, en `waiting` o `countdown`) desde
  * la propia pantalla de cardio. La pantalla completa con geolocalización y radio
@@ -17,6 +18,7 @@ const MAX_INLINE = 5
 
 export default function ActiveRacesPanel() {
   const { t } = useTranslation()
+  const sd = useSocialDisplay()
   const router = useRouter()
   const [search, setSearch] = useState('')
   const [debounced, setDebounced] = useState('')
@@ -79,7 +81,7 @@ export default function ActiveRacesPanel() {
               <Text className="font-sans-medium text-foreground" numberOfLines={1}>{r.name}</Text>
               <Text className="mt-0.5 font-mono text-[10px] uppercase tracking-wide text-muted-foreground">
                 {r.mode === 'distance'
-                  ? `${r.target_distance_km} km`
+                  ? `${sd.number(String(r.target_distance_km))} km`
                   : `${Math.round(r.target_duration_seconds / 60)} min`}
                 {' · '}
                 {t(r.status === 'countdown' ? 'race.startingSoon' : 'race.waitingLabel')}

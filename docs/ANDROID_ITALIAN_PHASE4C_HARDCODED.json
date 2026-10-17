@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "baseline": "21f3bc9eafd8e4dd0b3928baa382562c6d239fb2",
+  "nutritionComponents": [
+    {
+      "file": "apps/mobile/src/components/nutrition/NutritionGoalSetup.tsx",
+      "localizedSites": [
+        "CONFIGURACIÓN",
+        "RITMO",
+        "RESUMEN",
+        "MACROS CALCULADOS",
+        "activity labels",
+        "goal labels",
+        "pace labels",
+        "años"
+      ]
+    },
+    {
+      "file": "apps/mobile/src/components/nutrition/ChangeGoalCard.tsx",
+      "localizedSites": [
+        "CARBS",
+        "F macro suffix"
+      ]
+    },
+    {
+      "file": "apps/mobile/src/components/nutrition/DailyMealPlan.tsx",
+      "localizedSites": [
+        "g prot",
+        "g carbs",
+        "g grasa",
+        "meal_type fallback"
+      ]
+    },
+    {
+      "file": "apps/mobile/src/components/nutrition/NutritionDashboard.tsx",
+      "localizedSites": [
+        "Calidad pendiente",
+        "Calidad",
+        "Foto de",
+        "Foto N de",
+        "mealType"
+      ]
+    },
+    {
+      "file": "apps/mobile/src/components/nutrition/MacroRing.tsx",
+      "localizedSites": [
+        "Calidad del día",
+        "Ver cómo se calcula"
+      ]
+    },
+    {
+      "file": "apps/mobile/src/components/nutrition/QualityBreakdownPanel.tsx",
+      "localizedSites": [
+        "Calidad",
+        "Spanish score verdict words in accessibility"
+      ]
+    },
+    {
+      "file": "apps/mobile/src/components/nutrition/meal-logger-views.tsx",
+      "localizedSites": [
+        "Todo",
+        "Nombre del alimento",
+        "ud",
+        "g/ud",
+        "recent mealType",
+        "display-only decimals"
+      ]
+    },
+    {
+      "file": "apps/mobile/src/components/nutrition/WeeklyMealPlan.tsx",
+      "localizedSites": [
+        "weekday names",
+        "meal_type"
+      ]
+    },
+    {
+      "file": "apps/mobile/src/components/nutrition/BadgeCelebrationDialog.tsx",
+      "localizedSites": [
+        "8 local badge labels",
+        "8 local badge descriptions"
+      ]
+    },
+    {
+      "file": "apps/mobile/src/components/nutrition/CoachInsights.tsx",
+      "localizedSites": [
+        "local badge labels"
+      ]
+    }
+  ],
+  "otherSites": {
+    "apps/mobile/src/components/pantry/PantryTable.tsx": [
+      "unit display",
+      "expiry days suffix",
+      "Italian examples with baseline command preserved"
+    ],
+    "apps/mobile/src/components/pantry/ShoppingListView.tsx": [
+      "display-only quantities and prices"
+    ],
+    "apps/mobile/src/components/pantry/PantryConfirmSheet.tsx": [
+      "display units and receipt converted-total price"
+    ],
+    "apps/mobile/src/components/pantry/PantryEditSheet.tsx": [
+      "unit in label"
+    ],
+    "apps/mobile/src/components/pantry/PantryDepleteSheet.tsx": [
+      "unit display"
+    ],
+    "apps/mobile/src/app/recipe-detail.tsx": [
+      "display ingredient units, quantities, prices"
+    ],
+    "apps/mobile/src/components/share/NutritionShareButton.tsx": [
+      "COMPARTIR",
+      "Compartir nutrición",
+      "native share message"
+    ],
+    "apps/mobile/src/components/share/NutritionShareCard.tsx": [
+      "NUTRICIÓN",
+      "CALIDAD",
+      "COMIDAS",
+      "COMIDA count",
+      "más",
+      "MACRONUTRIENTES",
+      "PROTEÍNA",
+      "CARBOS",
+      "GRASA",
+      "AGUA",
+      "enum-only meal fallback",
+      "date and water decimals"
+    ],
+    "apps/mobile/src/widgets/NutritionWidget.tsx": [
+      "Italian STRINGS dictionary"
+    ],
+    "apps/mobile/src/widgets/NutritionRingWidget.tsx": [
+      "Italian STRINGS dictionary"
+    ],
+    "apps/mobile/src/widgets/MealStreakWidget.tsx": [
+      "Italian STRINGS dictionary"
+    ],
+    "apps/mobile/src/widgets/WaterWidget.tsx": [
+      "Italian STRINGS dictionary",
+      "display decimals"
+    ]
+  },
+  "dateSites": [
+    "app/(tabs)/nutrition.tsx",
+    "components/nutrition/WeeklyMealPlan.tsx",
+    "components/nutrition/WeeklyNutritionChart.tsx",
+    "components/nutrition/PantryPlanSection.tsx",
+    "components/nutrition/meal-logger-views.tsx",
+    "components/share/NutritionShareCard.tsx"
+  ],
+  "policy": "Italian Android render only; original literals retained outside IT. Local badge overlay uses stable badge identity. No arbitrary remote food/recipe/user text translated."
+}

@@ -1,6 +1,8 @@
+import { useSecondaryDisplay } from '@/lib/use-secondary-display'
+import { progressRelativeTime } from '@/lib/progress-ui-labels'
 /** Sleep-only pattern summary card — collapsible "Tu sueño" on the sleep screen (issue #244, Fase 5). */
 import React, { useCallback, useEffect, useState } from 'react'
-import { View, Pressable } from 'react-native'
+import { View, Pressable, Platform } from 'react-native'
 import { useTranslation } from 'react-i18next'
 import Animated, {
   FadeIn,
@@ -95,7 +97,8 @@ interface SleepInsightsCardProps {
 }
 
 function SleepInsightsCard({ userId }: SleepInsightsCardProps) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const display = useSecondaryDisplay()
   const [expanded, setExpanded] = useState(false)
   const [genError, setGenError] = useState(false)
   const { insight, isLoading, isGenerating, generate, needsMoreData, notSaved } = useSleepInsight(userId, 'weekly')
@@ -162,7 +165,7 @@ function SleepInsightsCard({ userId }: SleepInsightsCardProps) {
                 <TrendBadge trend={insight.payload.trend} />
               </View>
               {!!insight.generatedAt && (
-                <Text className="font-mono text-[9px] text-muted-foreground">{relativeTime(insight.generatedAt)}</Text>
+                <Text className="font-mono text-[9px] text-muted-foreground">{progressRelativeTime(relativeTime(insight.generatedAt), insight.generatedAt, i18n.language, Platform.OS)}</Text>
               )}
               {notSaved && (
                 <Text className="font-mono text-[9px] uppercase tracking-widest text-muted-foreground">
@@ -183,7 +186,7 @@ function SleepInsightsCard({ userId }: SleepInsightsCardProps) {
               </View>
               <View className="flex-1 items-center">
                 <Text className="font-bebas text-lg leading-none text-foreground">
-                  {insight.payload.avgQuality.toFixed(1)} / 5
+                  {display.number(insight.payload.avgQuality.toFixed(1))} / 5
                 </Text>
                 <Text className="mt-1 font-mono text-[9px] uppercase tracking-wide text-muted-foreground text-center">
                   {t('sleep.insight.avgQuality', 'Calidad media')}

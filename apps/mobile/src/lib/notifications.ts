@@ -1,3 +1,5 @@
+import i18n from 'i18next'
+import { secondaryLabel } from './secondary-ui-labels'
 /**
  * Notificaciones locales del rest timer (best effort: en Expo Go Android
  * tienen limitaciones; todo va en try/catch para no romper la sesión).
@@ -40,7 +42,7 @@ export async function ensureRestTimerChannel(): Promise<void> {
   if (Platform.OS !== 'android') return
   try {
     await Notifications.setNotificationChannelAsync('rest-timer', {
-      name: 'Rest timer',
+      name: secondaryLabel('Rest timer', i18n.language ?? 'es', Platform.OS),
       importance: Notifications.AndroidImportance.HIGH,
       vibrationPattern: [0, 200, 100, 200],
     })

@@ -1,6 +1,7 @@
 'use no memo'
 // React Compiler inyecta useMemoCache y rompe el renderer headless de react-native-android-widget
 import React from 'react'
+import { widgetStrings } from '../lib/widget-language'
 import { FlexWidget, TextWidget } from 'react-native-android-widget'
 import type { WidgetSnapshot } from '../lib/widget-snapshot'
 
@@ -12,12 +13,13 @@ const MUTED = '#8a8782' as const
 const FG = '#fafaf9' as const
 
 const STRINGS = {
+  it: {"today": "ALLENAMENTO DI OGGI", "done": "COMPLETATO", "rest": "GIORNO DI RIPOSO", "none": "SCEGLI UN PROGRAMMA", "stale": "APRI L’APP", "streak": "SERIE", "week": "SETTIMANA"},
   es: { today: 'ENTRENAMIENTO DE HOY', done: 'COMPLETADO', rest: 'DÍA DE DESCANSO', none: 'ELIGE UN PROGRAMA', stale: 'ABRE LA APP PARA ACTUALIZAR', streak: 'RACHA', week: 'SEMANA' },
   en: { today: "TODAY'S WORKOUT", done: 'COMPLETED', rest: 'REST DAY', none: 'PICK A PROGRAM', stale: 'OPEN THE APP TO UPDATE', streak: 'STREAK', week: 'WEEK' },
 }
 
 function label(snapshot: WidgetSnapshot | null, today: string) {
-  const tr = STRINGS[snapshot?.lang ?? 'es']
+  const tr = widgetStrings(STRINGS, snapshot?.lang)
   if (!snapshot || snapshot.date !== today) return { top: '', title: tr.stale, color: MUTED }
   const w = snapshot.workoutToday
   if (!w) return { top: '', title: tr.none, color: MUTED }
@@ -28,7 +30,7 @@ function label(snapshot: WidgetSnapshot | null, today: string) {
 
 export function TodayWidget({ snapshot, today }: { snapshot: WidgetSnapshot | null; today: string }) {
   const { top, title, color } = label(snapshot, today)
-  const tr = STRINGS[snapshot?.lang ?? 'es']
+  const tr = widgetStrings(STRINGS, snapshot?.lang)
   const fresh = snapshot && snapshot.date === today
 
   return (

@@ -1,3 +1,4 @@
+import { useSecondaryDisplay } from '@/lib/use-secondary-display'
 /**
  * WorkoutShareButton — renders WorkoutShareCard off-screen via ShareCardCapture,
  * captures a full-bleed story PNG sized to the device screen, then shares it.
@@ -53,6 +54,7 @@ export default function WorkoutShareButton({
   avatarUrl,
   referralCode,
 }: WorkoutShareButtonProps) {
+  const display = useSecondaryDisplay()
   const { width: screenW, height: screenH } = useWindowDimensions()
 
   const onCapture = useCallback(
@@ -67,12 +69,12 @@ export default function WorkoutShareButton({
         referralCode,
       })
 
-      await shareCardImage(uri, { message, title: 'Compartir sesión' }, {
+      await shareCardImage(uri, { message, title: display.label('Compartir sesión') }, {
         ...MOBILE_SHARE_CARD_CONTEXTS.workoutHistory,
         workout_id: workoutKey,
       })
     },
-    [userName, workoutTitle, totalSets, durationMin, date, workoutKey, referralCode],
+    [userName, workoutTitle, totalSets, durationMin, date, workoutKey, referralCode, display],
   )
 
   const { captureRef, sharing, share } = useShareCardCapture({ onCapture })
@@ -105,7 +107,7 @@ export default function WorkoutShareButton({
         onPress={() => void share()}
       >
         <Text className="font-bebas text-lg tracking-[2px] text-foreground">
-          {sharing ? 'GENERANDO…' : 'COMPARTIR'}
+          {display.label(sharing ? 'GENERANDO…' : 'COMPARTIR')}
         </Text>
       </Button>
     </>

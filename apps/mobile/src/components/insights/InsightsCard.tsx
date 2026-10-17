@@ -1,3 +1,4 @@
+import { useProgressDisplay } from '@/lib/use-progress-display'
 /** Cross-metric weekly insight card — collapsible "Tu semana" on Home (épica #128 Fase 2, issue #133). */
 import React, { useCallback, useEffect, useState } from 'react'
 import { View, Pressable } from 'react-native'
@@ -157,6 +158,7 @@ interface InsightsCardProps {
 
 function InsightsCard({ userId }: InsightsCardProps) {
   const { t } = useTranslation()
+  const display = useProgressDisplay()
   const router = useRouter()
   const [expanded, setExpanded] = useState(false)
   const [genError, setGenError] = useState(false)
@@ -265,7 +267,7 @@ function InsightsCard({ userId }: InsightsCardProps) {
               {!!insight.payload.trend && <TrendBadge trend={insight.payload.trend} />}
             </View>
             {!!insight.generatedAt && (
-              <Text className="font-mono text-[9px] text-muted-foreground">{relativeTime(insight.generatedAt)}</Text>
+              <Text className="font-mono text-[9px] text-muted-foreground">{display.relativeTime(relativeTime(insight.generatedAt), insight.generatedAt)}</Text>
             )}
             {notSaved && (
               <Text className="font-mono text-[9px] uppercase tracking-widest text-muted-foreground">

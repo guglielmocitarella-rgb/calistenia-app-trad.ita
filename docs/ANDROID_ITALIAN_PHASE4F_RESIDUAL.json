@@ -1,0 +1,112 @@
+{
+  "phase4EDeviceResults": {
+    "planned": 67,
+    "passed": 22,
+    "confirmedIssues": 1,
+    "notExecuted": 28,
+    "toVerify": 16,
+    "issue": "Social → Profilo labels split across lines; corrected here, physical recheck pending",
+    "prior4Ato4DRegressionsConfirmed": 0
+  },
+  "deferredToPhase6": [
+    "28 social checks not executed",
+    "16 social checks to verify",
+    "Real phone layout at default and enlarged text",
+    "Authenticated Health Connect flows and read/sync behavior",
+    "Eight launcher widgets at supported sizes; native permission dialogs follow system language",
+    "Notifications at real delivery times and live/lock-screen surfaces",
+    "Full real-phone regression 4A–4F"
+  ],
+  "contentPreserved": [
+    "Remote push title/body and server-generated messages",
+    "Unknown Health Connect/PocketBase/network error details",
+    "Remote/user-authored names, notes and exercise catalog content (4G)",
+    "Raw technical commit messages/scopes/hashes in changelog details",
+    "External help, legal/privacy documents and support URLs"
+  ],
+  "notPresent": [
+    "No standalone native FAQ or support article screen found; existing profile links open external content",
+    "No new export flow or file format introduced"
+  ],
+  "healthConnect": "Already implemented and reachable at /health; localized existing screen only. No new permissions or integration.",
+  "futureRoadmap": [
+    "4G catalogo italiano esercizi",
+    "5 audit finale",
+    "6 collaudo integrale Android",
+    "7 IA personale configurabile",
+    "8 manutenzione upstream"
+  ],
+  "scanner": {
+    "counts": {
+      "android_direct": 1778,
+      "web_apparent": 2550,
+      "undetermined": 409,
+      "android_potential": 549,
+      "android_indirect": 29
+    },
+    "catalogCounts": {
+      "es": 5315,
+      "en": 5315,
+      "it": 5315
+    },
+    "mobileFiles": 369,
+    "coreFiles": 290,
+    "dynamic": 181,
+    "missing": 0,
+    "hardcoded": 521,
+    "candidates": 2058,
+    "unresolved": 12
+  },
+  "scanParseDiagnostics": [],
+  "scanMissingStaticKeys": [],
+  "scanUnresolvedImports": [
+    {
+      "file": "apps/mobile/src/app/_layout.tsx",
+      "specifier": "../global.css"
+    },
+    {
+      "file": "apps/mobile/src/components/DiscoverSheet.tsx",
+      "specifier": "@calistenia/core/data/features.json"
+    },
+    {
+      "file": "apps/mobile/src/components/WhatsNewModal.tsx",
+      "specifier": "@calistenia/core/data/changelog.mobile.json"
+    },
+    {
+      "file": "apps/mobile/src/lib/catalog.ts",
+      "specifier": "@calistenia/core/data/exercise-catalog.json"
+    },
+    {
+      "file": "apps/mobile/src/lib/i18n.ts",
+      "specifier": "@calistenia/core/locales/es/translation.json"
+    },
+    {
+      "file": "apps/mobile/src/lib/i18n.ts",
+      "specifier": "@calistenia/core/locales/en/translation.json"
+    },
+    {
+      "file": "apps/mobile/src/lib/i18n.ts",
+      "specifier": "@calistenia/core/locales/it/translation.json"
+    },
+    {
+      "file": "apps/mobile/src/lib/init-core.ts",
+      "specifier": "@calistenia/core/data/exercise-catalog.json"
+    },
+    {
+      "file": "apps/mobile/src/lib/secondary-content-labels.ts",
+      "specifier": "./secondary-content-italian.json"
+    },
+    {
+      "file": "apps/mobile/src/lib/training-ui-labels.ts",
+      "specifier": "./training-ui.it.json"
+    },
+    {
+      "file": "apps/mobile/src/lib/training-ui-labels.ts",
+      "specifier": "./training-reps.it.json"
+    },
+    {
+      "file": "packages/core/lib/catalogIndex.ts",
+      "specifier": "../data/exercise-catalog.json"
+    }
+  ]
+}

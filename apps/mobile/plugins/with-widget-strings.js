@@ -32,7 +32,7 @@
  *
  * `withStringsXml` solo escribe en `values/`, así que `values-es/` usa
  * `withDangerousMod` con las mismas utilidades que `AndroidConfig.Strings`
- * (`getProjectStringsXMLPathAsync` acepta `kind: 'values-es'`).
+ * (`getProjectStringsXMLPathAsync` acepta `kind: `values-${lang}``).
  */
 const { withStringsXml, withDangerousMod, AndroidConfig, XML } = require('expo/config-plugins')
 
@@ -41,36 +41,36 @@ const { Resources, Strings } = AndroidConfig
 // Nombre del widget (tal cual en app.json) → label y description, en/es.
 const WIDGET_STRINGS = {
   TodayWidget: {
-    label: { en: "Today's workout", es: 'Entrenamiento de hoy' },
-    desc: { en: "Today's workout, week and streak", es: 'Qué toca hoy, semana y racha' },
+    label: { it: 'Allenamento di oggi', en: "Today's workout", es: 'Entrenamiento de hoy' },
+    desc: { it: 'Allenamento, settimana e continuità', en: "Today's workout, week and streak", es: 'Qué toca hoy, semana y racha' },
   },
   CardioWidget: {
-    label: { en: 'Cardio', es: 'Cardio' },
-    desc: { en: "This week's km and last session", es: 'Km de la semana y última sesión' },
+    label: { it: 'Cardio', en: 'Cardio', es: 'Cardio' },
+    desc: { it: 'Km della settimana e ultima sessione', en: "This week's km and last session", es: 'Km de la semana y última sesión' },
   },
   NutritionWidget: {
-    label: { en: 'Nutrition', es: 'Nutrición' },
-    desc: { en: "Today's calories and macros + quick log", es: 'Calorías y macros de hoy + registro rápido' },
+    label: { it: 'Alimentazione', en: 'Nutrition', es: 'Nutrición' },
+    desc: { it: 'Calorie e macro di oggi e registrazione rapida', en: "Today's calories and macros + quick log", es: 'Calorías y macros de hoy + registro rápido' },
   },
   NutritionRingWidget: {
-    label: { en: 'Calories', es: 'Calorías' },
-    desc: { en: "Today's calorie ring", es: 'Anillo de calorías de hoy' },
+    label: { it: 'Calorie', en: 'Calories', es: 'Calorías' },
+    desc: { it: 'Calorie di oggi', en: "Today's calorie ring", es: 'Anillo de calorías de hoy' },
   },
   StreakWidget: {
-    label: { en: 'Streak', es: 'Racha' },
-    desc: { en: 'Weeks in a row training and this week', es: 'Semanas seguidas entrenando y la semana' },
+    label: { it: 'Continuità', en: 'Streak', es: 'Racha' },
+    desc: { it: 'Settimane consecutive di allenamento', en: 'Weeks in a row training and this week', es: 'Semanas seguidas entrenando y la semana' },
   },
   MealStreakWidget: {
-    label: { en: 'Meal streak', es: 'Racha de comidas' },
-    desc: { en: 'Consecutive days with an A/B food score', es: 'Días seguidos con score de comida A/B' },
+    label: { it: 'Continuità alimentare', en: 'Meal streak', es: 'Racha de comidas' },
+    desc: { it: 'Giorni consecutivi con punteggio alimentare A/B', en: 'Consecutive days with an A/B food score', es: 'Días seguidos con score de comida A/B' },
   },
   WaterWidget: {
-    label: { en: 'Water', es: 'Agua' },
-    desc: { en: "Today's water glasses vs. your goal", es: 'Vasos de agua de hoy vs. tu meta' },
+    label: { it: 'Acqua', en: 'Water', es: 'Agua' },
+    desc: { it: 'Acqua di oggi rispetto all’obiettivo', en: "Today's water glasses vs. your goal", es: 'Vasos de agua de hoy vs. tu meta' },
   },
   NextSessionWidget: {
-    label: { en: 'Next session', es: 'Próxima sesión' },
-    desc: { en: "Tomorrow's workout, in a thin strip", es: 'Qué toca mañana, en una franja fina' },
+    label: { it: 'Prossima sessione', en: 'Next session', es: 'Próxima sesión' },
+    desc: { it: 'Allenamento di domani', en: "Tomorrow's workout, in a thin strip", es: 'Qué toca mañana, en una franja fina' },
   },
 }
 
@@ -96,13 +96,13 @@ function withWidgetStringsEn(config) {
  * `app_name` de `values/` (traducible) sin su versión española es el aviso
  * `MissingTranslation` de lint. El nombre de la app no se traduce.
  */
-function withWidgetStringsEs(config) {
+function withWidgetStringsLocale(config, lang) {
   return withDangerousMod(config, [
     'android',
     async (cfg) => {
-      const filePath = await Strings.getProjectStringsXMLPathAsync(cfg.modRequest.projectRoot, { kind: 'values-es' })
+      const filePath = await Strings.getProjectStringsXMLPathAsync(cfg.modRequest.projectRoot, { kind: `values-${lang}` })
       const xml = await Resources.readResourcesXMLAsync({ path: filePath })
-      const items = [Resources.buildResourceItem({ name: 'app_name', value: cfg.name }), ...buildItems('es')]
+      const items = [Resources.buildResourceItem({ name: 'app_name', value: cfg.name }), ...buildItems(lang)]
       await XML.writeXMLAsync({ path: filePath, xml: Strings.setStringItem(items, xml) })
       return cfg
     },
@@ -110,5 +110,5 @@ function withWidgetStringsEs(config) {
 }
 
 module.exports = function withWidgetStrings(config) {
-  return withWidgetStringsEs(withWidgetStringsEn(config))
+  return withWidgetStringsLocale(withWidgetStringsLocale(withWidgetStringsEn(config), 'es'), 'it')
 }

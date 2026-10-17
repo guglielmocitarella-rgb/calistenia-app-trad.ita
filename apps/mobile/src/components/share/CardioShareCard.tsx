@@ -1,3 +1,4 @@
+import { useSecondaryDisplay } from '@/lib/use-secondary-display'
 /**
  * CardioShareCard — shareable image for a cardio GPS session.
  *
@@ -47,11 +48,11 @@ const ACTIVITY_LABEL: Record<string, string> = {
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
-function formatCardioDate(iso?: string): string {
+function formatCardioDate(iso?: string, locale = 'es'): string {
   if (!iso) return ''
   try {
     const d = new Date(iso.replace(' ', 'T'))
-    return d.toLocaleDateString('es', { weekday: 'long', day: 'numeric', month: 'long' })
+    return d.toLocaleDateString(locale, { weekday: 'long', day: 'numeric', month: 'long' })
   } catch {
     return iso
   }
@@ -101,6 +102,7 @@ const CardioShareCard = memo(function CardioShareCard({
   width = BASE_W,
   height = BASE_H,
 }: CardioShareCardProps) {
+  const display = useSecondaryDisplay()
   const S = width / BASE_W
   const r = (n: number) => Math.round(n * S)
   const s = makeStyles(width, height, r)
@@ -227,9 +229,9 @@ const CardioShareCard = memo(function CardioShareCard({
         <View style={s.headerLeft}>
           <View style={s.activityRow}>
             <View style={[s.accentDot, { backgroundColor: accent }]} />
-            <Text style={[s.activityLabel, { color: accent }]}>{ACTIVITY_LABEL[activity] ?? activity.toUpperCase()}</Text>
+            <Text style={[s.activityLabel, { color: accent }]}>{display.label(ACTIVITY_LABEL[activity] ?? activity.toUpperCase())}</Text>
           </View>
-          <Text style={s.dateText}>{formatCardioDate(session.finished_at)}</Text>
+          <Text style={s.dateText}>{formatCardioDate(session.finished_at, display.locale('es'))}</Text>
         </View>
         <View style={s.avatar}>
           <Text style={s.avatarInitial}>{initials}</Text>
@@ -239,7 +241,7 @@ const CardioShareCard = memo(function CardioShareCard({
       {/* No-route ghost wordmark fills the void typographically */}
       {!hasRoute && (
         <Text style={[s.ghostWord, { color: accent }]} numberOfLines={1}>
-          {ACTIVITY_LABEL[activity] ?? activity.toUpperCase()}
+          {display.label(ACTIVITY_LABEL[activity] ?? activity.toUpperCase())}
         </Text>
       )}
 
@@ -248,18 +250,18 @@ const CardioShareCard = memo(function CardioShareCard({
         <Text style={s.byline}>{displayName}</Text>
 
         <View style={s.heroRow}>
-          <Text style={s.heroDistance}>{distStr}</Text>
+          <Text style={s.heroDistance}>{display.number(distStr)}</Text>
           <Text style={[s.heroUnit, { color: accent }]}>KM</Text>
         </View>
         <View style={[s.heroRule, { backgroundColor: accent }]} />
 
         <View style={s.statRow}>
           {stats.map((st, i) => (
-            <React.Fragment key={st.label}>
+            <React.Fragment key={display.label(st.label)}>
               {i > 0 && <View style={s.statDivider} />}
               <View style={s.statCell}>
-                <Text style={s.statValue}>{st.value}</Text>
-                <Text style={s.statLabel}>{st.label}</Text>
+                <Text style={s.statValue}>{display.number(st.value)}</Text>
+                <Text style={s.statLabel}>{display.label(st.label)}</Text>
               </View>
             </React.Fragment>
           ))}

@@ -1,0 +1,18 @@
+{
+  "phase4E": [
+    "Collaudo autenticato sul telefono non eseguito",
+    "Layout schermi piccoli e font ingranditi da verificare",
+    "Nomi e descrizioni personali/remoti, commenti, nomi esercizi da catalogo EN/ES e configurazioni di battaglia conservati",
+    "Messaggi tecnici remoti sconosciuti conservati; nessuna correzione funzionale",
+    "Schermata generale notifiche e relative preferenze rinviate alla 4F; tradotti soltanto eventi social locali",
+    "Titoli/descrizioni dei preset restano originali nel catalogo condiviso perché usati nei salvataggi; overlay Android italiano nei punti di presentazione noti"
+  ],
+  "phase4D": [
+    "Traguardi non collaudati",
+    "Persistenza misurazioni non verificata",
+    "Comparatore fotografico non verificato",
+    "Widget non verificato",
+    "Altri controlli non eseguiti",
+    "Singolare/plurale statistiche da esaminare in audit finale"
+  ]
+}
