@@ -33,7 +33,7 @@ export default function RaceLobby({ displayName }: { displayName: string }) {
   if (!race) return null
 
   const target = race.mode === 'distance'
-    ? `${race.target_distance_km} km`
+    ? `${sd.number(String(race.target_distance_km))} km`
     : `${Math.round(race.target_duration_seconds / 60)} min`
 
   const handleShare = async () => {

@@ -154,7 +154,7 @@ export default function RacesDiscoverScreen() {
                   <Text className="font-sans-medium text-foreground" numberOfLines={1}>{race.name}</Text>
                   <Text className="mt-0.5 font-mono text-[10px] uppercase tracking-wide text-muted-foreground">
                     {race.mode === 'distance'
-                      ? `${race.target_distance_km} km`
+                      ? `${sd.number(String(race.target_distance_km))} km`
                       : `${Math.round(race.target_duration_seconds / 60)} min`}
                     {' · '}
                     {t(race.status === 'countdown' ? 'race.startingSoon' : 'race.waitingLabel')}
