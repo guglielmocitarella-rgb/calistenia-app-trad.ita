@@ -29,4 +29,5 @@ it('keeps the previous EN/ES widget labels and handles stale Italian snapshots',
     expect(texts(NextSessionWidget({ snapshot: { lang, date: today }, today }))).toContain(expected)
   }
   expect(texts(NextSessionWidget({ snapshot: { lang: 'it', date: '2026-10-16' }, today }))).toContain('APRI L’APP')
+  expect(texts(TodayWidget({ snapshot: { lang: 'it', date: '2026-10-16' }, today }))).toContain('APRI L’APP')
 })

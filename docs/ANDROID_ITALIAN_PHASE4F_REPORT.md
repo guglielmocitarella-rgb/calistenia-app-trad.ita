@@ -56,6 +56,10 @@ Nessuna modifica a backend, API/contratti, `apps/web`, server, IA/MCP/provider, 
 - Durante le verifiche, riuso delle dipendenze bloccate con lockfile identico: corretti esclusivamente i collegamenti locali del workspace e gli shim, senza cambiare dipendenze. Il primo tentativo web aveva segnalato React duplicato dovuto al collegamento al vecchio core; suite completa rieseguita con successo dopo la correzione. Il primo core segnalava le eccezioni JSX obsolete; corrette restringendo il baseline e suite rieseguita.
 - Revisione indipendente: corretti motivi UpdateGate, decimale velocità cardio, layout condizionale e termini ambigui delle note storiche (circuiti, cronologia cardio, peso aggiuntivo, continuità settimanale, ricette del coach e metriche calendario). Nessun cambiamento funzionale rilevato.
 
+### Verifica aggiuntiva widget
+
+Misura del font Bebas Neue 30 al minimo widget di 250 dp (222 dp interni): il testo iniziale del widget Oggi scaduto misurava 250,89 dp. Sostituito con «APRI L’APP» (93,63 dp), già usato negli altri widget, senza cambiare azioni o dimensioni. «SCEGLI UN PROGRAMMA» misura 211,65 dp e resta invariato. Test sullo stato scaduto: fallimento atteso e successivo verde. Il primo workflow APK sul commit `4dc8382b` viene annullato automaticamente per concorrenza dal nuovo trigger prima della produzione dell’artifact; non è un APK consegnato. Un solo APK finale comprende tutte le modifiche.
+
 ### CI e unico APK finale
 
 Verifiche GitHub e build finale non ancora concluse al momento di questo commit. I risultati effettivi, riferiti al commit applicativo esatto e all’HEAD finale, saranno registrati nella sezione conclusiva dopo la fine dei workflow. Non viene attribuito il verde di commit precedenti a questa consegna.
