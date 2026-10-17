@@ -23,7 +23,7 @@ Durante la 4D non sono introdotti provider, endpoint, configurazioni visibili, c
 ## Stato aggiornato alla ricostruzione 4E — 17 ottobre 2026
 
 - Fasi 2 e 3 completate; 4A, 4B, 4C e 4D approvate nel rispettivo perimetro.
-- Fase 4E: ricostruzione in verifica; approvazione subordinata a revisione indipendente e collaudo reale sul telefono.
+- Fase 4E implementata e verificata automaticamente; APK standalone compilato e avviato su emulatore. In attesa di revisione indipendente e collaudo reale sul telefono.
 - 4F e 4G ancora da svolgere; fase 5 audit finale; fase 6 collaudo integrale.
 - Fase 7 IA personale configurabile: progetto separato, non avviato nell'implementazione 4E.
 - Residui 4D: traguardi, persistenza misurazioni, comparatore fotografico, widget e altri controlli non eseguiti; singolare/plurale statistiche da esaminare nell'audit.

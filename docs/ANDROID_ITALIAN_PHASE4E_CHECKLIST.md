@@ -1,6 +1,6 @@
 # Collaudo Android italiano — fase 4E
 
-APK e SHA: vedere report 4E. Stato iniziale di ogni voce: **NON ESEGUITO**. Registrare dispositivo, versione Android, dimensione caratteri ed eventuali schermate di prova.
+APK: `Calistenia-4E-TEST-standalone.apk`, commit applicativo `0dc5d926`. SHA-256: `876643ea70e168993c22661884f80984345b3de50ce5a2e1d34d25588ae1525b`. Stato iniziale di ogni voce: **NON ESEGUITO**. Registrare dispositivo, versione Android, dimensione caratteri ed eventuali schermate di prova.
 
 | Area | Verifiche sul telefono |
 | --- | --- |

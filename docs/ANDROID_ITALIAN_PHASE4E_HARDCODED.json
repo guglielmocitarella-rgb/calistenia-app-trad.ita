@@ -1,30 +1,535 @@
 {
   "baseline": "64ab728393de15856a185f7b6dcff0bb0c8af9a5",
-  "method": "Local display adapter; original literals preserved for EN/ES/iOS; callers reviewed in diff",
-  "adapterSource": "import { isItalianProgress } from './progress-ui-labels'\n\n/** Only call with local UI literals, never with user text or persisted fields. */\nconst labels: Record<string, string> = {\n  'Buscar usuario...': 'Cerca utente...', reps: 'rip.', '· mutuo': '· reciproco', Handstand: 'Verticale', Amigos: 'Amici', Siguiendo: 'Seguiti', Seguidores: 'Follower',\n  'Invita a un amigo': 'Invita un amico', 'COMPARTIR INVITACIÓN': 'CONDIVIDI INVITO',\n  'Error al buscar. ¿Reintentar?': 'Errore durante la ricerca. Riprovare?', REINTENTAR: 'RIPROVA',\n  'Buscar amigos...': 'Cerca amici...', Perfil: 'Profilo',\n  'No se pudo cargar el perfil.': 'Impossibile caricare il profilo.',\n  Sesiones: 'Sessioni', Racha: 'Continuità', Mejor: 'Migliore', Nivel: 'Livello', sem: 'sett.',\n  'Programa actual': 'Programma attuale', Fase: 'Fase', 'Records personales': 'Record personali',\n  'Actividad este mes': 'Attività di questo mese', 'Sesiones recientes': 'Sessioni recenti',\n  Comentarios: 'Commenti', total: 'totale', 'Respondiendo a': 'In risposta a',\n  'Escribe un comentario…': 'Scrivi un commento…', tú: 'tu', Responder: 'Rispondi', Eliminar: 'Elimina',\n  'Sé el primero en comentar': 'Scrivi il primo commento', 'Siguiendo...': 'Inizio a seguire...',\n  YOU: 'TU', GO: 'VIA', 'Cargando…': 'Caricamento…', 'Miembro desde': 'Iscritto dal',\n}\n\nexport function socialLabel(original: string, language: string, os: string): string {\n  return isItalianProgress(language, os) && Object.hasOwn(labels, original) ? labels[original] : original\n}\n\nexport function socialRelativeTime(original: string, iso: string, language: string, os: string, now = Date.now()): string {\n  if (!isItalianProgress(language, os)) return original\n  const minutes = Math.floor((now - new Date(iso.replace(' ', 'T')).getTime()) / 60_000)\n  if (!Number.isFinite(minutes) || minutes < 0) return original\n  if (minutes < 1) return 'ora'\n  if (minutes < 60) return `${minutes} min fa`\n  const hours = Math.floor(minutes / 60)\n  if (hours < 24) return `${hours} h fa`\n  const days = Math.floor(hours / 24)\n  return days === 1 ? 'ieri' : `${days} g fa`\n}\n\nexport function socialReferralMessage(original: string, name: string, language: string, os: string): string {\n  return isItalianProgress(language, os)\n    ? `${name} ti invita ad allenarti su Calistenia App 🤸\\nIscriviti e inizia gratis:` : original\n}\n\nconst presetLabels: Record<string, string> = {\n  \"challenge.preset.starter7.title\": \"Inizia in 7 giorni\",\n  \"challenge.preset.starter7.description\": \"Completa 3 allenamenti in 7 giorni. Una piccola prima vittoria per prendere slancio.\",\n  \"challenge.preset.consistency30.title\": \"30 giorni di costanza\",\n  \"challenge.preset.consistency30.description\": \"Completa 12 allenamenti in 30 giorni. Allenati con regolarità per prendere il ritmo.\",\n  \"challenge.preset.first10.title\": \"I primi 10 allenamenti\",\n  \"challenge.preset.first10.description\": \"Completa 10 allenamenti al tuo ritmo nel prossimo anno.\",\n  \"challenge.preset.pushup.title\": \"Costruisci i tuoi piegamenti\",\n  \"challenge.preset.pushup.description\": \"Accumula piegamenti nei tuoi allenamenti.\",\n  \"challenge.preset.firstPullup.title\": \"La tua prima trazione\",\n  \"challenge.preset.firstPullup.description\": \"Esegui la tua prima trazione rigorosa. Senza fretta: procedi al tuo ritmo.\"\n}\n\n/** Stable catalog keys only. Never used by preset creation or serialization. */\nexport function socialPresetLabel(original: string, key: string, language: string, os: string): string {\n  return isItalianProgress(language, os) && Object.hasOwn(presetLabels, key) ? presetLabels[key] : original\n}\n\nexport function socialBattleMessage(original: string, input: {\n  circuitName: string; userName?: string; rank: number; contenders: number; tied: boolean\n}, language: string, os: string): string {\n  if (!isItalianProgress(language, os)) return original\n  const who = input.userName ? `${input.userName}: ` : ''\n  if (input.contenders <= 1) return `${who}circuito \"${input.circuitName}\" completato 💪`\n  return input.tied\n    ? `${who}pari merito al ${input.rank}º posto su ${input.contenders} in \"${input.circuitName}\" 🤝`\n    : `${who}${input.rank}º su ${input.contenders} in \"${input.circuitName}\" 🏆`\n}\n",
-  "files": [
-    "apps/mobile/src/app/add-friend/[userId].tsx",
-    "apps/mobile/src/app/challenges/[id].tsx",
-    "apps/mobile/src/app/friends.tsx",
-    "apps/mobile/src/app/notifications.tsx",
-    "apps/mobile/src/app/races-discover.tsx",
-    "apps/mobile/src/app/u/[id].tsx",
-    "apps/mobile/src/components/community/ChallengesList.tsx",
-    "apps/mobile/src/components/community/LeaderboardList.tsx",
-    "apps/mobile/src/components/home/FeaturedChallengeCard.tsx",
-    "apps/mobile/src/components/race/RaceCountdown.tsx",
-    "apps/mobile/src/components/race/RaceLive.tsx",
-    "apps/mobile/src/components/race/RaceLobby.tsx",
-    "apps/mobile/src/components/race/RacePRsPanel.tsx",
-    "apps/mobile/src/components/race/RaceResults.tsx",
-    "apps/mobile/src/components/social/CommentsSheet.tsx",
-    "apps/mobile/src/components/social/FeedCard.tsx",
-    "apps/mobile/src/components/social/FriendActivityRow.tsx",
-    "apps/mobile/src/components/social/SuggestedUsers.tsx",
-    "apps/mobile/src/lib/__tests__/social-localization.test.ts",
-    "apps/mobile/src/lib/__tests__/social-share-localization.test.ts",
-    "apps/mobile/src/lib/share.ts",
-    "apps/mobile/src/lib/social-ui-labels.ts",
-    "apps/mobile/src/lib/use-social-display.ts"
+  "applicationCommit": "0dc5d926c245c4ed16d9092463bf88585d8796f4",
+  "method": "Local Android Italian display adapters; originals retained for EN/ES/iOS, unknown values and persisted content",
+  "localLiterals": [
+    {
+      "source": "Buscar usuario...",
+      "italian": "Cerca utente..."
+    },
+    {
+      "source": "reps",
+      "italian": "rip."
+    },
+    {
+      "source": "· mutuo",
+      "italian": "· reciproco"
+    },
+    {
+      "source": "Handstand",
+      "italian": "Verticale"
+    },
+    {
+      "source": "Amigos",
+      "italian": "Amici"
+    },
+    {
+      "source": "Siguiendo",
+      "italian": "Seguiti"
+    },
+    {
+      "source": "Seguidores",
+      "italian": "Follower"
+    },
+    {
+      "source": "Invita a un amigo",
+      "italian": "Invita un amico"
+    },
+    {
+      "source": "COMPARTIR INVITACIÓN",
+      "italian": "CONDIVIDI INVITO"
+    },
+    {
+      "source": "Error al buscar. ¿Reintentar?",
+      "italian": "Errore durante la ricerca. Riprovare?"
+    },
+    {
+      "source": "REINTENTAR",
+      "italian": "RIPROVA"
+    },
+    {
+      "source": "Buscar amigos...",
+      "italian": "Cerca amici..."
+    },
+    {
+      "source": "Perfil",
+      "italian": "Profilo"
+    },
+    {
+      "source": "No se pudo cargar el perfil.",
+      "italian": "Impossibile caricare il profilo."
+    },
+    {
+      "source": "Sesiones",
+      "italian": "Sessioni"
+    },
+    {
+      "source": "Racha",
+      "italian": "Continuità"
+    },
+    {
+      "source": "Mejor",
+      "italian": "Migliore"
+    },
+    {
+      "source": "Nivel",
+      "italian": "Livello"
+    },
+    {
+      "source": "sem",
+      "italian": "sett."
+    },
+    {
+      "source": "Programa actual",
+      "italian": "Programma attuale"
+    },
+    {
+      "source": "Fase",
+      "italian": "Fase"
+    },
+    {
+      "source": "Records personales",
+      "italian": "Record personali"
+    },
+    {
+      "source": "Actividad este mes",
+      "italian": "Attività di questo mese"
+    },
+    {
+      "source": "Sesiones recientes",
+      "italian": "Sessioni recenti"
+    },
+    {
+      "source": "Comentarios",
+      "italian": "Commenti"
+    },
+    {
+      "source": "total",
+      "italian": "totale"
+    },
+    {
+      "source": "Respondiendo a",
+      "italian": "In risposta a"
+    },
+    {
+      "source": "Escribe un comentario…",
+      "italian": "Scrivi un commento…"
+    },
+    {
+      "source": "tú",
+      "italian": "tu"
+    },
+    {
+      "source": "Responder",
+      "italian": "Rispondi"
+    },
+    {
+      "source": "Eliminar",
+      "italian": "Elimina"
+    },
+    {
+      "source": "Sé el primero en comentar",
+      "italian": "Scrivi il primo commento"
+    },
+    {
+      "source": "Siguiendo...",
+      "italian": "Inizio a seguire..."
+    },
+    {
+      "source": "YOU",
+      "italian": "TU"
+    },
+    {
+      "source": "GO",
+      "italian": "VIA"
+    },
+    {
+      "source": "Cargando…",
+      "italian": "Caricamento…"
+    },
+    {
+      "source": "Miembro desde",
+      "italian": "Iscritto dal"
+    }
+  ],
+  "presetOverlay": [
+    {
+      "source": "challenge.preset.starter7.title",
+      "italian": "Inizia in 7 giorni"
+    },
+    {
+      "source": "challenge.preset.starter7.description",
+      "italian": "Completa 3 allenamenti in 7 giorni. Una piccola prima vittoria per prendere slancio."
+    },
+    {
+      "source": "challenge.preset.consistency30.title",
+      "italian": "30 giorni di costanza"
+    },
+    {
+      "source": "challenge.preset.consistency30.description",
+      "italian": "Completa 12 allenamenti in 30 giorni. Allenati con regolarità per prendere il ritmo."
+    },
+    {
+      "source": "challenge.preset.first10.title",
+      "italian": "I primi 10 allenamenti"
+    },
+    {
+      "source": "challenge.preset.first10.description",
+      "italian": "Completa 10 allenamenti al tuo ritmo nel prossimo anno."
+    },
+    {
+      "source": "challenge.preset.pushup.title",
+      "italian": "Costruisci i tuoi piegamenti"
+    },
+    {
+      "source": "challenge.preset.pushup.description",
+      "italian": "Accumula piegamenti nei tuoi allenamenti."
+    },
+    {
+      "source": "challenge.preset.firstPullup.title",
+      "italian": "La tua prima trazione"
+    },
+    {
+      "source": "challenge.preset.firstPullup.description",
+      "italian": "Esegui la tua prima trazione rigorosa. Senza fretta: procedi al tuo ritmo."
+    }
+  ],
+  "dynamicAdapters": [
+    "socialRelativeTime: timestamp unchanged",
+    "socialReferralMessage: dynamic name unchanged; URL outside adapter unchanged",
+    "socialBattleMessage: original rank, contender count, tie flag and circuit name unchanged",
+    "progressNumber/progressDate/progressLocale: existing phase 4D display-only functions"
+  ],
+  "calls": [
+    {
+      "file": "apps/mobile/src/app/add-friend/[userId].tsx",
+      "line": 53,
+      "displayExpression": "{sd.label('Siguiendo...')}"
+    },
+    {
+      "file": "apps/mobile/src/app/challenges/[id].tsx",
+      "line": 199,
+      "displayExpression": "const title = sd.preset(resolvePresetChallengeTitle(challenge), challenge)"
+    },
+    {
+      "file": "apps/mobile/src/app/challenges/[id].tsx",
+      "line": 200,
+      "displayExpression": "const description = sd.preset(resolvePresetChallengeDescription(challenge), challenge, true)"
+    },
+    {
+      "file": "apps/mobile/src/app/friends.tsx",
+      "line": 118,
+      "displayExpression": "<Text className=\"font-mono text-[11px] text-lime\">{sd.label('· mutuo')}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/app/friends.tsx",
+      "line": 203,
+      "displayExpression": "{ id: 'siguiendo', label: sd.label('Siguiendo'), count: following.length },"
+    },
+    {
+      "file": "apps/mobile/src/app/friends.tsx",
+      "line": 204,
+      "displayExpression": "{ id: 'seguidores', label: sd.label('Seguidores'), count: followers.length },"
+    },
+    {
+      "file": "apps/mobile/src/app/friends.tsx",
+      "line": 259,
+      "displayExpression": "<Text className=\"font-bebas text-4xl leading-none text-foreground\">{sd.label('Amigos')}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/app/friends.tsx",
+      "line": 274,
+      "displayExpression": "placeholder={sd.label('Buscar usuario...')}"
+    },
+    {
+      "file": "apps/mobile/src/app/friends.tsx",
+      "line": 296,
+      "displayExpression": "<Text className=\"text-sm text-muted-foreground\">{sd.label('Error al buscar. ¿Reintentar?')}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/app/friends.tsx",
+      "line": 302,
+      "displayExpression": "<Text className=\"font-mono text-xs\">{sd.label('REINTENTAR')}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/app/friends.tsx",
+      "line": 337,
+      "displayExpression": "{sd.label('Invita a un amigo')}"
+    },
+    {
+      "file": "apps/mobile/src/app/friends.tsx",
+      "line": 345,
+      "displayExpression": "{sd.label('COMPARTIR INVITACIÓN')}"
+    },
+    {
+      "file": "apps/mobile/src/app/notifications.tsx",
+      "line": 248,
+      "displayExpression": "{sd.time(timeAgoShort(item.created), item.created)}"
+    },
+    {
+      "file": "apps/mobile/src/app/races-discover.tsx",
+      "line": 157,
+      "displayExpression": "? `${sd.number(String(race.target_distance_km))} km`"
+    },
+    {
+      "file": "apps/mobile/src/app/races-discover.tsx",
+      "line": 164,
+      "displayExpression": "<Text className=\"font-mono text-[11px] text-lime\">{sd.number(race.distanceKm.toFixed(1))} km</Text>"
+    },
+    {
+      "file": "apps/mobile/src/app/referrals.tsx",
+      "line": 412,
+      "displayExpression": "{ref.created ? sd.date(utcToLocalDateStr(ref.created)) : ''}"
+    },
+    {
+      "file": "apps/mobile/src/app/referrals.tsx",
+      "line": 461,
+      "displayExpression": "{tx.created ? sd.date(utcToLocalDateStr(tx.created)) : ''}"
+    },
+    {
+      "file": "apps/mobile/src/app/u/[id].tsx",
+      "line": 115,
+      "displayExpression": "<Text className=\"font-bebas text-4xl leading-none text-foreground\">{sd.label('Perfil')}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/app/u/[id].tsx",
+      "line": 177,
+      "displayExpression": "<Text className=\"mt-2 text-center text-sm text-muted-foreground\">{sd.label('No se pudo cargar el perfil.')}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/app/u/[id].tsx",
+      "line": 218,
+      "displayExpression": "{sd.label('Miembro desde')} {sd.date(profile.memberSince)} · Fase {profile.phase}"
+    },
+    {
+      "file": "apps/mobile/src/app/u/[id].tsx",
+      "line": 300,
+      "displayExpression": "<StatBox label={sd.label('Sesiones')} value={profile.totalSessions} accent=\"text-lime\" />"
+    },
+    {
+      "file": "apps/mobile/src/app/u/[id].tsx",
+      "line": 301,
+      "displayExpression": "<StatBox label={sd.label('Racha')} value={profile.currentStreak} accent=\"text-sky-500\" unit={sd.label('sem')} />"
+    },
+    {
+      "file": "apps/mobile/src/app/u/[id].tsx",
+      "line": 302,
+      "displayExpression": "<StatBox label={sd.label('Mejor')} value={profile.bestStreak} accent=\"text-amber-400\" unit={sd.label('sem')} />"
+    },
+    {
+      "file": "apps/mobile/src/app/u/[id].tsx",
+      "line": 303,
+      "displayExpression": "<StatBox label={sd.label('Nivel')} value={profile.level} accent=\"text-pink-500\" />"
+    },
+    {
+      "file": "apps/mobile/src/app/u/[id].tsx",
+      "line": 309,
+      "displayExpression": "<Text className=\"mb-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground\">{sd.label('Programa actual')}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/app/u/[id].tsx",
+      "line": 317,
+      "displayExpression": "<Text className=\"mb-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground\">{sd.label('Records personales')}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/app/u/[id].tsx",
+      "line": 323,
+      "displayExpression": "{profile.prs[pr.key] || 0}{sd.label(pr.unit)}"
+    },
+    {
+      "file": "apps/mobile/src/app/u/[id].tsx",
+      "line": 332,
+      "displayExpression": "<Text className=\"mb-3 font-mono text-[10px] uppercase tracking-[3px] text-muted-foreground\">{sd.label('Actividad este mes')}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/app/u/[id].tsx",
+      "line": 349,
+      "displayExpression": "<Text className=\"mb-3 font-mono text-[10px] uppercase tracking-[3px] text-muted-foreground\">{sd.label('Sesiones recientes')}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/app/u/[id].tsx",
+      "line": 353,
+      "displayExpression": "const fdate = d.toLocaleDateString(sd.locale('es'), { weekday: 'short', day: 'numeric', month: 'short' })"
+    },
+    {
+      "file": "apps/mobile/src/components/community/ChallengesList.tsx",
+      "line": 101,
+      "displayExpression": "title: sd.presetKey(t(preset.titleKey), preset.titleKey),"
+    },
+    {
+      "file": "apps/mobile/src/components/community/ChallengesList.tsx",
+      "line": 223,
+      "displayExpression": "{sd.preset(resolvePresetChallengeTitle(ch), ch)}"
+    },
+    {
+      "file": "apps/mobile/src/components/community/ChallengesList.tsx",
+      "line": 273,
+      "displayExpression": "{sd.preset(resolvePresetChallengeDescription(ch), ch, true)}"
+    },
+    {
+      "file": "apps/mobile/src/components/community/ChallengesList.tsx",
+      "line": 310,
+      "displayExpression": "<Text className=\"font-sans-medium text-foreground\">{sd.presetKey(t(preset.titleKey), preset.titleKey)}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/components/community/ChallengesList.tsx",
+      "line": 311,
+      "displayExpression": "<Text className=\"font-sans text-xs leading-relaxed text-muted-foreground mt-1\">{sd.presetKey(t(preset.descriptionKey), preset.descriptionKey)}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/components/community/LeaderboardList.tsx",
+      "line": 119,
+      "displayExpression": "{sd.label(cat.label)}"
+    },
+    {
+      "file": "apps/mobile/src/components/community/LeaderboardList.tsx",
+      "line": 195,
+      "displayExpression": "unit={sd.label(catDef?.unit ?? '')}"
+    },
+    {
+      "file": "apps/mobile/src/components/home/FeaturedChallengeCard.tsx",
+      "line": 81,
+      "displayExpression": "const title = sd.preset(resolvePresetChallengeTitle(card.challenge), card.challenge)"
+    },
+    {
+      "file": "apps/mobile/src/components/race/ActiveRacesPanel.tsx",
+      "line": 84,
+      "displayExpression": "? `${sd.number(String(r.target_distance_km))} km`"
+    },
+    {
+      "file": "apps/mobile/src/components/race/RaceCountdown.tsx",
+      "line": 39,
+      "displayExpression": "{secondsLeft > 0 ? secondsLeft : sd.label('GO')}"
+    },
+    {
+      "file": "apps/mobile/src/components/race/RaceLive.tsx",
+      "line": 128,
+      "displayExpression": "<Text className=\"font-bebas text-4xl leading-none text-lime\">{sd.number((myStats?.distance_km ?? 0).toFixed(2))}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/components/race/RaceLive.tsx",
+      "line": 203,
+      "displayExpression": "<Text className=\"w-16 text-right font-bebas text-lg text-foreground\">{sd.number(dist.toFixed(2))} km</Text>"
+    },
+    {
+      "file": "apps/mobile/src/components/race/RaceLobby.tsx",
+      "line": 36,
+      "displayExpression": "? `${sd.number(String(race.target_distance_km))} km`"
+    },
+    {
+      "file": "apps/mobile/src/components/race/RaceLobby.tsx",
+      "line": 105,
+      "displayExpression": "<Text className=\"rounded bg-lime/10 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[1px] text-lime\">{sd.label('YOU')}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/components/race/RacePRsPanel.tsx",
+      "line": 56,
+      "displayExpression": "{t('race.prsLongest')}: {sd.number(prs.longestRace.distanceKm.toFixed(2))} km"
+    },
+    {
+      "file": "apps/mobile/src/components/race/RaceResults.tsx",
+      "line": 82,
+      "displayExpression": "{sd.number(winner.distance_km.toFixed(2))} km · {formatDuration(winner.duration_seconds)} · {formatPace(winner.avg_pace)} /km"
+    },
+    {
+      "file": "apps/mobile/src/components/race/RaceResults.tsx",
+      "line": 111,
+      "displayExpression": "<Text className=\"font-bebas text-xl text-foreground\">{sd.number(p.distance_km.toFixed(2))} km</Text>"
+    },
+    {
+      "file": "apps/mobile/src/components/social/CommentsSheet.tsx",
+      "line": 292,
+      "displayExpression": "{sd.label('Comentarios')}"
+    },
+    {
+      "file": "apps/mobile/src/components/social/CommentsSheet.tsx",
+      "line": 345,
+      "displayExpression": "<Text className=\"font-mono text-[10px] text-muted-foreground/30\">{sd.label('total')}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/components/social/CommentsSheet.tsx",
+      "line": 357,
+      "displayExpression": "<Text className=\"font-mono text-xs text-muted-foreground/60\">{sd.label('Cargando…')}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/components/social/CommentsSheet.tsx",
+      "line": 412,
+      "displayExpression": "{sd.label('Respondiendo a')}{' '}"
+    },
+    {
+      "file": "apps/mobile/src/components/social/CommentsSheet.tsx",
+      "line": 427,
+      "displayExpression": "placeholder={sd.label('Escribe un comentario…')}"
+    },
+    {
+      "file": "apps/mobile/src/components/social/CommentsSheet.tsx",
+      "line": 608,
+      "displayExpression": "<Text className=\"font-mono text-[9px] text-lime/70\">{sd.label('tú')}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/components/social/CommentsSheet.tsx",
+      "line": 613,
+      "displayExpression": "{sd.time(timeAgo(comment.created), comment.created)}"
+    },
+    {
+      "file": "apps/mobile/src/components/social/CommentsSheet.tsx",
+      "line": 663,
+      "displayExpression": "<Text className=\"font-sans text-[11px] text-muted-foreground/50\">{sd.label('Responder')}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/components/social/CommentsSheet.tsx",
+      "line": 676,
+      "displayExpression": "<Text className=\"font-sans text-[11px] text-muted-foreground/35\">{sd.label('Eliminar')}</Text>"
+    },
+    {
+      "file": "apps/mobile/src/components/social/FeedCard.tsx",
+      "line": 118,
+      "displayExpression": "{sd.time(timeAgo(item.completedAt), item.completedAt)}"
+    },
+    {
+      "file": "apps/mobile/src/components/social/FriendActivityRow.tsx",
+      "line": 75,
+      "displayExpression": "{describeFeedItem(item).title} · {sd.time(timeAgo(item.completedAt), item.completedAt)}"
+    },
+    {
+      "file": "apps/mobile/src/lib/__tests__/social-localization.test.ts",
+      "line": 27,
+      "displayExpression": "expect(socialReferralMessage('original', record.name, 'it', 'android')).toBe('Eliminar {{name}} ti invita ad allenarti su Calistenia App 🤸\\nIscriviti e inizia gratis:')"
+    },
+    {
+      "file": "apps/mobile/src/lib/__tests__/social-localization.test.ts",
+      "line": 28,
+      "displayExpression": "expect(socialReferralMessage('original', record.name, 'es', 'android')).toBe('original')"
+    },
+    {
+      "file": "apps/mobile/src/lib/__tests__/social-localization.test.ts",
+      "line": 55,
+      "displayExpression": "expect(socialBattleMessage('original', input, 'it', 'android')).toBe('Nome: pari merito al 2º posto su 5 in \"Original {{rank}}\" 🤝')"
+    },
+    {
+      "file": "apps/mobile/src/lib/__tests__/social-localization.test.ts",
+      "line": 56,
+      "displayExpression": "expect(socialBattleMessage('original', input, 'en', 'android')).toBe('original')"
+    },
+    {
+      "file": "apps/mobile/src/lib/share.ts",
+      "line": 293,
+      "displayExpression": "return { message: socialReferralMessage(message, displayName, i18n.language, Platform.OS), url }"
+    },
+    {
+      "file": "apps/mobile/src/lib/share.ts",
+      "line": 358,
+      "displayExpression": "return { message: socialBattleMessage(message, input, i18n.language, Platform.OS), url }"
+    },
+    {
+      "file": "apps/mobile/src/lib/social-ui-labels.ts",
+      "line": 35,
+      "displayExpression": "export function socialReferralMessage(original: string, name: string, language: string, os: string): string {"
+    },
+    {
+      "file": "apps/mobile/src/lib/social-ui-labels.ts",
+      "line": 58,
+      "displayExpression": "export function socialBattleMessage(original: string, input: {"
+    }
   ]
 }
