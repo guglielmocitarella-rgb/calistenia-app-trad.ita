@@ -5508,7 +5508,5 @@
   "challenge.preset.duration_one": "{{count}} días",
   "challenge.preset.duration_other": "{{count}} días",
   "challenge.preset.target_one": "{{count}} entrenamientos",
-  "challenge.preset.target_other": "{{count}} entrenamientos",
-  "challenge.participantCount_one": "{{count}} participante",
-  "feed.roundsDone_one": "{{count}} ronda"
+  "challenge.preset.target_other": "{{count}} entrenamientos"
 }

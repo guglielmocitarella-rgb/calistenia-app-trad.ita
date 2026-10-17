@@ -21,6 +21,10 @@
     "apps/mobile/src/components/social/FeedCard.tsx",
     "apps/mobile/src/components/social/FriendActivityRow.tsx",
     "apps/mobile/src/components/social/SuggestedUsers.tsx",
-    "apps/mobile/src/lib/share.ts"
+    "apps/mobile/src/lib/__tests__/social-localization.test.ts",
+    "apps/mobile/src/lib/__tests__/social-share-localization.test.ts",
+    "apps/mobile/src/lib/share.ts",
+    "apps/mobile/src/lib/social-ui-labels.ts",
+    "apps/mobile/src/lib/use-social-display.ts"
   ]
 }
