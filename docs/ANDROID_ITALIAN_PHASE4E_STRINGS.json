@@ -1,0 +1,3682 @@
+{
+  "baseline": "64ab728393de15856a185f7b6dcff0bb0c8af9a5",
+  "reconstructed": true,
+  "changedItalianValues": 612,
+  "addedKeysPerLanguage": 12,
+  "catalogCountPerLanguage": 5317,
+  "earlierPhaseKeysChecked": 1488,
+  "entries": [
+    {
+      "key": "referrals.shareTitle",
+      "english": "Train with me on Calistenia App",
+      "italianBefore": "Train with me on Calistenia App",
+      "italian": "Allenati con me su Calistenia App"
+    },
+    {
+      "key": "referrals.shareText",
+      "english": "I invite you to train together. Use my link to sign up:",
+      "italianBefore": "I invite you to train together. Use my link to sign up:",
+      "italian": "Ti invito ad allenarti insieme. Usa il mio link per iscriverti:"
+    },
+    {
+      "key": "referrals.copyLink",
+      "english": "Copy link",
+      "italianBefore": "Copy link",
+      "italian": "Copia link"
+    },
+    {
+      "key": "friends.title",
+      "english": "FRIENDS",
+      "italianBefore": "FRIENDS",
+      "italian": "AMICI"
+    },
+    {
+      "key": "friends.searchPlaceholder",
+      "english": "Search friends...",
+      "italianBefore": "Search friends...",
+      "italian": "Cerca amici..."
+    },
+    {
+      "key": "friends.searchAriaLabel",
+      "english": "Search friends by name or username",
+      "italianBefore": "Search friends by name or username",
+      "italian": "Cerca amici per nome o nome utente"
+    },
+    {
+      "key": "friends.clearSearch",
+      "english": "Clear search",
+      "italianBefore": "Clear search",
+      "italian": "Cancella ricerca"
+    },
+    {
+      "key": "friends.inviteHint",
+      "english": "Invite friends to follow you",
+      "italianBefore": "Invite friends to follow you",
+      "italian": "Invita gli amici a seguirti"
+    },
+    {
+      "key": "friends.share",
+      "english": "SHARE",
+      "italianBefore": "SHARE",
+      "italian": "CONDIVIDI"
+    },
+    {
+      "key": "friends.searching",
+      "english": "Searching...",
+      "italianBefore": "Searching...",
+      "italian": "Ricerca..."
+    },
+    {
+      "key": "friends.searchErrorMsg",
+      "english": "Search error.",
+      "italianBefore": "Search error.",
+      "italian": "Errore durante la ricerca."
+    },
+    {
+      "key": "friends.noResultsFor",
+      "english": "No results found for \"{{query}}\"",
+      "italianBefore": "No results found for \"{{query}}\"",
+      "italian": "Nessun risultato per \"{{query}}\""
+    },
+    {
+      "key": "friends.resultCount_one",
+      "english": "{{count}} result",
+      "italianBefore": "{{count}} result",
+      "italian": "{{count}} risultato"
+    },
+    {
+      "key": "friends.resultCount_other",
+      "english": "{{count}} results",
+      "italianBefore": "{{count}} results",
+      "italian": "{{count}} risultati"
+    },
+    {
+      "key": "friends.searchErrorRetry",
+      "english": "Search error. Try again.",
+      "italianBefore": "Search error. Try again.",
+      "italian": "Errore durante la ricerca. Riprova."
+    },
+    {
+      "key": "friends.retry",
+      "english": "Retry",
+      "italianBefore": "Retry",
+      "italian": "Riprova"
+    },
+    {
+      "key": "friends.notFound",
+      "english": "We couldn't find \"{{name}}\"",
+      "italianBefore": "We couldn't find \"{{name}}\"",
+      "italian": "Non abbiamo trovato \"{{name}}\""
+    },
+    {
+      "key": "friends.inviteWhatsApp",
+      "english": "Invite them directly via WhatsApp",
+      "italianBefore": "Invite them directly via WhatsApp",
+      "italian": "Invita direttamente tramite WhatsApp"
+    },
+    {
+      "key": "friends.inviteByWhatsApp",
+      "english": "INVITE VIA WHATSAPP",
+      "italianBefore": "INVITE VIA WHATSAPP",
+      "italian": "INVITA VIA WHATSAPP"
+    },
+    {
+      "key": "friends.followingTab",
+      "english": "Following",
+      "italianBefore": "Following",
+      "italian": "Seguiti"
+    },
+    {
+      "key": "friends.followersTab",
+      "english": "Followers",
+      "italianBefore": "Followers",
+      "italian": "Follower"
+    },
+    {
+      "key": "friends.tabsAriaLabel",
+      "english": "Friends sections",
+      "italianBefore": "Friends sections",
+      "italian": "Sezioni amici"
+    },
+    {
+      "key": "friends.noFollowing",
+      "english": "You're not following anyone yet",
+      "italianBefore": "You're not following anyone yet",
+      "italian": "Non segui ancora nessuno"
+    },
+    {
+      "key": "friends.searchOrInvite",
+      "english": "Search for friends above or invite them",
+      "italianBefore": "Search for friends above or invite them",
+      "italian": "Cerca gli amici qui sopra o invitali"
+    },
+    {
+      "key": "friends.noFollowers",
+      "english": "You don't have followers yet",
+      "italianBefore": "You don't have followers yet",
+      "italian": "Non hai ancora follower"
+    },
+    {
+      "key": "friends.shareToGetFollowers",
+      "english": "Share your profile to get followers",
+      "italianBefore": "Share your profile to get followers",
+      "italian": "Condividi il tuo profilo per ottenere follower"
+    },
+    {
+      "key": "friends.sendByWhatsApp",
+      "english": "SEND VIA WHATSAPP",
+      "italianBefore": "SEND VIA WHATSAPP",
+      "italian": "INVIA VIA WHATSAPP"
+    },
+    {
+      "key": "friends.viewProfile",
+      "english": "View {{name}}'s profile",
+      "italianBefore": "View {{name}}'s profile",
+      "italian": "Visualizza il profilo di {{name}}"
+    },
+    {
+      "key": "friends.mutual",
+      "english": "Friends",
+      "italianBefore": "Friends",
+      "italian": "Amici"
+    },
+    {
+      "key": "friends.followingBtn",
+      "english": "FOLLOWING",
+      "italianBefore": "FOLLOWING",
+      "italian": "SEGUI GIÀ"
+    },
+    {
+      "key": "friends.followBtn",
+      "english": "FOLLOW",
+      "italianBefore": "FOLLOW",
+      "italian": "SEGUI"
+    },
+    {
+      "key": "friends.requestBtn",
+      "english": "REQUEST",
+      "italianBefore": "REQUEST",
+      "italian": "RICHIEDI"
+    },
+    {
+      "key": "friends.requestedBtn",
+      "english": "REQUESTED",
+      "italianBefore": "REQUESTED",
+      "italian": "RICHIESTA INVIATA"
+    },
+    {
+      "key": "friends.cancelRequest",
+      "english": "Cancel request",
+      "italianBefore": "Cancel request",
+      "italian": "Annulla richiesta"
+    },
+    {
+      "key": "friends.compare.show",
+      "english": "COMPARE",
+      "italianBefore": "COMPARE",
+      "italian": "CONFRONTA"
+    },
+    {
+      "key": "friends.compare.hide",
+      "english": "HIDE",
+      "italianBefore": "HIDE",
+      "italian": "NASCONDI"
+    },
+    {
+      "key": "friends.compare.extendedTitle",
+      "english": "Detailed comparison",
+      "italianBefore": "Detailed comparison",
+      "italian": "Confronto dettagliato"
+    },
+    {
+      "key": "friends.compare.sessionsWeek",
+      "english": "Sessions this week",
+      "italianBefore": "Sessions this week",
+      "italian": "Sessioni questa settimana"
+    },
+    {
+      "key": "friends.compare.sessionsMonth",
+      "english": "Sessions this month",
+      "italianBefore": "Sessions this month",
+      "italian": "Sessioni questo mese"
+    },
+    {
+      "key": "friends.compare.phase",
+      "english": "Current phase",
+      "italianBefore": "Current phase",
+      "italian": "Fase attuale"
+    },
+    {
+      "key": "friends.compare.sleepQuality",
+      "english": "Sleep quality (7d)",
+      "italianBefore": "Sleep quality (7d)",
+      "italian": "Qualità del sonno (7g)"
+    },
+    {
+      "key": "friends.compare.nutritionAdherence",
+      "english": "Nutrition adherence (7d)",
+      "italianBefore": "Nutrition adherence (7d)",
+      "italian": "Aderenza alimentare (7g)"
+    },
+    {
+      "key": "friends.compare.vsYou",
+      "english": "vs you",
+      "italianBefore": "vs you",
+      "italian": "rispetto a te"
+    },
+    {
+      "key": "friends.compare.loading",
+      "english": "Loading comparison...",
+      "italianBefore": "Loading comparison...",
+      "italian": "Caricamento confronto..."
+    },
+    {
+      "key": "friends.emptyFollowingTitle",
+      "english": "You're not following anyone yet",
+      "italianBefore": "You're not following anyone yet",
+      "italian": "Non segui ancora nessuno"
+    },
+    {
+      "key": "friends.emptyFollowingBody",
+      "english": "Search for users or invite your friends.",
+      "italianBefore": "Search for users or invite your friends.",
+      "italian": "Cerca utenti o invita i tuoi amici."
+    },
+    {
+      "key": "friends.emptyFollowersTitle",
+      "english": "No one follows you yet",
+      "italianBefore": "No one follows you yet",
+      "italian": "Nessuno ti segue ancora"
+    },
+    {
+      "key": "friends.emptyFollowersBody",
+      "english": "Share your profile to get followers.",
+      "italianBefore": "Share your profile to get followers.",
+      "italian": "Condividi il tuo profilo per ottenere follower."
+    },
+    {
+      "key": "friends.shareProfile",
+      "english": "Share profile",
+      "italianBefore": "Share profile",
+      "italian": "Condividi profilo"
+    },
+    {
+      "key": "friends.searchNoResults",
+      "english": "No results for \"{{query}}\"",
+      "italianBefore": "No results for \"{{query}}\"",
+      "italian": "Nessun risultato per \"{{query}}\""
+    },
+    {
+      "key": "friends.searchInviteHint",
+      "english": "Not on the app? Invite them to join.",
+      "italianBefore": "Not on the app? Invite them to join.",
+      "italian": "Non usa ancora l'app? Invita a iscriversi."
+    },
+    {
+      "key": "friends.invite",
+      "english": "Invite",
+      "italianBefore": "Invite",
+      "italian": "Invita"
+    },
+    {
+      "key": "friends.suggestedTitle",
+      "english": "Active people to follow",
+      "italianBefore": "Active people to follow",
+      "italian": "Persone attive da seguire"
+    },
+    {
+      "key": "friends.suggestedHint",
+      "english": "They trained recently. Follow someone to see their activity and compare on the leaderboard.",
+      "italianBefore": "They trained recently. Follow someone to see their activity and compare on the leaderboard.",
+      "italian": "Si sono allenate di recente. Segui qualcuno per vedere le sue attività e confrontarvi in classifica."
+    },
+    {
+      "key": "friends.suggestedSessions",
+      "english": "{{n}} workouts",
+      "italianBefore": "{{n}} workouts",
+      "italian": "{{n}} allenamenti"
+    },
+    {
+      "key": "friends.suggestedStreak",
+      "english": "{{n}}-day streak",
+      "italianBefore": "{{n}}-day streak",
+      "italian": "Serie di {{n}} giorni"
+    },
+    {
+      "key": "blocks.blockBtn",
+      "english": "BLOCK",
+      "italianBefore": "BLOCK",
+      "italian": "BLOCCA"
+    },
+    {
+      "key": "blocks.unblockBtn",
+      "english": "UNBLOCK",
+      "italianBefore": "UNBLOCK",
+      "italian": "SBLOCCA"
+    },
+    {
+      "key": "blocks.blockedState",
+      "english": "BLOCKED",
+      "italianBefore": "BLOCKED",
+      "italian": "BLOCCATO"
+    },
+    {
+      "key": "blocks.confirmTitle",
+      "english": "Block user?",
+      "italianBefore": "Block user?",
+      "italian": "Bloccare l'utente?"
+    },
+    {
+      "key": "blocks.confirmBody",
+      "english": "You will unfollow each other and stop seeing each other's activity (feed, comments, reactions, rankings).",
+      "italianBefore": "You will unfollow each other and stop seeing each other's activity (feed, comments, reactions, rankings).",
+      "italian": "Smetterete di seguirvi e non vedrete più le attività reciproche (feed, commenti, reazioni, classifiche)."
+    },
+    {
+      "key": "blocks.confirmAction",
+      "english": "Block",
+      "italianBefore": "Block",
+      "italian": "Blocca"
+    },
+    {
+      "key": "blocks.manageTitle",
+      "english": "BLOCKED USERS",
+      "italianBefore": "BLOCKED USERS",
+      "italian": "UTENTI BLOCCATI"
+    },
+    {
+      "key": "privacy.lockedTitle",
+      "english": "Private account",
+      "italianBefore": "Private account",
+      "italian": "Account privato"
+    },
+    {
+      "key": "privacy.lockedBody",
+      "english": "Request to follow {{name}} to see their workouts, records and progress.",
+      "italianBefore": "Request to follow {{name}} to see their workouts, records and progress.",
+      "italian": "Chiedi di seguire {{name}} per vedere allenamenti, record e progressi."
+    },
+    {
+      "key": "privacy.lockedPending",
+      "english": "Your request is pending. You will see their activity once they accept.",
+      "italianBefore": "Your request is pending. You will see their activity once they accept.",
+      "italian": "La tua richiesta è in attesa. Vedrai le attività dopo che sarà accettata."
+    },
+    {
+      "key": "privacy.requestsTitle",
+      "english": "Follow requests",
+      "italianBefore": "Follow requests",
+      "italian": "Richieste di follow"
+    },
+    {
+      "key": "privacy.requestsEmpty",
+      "english": "No pending requests",
+      "italianBefore": "No pending requests",
+      "italian": "Nessuna richiesta in attesa"
+    },
+    {
+      "key": "privacy.accept",
+      "english": "Accept",
+      "italianBefore": "Accept",
+      "italian": "Accetta"
+    },
+    {
+      "key": "privacy.reject",
+      "english": "Decline",
+      "italianBefore": "Decline",
+      "italian": "Rifiuta"
+    },
+    {
+      "key": "privacy.rankingHiddenSelf",
+      "english": "Your account is private: others cannot see you on this leaderboard.",
+      "italianBefore": "Your account is private: others cannot see you on this leaderboard.",
+      "italian": "Il tuo account è privato: gli altri non possono vederti in questa classifica."
+    },
+    {
+      "key": "privacy.rankingHiddenOthers_one",
+      "english": "{{count}} participant with a private account is hidden from the leaderboard.",
+      "italianBefore": "{{count}} participant with a private account is hidden from the leaderboard.",
+      "italian": "{{count}} partecipante con account privato è nascosto nella classifica."
+    },
+    {
+      "key": "privacy.rankingHiddenOthers_other",
+      "english": "{{count}} participants with private accounts are hidden from the leaderboard.",
+      "italianBefore": "{{count}} participants with private accounts are hidden from the leaderboard.",
+      "italian": "{{count}} partecipanti con account privato sono nascosti nella classifica."
+    },
+    {
+      "key": "blocks.empty",
+      "english": "You haven't blocked anyone",
+      "italianBefore": "You haven't blocked anyone",
+      "italian": "Non hai bloccato nessuno"
+    },
+    {
+      "key": "blocks.emptyBody",
+      "english": "When you block someone they stop seeing your activity and you stop seeing theirs. They'll show up here so you can unblock them.",
+      "italianBefore": "When you block someone they stop seeing your activity and you stop seeing theirs. They'll show up here so you can unblock them.",
+      "italian": "Quando blocchi qualcuno, non vedrete più le attività reciproche. Comparirà qui per poterlo sbloccare."
+    },
+    {
+      "key": "blocks.error",
+      "english": "Could not complete the action",
+      "italianBefore": "Could not complete the action",
+      "italian": "Impossibile completare l'azione"
+    },
+    {
+      "key": "blocks.menuBlock",
+      "english": "Block user",
+      "italianBefore": "Block user",
+      "italian": "Blocca utente"
+    },
+    {
+      "key": "blocks.menuUnblock",
+      "english": "Unblock user",
+      "italianBefore": "Unblock user",
+      "italian": "Sblocca utente"
+    },
+    {
+      "key": "blocks.blockedNote",
+      "english": "You won't see each other's activity or be able to interact.",
+      "italianBefore": "You won't see each other's activity or be able to interact.",
+      "italian": "Non vedrete le attività reciproche e non potrete interagire."
+    },
+    {
+      "key": "blocks.menuKicker",
+      "english": "OPTIONS",
+      "italianBefore": "OPTIONS",
+      "italian": "OPZIONI"
+    },
+    {
+      "key": "reports.menuReport",
+      "english": "Report user",
+      "italianBefore": "Report user",
+      "italian": "Segnala utente"
+    },
+    {
+      "key": "reports.commentAction",
+      "english": "Report",
+      "italianBefore": "Report",
+      "italian": "Segnala"
+    },
+    {
+      "key": "reports.pickerKicker",
+      "english": "REPORT",
+      "italianBefore": "REPORT",
+      "italian": "SEGNALAZIONE"
+    },
+    {
+      "key": "reports.pickerTitle",
+      "english": "Why are you reporting this?",
+      "italianBefore": "Why are you reporting this?",
+      "italian": "Perché vuoi segnalare questo contenuto?"
+    },
+    {
+      "key": "reports.reasonHarassment",
+      "english": "Harassment or hate",
+      "italianBefore": "Harassment or hate",
+      "italian": "Molestie o odio"
+    },
+    {
+      "key": "reports.reasonInappropriate",
+      "english": "Inappropriate content",
+      "italianBefore": "Inappropriate content",
+      "italian": "Contenuto inappropriato"
+    },
+    {
+      "key": "reports.reasonOther",
+      "english": "Other reason",
+      "italianBefore": "Other reason",
+      "italian": "Altro motivo"
+    },
+    {
+      "key": "reports.successTitle",
+      "english": "Report submitted",
+      "italianBefore": "Report submitted",
+      "italian": "Segnalazione inviata"
+    },
+    {
+      "key": "reports.success",
+      "english": "Thanks for letting us know. We'll review it soon.",
+      "italianBefore": "Thanks for letting us know. We'll review it soon.",
+      "italian": "Grazie per la segnalazione. La esamineremo al più presto."
+    },
+    {
+      "key": "reports.error",
+      "english": "Could not submit the report",
+      "italianBefore": "Could not submit the report",
+      "italian": "Impossibile inviare la segnalazione"
+    },
+    {
+      "key": "feed.recentActivity",
+      "english": "Recent activity",
+      "italianBefore": "Recent activity",
+      "italian": "Attività recente"
+    },
+    {
+      "key": "feed.completed",
+      "english": "completed",
+      "italianBefore": "completed",
+      "italian": "ha completato"
+    },
+    {
+      "key": "notif.follow",
+      "english": "{{name}} started following you",
+      "italianBefore": "{{name}} started following you",
+      "italian": "{{name}} ha iniziato a seguirti"
+    },
+    {
+      "key": "notif.followRequest",
+      "english": "{{name}} wants to follow you",
+      "italianBefore": "{{name}} wants to follow you",
+      "italian": "{{name}} vuole seguirti"
+    },
+    {
+      "key": "notif.followAccepted",
+      "english": "{{name}} accepted your follow request",
+      "italianBefore": "{{name}} accepted your follow request",
+      "italian": "{{name}} ha accettato la tua richiesta di follow"
+    },
+    {
+      "key": "notif.reaction",
+      "english": "{{name}} reacted {{emoji}} to your session",
+      "italianBefore": "{{name}} reacted {{emoji}} to your session",
+      "italian": "{{name}} ha reagito {{emoji}} alla tua sessione"
+    },
+    {
+      "key": "notif.reactionComment",
+      "english": "{{name}} reacted {{emoji}} to your comment",
+      "italianBefore": "{{name}} reacted {{emoji}} to your comment",
+      "italian": "{{name}} ha reagito {{emoji}} al tuo commento"
+    },
+    {
+      "key": "notif.comment",
+      "english": "{{name}} commented on your session",
+      "italianBefore": "{{name}} commented on your session",
+      "italian": "{{name}} ha commentato la tua sessione"
+    },
+    {
+      "key": "notif.commentReply",
+      "english": "{{name}} replied to your comment",
+      "italianBefore": "{{name}} replied to your comment",
+      "italian": "{{name}} ha risposto al tuo commento"
+    },
+    {
+      "key": "notif.challengeJoin",
+      "english": "{{name}} joined your challenge",
+      "italianBefore": "{{name}} joined your challenge",
+      "italian": "{{name}} partecipa alla tua sfida"
+    },
+    {
+      "key": "notif.challengeComplete",
+      "english": "The challenge {{title}} has ended!",
+      "italianBefore": "The challenge {{title}} has ended!",
+      "italian": "La sfida {{title}} è terminata!"
+    },
+    {
+      "key": "notif.referralSignup",
+      "english": "{{name}} joined using your referral link!",
+      "italianBefore": "{{name}} joined using your referral link!",
+      "italian": "{{name}} si è iscritto tramite il tuo link di invito!"
+    },
+    {
+      "key": "notif.referralBonus",
+      "english": "You earned a bonus — {{name}} completed their first workout!",
+      "italianBefore": "You earned a bonus — {{name}} completed their first workout!",
+      "italian": "Hai ottenuto un bonus: {{name}} ha completato il primo allenamento!"
+    },
+    {
+      "key": "notif.friendStreak",
+      "english": "{{name}} is on a {{days}}-day streak 🔥",
+      "italianBefore": "{{name}} is on a {{days}}-day streak 🔥",
+      "italian": "{{name}} ha una serie di {{days}} giorni 🔥"
+    },
+    {
+      "key": "notif.friendStreakWeeks",
+      "english": "{{name}} is on a {{weeks}}-week streak 🔥",
+      "italianBefore": "{{name}} is on a {{weeks}}-week streak 🔥",
+      "italian": "{{name}} ha una serie di {{weeks}} settimane 🔥"
+    },
+    {
+      "key": "notif.friendAchievement",
+      "english": "{{name}} unlocked {{achievement}} 🏅",
+      "italianBefore": "{{name}} unlocked {{achievement}} 🏅",
+      "italian": "{{name}} ha sbloccato {{achievement}} 🏅"
+    },
+    {
+      "key": "notif.friendWorkout",
+      "english": "{{name}} worked out today 💪",
+      "italianBefore": "{{name}} worked out today 💪",
+      "italian": "{{name}} si è allenato oggi 💪"
+    },
+    {
+      "key": "notif.friendJoined",
+      "english": "{{name}} started training 🎉",
+      "italianBefore": "{{name}} started training 🎉",
+      "italian": "{{name}} ha iniziato ad allenarsi 🎉"
+    },
+    {
+      "key": "notif.challengeReminder",
+      "english": "Today's challenge is waiting: {{title}}",
+      "italianBefore": "Today's challenge is waiting: {{title}}",
+      "italian": "La sfida di oggi ti aspetta: {{title}}"
+    },
+    {
+      "key": "challenges.title",
+      "english": "CHALLENGES",
+      "italianBefore": "CHALLENGES",
+      "italian": "SFIDE"
+    },
+    {
+      "key": "challenges.create",
+      "english": "+ CREATE",
+      "italianBefore": "+ CREATE",
+      "italian": "+ CREA"
+    },
+    {
+      "key": "challenges.filterActive",
+      "english": "Active",
+      "italianBefore": "Active",
+      "italian": "Attive"
+    },
+    {
+      "key": "challenges.filterPast",
+      "english": "Finished",
+      "italianBefore": "Finished",
+      "italian": "Concluse"
+    },
+    {
+      "key": "challenges.filterAriaLabel",
+      "english": "Challenge filter",
+      "italianBefore": "Challenge filter",
+      "italian": "Filtro sfide"
+    },
+    {
+      "key": "challenges.emptyHint",
+      "english": "Create a challenge and compete with friends",
+      "italianBefore": "Create a challenge and compete with friends",
+      "italian": "Crea una sfida e gareggia con gli amici"
+    },
+    {
+      "key": "challenges.createChallenge",
+      "english": "Create challenge",
+      "italianBefore": "Create challenge",
+      "italian": "Crea sfida"
+    },
+    {
+      "key": "challenges.goal",
+      "english": "Goal: {{value}}",
+      "italianBefore": "Goal: {{value}}",
+      "italian": "Obiettivo: {{value}}"
+    },
+    {
+      "key": "challenges.emptyActive",
+      "english": "No active challenges",
+      "italianBefore": "No active challenges",
+      "italian": "Nessuna sfida attiva"
+    },
+    {
+      "key": "challenges.emptyPast",
+      "english": "No past challenges",
+      "italianBefore": "No past challenges",
+      "italian": "Nessuna sfida conclusa"
+    },
+    {
+      "key": "challenges.emptyBodyActive",
+      "english": "Pick one of the challenges below and your next workout already counts.",
+      "italianBefore": "Pick one of the challenges below and your next workout already counts.",
+      "italian": "Scegli una delle sfide qui sotto: il prossimo allenamento conterà già."
+    },
+    {
+      "key": "challenges.emptyBodyPast",
+      "english": "When a challenge you joined ends, it stays here with its final standings.",
+      "italianBefore": "When a challenge you joined ends, it stays here with its final standings.",
+      "italian": "Quando una sfida a cui partecipi termina, rimane qui con la classifica finale."
+    },
+    {
+      "key": "challenges.notFound",
+      "english": "This challenge no longer exists or you can't see it.",
+      "italianBefore": "This challenge no longer exists or you can't see it.",
+      "italian": "Questa sfida non esiste più o non puoi visualizzarla."
+    },
+    {
+      "key": "leaderboard.section",
+      "english": "Competition",
+      "italianBefore": "Competition",
+      "italian": "Competizione"
+    },
+    {
+      "key": "leaderboard.title",
+      "english": "RANKING",
+      "italianBefore": "RANKING",
+      "italian": "CLASSIFICA"
+    },
+    {
+      "key": "leaderboard.sessions",
+      "english": "Sessions",
+      "italianBefore": "Sessions",
+      "italian": "Sessioni"
+    },
+    {
+      "key": "leaderboard.totalSessions",
+      "english": "Total sessions",
+      "italianBefore": "Total sessions",
+      "italian": "Sessioni totali"
+    },
+    {
+      "key": "leaderboard.totalSets",
+      "english": "Total sets",
+      "italianBefore": "Total sets",
+      "italian": "Serie totali"
+    },
+    {
+      "key": "leaderboard.streak",
+      "english": "Streak",
+      "italianBefore": "Streak",
+      "italian": "Continuità"
+    },
+    {
+      "key": "leaderboard.bestStreak",
+      "english": "Best streak",
+      "italianBefore": "Best streak",
+      "italian": "Migliore continuità"
+    },
+    {
+      "key": "leaderboard.streakUnit",
+      "english": "weeks",
+      "italianBefore": "weeks",
+      "italian": "settimane"
+    },
+    {
+      "key": "leaderboard.thisWeek",
+      "english": "This week",
+      "italianBefore": "This week",
+      "italian": "Questa settimana"
+    },
+    {
+      "key": "leaderboard.thisMonth",
+      "english": "This month",
+      "italianBefore": "This month",
+      "italian": "Questo mese"
+    },
+    {
+      "key": "leaderboard.loading",
+      "english": "Loading ranking...",
+      "italianBefore": "Loading ranking...",
+      "italian": "Caricamento classifica..."
+    },
+    {
+      "key": "leaderboard.followToSee",
+      "english": "Follow friends to see the ranking",
+      "italianBefore": "Follow friends to see the ranking",
+      "italian": "Segui gli amici per vedere la classifica"
+    },
+    {
+      "key": "leaderboard.findFriends",
+      "english": "Find friends",
+      "italianBefore": "Find friends",
+      "italian": "Trova amici"
+    },
+    {
+      "key": "leaderboard.you",
+      "english": "(you)",
+      "italianBefore": "(you)",
+      "italian": "(tu)"
+    },
+    {
+      "key": "leaderboard.emptyTitle",
+      "english": "Friends leaderboard",
+      "italianBefore": "Friends leaderboard",
+      "italian": "Classifica amici"
+    },
+    {
+      "key": "leaderboard.emptyBody",
+      "english": "Follow friends and compete on sessions and streak every week and every month.",
+      "italianBefore": "Follow friends and compete on sessions and streak every week and every month.",
+      "italian": "Segui gli amici e confrontatevi per sessioni e continuità ogni settimana e ogni mese."
+    },
+    {
+      "key": "leaderboard.noData",
+      "english": "No data yet",
+      "italianBefore": "No data yet",
+      "italian": "Ancora nessun dato"
+    },
+    {
+      "key": "leaderboard.prPullups",
+      "english": "Pull-ups",
+      "italianBefore": "Pull-ups",
+      "italian": "Trazioni"
+    },
+    {
+      "key": "community.kicker",
+      "english": "Train together",
+      "italianBefore": "Train together",
+      "italian": "Allenatevi insieme"
+    },
+    {
+      "key": "community.sectionsLabel",
+      "english": "Community sections",
+      "italianBefore": "Community sections",
+      "italian": "Sezioni della community"
+    },
+    {
+      "key": "community.emptyTitle",
+      "english": "Train with friends",
+      "italianBefore": "Train with friends",
+      "italian": "Allenati con gli amici"
+    },
+    {
+      "key": "community.emptyBody",
+      "english": "Follow someone to see their workouts, compete in the weekly ranking and challenge them to a battle.",
+      "italianBefore": "Follow someone to see their workouts, compete in the weekly ranking and challenge them to a battle.",
+      "italian": "Segui qualcuno per vedere i suoi allenamenti, gareggiare nella classifica settimanale e sfidarlo in una battaglia."
+    },
+    {
+      "key": "community.yourFriends",
+      "english": "Your friends",
+      "italianBefore": "Your friends",
+      "italian": "I tuoi amici"
+    },
+    {
+      "key": "community.friendsQuiet",
+      "english": "Your friends haven't trained this week yet.",
+      "italianBefore": "Your friends haven't trained this week yet.",
+      "italian": "I tuoi amici non si sono ancora allenati questa settimana."
+    },
+    {
+      "key": "community.weekRanking",
+      "english": "This week's ranking",
+      "italianBefore": "This week's ranking",
+      "italian": "Classifica della settimana"
+    },
+    {
+      "key": "community.you",
+      "english": "You",
+      "italianBefore": "You",
+      "italian": "Tu"
+    },
+    {
+      "key": "community.workouts_one",
+      "english": "{{count}} workout",
+      "italianBefore": "{{count}} workout",
+      "italian": "{{count}} allenamento"
+    },
+    {
+      "key": "community.workouts_other",
+      "english": "{{count}} workouts",
+      "italianBefore": "{{count}} workouts",
+      "italian": "{{count}} allenamenti"
+    },
+    {
+      "key": "community.programsSub",
+      "english": "Plans to follow as a group",
+      "italianBefore": "Plans to follow as a group",
+      "italian": "Programmi da seguire in gruppo"
+    },
+    {
+      "key": "community.racesSub",
+      "english": "Run with friends in real time",
+      "italianBefore": "Run with friends in real time",
+      "italian": "Corri con gli amici in tempo reale"
+    },
+    {
+      "key": "community.invite",
+      "english": "Invite friends",
+      "italianBefore": "Invite friends",
+      "italian": "Invita amici"
+    },
+    {
+      "key": "community.inviteSub",
+      "english": "Your invite link",
+      "italianBefore": "Your invite link",
+      "italian": "Il tuo link di invito"
+    },
+    {
+      "key": "community.battleLive",
+      "english": "Battle in progress",
+      "italianBefore": "Battle in progress",
+      "italian": "Battaglia in corso"
+    },
+    {
+      "key": "community.battleLobby",
+      "english": "Your battle is waiting in the lobby",
+      "italianBefore": "Your battle is waiting in the lobby",
+      "italian": "La tua battaglia ti aspetta nella sala d'attesa"
+    },
+    {
+      "key": "social.feedEmptyTitle",
+      "english": "No activity yet",
+      "italianBefore": "No activity yet",
+      "italian": "Ancora nessuna attività"
+    },
+    {
+      "key": "social.feedEmptyBody",
+      "english": "Follow other athletes to see their workouts, streaks and achievements here.",
+      "italianBefore": "Follow other athletes to see their workouts, streaks and achievements here.",
+      "italian": "Segui altri atleti per vedere qui allenamenti, continuità e traguardi."
+    },
+    {
+      "key": "social.react",
+      "english": "React",
+      "italianBefore": "React",
+      "italian": "Reagisci"
+    },
+    {
+      "key": "social.commentsEmpty",
+      "english": "Be the first to comment",
+      "italianBefore": "Be the first to comment",
+      "italian": "Scrivi il primo commento"
+    },
+    {
+      "key": "referrals.noReferrals",
+      "english": "No referrals yet. Invite friends to earn points!",
+      "italianBefore": "No referrals yet. Invite friends to earn points!",
+      "italian": "Ancora nessun invitato. Invita gli amici per ottenere punti!"
+    },
+    {
+      "key": "referrals.sourceChallenge",
+      "english": "Challenge",
+      "italianBefore": "Challenge",
+      "italian": "Sfida"
+    },
+    {
+      "key": "referrals.sourceInvite",
+      "english": "Invite",
+      "italianBefore": "Invite",
+      "italian": "Invito"
+    },
+    {
+      "key": "referrals.title",
+      "english": "My Referrals",
+      "italianBefore": "My Referrals",
+      "italian": "I miei inviti"
+    },
+    {
+      "key": "referrals.subtitle",
+      "english": "Invite friends and earn points",
+      "italianBefore": "Invite friends and earn points",
+      "italian": "Invita amici e ottieni punti"
+    },
+    {
+      "key": "referrals.loading",
+      "english": "Loading your referrals…",
+      "italianBefore": "Loading your referrals…",
+      "italian": "Caricamento inviti…"
+    },
+    {
+      "key": "referrals.noTransactions",
+      "english": "No point activity yet.",
+      "italianBefore": "No point activity yet.",
+      "italian": "Ancora nessun movimento di punti."
+    },
+    {
+      "key": "referrals.tabReferrals",
+      "english": "Referrals",
+      "italianBefore": "Referrals",
+      "italian": "Invitati"
+    },
+    {
+      "key": "referrals.tabHistory",
+      "english": "History",
+      "italianBefore": "History",
+      "italian": "Cronologia"
+    },
+    {
+      "key": "referrals.linkLabel",
+      "english": "Your invite link",
+      "italianBefore": "Your invite link",
+      "italian": "Il tuo link di invito"
+    },
+    {
+      "key": "referrals.linkHelp",
+      "english": "Share this link: you earn {{points}} points for every friend who signs up.",
+      "italianBefore": "Share this link: you earn {{points}} points for every friend who signs up.",
+      "italian": "Condividi questo link: ottieni {{points}} punti per ogni amico che si iscrive."
+    },
+    {
+      "key": "referrals.deletedUser",
+      "english": "Deleted user",
+      "italianBefore": "Deleted user",
+      "italian": "Utente eliminato"
+    },
+    {
+      "key": "referrals.rewardCredited",
+      "english": "+{{points}} pts",
+      "italianBefore": "+{{points}} pts",
+      "italian": "+{{points}} pt"
+    },
+    {
+      "key": "referrals.rewardPending",
+      "english": "Pending",
+      "italianBefore": "Pending",
+      "italian": "In attesa"
+    },
+    {
+      "key": "referrals.rewardPendingHint",
+      "english": "This referral counts, but its points have not shown up in your history yet.",
+      "italianBefore": "This referral counts, but its points have not shown up in your history yet.",
+      "italian": "Questo invito è valido, ma i punti non compaiono ancora nella cronologia."
+    },
+    {
+      "key": "referrals.pendingNotice",
+      "english": "Some referrals do not have their points credited yet.",
+      "italianBefore": "Some referrals do not have their points credited yet.",
+      "italian": "I punti di alcuni inviti non sono ancora stati accreditati."
+    },
+    {
+      "key": "referrals.howItWorksTitle",
+      "english": "How it works",
+      "italianBefore": "How it works",
+      "italian": "Come funziona"
+    },
+    {
+      "key": "referrals.howItWorksStep1",
+      "english": "Share your link or your code.",
+      "italianBefore": "Share your link or your code.",
+      "italian": "Condividi il tuo link o il tuo codice."
+    },
+    {
+      "key": "referrals.howItWorksStep2",
+      "english": "Your friend signs up using it.",
+      "italianBefore": "Your friend signs up using it.",
+      "italian": "Il tuo amico si iscrive utilizzandolo."
+    },
+    {
+      "key": "referrals.howItWorksStep3",
+      "english": "On sign-up you earn {{referrerPoints}} pts and your friend {{referredPoints}} pts. No workout required.",
+      "italianBefore": "On sign-up you earn {{referrerPoints}} pts and your friend {{referredPoints}} pts. No workout required.",
+      "italian": "All'iscrizione ottieni {{referrerPoints}} pt e il tuo amico {{referredPoints}} pt. Non serve allenarsi."
+    },
+    {
+      "key": "referrals.emptyTitle",
+      "english": "You have not invited anyone yet",
+      "italianBefore": "You have not invited anyone yet",
+      "italian": "Non hai ancora invitato nessuno"
+    },
+    {
+      "key": "referrals.emptyBody",
+      "english": "Share your link: when a friend signs up with it, you earn {{points}} points instantly.",
+      "italianBefore": "Share your link: when a friend signs up with it, you earn {{points}} points instantly.",
+      "italian": "Condividi il tuo link: quando un amico si iscrive tramite il link, ottieni subito {{points}} punti."
+    },
+    {
+      "key": "referrals.errorTitle",
+      "english": "We could not load your referrals",
+      "italianBefore": "We could not load your referrals",
+      "italian": "Impossibile caricare i tuoi inviti"
+    },
+    {
+      "key": "referrals.errorOffline",
+      "english": "There seems to be no connection to the server.",
+      "italianBefore": "There seems to be no connection to the server.",
+      "italian": "La connessione al server sembra assente."
+    },
+    {
+      "key": "referrals.errorGeneric",
+      "english": "Something went wrong reading your data.",
+      "italianBefore": "Something went wrong reading your data.",
+      "italian": "Si è verificato un errore durante la lettura dei dati."
+    },
+    {
+      "key": "referrals.retry",
+      "english": "Retry",
+      "italianBefore": "Retry",
+      "italian": "Riprova"
+    },
+    {
+      "key": "referrals.milestoneNote",
+      "english": "Points are not redeemable yet: they will unlock AI features soon.",
+      "italianBefore": "Points are not redeemable yet: they will unlock AI features soon.",
+      "italian": "I punti non sono ancora riscattabili: presto sbloccheranno funzionalità IA."
+    },
+    {
+      "key": "referrals.pointsLabel",
+      "english": "YOUR POINTS",
+      "italianBefore": "YOUR POINTS",
+      "italian": "I TUOI PUNTI"
+    },
+    {
+      "key": "referrals.statReferred",
+      "english": "Referrals",
+      "italianBefore": "Referrals",
+      "italian": "Invitati"
+    },
+    {
+      "key": "referrals.statBalance",
+      "english": "Balance",
+      "italianBefore": "Balance",
+      "italian": "Saldo"
+    },
+    {
+      "key": "referrals.statEarned",
+      "english": "Total",
+      "italianBefore": "Total",
+      "italian": "Totale"
+    },
+    {
+      "key": "referrals.navLabel",
+      "english": "Referrals",
+      "italianBefore": "Referrals",
+      "italian": "Inviti"
+    },
+    {
+      "key": "referrals.inviteShareText",
+      "english": "💪 {{name}} invited you to train together on Calistenia App",
+      "italianBefore": "💪 {{name}} invited you to train together on Calistenia App",
+      "italian": "💪 {{name}} ti invita ad allenarti insieme su Calistenia App"
+    },
+    {
+      "key": "referrals.inviteShareTitle",
+      "english": "{{name}} invites you to train",
+      "italianBefore": "{{name}} invites you to train",
+      "italian": "{{name}} ti invita ad allenarti"
+    },
+    {
+      "key": "referrals.logIn",
+      "english": "Log in",
+      "italianBefore": "Log in",
+      "italian": "Accedi"
+    },
+    {
+      "key": "referrals.alreadyHaveAccount",
+      "english": "Already have an account?",
+      "italianBefore": "Already have an account?",
+      "italian": "Hai già un account?"
+    },
+    {
+      "key": "referrals.bothEarnPoints",
+      "english": "{{name}} earns {{referrerPoints}} pts and you earn {{referredPoints}} pts when you sign up",
+      "italianBefore": "{{name}} earns {{referrerPoints}} pts and you earn {{referredPoints}} pts when you sign up",
+      "italian": "{{name}} ottiene {{referrerPoints}} pt e tu ottieni {{referredPoints}} pt quando ti iscrivi"
+    },
+    {
+      "key": "referrals.join",
+      "english": "Join",
+      "italianBefore": "Join",
+      "italian": "Partecipa"
+    },
+    {
+      "key": "referrals.joinChallenge",
+      "english": "Join the challenge",
+      "italianBefore": "Join the challenge",
+      "italian": "Partecipa alla sfida"
+    },
+    {
+      "key": "referrals.joining",
+      "english": "Joining...",
+      "italianBefore": "Joining...",
+      "italian": "Partecipazione..."
+    },
+    {
+      "key": "referrals.currentProgram",
+      "english": "CURRENT PROGRAM",
+      "italianBefore": "CURRENT PROGRAM",
+      "italian": "PROGRAMMA ATTUALE"
+    },
+    {
+      "key": "referrals.statSessions",
+      "english": "Sessions",
+      "italianBefore": "Sessions",
+      "italian": "Sessioni"
+    },
+    {
+      "key": "referrals.statStreak",
+      "english": "Streak",
+      "italianBefore": "Streak",
+      "italian": "Continuità"
+    },
+    {
+      "key": "referrals.statLevel",
+      "english": "Level",
+      "italianBefore": "Level",
+      "italian": "Livello"
+    },
+    {
+      "key": "referrals.invitesYouToTrain",
+      "english": "invites you to train together",
+      "italianBefore": "invites you to train together",
+      "italian": "ti invita ad allenarti insieme"
+    },
+    {
+      "key": "referrals.shareLinkHelp",
+      "english": "Share this link with your friends. You earn {{referrerPoints}} pts and they earn {{referredPoints}} pts when they sign up.",
+      "italianBefore": "Share this link with your friends. You earn {{referrerPoints}} pts and they earn {{referredPoints}} pts when they sign up.",
+      "italian": "Condividi questo link con gli amici. Ottieni {{referrerPoints}} pt e loro {{referredPoints}} pt quando si iscrivono."
+    },
+    {
+      "key": "challenge.dailyGoalPlaceholder",
+      "english": "E.g.: 50",
+      "italianBefore": "E.g.: 50",
+      "italian": "Es.: 50"
+    },
+    {
+      "key": "challenge.dailyGoal",
+      "english": "Daily goal",
+      "italianBefore": "Daily goal",
+      "italian": "Obiettivo giornaliero"
+    },
+    {
+      "key": "challenge.searchExercise",
+      "english": "Search exercise...",
+      "italianBefore": "Search exercise...",
+      "italian": "Cerca esercizio..."
+    },
+    {
+      "key": "challenge.createAndShare",
+      "english": "Create and share",
+      "italianBefore": "Create and share",
+      "italian": "Crea e condividi"
+    },
+    {
+      "key": "challenge.metricSessions",
+      "english": "Most sessions",
+      "italianBefore": "Most sessions",
+      "italian": "Più sessioni"
+    },
+    {
+      "key": "challenge.metricPullups",
+      "english": "Most pull-ups",
+      "italianBefore": "Most pull-ups",
+      "italian": "Più trazioni"
+    },
+    {
+      "key": "challenge.metricPushups",
+      "english": "Most push-ups",
+      "italianBefore": "Most push-ups",
+      "italian": "Più piegamenti"
+    },
+    {
+      "key": "challenge.metricStreak",
+      "english": "Longest streak",
+      "italianBefore": "Longest streak",
+      "italian": "Maggiore continuità"
+    },
+    {
+      "key": "challenge.metricLsit",
+      "english": "Longest L-sit",
+      "italianBefore": "Longest L-sit",
+      "italian": "L-sit più lungo"
+    },
+    {
+      "key": "challenge.metricHandstand",
+      "english": "Longest handstand",
+      "italianBefore": "Longest handstand",
+      "italian": "Verticale più lunga"
+    },
+    {
+      "key": "challenge.metricCustom",
+      "english": "Custom",
+      "italianBefore": "Custom",
+      "italian": "Personalizzata"
+    },
+    {
+      "key": "challenge.metricTotalWorkouts",
+      "english": "Total workouts",
+      "italianBefore": "Total workouts",
+      "italian": "Allenamenti totali"
+    },
+    {
+      "key": "challenge.metricTotalExercise",
+      "english": "Exercise total",
+      "italianBefore": "Exercise total",
+      "italian": "Totale esercizio"
+    },
+    {
+      "key": "challenge.metricTotalDistance",
+      "english": "Total distance",
+      "italianBefore": "Total distance",
+      "italian": "Distanza totale"
+    },
+    {
+      "key": "challenge.metricTotalOf",
+      "english": "Total · {{name}}",
+      "italianBefore": "Total · {{name}}",
+      "italian": "Totale · {{name}}"
+    },
+    {
+      "key": "challenge.scoreWindowNote",
+      "english": "Counts what you log between the challenge start and end (full days, in your timezone).",
+      "italianBefore": "Counts what you log between the challenge start and end (full days, in your timezone).",
+      "italian": "Conta ciò che registri tra l'inizio e la fine della sfida (giorni interi, nel tuo fuso orario)."
+    },
+    {
+      "key": "challenge.expressTarget",
+      "english": "{{target}} reps/day · {{days}} days",
+      "italianBefore": "{{target}} reps/day · {{days}} days",
+      "italian": "{{target}} rip./giorno · {{days}} giorni"
+    },
+    {
+      "key": "challenge.expressStreak",
+      "english": "{{n}}d streak",
+      "italianBefore": "{{n}}d streak",
+      "italian": "Serie di {{n}}g"
+    },
+    {
+      "key": "challenge.unitDays",
+      "english": "days",
+      "italianBefore": "days",
+      "italian": "giorni"
+    },
+    {
+      "key": "challenge.finished",
+      "english": "Finished",
+      "italianBefore": "Finished",
+      "italian": "Conclusa"
+    },
+    {
+      "key": "challenge.oneDayLeft",
+      "english": "1 day left",
+      "italianBefore": "1 day left",
+      "italian": "Manca 1 giorno"
+    },
+    {
+      "key": "challenge.daysLeft",
+      "english": "{{count}} days left",
+      "italianBefore": "{{count}} days left",
+      "italian": "Mancano {{count}} giorni"
+    },
+    {
+      "key": "challenge.startsTomorrow",
+      "english": "Starts tomorrow",
+      "italianBefore": "Starts tomorrow",
+      "italian": "Inizia domani"
+    },
+    {
+      "key": "challenge.startsInDays",
+      "english": "Starts in {{count}} days",
+      "italianBefore": "Starts in {{count}} days",
+      "italian": "Inizia tra {{count}} giorni"
+    },
+    {
+      "key": "challenge.metric.most_sessions",
+      "english": "Sessions",
+      "italianBefore": "Sessions",
+      "italian": "Sessioni"
+    },
+    {
+      "key": "challenge.metric.most_pullups",
+      "english": "Pull-ups",
+      "italianBefore": "Pull-ups",
+      "italian": "Trazioni"
+    },
+    {
+      "key": "challenge.metric.most_pushups",
+      "english": "Push-ups",
+      "italianBefore": "Push-ups",
+      "italian": "Piegamenti"
+    },
+    {
+      "key": "challenge.metric.longest_streak",
+      "english": "Streak",
+      "italianBefore": "Streak",
+      "italian": "Continuità"
+    },
+    {
+      "key": "challenge.metric.most_handstand",
+      "english": "Handstand",
+      "italianBefore": "Handstand",
+      "italian": "Verticale"
+    },
+    {
+      "key": "challenge.metric.custom",
+      "english": "Custom",
+      "italianBefore": "Custom",
+      "italian": "Personalizzata"
+    },
+    {
+      "key": "challenge.metricDesc.most_sessions",
+      "english": "Who trains the most days",
+      "italianBefore": "Who trains the most days",
+      "italian": "Chi si allena più giorni"
+    },
+    {
+      "key": "challenge.metricDesc.most_pullups",
+      "english": "Max pull-ups",
+      "italianBefore": "Max pull-ups",
+      "italian": "Massimo di trazioni"
+    },
+    {
+      "key": "challenge.metricDesc.most_pushups",
+      "english": "Max push-ups",
+      "italianBefore": "Max push-ups",
+      "italian": "Massimo di piegamenti"
+    },
+    {
+      "key": "challenge.metricDesc.longest_streak",
+      "english": "Longest consecutive streak",
+      "italianBefore": "Longest consecutive streak",
+      "italian": "Serie consecutiva più lunga"
+    },
+    {
+      "key": "challenge.metricDesc.most_lsit",
+      "english": "Longest L-sit hold",
+      "italianBefore": "Longest L-sit hold",
+      "italian": "Tenuta L-sit più lunga"
+    },
+    {
+      "key": "challenge.metricDesc.most_handstand",
+      "english": "Longest handstand hold",
+      "italianBefore": "Longest handstand hold",
+      "italian": "Tenuta in verticale più lunga"
+    },
+    {
+      "key": "challenge.metricDesc.exercise",
+      "english": "Best set of any catalog exercise",
+      "italianBefore": "Best set of any catalog exercise",
+      "italian": "Migliore serie di un esercizio del catalogo"
+    },
+    {
+      "key": "challenge.metricDesc.custom",
+      "english": "Define your own metric",
+      "italianBefore": "Define your own metric",
+      "italian": "Definisci una metrica personalizzata"
+    },
+    {
+      "key": "challenge.metricDesc.total_workouts",
+      "english": "Total completed workouts (calisthenics + cardio)",
+      "italianBefore": "Total completed workouts (calisthenics + cardio)",
+      "italian": "Allenamenti completati totali (calistenia + cardio)"
+    },
+    {
+      "key": "challenge.metric.total_exercise",
+      "english": "Exercise total",
+      "italianBefore": "Exercise total",
+      "italian": "Totale esercizio"
+    },
+    {
+      "key": "challenge.metricDesc.total_exercise",
+      "english": "Sum of reps (or seconds) for one exercise",
+      "italianBefore": "Sum of reps (or seconds) for one exercise",
+      "italian": "Somma delle ripetizioni (o dei secondi) per un esercizio"
+    },
+    {
+      "key": "challenge.metric.total_distance",
+      "english": "Distance",
+      "italianBefore": "Distance",
+      "italian": "Distanza"
+    },
+    {
+      "key": "challenge.metricDesc.total_distance",
+      "english": "Accumulated cardio kilometers",
+      "italianBefore": "Accumulated cardio kilometers",
+      "italian": "Chilometri cardio accumulati"
+    },
+    {
+      "key": "challenge.duration.label",
+      "english": "Duration",
+      "italianBefore": "Duration",
+      "italian": "Durata"
+    },
+    {
+      "key": "challenge.duration.1week",
+      "english": "1 week",
+      "italianBefore": "1 week",
+      "italian": "1 settimana"
+    },
+    {
+      "key": "challenge.duration.2weeks",
+      "english": "2 weeks",
+      "italianBefore": "2 weeks",
+      "italian": "2 settimane"
+    },
+    {
+      "key": "challenge.duration.1month",
+      "english": "1 month",
+      "italianBefore": "1 month",
+      "italian": "1 mese"
+    },
+    {
+      "key": "challenge.duration.custom",
+      "english": "Custom",
+      "italianBefore": "Custom",
+      "italian": "Personalizzata"
+    },
+    {
+      "key": "challenge.durationDays_one",
+      "english": "{{count}} day",
+      "italianBefore": "{{count}} day",
+      "italian": "{{count}} giorno"
+    },
+    {
+      "key": "challenge.durationDays_other",
+      "english": "{{count}} days",
+      "italianBefore": "{{count}} days",
+      "italian": "{{count}} giorni"
+    },
+    {
+      "key": "challenge.units",
+      "english": "units",
+      "italianBefore": "units",
+      "italian": "unità"
+    },
+    {
+      "key": "challenge.whatToCompete",
+      "english": "What to compete on",
+      "italianBefore": "What to compete on",
+      "italian": "Su cosa gareggiare"
+    },
+    {
+      "key": "challenge.moreMetrics",
+      "english": "More metrics ({{n}})",
+      "italianBefore": "More metrics ({{n}})",
+      "italian": "Altre metriche ({{n}})"
+    },
+    {
+      "key": "challenge.fewerMetrics",
+      "english": "Fewer metrics",
+      "italianBefore": "Fewer metrics",
+      "italian": "Meno metriche"
+    },
+    {
+      "key": "challenge.deselectAll",
+      "english": "Deselect all",
+      "italianBefore": "Deselect all",
+      "italian": "Deseleziona tutto"
+    },
+    {
+      "key": "challenge.selectAll",
+      "english": "Select all",
+      "italianBefore": "Select all",
+      "italian": "Seleziona tutto"
+    },
+    {
+      "key": "challenge.goal",
+      "english": "Goal",
+      "italianBefore": "Goal",
+      "italian": "Obiettivo"
+    },
+    {
+      "key": "challenge.optional",
+      "english": "optional",
+      "italianBefore": "optional",
+      "italian": "facoltativo"
+    },
+    {
+      "key": "challenge.creating",
+      "english": "Creating...",
+      "italianBefore": "Creating...",
+      "italian": "Creazione..."
+    },
+    {
+      "key": "challenge.createButton",
+      "english": "CREATE CHALLENGE",
+      "italianBefore": "CREATE CHALLENGE",
+      "italian": "CREA SFIDA"
+    },
+    {
+      "key": "challenge.titlePlaceholder",
+      "english": "E.g.: Pull-up week, 100 push-ups challenge...",
+      "italianBefore": "E.g.: Pull-up week, 100 push-ups challenge...",
+      "italian": "Es.: Settimana di trazioni, sfida dei 100 piegamenti..."
+    },
+    {
+      "key": "challenge.customMetricPlaceholder",
+      "english": "E.g.: Km run, minutes of plank, glasses of water...",
+      "italianBefore": "E.g.: Km run, minutes of plank, glasses of water...",
+      "italian": "Es.: Km corsi, minuti di plank, bicchieri d'acqua..."
+    },
+    {
+      "key": "challenge.exerciseSearchPlaceholder",
+      "english": "Search an exercise (e.g. pull-ups)...",
+      "italianBefore": "Search an exercise (e.g. pull-ups)...",
+      "italian": "Cerca un esercizio (es. trazioni)..."
+    },
+    {
+      "key": "challenge.exerciseTitlePrefill",
+      "english": "{{name}} PR",
+      "italianBefore": "{{name}} PR",
+      "italian": "Record di {{name}}"
+    },
+    {
+      "key": "challenge.changeExercise",
+      "english": "Change",
+      "italianBefore": "Change",
+      "italian": "Cambia"
+    },
+    {
+      "key": "challenge.goalPlaceholder",
+      "english": "E.g.: 100",
+      "italianBefore": "E.g.: 100",
+      "italian": "Es.: 100"
+    },
+    {
+      "key": "challenge.inviteFriends",
+      "english": "Invite friends",
+      "italianBefore": "Invite friends",
+      "italian": "Invita amici"
+    },
+    {
+      "key": "challenge.hide",
+      "english": "Hide",
+      "italianBefore": "Hide",
+      "italian": "Nascondi"
+    },
+    {
+      "key": "challenge.notFound",
+      "english": "Challenge not found",
+      "italianBefore": "Challenge not found",
+      "italian": "Sfida non trovata"
+    },
+    {
+      "key": "challenge.new",
+      "english": "New",
+      "italianBefore": "New",
+      "italian": "Nuova"
+    },
+    {
+      "key": "challenge.createTitle",
+      "english": "CREATE CHALLENGE",
+      "italianBefore": "CREATE CHALLENGE",
+      "italian": "CREA SFIDA"
+    },
+    {
+      "key": "challenge.nameLabel",
+      "english": "Challenge name",
+      "italianBefore": "Challenge name",
+      "italian": "Nome della sfida"
+    },
+    {
+      "key": "challenge.descriptionLabel",
+      "english": "Description",
+      "italianBefore": "Description",
+      "italian": "Descrizione"
+    },
+    {
+      "key": "challenge.descriptionPlaceholder",
+      "english": "Rules, context or motivation for the challenge...",
+      "italianBefore": "Rules, context or motivation for the challenge...",
+      "italian": "Regole, contesto o motivazione della sfida..."
+    },
+    {
+      "key": "challenge.customMetricLabel",
+      "english": "Custom metric",
+      "italianBefore": "Custom metric",
+      "italian": "Metrica personalizzata"
+    },
+    {
+      "key": "challenge.endLabel",
+      "english": "End",
+      "italianBefore": "End",
+      "italian": "Fine"
+    },
+    {
+      "key": "challenge.inviteFriendsAriaLabel",
+      "english": "Select friends to invite",
+      "italianBefore": "Select friends to invite",
+      "italian": "Seleziona gli amici da invitare"
+    },
+    {
+      "key": "challenge.shareWhatsAppText",
+      "english": "🎯 I challenge you to \"{{title}}\" on Calistenia App!",
+      "italianBefore": "🎯 I challenge you to \"{{title}}\" on Calistenia App!",
+      "italian": "🎯 Ti sfido a \"{{title}}\" su Calistenia App!"
+    },
+    {
+      "key": "challenge.shareFallbackTitle",
+      "english": "a challenge",
+      "italianBefore": "a challenge",
+      "italian": "una sfida"
+    },
+    {
+      "key": "challenge.preset.kicker",
+      "english": "START HERE",
+      "italianBefore": "START HERE",
+      "italian": "INIZIA QUI"
+    },
+    {
+      "key": "challenge.preset.catalogTitle",
+      "english": "Beginner challenges",
+      "italianBefore": "Beginner challenges",
+      "italian": "Sfide per principianti"
+    },
+    {
+      "key": "challenge.preset.catalogDescription",
+      "english": "Pick one simple target and make your next workout count.",
+      "italianBefore": "Pick one simple target and make your next workout count.",
+      "italian": "Scegli un obiettivo semplice: il prossimo allenamento conterà già."
+    },
+    {
+      "key": "challenge.preset.difficulty",
+      "english": "Beginner",
+      "italianBefore": "Beginner",
+      "italian": "Principiante"
+    },
+    {
+      "key": "challenge.preset.duration",
+      "english": "{{count}} days",
+      "italianBefore": "{{count}} days",
+      "italian": "{{count}} giorni"
+    },
+    {
+      "key": "challenge.preset.target",
+      "english": "{{count}} workouts",
+      "italianBefore": "{{count}} workouts",
+      "italian": "{{count}} allenamenti"
+    },
+    {
+      "key": "challenge.preset.joinError",
+      "english": "Could not start the challenge. Check your connection and try again.",
+      "italianBefore": "Could not start the challenge. Check your connection and try again.",
+      "italian": "Impossibile avviare la sfida. Controlla la connessione e riprova."
+    },
+    {
+      "key": "challenge.preset.join",
+      "english": "JOIN",
+      "italianBefore": "JOIN",
+      "italian": "PARTECIPA"
+    },
+    {
+      "key": "challenge.preset.joining",
+      "english": "JOINING...",
+      "italianBefore": "JOINING...",
+      "italian": "PARTECIPAZIONE..."
+    },
+    {
+      "key": "challenge.preset.open",
+      "english": "VIEW PROGRESS",
+      "italianBefore": "VIEW PROGRESS",
+      "italian": "VEDI PROGRESSI"
+    },
+    {
+      "key": "challenge.preset.unavailable",
+      "english": "COMING SOON",
+      "italianBefore": "COMING SOON",
+      "italian": "IN ARRIVO"
+    },
+    {
+      "key": "challenge.preset.confirmTitle",
+      "english": "Start this challenge?",
+      "italianBefore": "Start this challenge?",
+      "italian": "Iniziare questa sfida?"
+    },
+    {
+      "key": "challenge.preset.confirmBody",
+      "english": "{{title}}\n\nStart: {{startsAt}}\nEnd: {{endsAt}}\n\nYour progress will be measured from your logged workouts.",
+      "italianBefore": "{{title}}\n\nStart: {{startsAt}}\nEnd: {{endsAt}}\n\nYour progress will be measured from your logged workouts.",
+      "italian": "{{title}}\n\nInizio: {{startsAt}}\nFine: {{endsAt}}\n\nI progressi saranno misurati dagli allenamenti registrati."
+    },
+    {
+      "key": "challenge.preset.alreadyJoined",
+      "english": "You already joined this challenge.",
+      "italianBefore": "You already joined this challenge.",
+      "italian": "Partecipi già a questa sfida."
+    },
+    {
+      "key": "challenge.preset.joined",
+      "english": "Challenge joined.",
+      "italianBefore": "Challenge joined.",
+      "italian": "Partecipazione alla sfida confermata."
+    },
+    {
+      "key": "challenge.preset.firstPullup.target",
+      "english": "{{count}} pull-up",
+      "italianBefore": "{{count}} pull-up",
+      "italian": "{{count}} trazione"
+    },
+    {
+      "key": "challenge.preset.progress",
+      "english": "Progress",
+      "italianBefore": "Progress",
+      "italian": "Progressi"
+    },
+    {
+      "key": "challenge.preset.completed",
+      "english": "Completed",
+      "italianBefore": "Completed",
+      "italian": "Completata"
+    },
+    {
+      "key": "challenge.preset.expired",
+      "english": "Challenge ended",
+      "italianBefore": "Challenge ended",
+      "italian": "Sfida conclusa"
+    },
+    {
+      "key": "challenge.preset.noProgress",
+      "english": "Log a workout to see progress here.",
+      "italianBefore": "Log a workout to see progress here.",
+      "italian": "Registra un allenamento per vedere qui i progressi."
+    },
+    {
+      "key": "challenge.noParticipants",
+      "english": "No participants yet.",
+      "italianBefore": "No participants yet.",
+      "italian": "Ancora nessun partecipante."
+    },
+    {
+      "key": "challenge.leaderboard",
+      "english": "Leaderboard",
+      "italianBefore": "Leaderboard",
+      "italian": "Classifica"
+    },
+    {
+      "key": "challenge.goalRemaining",
+      "english": "{{value}} to go",
+      "italianBefore": "{{value}} to go",
+      "italian": "Mancano {{value}}"
+    },
+    {
+      "key": "challenge.participantCount_other",
+      "english": "{{count}} participants",
+      "italianBefore": "{{count}} participants",
+      "italian": "{{count}} partecipanti"
+    },
+    {
+      "key": "challenge.participantCount",
+      "english": "{{count}} participant",
+      "italianBefore": "{{count}} participant",
+      "italian": "{{count}} partecipante"
+    },
+    {
+      "key": "challenge.repsPerDay",
+      "english": "{{count}} reps / day",
+      "italianBefore": "{{count}} reps / day",
+      "italian": "{{count}} rip. / giorno"
+    },
+    {
+      "key": "challenge.expressEyebrow",
+      "english": "EXPRESS CHALLENGE",
+      "italianBefore": "EXPRESS CHALLENGE",
+      "italian": "SFIDA EXPRESS"
+    },
+    {
+      "key": "challenge.inviteByWhatsApp",
+      "english": "INVITE VIA WHATSAPP",
+      "italianBefore": "INVITE VIA WHATSAPP",
+      "italian": "INVITA VIA WHATSAPP"
+    },
+    {
+      "key": "challenge.findFriends",
+      "english": "FIND FRIENDS",
+      "italianBefore": "FIND FRIENDS",
+      "italian": "TROVA AMICI"
+    },
+    {
+      "key": "challenge.followSomeoneFirst",
+      "english": "Follow someone first so you can invite them",
+      "italianBefore": "Follow someone first so you can invite them",
+      "italian": "Segui prima qualcuno per poterlo invitare"
+    },
+    {
+      "key": "feed.title",
+      "english": "Activity",
+      "italianBefore": "Activity",
+      "italian": "Attività"
+    },
+    {
+      "key": "feed.loading",
+      "english": "Loading activity…",
+      "italianBefore": "Loading activity…",
+      "italian": "Caricamento attività…"
+    },
+    {
+      "key": "feed.empty",
+      "english": "Your feed is empty",
+      "italianBefore": "Your feed is empty",
+      "italian": "Il tuo feed è vuoto"
+    },
+    {
+      "key": "feed.emptyHint",
+      "english": "Follow friends to see their activity",
+      "italianBefore": "Follow friends to see their activity",
+      "italian": "Segui gli amici per vedere le loro attività"
+    },
+    {
+      "key": "feed.findFriends",
+      "english": "Find friends",
+      "italianBefore": "Find friends",
+      "italian": "Trova amici"
+    },
+    {
+      "key": "feed.now",
+      "english": "now",
+      "italianBefore": "now",
+      "italian": "ora"
+    },
+    {
+      "key": "feed.minutesAgo",
+      "english": "{{count}}m ago",
+      "italianBefore": "{{count}}m ago",
+      "italian": "{{count}} min fa"
+    },
+    {
+      "key": "feed.hoursAgo",
+      "english": "{{count}}h ago",
+      "italianBefore": "{{count}}h ago",
+      "italian": "{{count}} h fa"
+    },
+    {
+      "key": "feed.yesterday",
+      "english": "yesterday",
+      "italianBefore": "yesterday",
+      "italian": "ieri"
+    },
+    {
+      "key": "feed.daysAgo",
+      "english": "{{count}}d ago",
+      "italianBefore": "{{count}}d ago",
+      "italian": "{{count}} g fa"
+    },
+    {
+      "key": "feed.completedWorkout",
+      "english": "completed a workout 💪",
+      "italianBefore": "completed a workout 💪",
+      "italian": "ha completato un allenamento 💪"
+    },
+    {
+      "key": "feed.you",
+      "english": "you",
+      "italianBefore": "you",
+      "italian": "tu"
+    },
+    {
+      "key": "feed.phase",
+      "english": "Phase",
+      "italianBefore": "Phase",
+      "italian": "Fase"
+    },
+    {
+      "key": "feed.phaseN",
+      "english": "Phase {{phase}}",
+      "italianBefore": "Phase {{phase}}",
+      "italian": "Fase {{phase}}"
+    },
+    {
+      "key": "feed.circuitGeneric",
+      "english": "Circuit",
+      "italianBefore": "Circuit",
+      "italian": "Circuito"
+    },
+    {
+      "key": "feed.challengeGeneric",
+      "english": "Challenge",
+      "italianBefore": "Challenge",
+      "italian": "Sfida"
+    },
+    {
+      "key": "feed.raceGeneric",
+      "english": "Race",
+      "italianBefore": "Race",
+      "italian": "Gara"
+    },
+    {
+      "key": "feed.battleGeneric",
+      "english": "Battle",
+      "italianBefore": "Battle",
+      "italian": "Battaglia"
+    },
+    {
+      "key": "feed.completedFreeSession",
+      "english": "completed a free session 🔥",
+      "italianBefore": "completed a free session 🔥",
+      "italian": "ha completato una sessione libera 🔥"
+    },
+    {
+      "key": "feed.didCardio",
+      "english": "did cardio 🏃",
+      "italianBefore": "did cardio 🏃",
+      "italian": "ha fatto cardio 🏃"
+    },
+    {
+      "key": "feed.completedCircuit",
+      "english": "completed a circuit ⚡",
+      "italianBefore": "completed a circuit ⚡",
+      "italian": "ha completato un circuito ⚡"
+    },
+    {
+      "key": "feed.joinedChallenge",
+      "english": "joined a challenge 🏆",
+      "italianBefore": "joined a challenge 🏆",
+      "italian": "ha partecipato a una sfida 🏆"
+    },
+    {
+      "key": "feed.createdChallenge",
+      "english": "created a challenge 🏆",
+      "italianBefore": "created a challenge 🏆",
+      "italian": "ha creato una sfida 🏆"
+    },
+    {
+      "key": "feed.finishedRace",
+      "english": "finished a race 🏁",
+      "italianBefore": "finished a race 🏁",
+      "italian": "ha concluso una gara 🏁"
+    },
+    {
+      "key": "feed.wonBattle",
+      "english": "won a battle ⚔️",
+      "italianBefore": "won a battle ⚔️",
+      "italian": "ha vinto una battaglia ⚔️"
+    },
+    {
+      "key": "feed.finishedBattle",
+      "english": "finished a battle ⚔️",
+      "italianBefore": "finished a battle ⚔️",
+      "italian": "ha concluso una battaglia ⚔️"
+    },
+    {
+      "key": "feed.rankOf",
+      "english": "{{rank}} of {{total}}",
+      "italianBefore": "{{rank}} of {{total}}",
+      "italian": "{{rank}} di {{total}}"
+    },
+    {
+      "key": "feed.roundsDone",
+      "english": "{{count}} round",
+      "italianBefore": "{{count}} round",
+      "italian": "{{count}} giro"
+    },
+    {
+      "key": "feed.roundsDone_other",
+      "english": "{{count}} rounds",
+      "italianBefore": "{{count}} rounds",
+      "italian": "{{count}} giri"
+    },
+    {
+      "key": "feed.roundsOfTarget",
+      "english": "{{done}}/{{target}} rounds",
+      "italianBefore": "{{done}}/{{target}} rounds",
+      "italian": "{{done}}/{{target}} giri"
+    },
+    {
+      "key": "feed.challengeGoal",
+      "english": "Goal: {{goal}}",
+      "italianBefore": "Goal: {{goal}}",
+      "italian": "Obiettivo: {{goal}}"
+    },
+    {
+      "key": "feed.verbDid",
+      "english": "did",
+      "italianBefore": "did",
+      "italian": "ha fatto"
+    },
+    {
+      "key": "feed.verbJoined",
+      "english": "joined",
+      "italianBefore": "joined",
+      "italian": "ha partecipato a"
+    },
+    {
+      "key": "feed.verbCreated",
+      "english": "created",
+      "italianBefore": "created",
+      "italian": "ha creato"
+    },
+    {
+      "key": "feed.verbFinished",
+      "english": "finished",
+      "italianBefore": "finished",
+      "italian": "ha concluso"
+    },
+    {
+      "key": "feed.verbWon",
+      "english": "won",
+      "italianBefore": "won",
+      "italian": "ha vinto"
+    },
+    {
+      "key": "feed.openDetail",
+      "english": "View detail",
+      "italianBefore": "View detail",
+      "italian": "Vedi dettaglio"
+    },
+    {
+      "key": "social.comments",
+      "english": "Comments",
+      "italianBefore": "Comments",
+      "italian": "Commenti"
+    },
+    {
+      "key": "social.comment",
+      "english": "Comment",
+      "italianBefore": "Comment",
+      "italian": "Commenta"
+    },
+    {
+      "key": "social.loadingComments",
+      "english": "Loading comments…",
+      "italianBefore": "Loading comments…",
+      "italian": "Caricamento commenti…"
+    },
+    {
+      "key": "social.noComments",
+      "english": "No comments yet",
+      "italianBefore": "No comments yet",
+      "italian": "Ancora nessun commento"
+    },
+    {
+      "key": "social.beFirstToComment",
+      "english": "Be the first to comment",
+      "italianBefore": "Be the first to comment",
+      "italian": "Scrivi il primo commento"
+    },
+    {
+      "key": "social.commentPlaceholder",
+      "english": "Write a comment…",
+      "italianBefore": "Write a comment…",
+      "italian": "Scrivi un commento…"
+    },
+    {
+      "key": "social.reply",
+      "english": "Reply",
+      "italianBefore": "Reply",
+      "italian": "Rispondi"
+    },
+    {
+      "key": "social.replyingTo",
+      "english": "Replying to",
+      "italianBefore": "Replying to",
+      "italian": "In risposta a"
+    },
+    {
+      "key": "race.create",
+      "english": "Create race",
+      "italianBefore": "Create race",
+      "italian": "Crea gara"
+    },
+    {
+      "key": "race.name",
+      "english": "Race name",
+      "italianBefore": "Race name",
+      "italian": "Nome della gara"
+    },
+    {
+      "key": "race.targetDistance",
+      "english": "Target distance (km)",
+      "italianBefore": "Target distance (km)",
+      "italian": "Distanza obiettivo (km)"
+    },
+    {
+      "key": "race.targetDistanceOptional",
+      "english": "Target distance in km (optional)",
+      "italianBefore": "Target distance in km (optional)",
+      "italian": "Distanza obiettivo in km (facoltativa)"
+    },
+    {
+      "key": "race.join",
+      "english": "Join",
+      "italianBefore": "Join",
+      "italian": "Partecipa"
+    },
+    {
+      "key": "race.start",
+      "english": "Start race",
+      "italianBefore": "Start race",
+      "italian": "Avvia gara"
+    },
+    {
+      "key": "race.finish",
+      "english": "Finish race",
+      "italianBefore": "Finish race",
+      "italian": "Termina gara"
+    },
+    {
+      "key": "race.share",
+      "english": "Share",
+      "italianBefore": "Share",
+      "italian": "Condividi"
+    },
+    {
+      "key": "race.lobby",
+      "english": "Lobby",
+      "italianBefore": "Lobby",
+      "italian": "Sala d'attesa"
+    },
+    {
+      "key": "race.waitingForStart",
+      "english": "Waiting to start...",
+      "italianBefore": "Waiting to start...",
+      "italian": "In attesa della partenza..."
+    },
+    {
+      "key": "race.waitingForParticipants",
+      "english": "Waiting for participants...",
+      "italianBefore": "Waiting for participants...",
+      "italian": "In attesa dei partecipanti..."
+    },
+    {
+      "key": "race.liveBoard",
+      "english": "Live",
+      "italianBefore": "Live",
+      "italian": "In diretta"
+    },
+    {
+      "key": "race.results",
+      "english": "Results",
+      "italianBefore": "Results",
+      "italian": "Risultati"
+    },
+    {
+      "key": "race.participants",
+      "english": "Participants",
+      "italianBefore": "Participants",
+      "italian": "Partecipanti"
+    },
+    {
+      "key": "race.startMyRun",
+      "english": "START MY RUN",
+      "italianBefore": "START MY RUN",
+      "italian": "INIZIA LA MIA CORSA"
+    },
+    {
+      "key": "race.leader",
+      "english": "Leader",
+      "italianBefore": "Leader",
+      "italian": "In testa"
+    },
+    {
+      "key": "race.finished",
+      "english": "Finished",
+      "italianBefore": "Finished",
+      "italian": "Conclusa"
+    },
+    {
+      "key": "race.racing",
+      "english": "Racing",
+      "italianBefore": "Racing",
+      "italian": "In gara"
+    },
+    {
+      "key": "race.joined",
+      "english": "Joined",
+      "italianBefore": "Joined",
+      "italian": "Iscrizione confermata"
+    },
+    {
+      "key": "race.noRace",
+      "english": "Race not found",
+      "italianBefore": "Race not found",
+      "italian": "Gara non trovata"
+    },
+    {
+      "key": "race.elapsed",
+      "english": "Time",
+      "italianBefore": "Time",
+      "italian": "Tempo"
+    },
+    {
+      "key": "race.shareResults",
+      "english": "Share results",
+      "italianBefore": "Share results",
+      "italian": "Condividi risultati"
+    },
+    {
+      "key": "race.raceCreated",
+      "english": "Race created",
+      "italianBefore": "Race created",
+      "italian": "Gara creata"
+    },
+    {
+      "key": "race.pasteLinkPlaceholder",
+      "english": "Paste race link",
+      "italianBefore": "Paste race link",
+      "italian": "Incolla il link della gara"
+    },
+    {
+      "key": "race.modeDistance",
+      "english": "Distance",
+      "italianBefore": "Distance",
+      "italian": "Distanza"
+    },
+    {
+      "key": "race.modeTime",
+      "english": "Time",
+      "italianBefore": "Time",
+      "italian": "Tempo"
+    },
+    {
+      "key": "race.activity",
+      "english": "Activity",
+      "italianBefore": "Activity",
+      "italian": "Attività"
+    },
+    {
+      "key": "race.activityRun",
+      "english": "🏃 Run",
+      "italianBefore": "🏃 Run",
+      "italian": "🏃 Corsa"
+    },
+    {
+      "key": "race.activityWalk",
+      "english": "🚶 Walk",
+      "italianBefore": "🚶 Walk",
+      "italian": "🚶 Camminata"
+    },
+    {
+      "key": "race.activityBike",
+      "english": "🚴 Bike",
+      "italianBefore": "🚴 Bike",
+      "italian": "🚴 Bici"
+    },
+    {
+      "key": "race.minutes",
+      "english": "Minutes",
+      "italianBefore": "Minutes",
+      "italian": "Minuti"
+    },
+    {
+      "key": "race.route",
+      "english": "Route",
+      "italianBefore": "Route",
+      "italian": "Percorso"
+    },
+    {
+      "key": "race.optional",
+      "english": "optional",
+      "italianBefore": "optional",
+      "italian": "facoltativo"
+    },
+    {
+      "key": "race.public",
+      "english": "Public",
+      "italianBefore": "Public",
+      "italian": "Pubblica"
+    },
+    {
+      "key": "race.publicDesc",
+      "english": "Shows in nearby races search",
+      "italianBefore": "Shows in nearby races search",
+      "italian": "Compare nella ricerca delle gare nelle vicinanze"
+    },
+    {
+      "key": "race.showQR",
+      "english": "Show QR",
+      "italianBefore": "Show QR",
+      "italian": "Mostra QR"
+    },
+    {
+      "key": "race.hideQR",
+      "english": "Hide QR",
+      "italianBefore": "Hide QR",
+      "italian": "Nascondi QR"
+    },
+    {
+      "key": "race.scanHint",
+      "english": "Scan with your phone camera to join",
+      "italianBefore": "Scan with your phone camera to join",
+      "italian": "Scansiona con la fotocamera del telefono per partecipare"
+    },
+    {
+      "key": "race.leave",
+      "english": "Leave",
+      "italianBefore": "Leave",
+      "italian": "Abbandona"
+    },
+    {
+      "key": "race.ready",
+      "english": "Ready",
+      "italianBefore": "Ready",
+      "italian": "Pronto"
+    },
+    {
+      "key": "race.dnf",
+      "english": "DNF",
+      "italianBefore": "DNF",
+      "italian": "Non conclusa"
+    },
+    {
+      "key": "race.saved",
+      "english": "Saved ✓",
+      "italianBefore": "Saved ✓",
+      "italian": "Salvato ✓"
+    },
+    {
+      "key": "race.saveAsWorkout",
+      "english": "Save as workout",
+      "italianBefore": "Save as workout",
+      "italian": "Salva come allenamento"
+    },
+    {
+      "key": "race.exportGpx",
+      "english": "Export GPX (Strava)",
+      "italianBefore": "Export GPX (Strava)",
+      "italian": "Esporta GPX (Strava)"
+    },
+    {
+      "key": "race.winner",
+      "english": "Winner",
+      "italianBefore": "Winner",
+      "italian": "Vincitore"
+    },
+    {
+      "key": "race.winnerTime",
+      "english": "Most distance",
+      "italianBefore": "Most distance",
+      "italian": "Maggiore distanza"
+    },
+    {
+      "key": "race.remaining",
+      "english": "Left",
+      "italianBefore": "Left",
+      "italian": "Rimanente"
+    },
+    {
+      "key": "race.pace",
+      "english": "Pace",
+      "italianBefore": "Pace",
+      "italian": "Passo"
+    },
+    {
+      "key": "race.time",
+      "english": "Time",
+      "italianBefore": "Time",
+      "italian": "Tempo"
+    },
+    {
+      "key": "race.nearbyTitle",
+      "english": "Races nearby",
+      "italianBefore": "Races nearby",
+      "italian": "Gare nelle vicinanze"
+    },
+    {
+      "key": "race.nearbySubtitle",
+      "english": "Public races open to join",
+      "italianBefore": "Public races open to join",
+      "italian": "Gare pubbliche aperte alla partecipazione"
+    },
+    {
+      "key": "race.searchPlaceholder",
+      "english": "Search by name...",
+      "italianBefore": "Search by name...",
+      "italian": "Cerca per nome..."
+    },
+    {
+      "key": "race.locationOk",
+      "english": "Location ready",
+      "italianBefore": "Location ready",
+      "italian": "Posizione disponibile"
+    },
+    {
+      "key": "race.locating",
+      "english": "Locating...",
+      "italianBefore": "Locating...",
+      "italian": "Ricerca posizione..."
+    },
+    {
+      "key": "race.useLocation",
+      "english": "📍 Use my location",
+      "italianBefore": "📍 Use my location",
+      "italian": "📍 Usa la mia posizione"
+    },
+    {
+      "key": "race.noPublicRaces",
+      "english": "No public races",
+      "italianBefore": "No public races",
+      "italian": "Nessuna gara pubblica"
+    },
+    {
+      "key": "race.nearHint",
+      "english": "nearby",
+      "italianBefore": "nearby",
+      "italian": "nelle vicinanze"
+    },
+    {
+      "key": "race.createAndShare",
+      "english": "Create one and share it",
+      "italianBefore": "Create one and share it",
+      "italian": "Creane una e condividila"
+    },
+    {
+      "key": "race.discoverBody",
+      "english": "Challenge your friends to a real-time GPS race: create one, share the link and run together wherever you are.",
+      "italianBefore": "Challenge your friends to a real-time GPS race: create one, share the link and run together wherever you are.",
+      "italian": "Sfida gli amici in una gara GPS in tempo reale: creane una, condividi il link e correte insieme ovunque vi troviate."
+    },
+    {
+      "key": "race.discoverCta",
+      "english": "Create race",
+      "italianBefore": "Create race",
+      "italian": "Crea gara"
+    },
+    {
+      "key": "race.startingSoon",
+      "english": "Starting soon",
+      "italianBefore": "Starting soon",
+      "italian": "Partenza imminente"
+    },
+    {
+      "key": "race.waitingLabel",
+      "english": "Waiting",
+      "italianBefore": "Waiting",
+      "italian": "In attesa"
+    },
+    {
+      "key": "race.retryGps",
+      "english": "Retry",
+      "italianBefore": "Retry",
+      "italian": "Riprova"
+    },
+    {
+      "key": "race.prsTitle",
+      "english": "Race records",
+      "italianBefore": "Race records",
+      "italian": "Record delle gare"
+    },
+    {
+      "key": "race.prsWins",
+      "english": "Wins",
+      "italianBefore": "Wins",
+      "italian": "Vittorie"
+    },
+    {
+      "key": "race.prsFinished",
+      "english": "Finished",
+      "italianBefore": "Finished",
+      "italian": "Concluse"
+    },
+    {
+      "key": "race.prsFastestPace",
+      "english": "⚡ Fastest pace",
+      "italianBefore": "⚡ Fastest pace",
+      "italian": "⚡ Passo più veloce"
+    },
+    {
+      "key": "race.prsLongest",
+      "english": "📏 Longest race",
+      "italianBefore": "📏 Longest race",
+      "italian": "📏 Gara più lunga"
+    },
+    {
+      "key": "race.tierChampion",
+      "english": "Champion",
+      "italianBefore": "Champion",
+      "italian": "Campione"
+    },
+    {
+      "key": "race.tierSecond",
+      "english": "2nd place",
+      "italianBefore": "2nd place",
+      "italian": "2º posto"
+    },
+    {
+      "key": "race.tierThird",
+      "english": "3rd place",
+      "italianBefore": "3rd place",
+      "italian": "3º posto"
+    },
+    {
+      "key": "race.tierFinisher",
+      "english": "Finisher",
+      "italianBefore": "Finisher",
+      "italian": "Gara conclusa"
+    },
+    {
+      "key": "race.leaderboard",
+      "english": "Leaderboard",
+      "italianBefore": "Leaderboard",
+      "italian": "Classifica"
+    },
+    {
+      "key": "race.noRoute",
+      "english": "No route available",
+      "italianBefore": "No route available",
+      "italian": "Nessun percorso disponibile"
+    },
+    {
+      "key": "race.noGpsPerm",
+      "english": "Location permission denied",
+      "italianBefore": "Location permission denied",
+      "italian": "Permesso di posizione negato"
+    },
+    {
+      "key": "race.moreItems",
+      "english": "+{{n}} more",
+      "italianBefore": "+{{n}} more",
+      "italian": "altri {{n}}"
+    },
+    {
+      "key": "race.participantsFull",
+      "english": "participants",
+      "italianBefore": "participants",
+      "italian": "partecipanti"
+    },
+    {
+      "key": "race.sessionExpired",
+      "english": "Session expired — please sign in again",
+      "italianBefore": "Session expired — please sign in again",
+      "italian": "Sessione scaduta: accedi di nuovo"
+    },
+    {
+      "key": "race.cancelled",
+      "english": "Cancelled",
+      "italianBefore": "Cancelled",
+      "italian": "Annullata"
+    },
+    {
+      "key": "race.findNearby",
+      "english": "🔍 Search",
+      "italianBefore": "🔍 Search",
+      "italian": "🔍 Cerca"
+    },
+    {
+      "key": "race.activeTitle",
+      "english": "Active races",
+      "italianBefore": "Active races",
+      "italian": "Gare attive"
+    },
+    {
+      "key": "race.seeAll",
+      "english": "See all",
+      "italianBefore": "See all",
+      "italian": "Vedi tutte"
+    },
+    {
+      "key": "race.enableGps",
+      "english": "ENABLE GPS",
+      "italianBefore": "ENABLE GPS",
+      "italian": "ATTIVA GPS"
+    },
+    {
+      "key": "race.locationPermissionDenied",
+      "english": "Location permission denied",
+      "italianBefore": "Location permission denied",
+      "italian": "Permesso di posizione negato"
+    },
+    {
+      "key": "battle.title",
+      "english": "Battle",
+      "italianBefore": "Battle",
+      "italian": "Battaglia"
+    },
+    {
+      "key": "battle.newBattle",
+      "english": "New battle",
+      "italianBefore": "New battle",
+      "italian": "Nuova battaglia"
+    },
+    {
+      "key": "battle.createHint",
+      "english": "Pick a format, invite someone and race the same circuit at the same time.",
+      "italianBefore": "Pick a format, invite someone and race the same circuit at the same time.",
+      "italian": "Scegli un formato, invita qualcuno e affrontate lo stesso circuito contemporaneamente."
+    },
+    {
+      "key": "battle.chooseOrigin",
+      "english": "How to build it",
+      "italianBefore": "How to build it",
+      "italian": "Come crearla"
+    },
+    {
+      "key": "battle.origin.program_day",
+      "english": "A day of your program",
+      "italianBefore": "A day of your program",
+      "italian": "Un giorno del tuo programma"
+    },
+    {
+      "key": "battle.origin.custom",
+      "english": "Build your own",
+      "italianBefore": "Build your own",
+      "italian": "Creala tu"
+    },
+    {
+      "key": "battle.origin.preset",
+      "english": "Quick formats",
+      "italianBefore": "Quick formats",
+      "italian": "Formati rapidi"
+    },
+    {
+      "key": "battle.pickDay",
+      "english": "Program day",
+      "italianBefore": "Program day",
+      "italian": "Giorno del programma"
+    },
+    {
+      "key": "battle.noProgram",
+      "english": "You need an active program to challenge with one of its days. Try \"Build your own\" or a quick format.",
+      "italianBefore": "You need an active program to challenge with one of its days. Try \"Build your own\" or a quick format.",
+      "italian": "Serve un programma attivo per usare uno dei suoi giorni. Prova \"Creala tu\" o un formato rapido."
+    },
+    {
+      "key": "battle.reason.cardio",
+      "english": "Cardio can't be played as a battle.",
+      "italianBefore": "Cardio can't be played as a battle.",
+      "italian": "Il cardio non può essere usato in una battaglia."
+    },
+    {
+      "key": "battle.reason.yoga",
+      "english": "Yoga can't be played as a battle.",
+      "italianBefore": "Yoga can't be played as a battle.",
+      "italian": "Lo yoga non può essere usato in una battaglia."
+    },
+    {
+      "key": "battle.reason.rest",
+      "english": "Rest day.",
+      "italianBefore": "Rest day.",
+      "italian": "Giorno di riposo."
+    },
+    {
+      "key": "battle.reason.no_strength_exercises",
+      "english": "This day has no strength exercises for a battle.",
+      "italianBefore": "This day has no strength exercises for a battle.",
+      "italian": "Questo giorno non contiene esercizi di forza per una battaglia."
+    },
+    {
+      "key": "battle.roundsLabel",
+      "english": "Rounds",
+      "italianBefore": "Rounds",
+      "italian": "Giri"
+    },
+    {
+      "key": "battle.fewerRounds",
+      "english": "One round fewer",
+      "italianBefore": "One round fewer",
+      "italian": "Un giro in meno"
+    },
+    {
+      "key": "battle.moreRounds",
+      "english": "One round more",
+      "italianBefore": "One round more",
+      "italian": "Un giro in più"
+    },
+    {
+      "key": "battle.restShort",
+      "english": "rest {{seconds}} s",
+      "italianBefore": "rest {{seconds}} s",
+      "italian": "riposo {{seconds}} s"
+    },
+    {
+      "key": "battle.perSide.leg",
+      "english": "each leg",
+      "italianBefore": "each leg",
+      "italian": "per gamba"
+    },
+    {
+      "key": "battle.perSide.side",
+      "english": "each side",
+      "italianBefore": "each side",
+      "italian": "per lato"
+    },
+    {
+      "key": "battle.perSide.arm",
+      "english": "each arm",
+      "italianBefore": "each arm",
+      "italian": "per braccio"
+    },
+    {
+      "key": "battle.perSide.direction",
+      "english": "per direction",
+      "italianBefore": "per direction",
+      "italian": "per direzione"
+    },
+    {
+      "key": "battle.note.roundsFlattened",
+      "english": "The exercises had between {{min}} and {{max}} sets: the battle uses {{min}} equal rounds. You can change them.",
+      "italianBefore": "The exercises had between {{min}} and {{max}} sets: the battle uses {{min}} equal rounds. You can change them.",
+      "italian": "Gli esercizi prevedevano da {{min}} a {{max}} serie: la battaglia usa {{min}} giri uguali. Puoi modificarli."
+    },
+    {
+      "key": "battle.note.nonNumericSets",
+      "english": "Some sets had no clear number and count as 3.",
+      "italianBefore": "Some sets had no clear number and count as 3.",
+      "italian": "Alcune serie non avevano un numero chiaro e contano come 3."
+    },
+    {
+      "key": "battle.note.truncated",
+      "english": "Only {{max}} exercises fit: {{dropped}} were left out.",
+      "italianBefore": "Only {{max}} exercises fit: {{dropped}} were left out.",
+      "italian": "C'è spazio per {{max}} esercizi: {{dropped}} sono stati esclusi."
+    },
+    {
+      "key": "battle.note.duplicatesRemoved",
+      "english": "An exercise repeated in the day only counts once.",
+      "italianBefore": "An exercise repeated in the day only counts once.",
+      "italian": "Un esercizio ripetuto nel giorno conta una sola volta."
+    },
+    {
+      "key": "battle.note.restCapped",
+      "english": "Rest was capped at 2 minutes.",
+      "italianBefore": "Rest was capped at 2 minutes.",
+      "italian": "Il riposo è stato limitato a 2 minuti."
+    },
+    {
+      "key": "battle.note.targetsCapped",
+      "english": "Some target was too high and was capped.",
+      "italianBefore": "Some target was too high and was capped.",
+      "italian": "Alcuni obiettivi erano troppo alti e sono stati limitati."
+    },
+    {
+      "key": "battle.note.targetsDefaulted",
+      "english": "Some target couldn't be read: check the ones outlined in green.",
+      "italianBefore": "Some target couldn't be read: check the ones outlined in green.",
+      "italian": "Impossibile leggere alcuni obiettivi: controlla quelli evidenziati in verde."
+    },
+    {
+      "key": "battle.titleLabel",
+      "english": "Title (optional)",
+      "italianBefore": "Title (optional)",
+      "italian": "Titolo (facoltativo)"
+    },
+    {
+      "key": "battle.titlePlaceholder",
+      "english": "Untitled battle",
+      "italianBefore": "Untitled battle",
+      "italian": "Battaglia senza titolo"
+    },
+    {
+      "key": "battle.addExercise",
+      "english": "Add exercise",
+      "italianBefore": "Add exercise",
+      "italian": "Aggiungi esercizio"
+    },
+    {
+      "key": "battle.removeExercise",
+      "english": "Remove {{name}}",
+      "italianBefore": "Remove {{name}}",
+      "italian": "Rimuovi {{name}}"
+    },
+    {
+      "key": "battle.targetReps",
+      "english": "Reps",
+      "italianBefore": "Reps",
+      "italian": "Ripetizioni"
+    },
+    {
+      "key": "battle.targetSeconds",
+      "english": "Seconds",
+      "italianBefore": "Seconds",
+      "italian": "Secondi"
+    },
+    {
+      "key": "battle.restLabel",
+      "english": "Rest",
+      "italianBefore": "Rest",
+      "italian": "Riposo"
+    },
+    {
+      "key": "battle.customEmpty",
+      "english": "Pick 1 to {{max}} exercises from the catalog.",
+      "italianBefore": "Pick 1 to {{max}} exercises from the catalog.",
+      "italian": "Scegli da 1 a {{max}} esercizi dal catalogo."
+    },
+    {
+      "key": "battle.customCount",
+      "english": "{{n}} of {{max}} exercises.",
+      "italianBefore": "{{n}} of {{max}} exercises.",
+      "italian": "{{n}} di {{max}} esercizi."
+    },
+    {
+      "key": "battle.invalidConfig",
+      "english": "This battle can't be created as it is:",
+      "italianBefore": "This battle can't be created as it is:",
+      "italian": "Questa battaglia non può essere creata così:"
+    },
+    {
+      "key": "battle.chooseFormat",
+      "english": "Format",
+      "italianBefore": "Format",
+      "italian": "Formato"
+    },
+    {
+      "key": "battle.createAndInvite",
+      "english": "Create and invite",
+      "italianBefore": "Create and invite",
+      "italian": "Crea e invita"
+    },
+    {
+      "key": "battle.circuit",
+      "english": "Circuit",
+      "italianBefore": "Circuit",
+      "italian": "Circuito"
+    },
+    {
+      "key": "battle.rounds",
+      "english": "rounds",
+      "italianBefore": "rounds",
+      "italian": "giri"
+    },
+    {
+      "key": "battle.roundsShort",
+      "english": "R",
+      "italianBefore": "R",
+      "italian": "G"
+    },
+    {
+      "key": "battle.exercises",
+      "english": "exercises",
+      "italianBefore": "exercises",
+      "italian": "esercizi"
+    },
+    {
+      "key": "battle.reps",
+      "english": "reps",
+      "italianBefore": "reps",
+      "italian": "ripetizioni"
+    },
+    {
+      "key": "battle.repsShort",
+      "english": "reps",
+      "italianBefore": "reps",
+      "italian": "rip."
+    },
+    {
+      "key": "battle.round",
+      "english": "Round",
+      "italianBefore": "Round",
+      "italian": "Giro"
+    },
+    {
+      "key": "battle.elapsed",
+      "english": "Elapsed",
+      "italianBefore": "Elapsed",
+      "italian": "Trascorso"
+    },
+    {
+      "key": "battle.currentExercise",
+      "english": "Current exercise",
+      "italianBefore": "Current exercise",
+      "italian": "Esercizio attuale"
+    },
+    {
+      "key": "battle.target",
+      "english": "Target",
+      "italianBefore": "Target",
+      "italian": "Obiettivo"
+    },
+    {
+      "key": "battle.participants",
+      "english": "participants",
+      "italianBefore": "participants",
+      "italian": "partecipanti"
+    },
+    {
+      "key": "battle.participantOne",
+      "english": "participant",
+      "italianBefore": "participant",
+      "italian": "partecipante"
+    },
+    {
+      "key": "battle.inviteError",
+      "english": "That invite could not be opened. Try again.",
+      "italianBefore": "That invite could not be opened. Try again.",
+      "italian": "Impossibile aprire l'invito. Riprova."
+    },
+    {
+      "key": "battle.inviteOffline",
+      "english": "Offline: the invite can't be opened.",
+      "italianBefore": "Offline: the invite can't be opened.",
+      "italian": "Sei offline: impossibile aprire l'invito."
+    },
+    {
+      "key": "battle.networkError",
+      "english": "No connection to the server. The battle is still alive.",
+      "italianBefore": "No connection to the server. The battle is still alive.",
+      "italian": "Nessuna connessione al server. La battaglia è ancora attiva."
+    },
+    {
+      "key": "battle.retry",
+      "english": "Tap to retry",
+      "italianBefore": "Tap to retry",
+      "italian": "Tocca per riprovare"
+    },
+    {
+      "key": "battle.stillLive",
+      "english": "The battle is still running",
+      "italianBefore": "The battle is still running",
+      "italian": "La battaglia è ancora in corso"
+    },
+    {
+      "key": "battle.youFinishedTitle",
+      "english": "You're done",
+      "italianBefore": "You're done",
+      "italian": "Hai terminato"
+    },
+    {
+      "key": "battle.youLeftTitle",
+      "english": "You left",
+      "italianBefore": "You left",
+      "italian": "Hai abbandonato"
+    },
+    {
+      "key": "battle.position",
+      "english": "Place",
+      "italianBefore": "Place",
+      "italian": "Posizione"
+    },
+    {
+      "key": "battle.roundsDone",
+      "english": "Rounds",
+      "italianBefore": "Rounds",
+      "italian": "Giri"
+    },
+    {
+      "key": "battle.workDone",
+      "english": "Work",
+      "italianBefore": "Work",
+      "italian": "Lavoro"
+    },
+    {
+      "key": "battle.duration",
+      "english": "Duration",
+      "italianBefore": "Duration",
+      "italian": "Durata"
+    },
+    {
+      "key": "battle.yourScore",
+      "english": "Your score",
+      "italianBefore": "Your score",
+      "italian": "Il tuo punteggio"
+    },
+    {
+      "key": "battle.waitingForOthers",
+      "english": "Your circuit is closed. The result is sealed once the others finish.",
+      "italianBefore": "Your circuit is closed. The result is sealed once the others finish.",
+      "italian": "Il tuo circuito è concluso. Il risultato sarà definitivo quando termineranno gli altri."
+    },
+    {
+      "key": "battle.waitingClosing",
+      "english": "Everyone has finished. Sealing the result…",
+      "italianBefore": "Everyone has finished. Sealing the result…",
+      "italian": "Tutti hanno terminato. Risultato in elaborazione…"
+    },
+    {
+      "key": "battle.leaveScreen",
+      "english": "Back to home",
+      "italianBefore": "Back to home",
+      "italian": "Torna alla home"
+    },
+    {
+      "key": "battle.leaveScreenHint",
+      "english": "You're still in the battle; come back any time",
+      "italianBefore": "You're still in the battle; come back any time",
+      "italian": "Sei ancora nella battaglia; torna quando vuoi"
+    },
+    {
+      "key": "battle.barLobby",
+      "english": "Your battle is waiting in the lobby",
+      "italianBefore": "Your battle is waiting in the lobby",
+      "italian": "La tua battaglia ti aspetta nella sala d'attesa"
+    },
+    {
+      "key": "battle.barLabel",
+      "english": "Back to your battle",
+      "italianBefore": "Back to your battle",
+      "italian": "Torna alla tua battaglia"
+    },
+    {
+      "key": "battle.rest",
+      "english": "Rest",
+      "italianBefore": "Rest",
+      "italian": "Riposo"
+    },
+    {
+      "key": "battle.skipRest",
+      "english": "Skip rest",
+      "italianBefore": "Skip rest",
+      "italian": "Salta riposo"
+    },
+    {
+      "key": "battle.nextUp",
+      "english": "Next up",
+      "italianBefore": "Next up",
+      "italian": "Prossimo"
+    },
+    {
+      "key": "battle.resumeKicker",
+      "english": "Battle in progress",
+      "italianBefore": "Battle in progress",
+      "italian": "Battaglia in corso"
+    },
+    {
+      "key": "battle.resumeAction",
+      "english": "Back to your battle",
+      "italianBefore": "Back to your battle",
+      "italian": "Torna alla tua battaglia"
+    },
+    {
+      "key": "battle.ready",
+      "english": "ready",
+      "italianBefore": "ready",
+      "italian": "pronto"
+    },
+    {
+      "key": "battle.allReady",
+      "english": "Everyone ready",
+      "italianBefore": "Everyone ready",
+      "italian": "Tutti pronti"
+    },
+    {
+      "key": "battle.waitingForParticipants",
+      "english": "Waiting for participants",
+      "italianBefore": "Waiting for participants",
+      "italian": "In attesa dei partecipanti"
+    },
+    {
+      "key": "battle.imReady",
+      "english": "I'm ready",
+      "italianBefore": "I'm ready",
+      "italian": "Sono pronto"
+    },
+    {
+      "key": "battle.cancelReady",
+      "english": "Not ready anymore",
+      "italianBefore": "Not ready anymore",
+      "italian": "Non sono più pronto"
+    },
+    {
+      "key": "battle.needTwoReady",
+      "english": "2 people must be ready to start",
+      "italianBefore": "2 people must be ready to start",
+      "italian": "Servono 2 persone pronte per iniziare"
+    },
+    {
+      "key": "battle.invite",
+      "english": "Invite",
+      "italianBefore": "Invite",
+      "italian": "Invita"
+    },
+    {
+      "key": "battle.inviteMessage",
+      "english": "I challenge you to a circuit battle:",
+      "italianBefore": "I challenge you to a circuit battle:",
+      "italian": "Ti sfido a una battaglia a circuito:"
+    },
+    {
+      "key": "battle.cancel",
+      "english": "Cancel battle",
+      "italianBefore": "Cancel battle",
+      "italian": "Annulla battaglia"
+    },
+    {
+      "key": "battle.cancelConfirm",
+      "english": "It will be cancelled for every participant.",
+      "italianBefore": "It will be cancelled for every participant.",
+      "italian": "Sarà annullata per tutti i partecipanti."
+    },
+    {
+      "key": "battle.leave",
+      "english": "Leave",
+      "italianBefore": "Leave",
+      "italian": "Abbandona"
+    },
+    {
+      "key": "battle.leaveConfirm",
+      "english": "You'll leave the battle. Your score stays in the standings.",
+      "italianBefore": "You'll leave the battle. Your score stays in the standings.",
+      "italian": "Abbandonerai la battaglia. Il tuo punteggio rimarrà in classifica."
+    },
+    {
+      "key": "battle.leaveCreatorConfirm",
+      "english": "You created it: leaving now cancels the battle for everyone.",
+      "italianBefore": "You created it: leaving now cancels the battle for everyone.",
+      "italian": "L'hai creata tu: abbandonare ora annulla la battaglia per tutti."
+    },
+    {
+      "key": "battle.getReady",
+      "english": "Get ready",
+      "italianBefore": "Get ready",
+      "italian": "Preparati"
+    },
+    {
+      "key": "battle.liveStandings",
+      "english": "Live standings",
+      "italianBefore": "Live standings",
+      "italian": "Classifica in diretta"
+    },
+    {
+      "key": "battle.finalStandings",
+      "english": "Final standings",
+      "italianBefore": "Final standings",
+      "italian": "Classifica finale"
+    },
+    {
+      "key": "battle.finishedTitle",
+      "english": "Battle finished",
+      "italianBefore": "Battle finished",
+      "italian": "Battaglia conclusa"
+    },
+    {
+      "key": "battle.cancelledTitle",
+      "english": "Battle cancelled",
+      "italianBefore": "Battle cancelled",
+      "italian": "Battaglia annullata"
+    },
+    {
+      "key": "battle.expiredTitle",
+      "english": "Battle expired",
+      "italianBefore": "Battle expired",
+      "italian": "Battaglia scaduta"
+    },
+    {
+      "key": "battle.expiredHint",
+      "english": "The lobby sat idle for too long.",
+      "italianBefore": "The lobby sat idle for too long.",
+      "italian": "La sala d'attesa è rimasta inattiva troppo a lungo."
+    },
+    {
+      "key": "battle.notFound",
+      "english": "Battle unavailable",
+      "italianBefore": "Battle unavailable",
+      "italian": "Battaglia non disponibile"
+    },
+    {
+      "key": "battle.someone",
+      "english": "Someone",
+      "italianBefore": "Someone",
+      "italian": "Qualcuno"
+    },
+    {
+      "key": "battle.youName",
+      "english": "You",
+      "italianBefore": "You",
+      "italian": "Tu"
+    },
+    {
+      "key": "battle.you",
+      "english": "YOU",
+      "italianBefore": "YOU",
+      "italian": "TU"
+    },
+    {
+      "key": "battle.leftTag",
+      "english": "(left)",
+      "italianBefore": "(left)",
+      "italian": "(ha abbandonato)"
+    },
+    {
+      "key": "battle.offlineBlocked",
+      "english": "Offline: progress can't be recorded",
+      "italianBefore": "Offline: progress can't be recorded",
+      "italian": "Sei offline: impossibile registrare i progressi"
+    },
+    {
+      "key": "battle.invitedTitle",
+      "english": "You've been challenged",
+      "italianBefore": "You've been challenged",
+      "italian": "Hai ricevuto una sfida"
+    },
+    {
+      "key": "battle.joinBattle",
+      "english": "Join",
+      "italianBefore": "Join",
+      "italian": "Partecipa"
+    },
+    {
+      "key": "battle.inviteExpired",
+      "english": "Invite expired",
+      "italianBefore": "Invite expired",
+      "italian": "Invito scaduto"
+    },
+    {
+      "key": "battle.inviteUnavailable",
+      "english": "Invite unavailable",
+      "italianBefore": "Invite unavailable",
+      "italian": "Invito non disponibile"
+    },
+    {
+      "key": "battle.inviteUnavailableHint",
+      "english": "Ask whoever invited you for a fresh link.",
+      "italianBefore": "Ask whoever invited you for a fresh link.",
+      "italian": "Chiedi un nuovo link a chi ti ha invitato."
+    },
+    {
+      "key": "battle.openInApp",
+      "english": "Battles run in the app. Open it to join.",
+      "italianBefore": "Battles run in the app. Open it to join.",
+      "italian": "Le battaglie si svolgono nell'app. Aprila per partecipare."
+    },
+    {
+      "key": "battle.getTheApp",
+      "english": "Get the app",
+      "italianBefore": "Get the app",
+      "italian": "Scarica l'app"
+    },
+    {
+      "key": "battle.stateResting",
+      "english": "Resting",
+      "italianBefore": "Resting",
+      "italian": "In riposo"
+    },
+    {
+      "key": "battle.stateIdle",
+      "english": "No signal",
+      "italianBefore": "No signal",
+      "italian": "Nessun segnale"
+    },
+    {
+      "key": "battle.stateStarting",
+      "english": "Starting",
+      "italianBefore": "Starting",
+      "italian": "Avvio"
+    },
+    {
+      "key": "battle.historyTitle",
+      "english": "Battles",
+      "italianBefore": "Battles",
+      "italian": "Battaglie"
+    },
+    {
+      "key": "battle.historyKicker",
+      "english": "YOUR RECORD",
+      "italianBefore": "YOUR RECORD",
+      "italian": "I TUOI RISULTATI"
+    },
+    {
+      "key": "battle.historyRowDesc",
+      "english": "History, record and head-to-head",
+      "italianBefore": "History, record and head-to-head",
+      "italian": "Cronologia, risultati e confronti diretti"
+    },
+    {
+      "key": "battle.historyEmpty",
+      "english": "No battles yet",
+      "italianBefore": "No battles yet",
+      "italian": "Ancora nessuna battaglia"
+    },
+    {
+      "key": "battle.historyEmptyDesc",
+      "english": "Challenge someone to a circuit and the result lands here.",
+      "italianBefore": "Challenge someone to a circuit and the result lands here.",
+      "italian": "Sfida qualcuno in un circuito: il risultato comparirà qui."
+    },
+    {
+      "key": "battle.recordFought",
+      "english": "Fought",
+      "italianBefore": "Fought",
+      "italian": "Disputate"
+    },
+    {
+      "key": "battle.recordWon",
+      "english": "Won",
+      "italianBefore": "Won",
+      "italian": "Vinte"
+    },
+    {
+      "key": "battle.recordStreak",
+      "english": "Streak",
+      "italianBefore": "Streak",
+      "italian": "Serie di vittorie"
+    },
+    {
+      "key": "battle.outcomeWon",
+      "english": "Won",
+      "italianBefore": "Won",
+      "italian": "Vinta"
+    },
+    {
+      "key": "battle.outcomeLost",
+      "english": "Lost",
+      "italianBefore": "Lost",
+      "italian": "Persa"
+    },
+    {
+      "key": "battle.outcomeLeft",
+      "english": "Left",
+      "italianBefore": "Left",
+      "italian": "Abbandonata"
+    },
+    {
+      "key": "battle.outcomeUnknown",
+      "english": "No result",
+      "italianBefore": "No result",
+      "italian": "Nessun risultato"
+    },
+    {
+      "key": "battle.noStoredResult",
+      "english": "This battle ended before results were stored.",
+      "italianBefore": "This battle ended before results were stored.",
+      "italian": "Questa battaglia è terminata prima del salvataggio dei risultati."
+    },
+    {
+      "key": "battle.rankOf",
+      "english": "{{rank}} of {{total}}",
+      "italianBefore": "{{rank}} of {{total}}",
+      "italian": "{{rank}} di {{total}}"
+    },
+    {
+      "key": "battle.compare",
+      "english": "Head-to-head",
+      "italianBefore": "Head-to-head",
+      "italian": "Confronto diretto"
+    },
+    {
+      "key": "battle.wonTitle",
+      "english": "You won",
+      "italianBefore": "You won",
+      "italian": "Hai vinto"
+    },
+    {
+      "key": "battle.tiedTitle",
+      "english": "Tied",
+      "italianBefore": "Tied",
+      "italian": "Pareggio"
+    },
+    {
+      "key": "battle.soloTitle",
+      "english": "Circuit completed",
+      "italianBefore": "Circuit completed",
+      "italian": "Circuito completato"
+    },
+    {
+      "key": "battle.soloHint",
+      "english": "You finished on your own — the circuit counts all the same.",
+      "italianBefore": "You finished on your own — the circuit counts all the same.",
+      "italian": "Hai terminato da solo: il circuito conta comunque."
+    },
+    {
+      "key": "battle.deletedUser",
+      "english": "Deleted user",
+      "italianBefore": "Deleted user",
+      "italian": "Utente eliminato"
+    },
+    {
+      "key": "battle.rematch",
+      "english": "Rematch",
+      "italianBefore": "Rematch",
+      "italian": "Rivincita"
+    },
+    {
+      "key": "battle.rematchCreating",
+      "english": "Creating…",
+      "italianBefore": "Creating…",
+      "italian": "Creazione…"
+    },
+    {
+      "key": "battle.rematchError",
+      "english": "Couldn't create the rematch. Try again.",
+      "italianBefore": "Couldn't create the rematch. Try again.",
+      "italian": "Impossibile creare la rivincita. Riprova."
+    },
+    {
+      "key": "battle.shareResult",
+      "english": "Share result",
+      "italianBefore": "Share result",
+      "italian": "Condividi risultato"
+    },
+    {
+      "key": "battle.sharePreparing",
+      "english": "Generating…",
+      "italianBefore": "Generating…",
+      "italian": "Generazione…"
+    },
+    {
+      "key": "battle.linkCopied",
+      "english": "Link copied: paste it into a chat to invite someone.",
+      "italianBefore": "Link copied: paste it into a chat to invite someone.",
+      "italian": "Link copiato: incollalo in una chat per invitare qualcuno."
+    },
+    {
+      "key": "community.findFriends",
+      "english": "Find friends",
+      "italianBefore": "Find friends",
+      "italian": "Trova amici"
+    },
+    {
+      "key": "community.tabsAriaLabel",
+      "english": "Community sections",
+      "italianBefore": "Community sections",
+      "italian": "Sezioni della community"
+    },
+    {
+      "key": "community.tab.activity",
+      "english": "Activity",
+      "italianBefore": "Activity",
+      "italian": "Attività"
+    },
+    {
+      "key": "community.tab.challenges",
+      "english": "Challenges",
+      "italianBefore": "Challenges",
+      "italian": "Sfide"
+    },
+    {
+      "key": "community.tab.ranking",
+      "english": "Ranking",
+      "italianBefore": "Ranking",
+      "italian": "Classifica"
+    },
+    {
+      "key": "community.friendsTitle",
+      "english": "Your friends",
+      "italianBefore": "Your friends",
+      "italian": "I tuoi amici"
+    },
+    {
+      "key": "community.weeklyRanking",
+      "english": "This week's ranking",
+      "italianBefore": "This week's ranking",
+      "italian": "Classifica della settimana"
+    },
+    {
+      "key": "community.noFriendActivity",
+      "english": "Your friends haven't logged a workout yet.",
+      "italianBefore": "Your friends haven't logged a workout yet.",
+      "italian": "I tuoi amici non hanno ancora registrato un allenamento."
+    },
+    {
+      "key": "community.more",
+      "english": "More",
+      "italianBefore": "More",
+      "italian": "Altro"
+    },
+    {
+      "key": "community.link.programsTitle",
+      "english": "Community programs",
+      "italianBefore": "Community programs",
+      "italian": "Programmi della community"
+    },
+    {
+      "key": "community.link.programsHint",
+      "english": "Routines people share",
+      "italianBefore": "Routines people share",
+      "italian": "Routine condivise dagli utenti"
+    },
+    {
+      "key": "community.link.racesTitle",
+      "english": "Races",
+      "italianBefore": "Races",
+      "italian": "Gare"
+    },
+    {
+      "key": "community.link.racesHint",
+      "english": "Run with friends in real time",
+      "italianBefore": "Run with friends in real time",
+      "italian": "Corri con gli amici in tempo reale"
+    },
+    {
+      "key": "community.link.inviteTitle",
+      "english": "Invite friends",
+      "italianBefore": "Invite friends",
+      "italian": "Invita amici"
+    },
+    {
+      "key": "community.link.inviteHint",
+      "english": "Your invite link",
+      "italianBefore": "Your invite link",
+      "italian": "Il tuo link di invito"
+    },
+    {
+      "key": "community.empty.title",
+      "english": "Train together",
+      "italianBefore": "Train together",
+      "italian": "Allenatevi insieme"
+    },
+    {
+      "key": "community.empty.hint",
+      "english": "Follow your friends to see their workouts, cheer them on and compete in this week's ranking.",
+      "italianBefore": "Follow your friends to see their workouts, cheer them on and compete in this week's ranking.",
+      "italian": "Segui gli amici per vedere i loro allenamenti, incoraggiarli e gareggiare nella classifica settimanale."
+    },
+    {
+      "key": "community.loadError",
+      "english": "We couldn't load your community. Check your connection and try again.",
+      "italianBefore": "We couldn't load your community. Check your connection and try again.",
+      "italian": "Impossibile caricare la community. Controlla la connessione e riprova."
+    },
+    {
+      "key": "community.retry",
+      "english": "Retry",
+      "italianBefore": "Retry",
+      "italian": "Riprova"
+    },
+    {
+      "key": "friends.suggestedSessions_one",
+      "english": "{{n}} workouts",
+      "italianBefore": null,
+      "italian": "{{n}} allenamento"
+    },
+    {
+      "key": "friends.suggestedSessions_other",
+      "english": "{{n}} workouts",
+      "italianBefore": null,
+      "italian": "{{n}} allenamenti"
+    },
+    {
+      "key": "challenge.daysLeft_one",
+      "english": "{{count}} days left",
+      "italianBefore": null,
+      "italian": "Manca {{count}} giorno"
+    },
+    {
+      "key": "challenge.daysLeft_other",
+      "english": "{{count}} days left",
+      "italianBefore": null,
+      "italian": "Mancano {{count}} giorni"
+    },
+    {
+      "key": "challenge.startsInDays_one",
+      "english": "Starts in {{count}} days",
+      "italianBefore": null,
+      "italian": "Inizia tra {{count}} giorno"
+    },
+    {
+      "key": "challenge.startsInDays_other",
+      "english": "Starts in {{count}} days",
+      "italianBefore": null,
+      "italian": "Inizia tra {{count}} giorni"
+    },
+    {
+      "key": "challenge.preset.duration_one",
+      "english": "{{count}} days",
+      "italianBefore": null,
+      "italian": "{{count}} giorno"
+    },
+    {
+      "key": "challenge.preset.duration_other",
+      "english": "{{count}} days",
+      "italianBefore": null,
+      "italian": "{{count}} giorni"
+    },
+    {
+      "key": "challenge.preset.target_one",
+      "english": "{{count}} workouts",
+      "italianBefore": null,
+      "italian": "{{count}} allenamento"
+    },
+    {
+      "key": "challenge.preset.target_other",
+      "english": "{{count}} workouts",
+      "italianBefore": null,
+      "italian": "{{count}} allenamenti"
+    },
+    {
+      "key": "challenge.participantCount_one",
+      "english": "{{count}} participant",
+      "italianBefore": null,
+      "italian": "{{count}} partecipante"
+    },
+    {
+      "key": "feed.roundsDone_one",
+      "english": "{{count}} round",
+      "italianBefore": null,
+      "italian": "{{count}} giro"
+    }
+  ]
+}

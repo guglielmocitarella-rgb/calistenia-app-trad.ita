@@ -1,3 +1,4 @@
+import { useSocialDisplay } from '@/lib/use-social-display'
 /**
  * Clasificación entre seguidos (pastillas de categoría + filas), sin cabecera.
  *
@@ -53,6 +54,7 @@ function buildCategories(t: TFunction): CategoryDef[] {
 
 export default function LeaderboardList() {
   const { t } = useTranslation()
+  const sd = useSocialDisplay()
   const router = useRouter()
   const user = useAuthUser()
   const userId = user?.id ?? null
@@ -114,7 +116,7 @@ export default function LeaderboardList() {
                       category === cat.id ? 'text-lime' : 'text-muted-foreground',
                     )}
                   >
-                    {cat.label}
+                    {sd.label(cat.label)}
                   </Text>
                 </Pressable>
               ))}
@@ -190,7 +192,7 @@ export default function LeaderboardList() {
           <RankRow
             entry={item}
             position={index + 1}
-            unit={catDef?.unit ?? ''}
+            unit={sd.label(catDef?.unit ?? '')}
           />
         )}
       />

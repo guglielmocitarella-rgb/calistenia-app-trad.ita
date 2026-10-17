@@ -19,3 +19,17 @@ La fase dovrà valutare:
 Le configurazioni server del progetto per Anthropic, Google e OpenAI non equivalgono a una selezione del provider disponibile all'utente Android. La futura analisi dovrà verificare nuovamente questa architettura prima di proporre modifiche.
 
 Durante la 4D non sono introdotti provider, endpoint, configurazioni visibili, chiavi o servizi IA personali; richieste e generazione originali rimangono invariate.
+
+## Stato aggiornato alla ricostruzione 4E — 17 ottobre 2026
+
+- Fasi 2 e 3 completate; 4A, 4B, 4C e 4D approvate nel rispettivo perimetro.
+- Fase 4E: ricostruzione in verifica; approvazione subordinata a revisione indipendente e collaudo reale sul telefono.
+- 4F e 4G ancora da svolgere; fase 5 audit finale; fase 6 collaudo integrale.
+- Fase 7 IA personale configurabile: progetto separato, non avviato nell'implementazione 4E.
+- Residui 4D: traguardi, persistenza misurazioni, comparatore fotografico, widget e altri controlli non eseguiti; singolare/plurale statistiche da esaminare nell'audit.
+
+### Evidenze MCP riferite dall'utente — sola documentazione per la fase 7
+
+Autenticazione OAuth MCP riuscita con Claude/Calistenia; `cal_whoami` eseguito e strumenti MCP accessibili. Registrazione di un pasto tramite IA esterna secondo il risultato riportato dal client. Cancellazione autorizzata di cinque allenamenti liberi tramite MCP e successiva conferma sull'APK dell'azzeramento delle sessioni eliminate.
+
+Queste prove indicano la fattibilità di alcune interazioni con IA esterne. Non dimostrano la sostituzione dell'IA integrata nei pulsanti dell'APK. Nessun provider, endpoint, BYOK o server personale implementato dalla 4E.

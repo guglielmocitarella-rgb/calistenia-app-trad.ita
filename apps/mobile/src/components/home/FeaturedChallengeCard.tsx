@@ -1,3 +1,4 @@
+import { useSocialDisplay } from '@/lib/use-social-display'
 /**
  * FeaturedChallengeCard — reto comunitario destacado en Home (issue #351).
  *
@@ -36,6 +37,7 @@ export default function FeaturedChallengeCard({ userId }: FeaturedChallengeCardP
 
 function FeaturedChallengeInner({ userId }: { userId: string }) {
   const { t } = useTranslation()
+  const sd = useSocialDisplay()
   const router = useRouter()
   const { card, participantCount, loading, joining, join } = useFeaturedChallenge(userId)
 
@@ -76,7 +78,7 @@ function FeaturedChallengeInner({ userId }: { userId: string }) {
   const metricLabel = getMetricLabel(card.challenge.metric, card.challenge.custom_metric, card.challenge.exercise_slug)
   // Un reto de preset (#350) guarda el título de catálogo; el visible vive en
   // i18n. Sin preset_key devuelve el título tal cual.
-  const title = resolvePresetChallengeTitle(card.challenge)
+  const title = sd.preset(resolvePresetChallengeTitle(card.challenge), card.challenge)
   const daysLabel =
     card.state === 'results'
       ? t('featuredChallenge.ended')

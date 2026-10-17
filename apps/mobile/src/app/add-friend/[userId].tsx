@@ -1,3 +1,4 @@
+import { useSocialDisplay } from '@/lib/use-social-display'
 /**
  * Auto-follow deep-link route — ejecuta follow() al montar y redirige al feed.
  * Port móvil de apps/web/src/pages/AddFriendPage.tsx
@@ -18,6 +19,7 @@ import { useFollows } from '@calistenia/core/hooks/useFollows'
 export default function AddFriendScreen() {
   const { userId: targetUserId } = useLocalSearchParams<{ userId: string }>()
   const router = useRouter()
+  const sd = useSocialDisplay()
   const currentUser = useAuthUser()
   const currentUserId = currentUser?.id ?? null
 
@@ -48,7 +50,7 @@ export default function AddFriendScreen() {
       <View className="items-center gap-4">
         <Loader size="lg" />
         <Text className="font-mono text-[11px] uppercase tracking-[3px] text-muted-foreground">
-          Siguiendo...
+          {sd.label('Siguiendo...')}
         </Text>
       </View>
     </SafeAreaView>

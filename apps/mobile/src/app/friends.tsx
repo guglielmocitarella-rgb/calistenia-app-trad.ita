@@ -1,3 +1,4 @@
+import { useSocialDisplay } from '@/lib/use-social-display'
 /**
  * Pantalla de Amigos — Siguiendo / Seguidores + búsqueda de usuarios + invitar.
  * Port móvil de apps/web/src/pages/FriendsPage.tsx
@@ -66,6 +67,7 @@ interface UserRowProps {
 }
 
 function UserRow({ user, isFollowing, isRequested = false, isMutual, onFollow, onUnfollow, onTap }: UserRowProps) {
+  const sd = useSocialDisplay()
   const { t } = useTranslation()
   const [actionLoading, setActionLoading] = useState(false)
   // SIGUIENDO y SOLICITADO comparten el estilo outline; pulsar SOLICITADO retira la solicitud.
@@ -113,7 +115,7 @@ function UserRow({ user, isFollowing, isRequested = false, isMutual, onFollow, o
             </Text>
           ) : null}
           {isMutual ? (
-            <Text className="font-mono text-[11px] text-lime">· mutuo</Text>
+            <Text className="font-mono text-[11px] text-lime">{sd.label('· mutuo')}</Text>
           ) : null}
         </View>
       </View>
@@ -149,6 +151,7 @@ function UserRow({ user, isFollowing, isRequested = false, isMutual, onFollow, o
 // ── Main screen ───────────────────────────────────────────────────────────────
 
 export default function FriendsScreen() {
+  const sd = useSocialDisplay()
   const { t } = useTranslation()
   const router = useRouter()
   const user = useAuthUser()
@@ -197,8 +200,8 @@ export default function FriendsScreen() {
   // ── Tab helpers ───────────────────────────────────────────────────────────────
 
   const TABS: { id: Tab; label: string; count: number }[] = [
-    { id: 'siguiendo', label: 'Siguiendo', count: following.length },
-    { id: 'seguidores', label: 'Seguidores', count: followers.length },
+    { id: 'siguiendo', label: sd.label('Siguiendo'), count: following.length },
+    { id: 'seguidores', label: sd.label('Seguidores'), count: followers.length },
   ]
 
   // ── Render helpers ────────────────────────────────────────────────────────────
@@ -253,7 +256,7 @@ export default function FriendsScreen() {
           <Kicker>
             SOCIAL
           </Kicker>
-          <Text className="font-bebas text-4xl leading-none text-foreground">Amigos</Text>
+          <Text className="font-bebas text-4xl leading-none text-foreground">{sd.label('Amigos')}</Text>
         </View>
         <Pressable
           onPress={() => router.back()}
@@ -268,7 +271,7 @@ export default function FriendsScreen() {
         <Input
           value={search}
           onChangeText={setSearch}
-          placeholder="Buscar usuario..."
+          placeholder={sd.label('Buscar usuario...')}
           placeholderTextColor="#71717a"
           maxLength={50}
           returnKeyType="search"
@@ -290,13 +293,13 @@ export default function FriendsScreen() {
           )}
           {!searching && searchError && (
             <View className="items-center py-10 gap-3">
-              <Text className="text-sm text-muted-foreground">Error al buscar. ¿Reintentar?</Text>
+              <Text className="text-sm text-muted-foreground">{sd.label('Error al buscar. ¿Reintentar?')}</Text>
               <Button
                 variant="outline"
                 size="sm"
                 onPress={retrySearch}
               >
-                <Text className="font-mono text-xs">REINTENTAR</Text>
+                <Text className="font-mono text-xs">{sd.label('REINTENTAR')}</Text>
               </Button>
             </View>
           )}
@@ -331,7 +334,7 @@ export default function FriendsScreen() {
           {/* Invite card */}
           <View className="mx-4 mb-4 rounded-xl border border-border bg-card px-4 py-3 gap-2">
             <Text className="font-mono text-[10px] uppercase tracking-[2px] text-muted-foreground">
-              Invita a un amigo
+              {sd.label('Invita a un amigo')}
             </Text>
             <Button
               onPress={handleInvite}
@@ -339,7 +342,7 @@ export default function FriendsScreen() {
               className="self-start bg-lime"
             >
               <Text className="font-mono text-[11px] tracking-widest text-black">
-                COMPARTIR INVITACIÓN
+                {sd.label('COMPARTIR INVITACIÓN')}
               </Text>
             </Button>
           </View>

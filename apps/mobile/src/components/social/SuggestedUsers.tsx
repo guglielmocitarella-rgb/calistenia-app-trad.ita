@@ -82,7 +82,7 @@ export function SuggestedUsers({ surface, limit, maxFollowing = Infinity }: Prop
           <View className="min-w-0 flex-1">
             <Text className="font-sans-medium text-foreground" numberOfLines={1}>{u.displayName}</Text>
             <Text className="font-mono text-[11px] text-muted-foreground" numberOfLines={1}>
-              {t('friends.suggestedSessions', { n: u.totalSessions })}
+              {t('friends.suggestedSessions', { n: u.totalSessions, count: u.totalSessions })}
               {u.currentStreak > 1 ? ` · ${t('friends.suggestedStreak', { n: u.currentStreak })}` : ''}
             </Text>
           </View>

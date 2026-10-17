@@ -5498,5 +5498,17 @@
   "fasting.error.signIn": "Sign in to save your fasts.",
   "fasting.error.load": "Your fasts could not be loaded. Retry before saving changes.",
   "fasting.error.save": "The change could not be saved. Retry; your previous record is preserved.",
-  "fasting.error.conflict": "This fast changed on another device. Refresh and reopen it before saving."
+  "fasting.error.conflict": "This fast changed on another device. Refresh and reopen it before saving.",
+  "friends.suggestedSessions_one": "{{n}} workouts",
+  "friends.suggestedSessions_other": "{{n}} workouts",
+  "challenge.daysLeft_one": "{{count}} days left",
+  "challenge.daysLeft_other": "{{count}} days left",
+  "challenge.startsInDays_one": "Starts in {{count}} days",
+  "challenge.startsInDays_other": "Starts in {{count}} days",
+  "challenge.preset.duration_one": "{{count}} days",
+  "challenge.preset.duration_other": "{{count}} days",
+  "challenge.preset.target_one": "{{count}} workouts",
+  "challenge.preset.target_other": "{{count}} workouts",
+  "challenge.participantCount_one": "{{count}} participant",
+  "feed.roundsDone_one": "{{count}} round"
 }

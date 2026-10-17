@@ -1,3 +1,4 @@
+import { useSocialDisplay } from '@/lib/use-social-display'
 /**
  * Hoja de comentarios estilo Instagram.
  *
@@ -112,6 +113,7 @@ export const CommentsSheet = forwardRef<CommentsSheetMethods, CommentsSheetProps
     ref,
   ) {
     const { t } = useTranslation()
+  const sd = useSocialDisplay()
     const { colorScheme } = useColorScheme()
     const isDark = colorScheme === 'dark'
 
@@ -287,7 +289,7 @@ export const CommentsSheet = forwardRef<CommentsSheetMethods, CommentsSheetProps
                 <View className="flex-row items-center justify-between px-5 pt-1 pb-3">
                   <View className="flex-row items-center gap-2">
                     <Text className="font-bebas text-lg tracking-wide text-foreground">
-                      Comentarios
+                      {sd.label('Comentarios')}
                     </Text>
                     {totalComments > 0 && (
                       <View className="rounded-full bg-muted/60 px-1.5 py-0.5">
@@ -340,7 +342,7 @@ export const CommentsSheet = forwardRef<CommentsSheetMethods, CommentsSheetProps
                         <Text className="font-mono text-[10px] text-muted-foreground/50">
                           {String(totalReactions)}
                         </Text>
-                        <Text className="font-mono text-[10px] text-muted-foreground/30">total</Text>
+                        <Text className="font-mono text-[10px] text-muted-foreground/30">{sd.label('total')}</Text>
                       </View>
                     )}
                   </View>
@@ -352,7 +354,7 @@ export const CommentsSheet = forwardRef<CommentsSheetMethods, CommentsSheetProps
                 {loading ? (
                   <View className="flex-1 items-center justify-center py-12 gap-2">
                     <Loader size="sm" />
-                    <Text className="font-mono text-xs text-muted-foreground/60">Cargando…</Text>
+                    <Text className="font-mono text-xs text-muted-foreground/60">{sd.label('Cargando…')}</Text>
                   </View>
                 ) : (
                   <FlatList
@@ -407,7 +409,7 @@ export const CommentsSheet = forwardRef<CommentsSheetMethods, CommentsSheetProps
                         className="font-sans text-xs text-muted-foreground flex-1"
                         numberOfLines={1}
                       >
-                        Respondiendo a{' '}
+                        {sd.label('Respondiendo a')}{' '}
                         <Text className="font-sans-medium text-foreground/80">{replyTo.name}</Text>
                       </Text>
                       <Pressable onPress={() => setReplyTo(null)} hitSlop={8}>
@@ -422,7 +424,7 @@ export const CommentsSheet = forwardRef<CommentsSheetMethods, CommentsSheetProps
                       <TextInput
                         value={text}
                         onChangeText={(val) => setText(val.slice(0, 500))}
-                        placeholder="Escribe un comentario…"
+                        placeholder={sd.label('Escribe un comentario…')}
                         placeholderTextColor={inputPlaceholder}
                         maxLength={500}
                         editable={!sending}
@@ -540,6 +542,7 @@ function CommentBubble({
   highlight,
 }: CommentBubbleProps) {
   const { t } = useTranslation()
+  const sd = useSocialDisplay()
   const [showPicker, setShowPicker] = useState(false)
   const isOwn = comment.authorId === currentUserId
 
@@ -602,12 +605,12 @@ function CommentBubble({
           </Text>
           {isOwn && (
             <View className="rounded-full bg-lime/10 px-1 py-px">
-              <Text className="font-mono text-[9px] text-lime/70">tú</Text>
+              <Text className="font-mono text-[9px] text-lime/70">{sd.label('tú')}</Text>
             </View>
           )}
           {comment.created ? (
             <Text className="font-mono text-[10px] text-muted-foreground/40 shrink-0">
-              {timeAgo(comment.created)}
+              {sd.time(timeAgo(comment.created), comment.created)}
             </Text>
           ) : null}
         </View>
@@ -657,7 +660,7 @@ function CommentBubble({
         <View className="flex-row items-center gap-3 mt-1.5">
           {!isReply && (
             <Pressable onPress={onReply} hitSlop={6}>
-              <Text className="font-sans text-[11px] text-muted-foreground/50">Responder</Text>
+              <Text className="font-sans text-[11px] text-muted-foreground/50">{sd.label('Responder')}</Text>
             </Pressable>
           )}
 
@@ -670,7 +673,7 @@ function CommentBubble({
 
           {isOwn ? (
             <Pressable onPress={onDelete} hitSlop={6}>
-              <Text className="font-sans text-[11px] text-muted-foreground/35">Eliminar</Text>
+              <Text className="font-sans text-[11px] text-muted-foreground/35">{sd.label('Eliminar')}</Text>
             </Pressable>
           ) : (
             <Pressable onPress={onReport} hitSlop={6}>

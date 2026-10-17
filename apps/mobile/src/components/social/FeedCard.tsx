@@ -1,3 +1,4 @@
+import { useSocialDisplay } from '@/lib/use-social-display'
 /**
  * Tarjeta del muro (nativa).
  *
@@ -52,6 +53,7 @@ export const FeedCard = memo(function FeedCard({
   highlight,
 }: FeedCardProps) {
   const router = useRouter()
+  const sd = useSocialDisplay()
   const { t } = useTranslation()
   const view = describeFeedItem(item)
   // `null` = esta actividad no tiene destino abrible para quien mira (circuito
@@ -113,7 +115,7 @@ export const FeedCard = memo(function FeedCard({
             )}
           </View>
           <Text className="font-mono text-[10px] text-muted-foreground">
-            {timeAgo(item.completedAt)}
+            {sd.time(timeAgo(item.completedAt), item.completedAt)}
           </Text>
         </View>
       </Pressable>

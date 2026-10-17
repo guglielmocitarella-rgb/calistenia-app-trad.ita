@@ -1,3 +1,4 @@
+import { useSocialDisplay } from '@/lib/use-social-display'
 /**
  * Detalle de un reto — progreso propio + clasificación + unirse. Puerto móvil de
  * ChallengeDetailPage (web), usando el mismo hook de core (`useChallengeDetail`).
@@ -45,6 +46,7 @@ const withUnit = (value: number, unit: string) => (unit ? `${value} ${unit}` : `
 
 export default function ChallengeDetailScreen() {
   const { t } = useTranslation()
+  const sd = useSocialDisplay()
   const router = useRouter()
   const { id } = useLocalSearchParams<{ id: string }>()
   const user = useAuthUser()
@@ -194,8 +196,8 @@ export default function ChallengeDetailScreen() {
   const unit = getMetricUnit(challenge.metric, challenge.exercise_slug)
   // Los retos de preset guardan un slug de catálogo; el título/descripción reales
   // viven en i18n (#350), así que se resuelven aquí en vez de usar el campo crudo.
-  const title = resolvePresetChallengeTitle(challenge)
-  const description = resolvePresetChallengeDescription(challenge)
+  const title = sd.preset(resolvePresetChallengeTitle(challenge), challenge)
+  const description = sd.preset(resolvePresetChallengeDescription(challenge), challenge, true)
   // El "N días restantes" de al lado no dice cuándo empieza ni acaba, y en un reto
   // ya terminado no queda ninguna fecha. Va en la misma fila meta a propósito: es
   // la misma pregunta ("¿cuándo va esto?"). Vacío si los campos no son válidos.

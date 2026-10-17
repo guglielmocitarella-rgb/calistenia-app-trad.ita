@@ -89,3 +89,14 @@ Date e decimali italiani soltanto nel rendering. Gli input e i parser numerici c
 | thigh left/right short | Co. sx / Co. dx | Cronologia misure |
 
 Date di calendario mostrate come `gg/mm/aaaa` (o `gg/mm` nelle miniature), senza cambiare le stringhe ISO originali. Virgola decimale soltanto sulle stringhe numeriche di presentazione, mantenendo precisione e unità. Serie, ripetizioni, carichi e condizioni dei traguardi non cambiano. EN/ES e il glossario remoto non sono modificati.
+
+## Fase 4E — Social Android
+
+- Following / followers → Seguiti / Follower; following button → Segui già.
+- Challenge / race / circuit battle → Sfida / Gara / Battaglia a circuito.
+- Leaderboard / live standings → Classifica / Classifica in diretta.
+- Race lobby → Sala d'attesa; DNF → Non conclusa.
+- Referral → Invito; referrer / referred → chi invita / invitato.
+- Report / block / unblock → Segnala / Blocca / Sblocca.
+- Rounds → Giri; reps → rip.; ordinali → 1º, 2º, 3º.
+- Username, commenti, titoli personali, codici, ID e URL rimangono originali.

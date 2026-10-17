@@ -1,3 +1,4 @@
+import { socialReferralMessage, socialBattleMessage } from './social-ui-labels'
 import { Linking, Platform, Share, type ShareAction } from 'react-native'
 import * as Sharing from 'expo-sharing'
 import * as Clipboard from 'expo-clipboard'
@@ -289,7 +290,7 @@ export function shareReferralInvite(
 ): ReferralShareResult {
   const url = inviteUrl(referralCode)
   const message = `${displayName} te invita a entrenar en Calistenia App 🤸\nÚnete y empieza gratis:`
-  return { message, url }
+  return { message: socialReferralMessage(message, displayName, i18n.language, Platform.OS), url }
 }
 
 export async function shareReferralInviteByChannel(
@@ -354,7 +355,7 @@ export function shareBattleResult(input: BattleResultShareInput): BattleResultSh
   } else {
     message = `${who}${rank}.º de ${contenders} en "${circuitName}" 🏆`
   }
-  return { message, url }
+  return { message: socialBattleMessage(message, input, i18n.language, Platform.OS), url }
 }
 
 /** Deep link to the web nutrition page for a specific date. */
