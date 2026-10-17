@@ -23,7 +23,7 @@ Collaudo 4E precedente conservato: **67 controlli: 22 superati, 1 problema grafi
 
 ### Copertura
 
-- **154 chiavi revisionate, 153 valori italiani modificati**, nessuna chiave aggiunta/rimossa. **5.315 chiavi per ciascuna lingua**. Le 2.807 chiavi inventariate nelle fasi precedenti restano identiche; EN/ES invariati byte per byte.
+- **186 chiavi revisionate, 185 valori italiani modificati**, nessuna chiave aggiunta/rimossa. **5.315 chiavi per ciascuna lingua**. Le 2.807 chiavi inventariate nelle fasi precedenti restano identiche; EN/ES invariati byte per byte.
 - **41 forme locali** nel nuovo adattatore Android `secondary-ui-labels.ts`; **18 testi** nei dizionari IT di tre widget. Queste quantità contano forme di dizionario, non siti di chiamata.
 - **359 testi locali** in overlay con chiave stabile e guardia sul sorgente: 317 riepiloghi/titoli/descrizioni delle **35 versioni** del changelog e 42 titoli/descrizioni delle **21 voci Scopri**. Nessuna modifica ai JSON condivisi originali. Se un aggiornamento upstream cambia il testo inglese, la guardia evita di mostrare una traduzione obsoleta e usa il fallback originale.
 
@@ -39,6 +39,7 @@ Collaudo 4E precedente conservato: **67 controlli: 22 superati, 1 problema grafi
 | Scopri | 21 voci locali, titoli e descrizioni italiane; ID, categorie, rotte e navigazione invariati |
 | UpdateGate | Avvisi facoltativi/obbligatori, inclusi motivi di sicurezza/incompatibilità selezionati tramite chiavi locali |
 | Condivisione allenamento/cardio | Didascalie, pulsanti e titolo del selettore nativo, date e decimali soltanto nella resa grafica; messaggi nativi/URL/formati file invariati |
+| Geolocalizzazione / Invita / citazioni locali | Errore nativo di disponibilità, pulsante invito e 20 citazioni predefinite con attribuzioni generiche; nomi propri invariati, nessun cambiamento ai contenuti dei servizi |
 | Banner offline, sondaggio e sessione in corso | Testi locali residui nei cataloghi, senza modificare flussi o dati |
 
 Health Connect era **già implementato**; non è una nuova integrazione. Nessuna schermata nativa autonoma FAQ/supporto trovata; i collegamenti esistenti verso contenuti esterni restano invariati. Dettagli tecnici remoti sconosciuti conservati come fallback, mai riscritti arbitrariamente. Le notifiche ricevute dal server e i promemoria push effettivi mantengono il contenuto originale: tradurre le anteprime locali non cambia la lingua del server.
@@ -59,6 +60,10 @@ Nessuna modifica a backend, API/contratti, `apps/web`, server, IA/MCP/provider, 
 ### Verifica aggiuntiva widget
 
 Misura del font Bebas Neue 30 al minimo widget di 250 dp (222 dp interni): il testo iniziale del widget Oggi scaduto misurava 250,89 dp. Sostituito con «APRI L’APP» (93,63 dp), già usato negli altri widget, senza cambiare azioni o dimensioni. «SCEGLI UN PROGRAMMA» misura 211,65 dp e resta invariato. Test sullo stato scaduto: fallimento atteso e successivo verde. Il primo workflow APK sul commit `4dc8382b` viene annullato automaticamente per concorrenza dal nuovo trigger prima della produzione dell’artifact; non è un APK consegnato. Un solo APK finale comprende tutte le modifiche.
+
+### Audit conclusivo dei residui statici
+
+Verificati tutti i testi ancora uguali a EN con riferimenti Android diretti/indiretti. Completati due residui di interfaccia e 30 testi/attribuzioni delle citazioni locali, effettivamente mostrate in CelebrateScreen e nella fine circuito. Le citazioni non sono inviate ai salvataggi; quelle nelle immagini condivise restano sola presentazione. Autori con nomi propri conservati. `widgets.completed` è generato dal presenter condiviso ma la proprietà `verb` è visualizzata soltanto nel widget web, non nei componenti Android: resta invariato. `phase.*`/`dayFocus.*` appartengono al vecchio modello dati di programma, senza uso Android accertato delle chiavi di traduzione; non si alterano i titoli del programma o i salvataggi. I preset persistiti restano protetti dagli overlay 4E. Il secondo tentativo APK (`e4c98193`) è sostituito prima dell’artifact dal trigger sul commit applicativo definitivo. Nessun APK intermedio consegnato.
 
 ### CI e unico APK finale
 

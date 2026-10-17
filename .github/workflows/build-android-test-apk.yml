@@ -1,5 +1,5 @@
 name: Android TEST APK (standalone, no publication)
-# Phase 4F: Italian secondary screens, native labels, compact widget fallback and residual 4E profile layout.
+# Phase 4F: Italian secondary screens, native labels, compact widget fallback, final static residue audit and residual 4E profile layout.
 
 on:
   workflow_dispatch:

@@ -1,8 +1,8 @@
 {
   "baseline": "8a71be8feb4a0a8e50a76ea157ee12dd826b31b2",
   "phase": "4F",
-  "reviewedKeys": 154,
-  "changedItalianValues": 153,
+  "reviewedKeys": 186,
+  "changedItalianValues": 185,
   "protectedEarlierPhaseKeys": 2807,
   "catalogCountPerLanguage": 5315,
   "entries": [
@@ -3246,6 +3246,528 @@
         {
           "file": "apps/mobile/src/components/UpdateGate.tsx",
           "expression": "messageKey from app-config selects this local key"
+        }
+      ]
+    },
+    {
+      "key": "cardioSession.geoNotAvailable",
+      "english": "Geolocation not available",
+      "italianBefore": "Geolocation not available",
+      "italian": "Geolocalizzazione non disponibile",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/contexts/CardioSessionContext.tsx",
+          "line": 47,
+          "column": 37,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/contexts/CardioSessionContext.tsx",
+          "line": 27,
+          "column": 37,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "share.invite",
+      "english": "Invite",
+      "italianBefore": "Invite",
+      "italian": "Invita",
+      "changed": true,
+      "sources": [
+        {
+          "file": "apps/mobile/src/app/referrals.tsx",
+          "line": 219,
+          "column": 26,
+          "kind": "android_direct"
+        },
+        {
+          "file": "apps/web/src/components/referrals/InviteButton.tsx",
+          "line": 67,
+          "column": 10,
+          "kind": "web"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote0",
+      "english": "The only bad workout is the one you didn't do.",
+      "italianBefore": "The only bad workout is the one you didn't do.",
+      "italian": "L'unico allenamento sbagliato è quello che non hai fatto.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.author0",
+      "english": "Unknown",
+      "italianBefore": "Unknown",
+      "italian": "Sconosciuto",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 11,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.author${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote1",
+      "english": "Success is the sum of small efforts repeated day after day.",
+      "italianBefore": "Success is the sum of small efforts repeated day after day.",
+      "italian": "Il successo è la somma di piccoli sforzi ripetuti giorno dopo giorno.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote2",
+      "english": "Strength does not come from the body. It comes from the will of the soul.",
+      "italianBefore": "Strength does not come from the body. It comes from the will of the soul.",
+      "italian": "La forza non viene dal corpo. Viene dalla volontà dell'anima.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote3",
+      "english": "You don't have to be great to start, but you have to start to be great.",
+      "italianBefore": "You don't have to be great to start, but you have to start to be great.",
+      "italian": "Non devi essere eccezionale per iniziare, ma devi iniziare per diventare eccezionale.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote4",
+      "english": "The body achieves what the mind believes.",
+      "italianBefore": "The body achieves what the mind believes.",
+      "italian": "Il corpo realizza ciò in cui crede la mente.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.author4",
+      "english": "Unknown",
+      "italianBefore": "Unknown",
+      "italian": "Sconosciuto",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 11,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.author${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote5",
+      "english": "No pain, no gain. Shut up and train.",
+      "italianBefore": "No pain, no gain. Shut up and train.",
+      "italian": "Chi non soffre, non ottiene nulla. Stai zitto e allenati.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.author5",
+      "english": "Unknown",
+      "italianBefore": "Unknown",
+      "italian": "Sconosciuto",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 11,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.author${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote6",
+      "english": "Push yourself because no one else is going to do it for you.",
+      "italianBefore": "Push yourself because no one else is going to do it for you.",
+      "italian": "Mettiti alla prova, perché nessun altro lo farà al posto tuo.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.author6",
+      "english": "Unknown",
+      "italianBefore": "Unknown",
+      "italian": "Sconosciuto",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 11,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.author${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote7",
+      "english": "Take care of your body. It's the only place you have to live.",
+      "italianBefore": "Take care of your body. It's the only place you have to live.",
+      "italian": "Prenditi cura del tuo corpo. È l’unico posto in cui puoi vivere.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote8",
+      "english": "Your body can stand almost anything. It's your mind you have to convince.",
+      "italianBefore": "Your body can stand almost anything. It's your mind you have to convince.",
+      "italian": "Il tuo corpo è in grado di sopportare quasi tutto. È la tua mente che devi convincere.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.author8",
+      "english": "Unknown",
+      "italianBefore": "Unknown",
+      "italian": "Sconosciuto",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 11,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.author${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote9",
+      "english": "Discipline is the bridge between goals and accomplishment.",
+      "italianBefore": "Discipline is the bridge between goals and accomplishment.",
+      "italian": "La disciplina è il ponte che collega gli obiettivi alla loro realizzazione.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote10",
+      "english": "The difference between trying and triumphing is just a little more effort.",
+      "italianBefore": "The difference between trying and triumphing is just a little more effort.",
+      "italian": "La differenza tra provarci e riuscire sta solo in un piccolo sforzo in più.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote11",
+      "english": "Fall seven times, stand up eight.",
+      "italianBefore": "Fall seven times, stand up eight.",
+      "italian": "Cadi sette volte, rialzati otto.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.author11",
+      "english": "Japanese proverb",
+      "italianBefore": "Japanese proverb",
+      "italian": "Proverbio giapponese",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 11,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.author${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote12",
+      "english": "It never gets easier, you just get stronger.",
+      "italianBefore": "It never gets easier, you just get stronger.",
+      "italian": "Non diventa mai più facile, ma tu diventi più forte.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.author12",
+      "english": "Unknown",
+      "italianBefore": "Unknown",
+      "italian": "Sconosciuto",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 11,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.author${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote13",
+      "english": "The secret of getting ahead is getting started.",
+      "italianBefore": "The secret of getting ahead is getting started.",
+      "italian": "Il segreto per avere successo è iniziare.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote14",
+      "english": "We are what we repeatedly do. Excellence is not an act, but a habit.",
+      "italianBefore": "We are what we repeatedly do. Excellence is not an act, but a habit.",
+      "italian": "Siamo ciò che facciamo ripetutamente. L’eccellenza non è un’azione, ma un’abitudine.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote15",
+      "english": "Hard work beats talent when talent doesn't work hard.",
+      "italianBefore": "Hard work beats talent when talent doesn't work hard.",
+      "italian": "Il duro lavoro batte il talento quando il talento non si impegna a fondo.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote16",
+      "english": "The pain you feel today will be the strength you feel tomorrow.",
+      "italianBefore": "The pain you feel today will be the strength you feel tomorrow.",
+      "italian": "Il dolore che provi oggi sarà la forza che sentirai domani.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.author16",
+      "english": "Unknown",
+      "italianBefore": "Unknown",
+      "italian": "Sconosciuto",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 11,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.author${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote17",
+      "english": "Small daily improvements are the key to extraordinary results.",
+      "italianBefore": "Small daily improvements are the key to extraordinary results.",
+      "italian": "I piccoli miglioramenti quotidiani sono la chiave per ottenere risultati straordinari.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.author17",
+      "english": "Unknown",
+      "italianBefore": "Unknown",
+      "italian": "Sconosciuto",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 11,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.author${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote18",
+      "english": "Champions aren't made in gyms. They are made from something deep inside them.",
+      "italianBefore": "Champions aren't made in gyms. They are made from something deep inside them.",
+      "italian": "I campioni non nascono nelle palestre. Nascono da qualcosa che hanno nel profondo.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.quote19",
+      "english": "It's not about being the best. It's about being better than yesterday.",
+      "italianBefore": "It's not about being the best. It's about being better than yesterday.",
+      "italian": "Non si tratta di essere i migliori. Si tratta di essere migliori rispetto a ieri.",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 10,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.quote${i}`"
+        }
+      ]
+    },
+    {
+      "key": "motivation.author19",
+      "english": "Unknown",
+      "italianBefore": "Unknown",
+      "italian": "Sconosciuto",
+      "changed": true,
+      "sources": [
+        {
+          "file": "packages/core/lib/quotes.ts",
+          "line": 11,
+          "column": 8,
+          "kind": "android_potential",
+          "expression": "`motivation.author${i}`"
         }
       ]
     }
